@@ -1,7 +1,13 @@
-from flask import Flask
+from flask import Flask,redirect
+
 app = Flask(__name__)
 
 @app.route("/")
+def index():
+    return redirect("http://localhost:5000/static/index.html", code=302)
+
+
+@app.route("/hello")
 def hello():
      return """
     <html>
