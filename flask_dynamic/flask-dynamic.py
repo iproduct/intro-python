@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return redirect("http://localhost:5000/static/index.html", code=302)
+    return redirect("/static/index.html", code=302)
 
 
 @app.route("/hello")
