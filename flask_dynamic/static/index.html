@@ -2,35 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Comments</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="jumbotron text-center">
-      <h1>Comments Demo</h1>
-      <p>Resize this responsive page to see the effect!</p>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
     </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>Comments Demo</h1>
+    <p>Resize this responsive page to see the effect!</p>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Column 1</h3>
-          <p>Lorem ipsum dolor..</p>
-          <p>Ut enim ad..</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Gallery</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="/static/img/lights.jpg">
+                            <img src="/static/img/lights.jpg" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="/static/img/nature.jpg">
+                            <img src="/static/img/nature.jpg" alt="Nature" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="/static/img/fjords.jpg">
+                            <img src="/static/img/fjords.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor..</p>
-          <p>Ut enim ad..</p>
+        <div class="col-sm-6">
+            <h3>Posts</h3>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicons glyphicons-notes-2"></span> Add Post
+                </button>
+                <button type="button" class="btn btn-danger">Delete Post</button>
+            </div>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal
+            </button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor..</p>
-          <p>Ut enim ad..</p>
-        </div>
-      </div>
     </div>
+</div>
+</div>
 </body>
 </html>
