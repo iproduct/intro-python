@@ -1,7 +1,7 @@
-import sqlite3, os
+import sqlite3
 
 def get_db():
-    DATABASE = os.path.join('.', 'blog.sqlite')
+    DATABASE = './blog.sqlite'
     db = sqlite3.connect(DATABASE, detect_types=sqlite3.PARSE_DECLTYPES)
     db.row_factory = sqlite3.Row
     return db

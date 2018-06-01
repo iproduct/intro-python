@@ -22,12 +22,18 @@ def print_users(user_list):
     for user in user_list:
         print ('ID: ', user['id'],', username: ', user['username'], ', password: ', user['password'])
 
-@app.route('/')
-def getUsers():
+@app.route('/users')
+def users():
+    g.active_url='/users'
     db = get_db()
     users = get_all_users()
     print_users(users)
     return render_template('user/users.html', users=users)
+
+@app.route('/')
+def home():
+    g.active_url='/'
+    return render_template('home/home.html')
 
 if __name__ == '__main__':
     app.run()
