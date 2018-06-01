@@ -22,15 +22,15 @@ def get_all_users():
 
 def print_users(user_list):
     for user in user_list:
-        print ('username: ', user['username'], ', password: ', user['password'])
+        print ('ID: ', user['id'],', username: ', user['username'], ', password: ', user['password'])
 
 db = get_db()
 
 if __name__ == "__main__":
-    # init_db()
-    # insert_user("Ivan", "ivan123")
-    # insert_user("Petar", "pythonrocks")
-    # insert_user("Dimitar", "hero123")
+    init_db()
+    insert_user("ivan", "ivan567")
+    insert_user("petar", "pythonisfun")
+    insert_user("dimitar", "hero123")
     user_list = get_all_users()
     print_users(user_list)
     db.close();
