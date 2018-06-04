@@ -18,7 +18,7 @@ def index():
         ' FROM post p JOIN user u ON p.author_id = u.id'
         ' ORDER BY created DESC'
     ).fetchall()
-    return render_template('blog/users.html', posts=posts)
+    return render_template('blog/index.html', posts=posts)
 
 
 def get_post(id, check_author=True):
