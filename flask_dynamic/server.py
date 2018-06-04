@@ -1,8 +1,9 @@
-from flask import Flask, render_template, g
+from flask import Flask, render_template, g, request, redirect
 import sqlite3
 
 DATABASE = './blog.sqlite'
 app = Flask(__name__)
+
 
 def get_db():
     """Connect to the application's configured database. The connection
@@ -14,33 +15,47 @@ def get_db():
         g.db.row_factory = sqlite3.Row
     return g.db
 
+
 def get_all_users():
     users = g.db.execute('SELECT * FROM user').fetchall()
     return users
 
+
 def print_users(user_list):
     for user in user_list:
-        print ('ID: ', user['id'],', username: ', user['username'], ', password: ', user['password'])
+        print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'])
 
-@app.route('/users/add')
+
+@app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
-    g.active_url='/users/add'
-    # db = get_db()
-    # users = get_all_users()
-    return render_template('user/add-user.html')
+    g.active_url = '/users/add'
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        db = get_db()
+        db.execute(
+            'INSERT INTO user (username, password) VALUES (?, ?)',
+            (username, password)
+        )
+        db.commit()
+        return redirect('/users')
+    else:
+        return render_template('user/add-user.html')
 
 @app.route('/users')
 def users():
-    g.active_url='/users'
+    g.active_url = '/users'
     db = get_db()
     users = get_all_users()
     print_users(users)
     return render_template('user/users.html', users=users)
 
+
 @app.route('/')
 def home():
-    g.active_url='/'
+    g.active_url = '/'
     return render_template('home/home.html')
+
 
 if __name__ == '__main__':
     app.run()
