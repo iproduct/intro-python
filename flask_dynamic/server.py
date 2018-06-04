@@ -29,18 +29,29 @@ def print_users(user_list):
 @app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
     g.active_url = '/users/add'
+    error=None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
         db = get_db()
-        db.execute(
-            'INSERT INTO user (username, password) VALUES (?, ?)',
-            (username, password)
-        )
-        db.commit()
-        return redirect('/users')
-    else:
-        return render_template('user/add-user.html')
+        if not username:
+            error = 'Username is required.'
+        elif not password:
+            error = 'Password is required.'
+        elif db.execute(
+            'SELECT id FROM user WHERE username = ?', (username,)
+        ).fetchone() is not None:
+            error = 'User {0} is already registered.'.format(username)
+
+        if error is None:
+            db.execute(
+                'INSERT INTO user (username, password) VALUES (?, ?)',
+                (username, password)
+            )
+            db.commit()
+            return redirect('/users')
+
+    return render_template('user/add-user.html', error=error)
 
 @app.route('/users')
 def users():

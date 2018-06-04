@@ -3,6 +3,7 @@
 {% block content %}
 <h1>{% block title %}Users{% endblock %}</h1>
 <section class="user col-sm-6">
+    {{ error }}
     <form action="/users/add" method="POST">
         <div class="row">
             <input type="text" name="username" placeholder="Username" autocomplete="off" />
