@@ -1,4 +1,4 @@
-from flask import Flask, render_template, g, request, redirect
+from flask import Flask, render_template, g, request, redirect, url_for
 import sqlite3
 
 DATABASE = './blog.sqlite'
@@ -29,7 +29,7 @@ def print_users(user_list):
 @app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
     g.active_url = '/users/add'
-    error=None
+    error = None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -39,7 +39,7 @@ def add_user():
         elif not password:
             error = 'Password is required.'
         elif db.execute(
-            'SELECT id FROM user WHERE username = ?', (username,)
+                'SELECT id FROM user WHERE username = ?', (username,)
         ).fetchone() is not None:
             error = 'User {0} is already registered.'.format(username)
 
@@ -52,6 +52,19 @@ def add_user():
             return redirect('/users')
 
     return render_template('user/add-user.html', error=error)
+
+
+@app.route('/users/<int:id>/delete', methods=('POST',))
+def delete_user(id):
+    db = get_db()
+    # if db.execute(
+    #     'SELECT id FROM user WHERE id = ?', (id,)
+    # ).fetchone() is not None:
+    db.execute('DELETE FROM user WHERE id = ?', (id,))
+    db.commit()
+
+    return redirect(url_for('users'))
+
 
 @app.route('/users')
 def users():
