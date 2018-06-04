@@ -3,7 +3,9 @@
 {% block content %}
 <h1>{% block title %}Users{% endblock %}</h1>
 <section class="user col-sm-6">
-    {{ error }}
+    {% if error != None %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
     <form action="/users/add" method="POST">
         <div class="row">
             <input type="text" name="username" placeholder="Username" autocomplete="off" />
