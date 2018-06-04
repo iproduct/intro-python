@@ -22,6 +22,13 @@ def print_users(user_list):
     for user in user_list:
         print ('ID: ', user['id'],', username: ', user['username'], ', password: ', user['password'])
 
+@app.route('/users/add')
+def add_user():
+    g.active_url='/users/add'
+    # db = get_db()
+    # users = get_all_users()
+    return render_template('user/add-user.html')
+
 @app.route('/users')
 def users():
     g.active_url='/users'

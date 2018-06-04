@@ -22,6 +22,9 @@
             <li {% if g.active_url=='/users' %} class="active" {% endif %}>
                 <a href="/users">Users</a>
             </li>
+           <li {% if g.active_url=='/users/add' %} class="active" {% endif %}>
+                <a href="/users/add">Add New User</a>
+            </li>
             <li><a href="#">Page 2</a></li>
             <li><a href="#">Page 3</a></li>
         </ul>

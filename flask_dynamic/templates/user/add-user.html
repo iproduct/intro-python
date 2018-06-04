@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %}Users{% endblock %}</h1>
+<section class="user col-sm-6">
+    <form action="/users/add" method="POST">
+        <div class="row">
+            <input type="text" name="username" placeholder="Username" autocomplete="off" />
+            <input type="password" name="password" placeholder="Password"/>
+            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                <span class="glyphicons glyphicons-notes-2"></span> Add User
+            </button>
+        </div>
+    </form>
+</section>
+{% endblock %}
