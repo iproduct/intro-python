@@ -24,7 +24,8 @@ def get_all_users():
 
 def print_users(user_list):
     for user in user_list:
-        print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'])
+        print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
+              ', role: ', user['role'])
 
 @app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
@@ -33,11 +34,14 @@ def add_user():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        role = request.form['role']
         db = get_db()
         if not username:
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
+        elif not role:
+            error = 'Role is required.'
         elif db.execute(
                 'SELECT id FROM user WHERE username = ?', (username,)
         ).fetchone() is not None:
@@ -45,26 +49,31 @@ def add_user():
 
         if error is None:
             db.execute(
-                'INSERT INTO user (username, password) VALUES (?, ?)',
-                (username, password)
+                'INSERT INTO user (username, password, role) VALUES (?, ?, ?)',
+                (username, password, role)
             )
             db.commit()
             return redirect('/users')
         else:
             flash(error)
 
-    return render_template('user/add-user.html') #, error=error)
+    return render_template('user/add-user.html')
 
 @app.route('/users/<int:id>/edit', methods=('POST',))
 def edit_user(id):
     db = get_db()
+    user = db.execute(
+        'SELECT * FROM user WHERE id = ?', (id,)
+    ).fetchone()
+    print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
+              ', role: ', user['role'])
     # if db.execute(
     #     'SELECT id FROM user WHERE id = ?', (id,)
     # ).fetchone() is not None:
     # db.execute('DELETE FROM user WHERE id = ?', (id,))
     # db.commit()
 
-    return redirect(url_for('users'))
+    return render_template('user/edit-user.html', user=user )
 
 @app.route('/users/<int:id>/delete', methods=('POST',))
 def delete_user(id):
