@@ -3,7 +3,7 @@ from flask import Flask
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__.split('.')[0], instance_relative_config=True)
     app.config.from_mapping(
         # a default secret that should be overridden by instance config
         SECRET_KEY='dev',
@@ -33,9 +33,9 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # apply the blueprints to the app
-    from blog import auth, blog
+    from blog import auth, my_blog
     app.register_blueprint(auth.bp)
-    app.register_blueprint(blog.bp)
+    app.register_blueprint(my_blog.bp)
 
     # make url_for('index') == url_for('blog.index')
     # in another app, you might define a separate main index here with

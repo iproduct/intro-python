@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
+{% block header %}
+    <h1 class="container">{% block title %}Add User{% endblock %}</h1>
+{% endblock %}
 
 {% block content %}
-<h1>{% block title %}Users{% endblock %}</h1>
 <section class="user col-sm-6">
-    {% if error != None %}
-      <div class="alert alert-danger">{{ error }}</div>
-    {% endif %}
     <form action="/users/add" method="POST">
         <div class="row">
             <input type="text" name="username" placeholder="Username" autocomplete="off" />

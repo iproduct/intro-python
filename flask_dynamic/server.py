@@ -1,8 +1,9 @@
-from flask import Flask, render_template, g, request, redirect, url_for
+from flask import Flask, render_template, g, request, redirect, url_for, session, flash
 import sqlite3
 
 DATABASE = './blog.sqlite'
 app = Flask(__name__)
+app.secret_key = 'any random string'
 
 
 def get_db():
@@ -24,7 +25,6 @@ def get_all_users():
 def print_users(user_list):
     for user in user_list:
         print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'])
-
 
 @app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
@@ -50,9 +50,21 @@ def add_user():
             )
             db.commit()
             return redirect('/users')
+        else:
+            flash(error)
 
-    return render_template('user/add-user.html', error=error)
+    return render_template('user/add-user.html') #, error=error)
 
+@app.route('/users/<int:id>/edit', methods=('POST',))
+def edit_user(id):
+    db = get_db()
+    # if db.execute(
+    #     'SELECT id FROM user WHERE id = ?', (id,)
+    # ).fetchone() is not None:
+    # db.execute('DELETE FROM user WHERE id = ?', (id,))
+    # db.commit()
+
+    return redirect(url_for('users'))
 
 @app.route('/users/<int:id>/delete', methods=('POST',))
 def delete_user(id):
