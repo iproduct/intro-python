@@ -130,6 +130,48 @@ def home():
     g.active_url = '/'
     return render_template('home/home.html')
 
+@app.route('/login')
+def login():
+    g.active_url = '/'
+    return render_template('home/home.html')
+
+@app.route('/logout')
+def logout():
+    g.active_url = '/'
+    return render_template('home/home.html')
+
+@app.route('/register', methods=('GET', 'POST'))
+def register():
+    g.active_url = '/register'
+    error = None
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        role = 'user'
+        db = get_db()
+        if not username:
+            error = 'Username is required.'
+        elif not password:
+            error = 'Password is required.'
+        elif db.execute(
+                'SELECT id FROM user WHERE username = ?', (username,)
+        ).fetchone() is not None:
+            error = 'User {0} is already registered.'.format(username)
+
+        if error is None:
+            db.execute(
+                'INSERT INTO user (username, password, role) VALUES (?, ?, ?)',
+                (username, password, role)
+            )
+            db.commit()
+            return redirect('/login')
+        else:
+            flash(error)
+
+    return render_template('auth/register.html')
+
+
+
 
 if __name__ == '__main__':
     app.run()

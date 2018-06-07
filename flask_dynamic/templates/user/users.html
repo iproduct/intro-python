@@ -26,11 +26,9 @@
                             <span class="glyphicon glyphicon-remove" style="padding-right: 10px"></span>Delete
                         </button>
                     </form>
-                    <form action="{{ url_for('edit_user', id=user['id']) }}" method="GET">
-                        <button class="btn btn-sm btn-default" type="submit">
-                            <span class="glyphicon glyphicon-user" style="padding-right: 10px"></span>Update
-                        </button>
-                    </form>
+                    <a href="{{ url_for('edit_user', id=user['id']) }}" class="btn btn-sm btn-default" type="submit">
+                        <span class="glyphicon glyphicon-user" style="padding-right: 10px"></span>Update
+                    </a>
                 </td>
             </tr>
             {% endfor %}
