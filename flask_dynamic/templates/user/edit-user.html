@@ -5,7 +5,7 @@
 
 {% block content %}
 <section class="user col-sm-6">
-    <form action="/users/add" method="POST" autocomplete="off">
+    <form action="{{ url_for('edit_user', id=user['id']) }}" method="POST" autocomplete="off">
         <div class="row">
             <div class="form-group">
                 <label for="id">ID</label>
@@ -31,7 +31,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                <span class="glyphicons glyphicons-notes-2"></span> Add User
+                <span class="glyphicons glyphicons-notes-2"></span>Update User
             </button>
         </div>
     </form>

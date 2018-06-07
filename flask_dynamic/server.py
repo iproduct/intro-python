@@ -59,19 +59,45 @@ def add_user():
 
     return render_template('user/add-user.html')
 
-@app.route('/users/<int:id>/edit', methods=('POST',))
+@app.route('/users/<int:id>/edit', methods=('GET', 'POST'))
 def edit_user(id):
     db = get_db()
     user = db.execute(
         'SELECT * FROM user WHERE id = ?', (id,)
     ).fetchone()
+
+    error = None
+    if user is None:
+        error = 'User with ID={0} does not exist.'.format(id)
     print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
               ', role: ', user['role'])
-    # if db.execute(
-    #     'SELECT id FROM user WHERE id = ?', (id,)
-    # ).fetchone() is not None:
-    # db.execute('DELETE FROM user WHERE id = ?', (id,))
-    # db.commit()
+
+    if request.method == 'POST' and user:
+        username = request.form['username']
+        password = request.form['password']
+        role = request.form['role']
+        db = get_db()
+        if not username:
+            error = 'Username is required.'
+        elif not password:
+            error = 'Password is required.'
+        elif not role:
+            error = 'Role is required.'
+        elif db.execute(
+                'SELECT id FROM user WHERE username = ?', (username,)
+        ).fetchone() is not None:
+            error = 'User {0} is already registered.'.format(username)
+
+        if error is None:
+            db.execute(
+                'UPDATE user SET username = ?, password = ?, role= ? WHERE id = ?',
+                (username, password, role, id)
+            )
+            db.commit()
+            return redirect('/users')
+
+    if error is not None:
+        flash(error)
 
     return render_template('user/edit-user.html', user=user )
 
