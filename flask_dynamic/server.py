@@ -21,11 +21,13 @@ def get_all_users():
     users = g.db.execute('SELECT * FROM user').fetchall()
     return users
 
+def print_user(user):
+    print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
+              ', role: ', user['role'])
 
 def print_users(user_list):
     for user in user_list:
-        print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
-              ', role: ', user['role'])
+        print_user(user)
 
 @app.route('/users/add', methods=('GET', 'POST'))
 def add_user():
@@ -65,12 +67,13 @@ def edit_user(id):
     user = db.execute(
         'SELECT * FROM user WHERE id = ?', (id,)
     ).fetchone()
+    print_user(user)
 
     error = None
     if user is None:
         error = 'User with ID={0} does not exist.'.format(id)
-    print('ID: ', user['id'], ', username: ', user['username'], ', password: ', user['password'],
-              ', role: ', user['role'])
+    else:
+        print_user(user)
 
     if request.method == 'POST' and user:
         username = request.form['username']
@@ -83,7 +86,7 @@ def edit_user(id):
             error = 'Password is required.'
         elif not role:
             error = 'Role is required.'
-        elif db.execute(
+        elif user['username'] != username and db.execute(
                 'SELECT id FROM user WHERE username = ?', (username,)
         ).fetchone() is not None:
             error = 'User {0} is already registered.'.format(username)
