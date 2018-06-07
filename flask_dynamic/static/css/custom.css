@@ -6,3 +6,8 @@ td form {
     display: inline-block;
     width: 90px;
 }
+
+.logged-user {
+    font-size: 150%;
+    color: green;
+}

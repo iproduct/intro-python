@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c29e5591-6ed0-4d71-8fc2-7a6ae41b0320" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/auth/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/auth/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/blog.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/users.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
+            <state relative-caret-position="126">
+              <caret line="163" column="44" lean-forward="true" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
               <folding>
                 <element signature="e#0#87#0" expanded="true" />
               </folding>
@@ -30,29 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/home.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/templates/auth/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="375">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/user/edit-user.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/auth/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add-user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/user/add-user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="100">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -60,8 +51,8 @@
       <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="-274">
+              <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -78,20 +69,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/schema.sql">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+              <caret line="32" column="93" lean-forward="true" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="120" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="47" column="16" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="47" selection-end-column="16" />
+            <state relative-caret-position="175">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -161,13 +161,14 @@
         <option value="$PROJECT_DIR$/blog/__init__.py" />
         <option value="$PROJECT_DIR$/schema.sql" />
         <option value="$PROJECT_DIR$/templates/user/add-user.html" />
-        <option value="$PROJECT_DIR$/static/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/user/edit-user.html" />
         <option value="$PROJECT_DIR$/templates/user/users.html" />
         <option value="$PROJECT_DIR$/blog/auth.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/auth/register.html" />
+        <option value="$PROJECT_DIR$/templates/auth/login.html" />
+        <option value="$PROJECT_DIR$/static/css/custom.css" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -196,13 +197,13 @@
             <path>
               <item name="flask_dynamic" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask_dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask_dynamic" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask_dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask_dynamic" type="b2602c69:ProjectViewProjectNode" />
@@ -366,12 +367,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13054499" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3294423" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3294423" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25032425" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34889755" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994812" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -421,7 +421,8 @@
     <MESSAGE value="edit user form added" />
     <MESSAGE value="edit user request handled" />
     <MESSAGE value="bug fixed disabling username existing check if username not modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed disabling username existing check if username not modified" />
+    <MESSAGE value="register user added" />
+    <option name="LAST_COMMIT_MESSAGE" value="register user added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -435,20 +436,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/user/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -664,13 +651,6 @@
         <state relative-caret-position="-52" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/my_blog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -694,13 +674,6 @@
     <entry file="file://$PROJECT_DIR$/db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/__init__.py">
@@ -760,27 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="14" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="47" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -791,10 +747,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog/templates/auth/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/auth/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274">
+          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" column="93" lean-forward="true" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
+        <state relative-caret-position="126">
+          <caret line="163" column="44" lean-forward="true" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
           <folding>
             <element signature="e#0#87#0" expanded="true" />
           </folding>

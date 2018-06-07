@@ -130,14 +130,37 @@ def home():
     g.active_url = '/'
     return render_template('home/home.html')
 
-@app.route('/login')
+@app.route('/login', methods=('GET', 'POST'))
 def login():
-    g.active_url = '/'
-    return render_template('home/home.html')
+    """Log in a registered user by adding the user id to the session."""
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        db = get_db()
+        error = None
+        user = db.execute(
+            'SELECT * FROM user WHERE username = ?', (username,)
+        ).fetchone()
+
+        if user is None:
+            error = 'Incorrect username.'
+        elif user['password'] != password:
+            error = 'Incorrect password.'
+
+        if error is None:
+            # store the user id in a new session and return to the index
+            session.clear()
+            session['user'] = {'id': user['id'], 'username': user['username'], 'role': user['role']}
+            return redirect(url_for('home'))
+
+        flash(error)
+
+    return render_template('auth/login.html')
 
 @app.route('/logout')
 def logout():
-    g.active_url = '/'
+    g.active_url = '/logout'
+    session.clear()
     return render_template('home/home.html')
 
 @app.route('/register', methods=('GET', 'POST'))

@@ -30,7 +30,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
         {% if session.get('user') %}
-            <li><span>{{ session.get('user')['username'] }}</span></li>
+            <li><a class="logged-user" href="#">{{ session.get('user')['username'] + ' : ' + session.get('user')['role'] }}</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
             <li><a href="{{ url_for('register') }}">Register</a></li>
