@@ -1,6 +1,7 @@
 from flask import Flask
-import json
+
 app = Flask(__name__)
+
 
 def get_db():
     from pymongo import MongoClient
@@ -8,27 +9,32 @@ def get_db():
     db = client.myFirstMB
     return db
 
+
 def add_country(db):
     db.countries.drop()
-    db.countries.insert({"name" : "Bulgaria"})
-    db.countries.insert({"name" : "Germany"})
-    db.countries.insert({"name" : "USA"})
-    db.countries.insert({"name" : "Canada"})
+    db.countries.insert_one({"name": "Bulgaria"})
+    db.countries.insert_one({"name": "Germany"})
+    db.countries.insert_one({"name": "USA"})
+    db.countries.insert_one({"name": "Canada"})
+
 
 def get_country(db):
     return db.countries.find_one()
 
+
 def get_countries(db):
     return db.countries.find()
 
+
 @app.route("/")
 def hello():
-    db = get_db() 
+    db = get_db()
     add_country(db)
     result = ''
     for country in get_countries(db):
-        result +=  "<h3>" + str(country) + "</h3>"
+        result += "<h3>" + str(country) + "</h3>"
     return result
+
 
 if __name__ == "__main__":
     app.run()

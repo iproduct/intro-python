@@ -1,10 +1,11 @@
-import numpy as np
 import cv2
+
+print(cv2.__version__)
 
 cap = cv2.VideoCapture(0)
 
 while True:
-    # Capture frame-by-frame
+    # Capture frame-by-framehttps://github.com/iproduct/course-angular/wiki/Important-Dates
     ret, frame = cap.read()
 
     # Our operations on the frame come here
