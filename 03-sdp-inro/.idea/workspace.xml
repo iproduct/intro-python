@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aad7413-5c21-4500-8273-c168de620ef8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dictionaries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_wiki.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_statistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-sdp-intro/fibonacchi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01-sdp-intro/fibonacchi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_statistics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600670236236</updated>
-      <workItem from="1600670250664" duration="8017000" />
+      <workItem from="1600670250664" duration="8897000" />
     </task>
     <task id="LOCAL-00001" summary="recursion examples added">
       <created>1600675233956</created>
@@ -244,22 +243,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="581" y="170" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1600676412415" />
-    <state width="1651" height="251" key="GridCell.Tab.0.bottom" timestamp="1600678928964">
+    <state width="1651" height="251" key="GridCell.Tab.0.bottom" timestamp="1600681910359">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1600678928964" />
-    <state width="1651" height="251" key="GridCell.Tab.0.center" timestamp="1600678928964">
+    <state width="1651" height="251" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
+    <state width="1651" height="251" key="GridCell.Tab.0.center" timestamp="1600681910359">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1600678928964" />
-    <state width="1651" height="251" key="GridCell.Tab.0.left" timestamp="1600678928964">
+    <state width="1651" height="251" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
+    <state width="1651" height="251" key="GridCell.Tab.0.left" timestamp="1600681910359">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1600678928964" />
-    <state width="1651" height="251" key="GridCell.Tab.0.right" timestamp="1600678928964">
+    <state width="1651" height="251" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
+    <state width="1651" height="251" key="GridCell.Tab.0.right" timestamp="1600681910359">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1600678928964" />
+    <state width="1651" height="251" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
     <state x="346" y="127" key="Vcs.Push.Dialog.v2" timestamp="1600675236214">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -268,7 +267,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/03_sdp_inro$main.coverage" NAME="main Coverage Results" MODIFIED="1600670269017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_sdp_inro$palindrom.coverage" NAME="palindrom Coverage Results" MODIFIED="1600675176881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/03_sdp_inro$text_statistics.coverage" NAME="text_statistics Coverage Results" MODIFIED="1600678876139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/03_sdp_inro$text_statistics.coverage" NAME="text_statistics Coverage Results" MODIFIED="1600681910353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_sdp_inro$tree.coverage" NAME="tree Coverage Results" MODIFIED="1600673009516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_sdp_inro$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1600670610924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_sdp_inro$dictionaries.coverage" NAME="dictionaries Coverage Results" MODIFIED="1600676174470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

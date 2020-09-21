@@ -33,17 +33,17 @@ def fib_rec(n):
 
 if __name__ == '__main__':
     start_iter = time.time();  # in milliseconds
-    for i in range(100):
+    for i in range(10000):
         fib_iter(i)
-        print(i, ' -> ', fib_iter(i))
+        # print(i, ' -> ', fib_iter(i))
     end_iter = time.time();
 
-    # start_rec = time.time();  # in milliseconds
-    # for i in range(10000):
-    #     fib_rec(i)
-    #     # print(i, ' -> ', fib_rec(i))
-    # end_rec = time.time();
-    #
-    # print(f'Iterative: {(end_iter - start_iter)  * 1000} ms')
-    # print(f'Recursive + caching: {(end_rec - start_rec)  * 1000} ms')
+    start_rec = time.time();  # in milliseconds
+    for i in range(10000):
+        fib_rec(i)
+        # print(i, ' -> ', fib_rec(i))
+    end_rec = time.time();
+
+    print(f'Iterative: {(end_iter - start_iter)  * 1000} ms')
+    print(f'Recursive + caching: {(end_rec - start_rec)  * 1000} ms')
 

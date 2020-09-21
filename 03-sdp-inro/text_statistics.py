@@ -19,7 +19,7 @@ def extract_keywords(text):
         for word in words:
             word = word.lower()
             if len(word) > 2 and not word in stop_words:
-                if word_counts.get(word):
+                if word in word_counts:
                     word_counts[word] = word_counts[word] + 1
                 else:
                     word_counts[word] = 1
