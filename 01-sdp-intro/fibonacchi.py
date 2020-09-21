@@ -2,12 +2,12 @@ import time
 
 
 def fib_iter(n):
-    i = 0
-    fn = 1
-    fnp1 = 1
-    while i <= n - 2:
-        fn, fnp1, i = fnp1, fn + fnp1, i + 1
-    return fnp1
+    i = 2
+    fnm2 = 1
+    fnm1 = 1
+    while i <= n:
+        fnm2, fnm1, i = fnm1, fnm2 + fnm1, i + 1
+    return fnm1
 
 
 fib_cache = {}
@@ -33,17 +33,17 @@ def fib_rec(n):
 
 if __name__ == '__main__':
     start_iter = time.time();  # in milliseconds
-    for i in range(10000):
+    for i in range(100):
         fib_iter(i)
-        # print(i, ' -> ', fib_iter(i))
+        print(i, ' -> ', fib_iter(i))
     end_iter = time.time();
 
-    start_rec = time.time();  # in milliseconds
-    for i in range(10000):
-        fib_rec(i)
-        # print(i, ' -> ', fib_rec(i))
-    end_rec = time.time();
-
-    print(f'Iterative: {(end_iter - start_iter)  * 1000} ms')
-    print(f'Recursive + caching: {(end_rec - start_rec)  * 1000} ms')
+    # start_rec = time.time();  # in milliseconds
+    # for i in range(10000):
+    #     fib_rec(i)
+    #     # print(i, ' -> ', fib_rec(i))
+    # end_rec = time.time();
+    #
+    # print(f'Iterative: {(end_iter - start_iter)  * 1000} ms')
+    # print(f'Recursive + caching: {(end_rec - start_rec)  * 1000} ms')
 
