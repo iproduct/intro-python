@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aad7413-5c21-4500-8273-c168de620ef8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../01-sdp-intro/fibonacchi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01-sdp-intro/fibonacchi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_statistics.py" afterDir="false" />
-    </list>
+    <list default="true" id="1aad7413-5c21-4500-8273-c168de620ef8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +207,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600670236236</updated>
-      <workItem from="1600670250664" duration="8897000" />
+      <workItem from="1600670250664" duration="9646000" />
     </task>
     <task id="LOCAL-00001" summary="recursion examples added">
       <created>1600675233956</created>
@@ -243,22 +239,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="581" y="170" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1600676412415" />
-    <state width="1651" height="251" key="GridCell.Tab.0.bottom" timestamp="1600681910359">
+    <state width="1651" height="251" key="GridCell.Tab.0.bottom" timestamp="1600754324680">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
-    <state width="1651" height="251" key="GridCell.Tab.0.center" timestamp="1600681910359">
+    <state width="1651" height="251" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1600754324680" />
+    <state width="1651" height="251" key="GridCell.Tab.0.center" timestamp="1600754324679">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
-    <state width="1651" height="251" key="GridCell.Tab.0.left" timestamp="1600681910359">
+    <state width="1651" height="251" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1600754324679" />
+    <state width="1651" height="251" key="GridCell.Tab.0.left" timestamp="1600754324679">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
-    <state width="1651" height="251" key="GridCell.Tab.0.right" timestamp="1600681910359">
+    <state width="1651" height="251" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1600754324679" />
+    <state width="1651" height="251" key="GridCell.Tab.0.right" timestamp="1600754324680">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="251" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1600681910359" />
+    <state width="1651" height="251" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1600754324680" />
     <state x="346" y="127" key="Vcs.Push.Dialog.v2" timestamp="1600675236214">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
