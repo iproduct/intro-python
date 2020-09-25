@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3324da39-ef66-4cce-9be4-d86e88c05dd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/05-sdp-oop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/property.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/property_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/inheritance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/student.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
