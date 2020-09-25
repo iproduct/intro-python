@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3324da39-ef66-4cce-9be4-d86e88c05dd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/04-sdp-oop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/points.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/student.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/05-sdp-oop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/property.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-sdp-oop/property_decorator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/student.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600754324923</updated>
-      <workItem from="1600754342555" duration="11103000" />
+      <workItem from="1600754342555" duration="15276000" />
     </task>
     <servers />
   </component>
@@ -143,22 +145,22 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="581" y="170" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1600766211834" />
-    <state width="1651" height="227" key="GridCell.Tab.0.bottom" timestamp="1600766737101">
+    <state width="1651" height="227" key="GridCell.Tab.0.bottom" timestamp="1601012999298">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="227" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1600766737101" />
-    <state width="1651" height="227" key="GridCell.Tab.0.center" timestamp="1600766737100">
+    <state width="1651" height="227" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1601012999298" />
+    <state width="1651" height="227" key="GridCell.Tab.0.center" timestamp="1601012999298">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="227" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1600766737100" />
-    <state width="1651" height="227" key="GridCell.Tab.0.left" timestamp="1600766737100">
+    <state width="1651" height="227" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1601012999298" />
+    <state width="1651" height="227" key="GridCell.Tab.0.left" timestamp="1601012999298">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="227" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1600766737100" />
-    <state width="1651" height="227" key="GridCell.Tab.0.right" timestamp="1600766737101">
+    <state width="1651" height="227" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1601012999298" />
+    <state width="1651" height="227" key="GridCell.Tab.0.right" timestamp="1601012999298">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1651" height="227" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1600766737101" />
+    <state width="1651" height="227" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1601012999298" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -172,7 +174,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/04_sdp_oop$student.coverage" NAME="student Coverage Results" MODIFIED="1600766189914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/04_sdp_oop$points.coverage" NAME="points Coverage Results" MODIFIED="1600766737094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/04_sdp_oop$student.coverage" NAME="student Coverage Results" MODIFIED="1600768746238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/04_sdp_oop$points.coverage" NAME="points Coverage Results" MODIFIED="1601012999290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -48,11 +48,9 @@ class Student:
     def get_fullname(self):
         return ' '.join(self.names)
 
-def test():
-    pass
 
 if __name__ == '__main__':
-    s1 = Student('6005112394', 'Ivan', 'Petrov', 65, 'Angelov')
+    s1 = Student(ssn='6005112394', first_name='Ivan', middle_name='Petrov', last_name='Angelov', age=65, )
     s2 = Student('9005112394','Dimtar', 'Georgiev', 35)
     s3 = Student('7005112394', 'John', 'Smith', 55)
     s4 = Student('8005114567', 'Vyara', 'Georgieva', 34)
