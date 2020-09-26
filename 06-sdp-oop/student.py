@@ -1,9 +1,10 @@
+import datetime
+
 class Person(object):
-    def __init__(self, ssn, first_name, last_name, age, address= None, phone=None):
+    def __init__(self, ssn, first_name, last_name, address= None, phone=None):
         self.__ssn = ssn
         self.__first_name = first_name
         self.__last_name = last_name
-        self.__age = age
         self.__address = address
         self.__phone = phone
 
@@ -33,11 +34,18 @@ class Person(object):
 
     @property
     def age(self):
-        return self.__age
-
-    @age.setter
-    def age(self, value):
-        self.__age = value
+        year2digits = int(self.ssn[:2])
+        if year2digits < 30:
+            year_born = 2000 + year2digits
+        else:
+            year_born = 1900 + year2digits
+        month_born = int(self.ssn[2:4])
+        day_born = int(self.ssn[4:6])
+        now = datetime.datetime.now()
+        years = now.year - year_born
+        if(month_born < now.month or (month_born == now.month and day_born <= now.day)):
+            years += 1
+        return years
 
     @property
     def address(self):
@@ -66,9 +74,9 @@ class Person(object):
 
 
 class Student(Person):
-    def __init__(self, ssn, first_name, last_name, age, address= None, phone=None, courses=[]):
+    def __init__(self, ssn, first_name, last_name, address= None, phone=None, courses=[]):
         # Person.__init__(self, ssn, first_name, last_name, age, address= None, phone=None)
-        super().__init__(ssn, first_name, last_name, age, address= None, phone=None)
+        super().__init__(ssn, first_name, last_name, address= None, phone=None)
         self.__courses = courses
 
     @property
@@ -87,14 +95,15 @@ class Student(Person):
 
 
 if __name__ == '__main__':
-    p1 = Person('9009212345', 'Ivan', 'Petrov', 20)
+    p1 = Person('9009212345', 'Ivan', 'Petrov')
     print(p1.__str__())
     print(p1.__dir__())
-    p2 = Person('7009122345', 'Dimitar', 'Georgiev', 40, 'Sofia 1000', '+359889675432')
+    p2 = Person('7009122345', 'Dimitar', 'Georgiev', 'Sofia 1000', '+359889675432')
     print(p2)
-    p3 = Person('7009122345', 'Dimitar', 'Georgiev', 42, 'Plovdiv', '+359889675432')
+    p3 = Person('7009122345', 'Dimitar', 'Georgiev', 'Plovdiv', '+359889675432')
     print(p3)
     print(f'p1 == p2: {p1 == p2}')
     print(f'p2 == p3: {p2 == p3}')
-    s3 = Student('7009122345', 'Dimitar', 'Georgiev', 42, 'Plovdiv', '+359889675432', ['Algebra', 'SDP', 'Calculus'])
+    s3 = Student('7009272345', 'Dimitar', 'Georgiev', 'Plovdiv', '+359889675432', ['Algebra', 'SDP', 'Calculus'])
     print(s3.__str__())
+    print(f'Age: {s3.age}')
