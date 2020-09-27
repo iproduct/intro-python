@@ -69,5 +69,8 @@ if __name__== '__main__':
     print (f'First: {queue.peek()}')
 
     while len(queue) > 0:
-    # for i in range(7):
-        print(queue.dequeue())
+    # for i in range(8):
+        try:
+            print(queue.dequeue())
+        except QueueException as qe:
+            print(f'Error: {qe}')
