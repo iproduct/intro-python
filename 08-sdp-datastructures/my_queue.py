@@ -31,15 +31,11 @@ class BoundedQueue:
         self.__stack[self.__last] = value
         self.__last = (self.__last + 1) % self.__size
         self.__len += 1
-        # print(f'!!!self.__len__, __len={self.__len__()}, {self.__size}')
-        # print(f'!!!self.__last={self.__last}')
 
     def dequeue(self):
         if self.__len__() == 0:
             raise QueueException('Queue is empty. Can not dequeue an element.')
         result = self.__stack[self.__first]
-        # print(f'!!!self.__len__, __len={self.__len__()}, {self.__size}')
-        # print(f'!!!result, self.__first={result}, {self.__first}')
         self.__first = (self.__first + 1) % self.__size
         self.__len -= 1
         return result
