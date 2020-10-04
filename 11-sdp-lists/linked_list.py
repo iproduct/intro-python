@@ -14,7 +14,7 @@ class LinkedList(List):
         self.__last = None
         self.__len = 0
 
-    def insert(self, index, e):
+    def insert(self, index, e): # O(n)
         node = Node(e)
         if index == 0:
             self.__head, node.next = node, self.__head
@@ -25,7 +25,7 @@ class LinkedList(List):
             self.__last = node
         self.__len += 1
 
-    def append(self, e):
+    def append(self, e): # O(1)
         node = Node(e)
         if self.__last is not None:
             self.__last.next = node
@@ -34,8 +34,8 @@ class LinkedList(List):
         self.__last = node
         self.__len += 1
 
-    def remove(self, index):
-        if index > self.count() - 1:
+    def remove(self, index): # O(n)
+        if index < 0 or index > self.count() - 1:
             raise IndexError(f'Index \'{index}\' out of bounds [0, {self.count() - 1}]')
         if index == 0:
             removed = self.__head
@@ -49,7 +49,10 @@ class LinkedList(List):
         self.__len -= 1
         return removed
 
-    def get(self, index):
+    def pop(self): # O(n)
+        return self.remove(self.count() - 1)
+
+    def get(self, index): # O(n)
         current = self.__head
         i = index
         while i > 0 and not current is None:
@@ -66,10 +69,19 @@ class LinkedList(List):
         while i < end and current is not None:
             slice.append(current.data)
             current = current.next
+            i += 1
         return slice
 
     def reverse(self):
-        return super().reverse()
+        current = self.__head
+        previous = None
+        while current is not None:
+            next = current.next
+            current.next = previous
+            previous = current
+            current = next
+        self.__last = self.__head
+        self.__head = previous
 
     def count(self):
         return self.__len
@@ -101,5 +113,11 @@ if __name__ == '__main__':
     # l.remove(4)
     l.append('seven')
     # print(f'Removed: {l.remove(0)}')
-    print(l)
+    # print(l)
     # print(l.slice(2, 5))
+    # print()
+    # for i in range(4):
+    #     print(l.pop())
+    print(l)
+    l.reverse()
+    print(f'Reversed: {l}')

@@ -8,6 +8,9 @@ class List:
     def remove(self, index):
         raise NotImplemented('Method not implemented.')
 
+    def pop(self):
+        raise NotImplemented('Method not implemented.')
+
     def get(self, index):
         raise NotImplemented('Method not implemented.')
 
