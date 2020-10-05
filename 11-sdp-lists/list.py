@@ -25,3 +25,6 @@ class List:
 
     def empty(self):
         raise NotImplemented('Method not implemented.')
+
+    def insert_sorted(self, e):
+        raise NotImplemented('Method not implemented.')

@@ -100,18 +100,33 @@ class LinkedList(List):
     def __len__(self):
         return self.count()
 
+    def insert_sorted(self, e):
+        node = Node(e)
+        if self.__head is None or e < self.__head.data :
+            self.__head, node.next = node, self.__head
+            if self.__last == None:
+                self.__last = node
+        else:
+            current = self.__head.next
+            previous = self.__head
+            while current is not None and current.data < e:
+                current, previous = current.next, current
+            previous.next, node.next = node, previous.next
+            if previous == self.__last:
+                self.__last = node
+        self.__len += 1
 
 if __name__ == '__main__':
     l = LinkedList()
-    l.insert(0, 'one')
-    l.insert(0, 'two')
-    l.insert(0, 'three')
-    l.append('four')
-    l.append('five')
-    l.append('six')
+    l.insert_sorted('one')
+    l.insert_sorted('two')
+    l.insert_sorted('three')
+    l.insert_sorted('four')
+    l.insert_sorted('five')
+    l.insert_sorted('six')
     # l.remove(4)
     # l.remove(4)
-    l.append('seven')
+    l.insert_sorted('seven')
     # print(f'Removed: {l.remove(0)}')
     # print(l)
     # print(l.slice(2, 5))
@@ -119,5 +134,5 @@ if __name__ == '__main__':
     # for i in range(4):
     #     print(l.pop())
     print(l)
-    l.reverse()
-    print(f'Reversed: {l}')
+    # l.reverse()
+    # print(f'Reversed: {l}')
