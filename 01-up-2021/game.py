@@ -34,6 +34,9 @@ if __name__ == '__main__':
     print(digits)
     while not finished:
         answer = input("You number:")
+        if len(answer) != number_digits:
+            print(f"Should be {number_digits} digits")
+            continue
         ans_number = int(answer)
         bulls, cows = get_bulls_cows(ans_number)
         print(f"Bulls {bulls}, Cows: {cows}")
