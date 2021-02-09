@@ -36,6 +36,7 @@ if __name__ == '__main__':
     word_items = list(word_counts.items())
     word_items.sort(key = extract_count, reverse = True)
     for item in word_items[:10]:
-        print("%-15s -> %6d"%(item[0], item[1]))
+        # print("%-15s -> %6d"%(item[0], item[1]))
+        print(f"{item[0]:15} -> {item[1]:6}")
 
     file.close()  # flushes data to disk
