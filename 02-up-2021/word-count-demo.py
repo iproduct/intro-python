@@ -11,12 +11,31 @@ stop_words = {'ourselves', 'hers', 'between', 'yourself', 'but', 'again', 'there
 'where', 'too', 'only', 'myself', 'which', 'those', 'i', 'after', 'few', 'whom', 't', 'being', 'if', 'theirs', 
 'my', 'against', 'a', 'by', 'doing', 'it', 'how', 'further', 'was', 'here', 'than'}
 
+def extract_count(item):
+    return item[1] # the word count
+
 if __name__ == '__main__':
+    word_counts = {}
+
     file = open("wikipedia.txt", "rt")
     for line in file:
         line = line.strip()
         if len(line) == 0:
             continue
         words = re.split("[\s.,!\?\-\+\[\](){}]+", line)
-        print(words)
+        # print(words)
+        for word in words:
+            word_lower_case = word.lower()
+            if word_lower_case in stop_words or len(word_lower_case) < 3:
+                continue
+            if word_lower_case in word_counts:
+                word_counts[word_lower_case] += 1
+            else:
+                word_counts[word_lower_case] = 1
+
+    word_items = list(word_counts.items())
+    word_items.sort(key = extract_count, reverse = True)
+    for item in word_items[:10]:
+        print("%-15s -> %6d"%(item[0], item[1]))
+
     file.close()  # flushes data to disk
