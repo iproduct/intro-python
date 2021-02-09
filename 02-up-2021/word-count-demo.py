@@ -1,4 +1,4 @@
-
+import re
 
 if __name__ == '__main__':
     file = open("wikipedia.txt", "rt")
@@ -6,6 +6,6 @@ if __name__ == '__main__':
         line = line.strip()
         if len(line) == 0:
             continue
-        words = line.split(" ")
+        words = re.split("[\s.,!\?\-\+\[\](){}]+", line)
         print(words)
     file.close()  # flushes data to disk
