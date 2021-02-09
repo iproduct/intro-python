@@ -6,5 +6,6 @@ if __name__ == '__main__':
         line = line.strip()
         if len(line) == 0:
             continue
-        print(line)
+        words = line.split(" ")
+        print(words)
     file.close()  # flushes data to disk
