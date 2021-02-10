@@ -1,0 +1,6 @@
+1:  function removes strings from text line
+2:  using provided string_char as delimiter
+3:  open own source code
+4:  interate over lines in file
+5:  auto flush data to disk
+6:  flushes data to disk
