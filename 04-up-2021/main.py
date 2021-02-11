@@ -77,18 +77,27 @@ def load_from_file(filename):
     result = []
     in_file = open(filename, "rt", encoding="utf-8")
     for line in in_file:
+        record = []
         closing_quotes_index = -1
         open_quotes_index = line.find('"')
 
         while open_quotes_index >= 0:
             new_properties = line[closing_quotes_index+1: open_quotes_index - 1].split(",")
-            result.extend(new_properties)
+            record.extend(new_properties)
             closing_quotes_index = line.find('"', open_quotes_index + 1)
+            record.append(line[open_quotes_index + 1: closing_quotes_index])
             open_quotes_index = line.find('"', closing_quotes_index + 1)
 
         #parse props after last closing quote
-        new_properties = line.split(",", closing_quotes_index + 1)
-        result.extend(new_properties)
+        new_properties = line[closing_quotes_index + 1:].split(",", )
+        record.extend(new_properties)
+        i = 0
+        while i < len(record):
+            if record[i] == '':
+                del record[i]
+            else:
+                i += 1
+        result.append(record)
     return result
 
 def save_to_file(filename, library):
@@ -114,6 +123,9 @@ def write_book(out, book):
 
 if __name__ == '__main__':
     library = load_from_file("library.csv")
+    for book in library:
+        book[2] = book[2].split(",")
+        book[3] = book[3].split(",")
     print(library)
     # book = input_book()
     # library.append(book)
