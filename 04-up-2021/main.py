@@ -77,6 +77,9 @@ def load_from_file(filename):
     result = []
     in_file = open(filename, "rt", encoding="utf-8")
     for line in in_file:
+        line = line.strip()
+        if line == '':
+            continue
         record = []
         closing_quotes_index = -1
         open_quotes_index = line.find('"')
@@ -98,14 +101,16 @@ def load_from_file(filename):
             else:
                 i += 1
         result.append(record)
+
+    in_file.close()
     return result
 
 def save_to_file(filename, library):
     out = open(filename, "wt", encoding="utf-8")
     for book in library:
         write_book(out, book)
-
     out.close()
+
 
 def write_book(out, book):
     for i in range(len(book)):
@@ -120,6 +125,25 @@ def write_book(out, book):
             continue
         if i != len(book) - 1:
             out.write(",")
+    out.write("\n")
+
+
+# Menu functions
+def add_book(library):
+    new_book = input_book()
+    library.append(new_book)
+    save_to_file("library.csv", library)
+
+
+def list_books(library):
+    for book in library:
+        print(book)
+
+
+def exit_from_program(library):
+    # save_to_file("library.csv", library)
+    pass
+
 
 if __name__ == '__main__':
     library = load_from_file("library.csv")
@@ -127,6 +151,19 @@ if __name__ == '__main__':
         book[2] = book[2].split(",")
         book[3] = book[3].split(",")
     print(library)
+
+    main_menu = [("Добави книга", add_book), ("Покажи всички книги", list_books), ("Изход", exit_from_program)]
+    while True:
+        print()
+        for i in range(len(main_menu)):
+            print(f"{i + 1}: {main_menu[i][0]}")
+
+        option = int(input("Изберете опция:"))
+        main_menu[option - 1][1](library)
+        if option == len(main_menu):
+            break
+
+    print("Good bye!")
     # book = input_book()
     # library.append(book)
     # print(f"New book added: {library}")
