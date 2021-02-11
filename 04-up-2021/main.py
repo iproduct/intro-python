@@ -74,7 +74,7 @@ def input_book():
 
 # File IO methods
 def load_from_file(filename):
-    result = []
+    table = []
     in_file = open(filename, "rt", encoding="utf-8")
     for line in in_file:
         line = line.strip()
@@ -92,7 +92,7 @@ def load_from_file(filename):
             open_quotes_index = line.find('"', closing_quotes_index + 1)
 
         #parse props after last closing quote
-        new_properties = line[closing_quotes_index + 1:].split(",", )
+        new_properties = line[closing_quotes_index + 2:].split(",")
         record.extend(new_properties)
         i = 0
         while i < len(record):
@@ -100,10 +100,10 @@ def load_from_file(filename):
                 del record[i]
             else:
                 i += 1
-        result.append(record)
+        table.append(record)
 
     in_file.close()
-    return result
+    return table
 
 def save_to_file(filename, library):
     out = open(filename, "wt", encoding="utf-8")
