@@ -3,26 +3,28 @@ import re
 def extract_count(item):
     return item[1] # the word count
 
-# def remove_comment(line):
-#     ch = "\""
-#     start = line.find(ch)
-#     if start < 0:
-#         start_comment = line.find("#")
-#     else:
-#         start_comment = line.find("#", 0, start)
-#     if start_comment >= 0:
-#         line = line[:start_comment]
-#         return line
-#     while start >= 0:
-#         end = line.find(ch, start)
-#         if end < 0:
-#             break
-#         start = line.find(ch, end + 1)
-#         start_comment = line.find("#", end + 1, start)
-#         if start_comment > end:
-#             line = line[:start_comment+1]
-#             break
-#     return line
+def remove_comment(line):
+    parts = re.split(r"\".*\"|'.*'|\"\"\".+\"\"\"", line)
+    line = "".join(parts)
+    start_comment = line.find("#")
+    if start_comment >= 0:
+        return line[:start_comment]
+    return line
+    # end = 0
+    # match = re.search("['\"]|\"\"\"", line)
+    # while match and end >= 0:
+    #     start = match.start() + end
+    #     str_chars = line[start:match.end() + end]
+    #     start_comment = line.find("#", end, start)
+    #     if start_comment >= 0:
+    #         return line[:start_comment]
+    #     end = line.find(str_chars, start + 1)
+    #     match = re.search("['\"]|\"\"\"", line[end+1:])
+    # if end >= 0:
+    #     start_comment = line.find("#", end)
+    #     if start_comment >= 0:
+    #         return line[:start_comment]
+    # return line
 
 def parse_file(filename):
     word_counts = {}
@@ -35,8 +37,12 @@ def parse_file(filename):
             continue
 
         # 3. remove comments
-        # line = remove_comment(line)
-        line = re.sub("#.*", "", line)
+        line = remove_comment(line)
+        print(line)
+        # line = re.sub("#.*", "", line)
+        # index = line.find("#")
+        # if index >= 0:
+        #     line = line[:index]
         line = line.strip()
         if line == "":
             continue
@@ -47,24 +53,25 @@ def parse_file(filename):
             word_lower_case = word.lower()
             if word_lower_case == "":
                 continue
-            if word_lower_case in word_counts:
-                word_counts[word_lower_case] += 1
-            else:
-                word_counts[word_lower_case] = 1
+            word_counts[word_lower_case] = word_counts.get(word_lower_case, 0) + 1
+            # if word_lower_case in word_counts:
+            #     word_counts[word_lower_case] += 1
+            # else:
+            #     word_counts[word_lower_case] = 1
     file.close()  # flushes data to disk
     return word_counts
 
 if __name__ == '__main__':
     # 1. input two filenames
-    file1 = input("Input the filename 1:")
-    file2 = input("Input the filename 2:")
+    # file1 = input("Input the filename 1:")
+    # file2 = input("Input the filename 2:")
     # 2. Process files
-    counts1 = parse_file("data/" + file1)
-    counts2 = parse_file("data/" + file2)
-    # counts1 = parse_file("data/example01.py")
-    # print(counts1)
-    # counts2 = parse_file("data/example02.py")
-    # print(counts2)
+    # counts1 = parse_file("data/" + file1)
+    # counts2 = parse_file("data/" + file2)
+    counts1 = parse_file("data/example04.py")
+    print(counts1)
+    counts2 = parse_file("data/example01.py")
+    print(counts2)
 
     #5. sort and print words
     items1 = list(counts1.items())
