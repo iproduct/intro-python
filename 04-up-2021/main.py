@@ -72,6 +72,25 @@ def input_book():
     return [title, subtitle, authors, tags, year, language]
 
 
+# File IO methods
+def load_from_file(filename):
+    result = []
+    in_file = open(filename, "rt", encoding="utf-8")
+    for line in in_file:
+        closing_quotes_index = -1
+        open_quotes_index = line.find('"')
+
+        while open_quotes_index >= 0:
+            new_properties = line[closing_quotes_index+1: open_quotes_index - 1].split(",")
+            result.extend(new_properties)
+            closing_quotes_index = line.find('"', open_quotes_index + 1)
+            open_quotes_index = line.find('"', closing_quotes_index + 1)
+
+        #parse props after last closing quote
+        new_properties = line.split(",", closing_quotes_index + 1)
+        result.extend(new_properties)
+    return result
+
 def save_to_file(filename, library):
     out = open(filename, "wt", encoding="utf-8")
     for book in library:
@@ -94,9 +113,10 @@ def write_book(out, book):
             out.write(",")
 
 if __name__ == '__main__':
-    library = []
-    book = input_book()
-    library.append(book)
-    print(f"New book added: {library}")
-    # write to csv file
-    save_to_file("library.csv", library)
+    library = load_from_file("library.csv")
+    print(library)
+    # book = input_book()
+    # library.append(book)
+    # print(f"New book added: {library}")
+    # # write to csv file
+    # save_to_file("library.csv", library)
