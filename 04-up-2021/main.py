@@ -11,6 +11,8 @@ def input_book():
 
     # input subtitle
     subtitle = input("Въведете под-заглавие:")
+    if subtitle == '':
+        subtitle = ' '
 
     # input authors - comma separated
     while True:
@@ -136,9 +138,12 @@ def add_book(library):
 
 
 def list_books(library):
+    print("-" * 122)
+    print(f'| {"Заглавие":20.20} | {"Под-загалвие":20.20} | {"Автори":30.30} | {"Тагове":20.20} | {"Година":6} | {"Език":7} |')
+    print("-" * 122)
     for book in library:
-        print(book)
-
+        print(f'| {book[0]:20.20} | {book[1]:20.20} | {", ".join(book[2]):30.30} | {", ".join(book[3]):20.20} | {book[4]:6} | {book[5]:7} |')
+    print("-" * 122)
 
 def exit_from_program(library):
     # save_to_file("library.csv", library)
