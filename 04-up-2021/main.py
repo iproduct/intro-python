@@ -1,5 +1,6 @@
 import re
 
+
 def input_book():
     # input title
     while True:
@@ -87,13 +88,13 @@ def load_from_file(filename):
         open_quotes_index = line.find('"')
 
         while open_quotes_index >= 0:
-            new_properties = line[closing_quotes_index+1: open_quotes_index - 1].split(",")
+            new_properties = line[closing_quotes_index + 1: open_quotes_index - 1].split(",")
             record.extend(new_properties)
             closing_quotes_index = line.find('"', open_quotes_index + 1)
             record.append(line[open_quotes_index + 1: closing_quotes_index])
             open_quotes_index = line.find('"', closing_quotes_index + 1)
 
-        #parse props after last closing quote
+        # parse props after last closing quote
         new_properties = line[closing_quotes_index + 2:].split(",")
         record.extend(new_properties)
         i = 0
@@ -106,6 +107,7 @@ def load_from_file(filename):
 
     in_file.close()
     return table
+
 
 def save_to_file(filename, library):
     out = open(filename, "wt", encoding="utf-8")
@@ -139,15 +141,27 @@ def add_book(library):
 
 def list_books(library):
     print("-" * 122)
-    print(f'| {"Заглавие":20.20} | {"Под-загалвие":20.20} | {"Автори":30.30} | {"Тагове":20.20} | {"Година":6.6} | {"Език":7.7} |')
+    print(
+        f'| {"Заглавие":20.20} | {"Под-загалвие":20.20} | {"Автори":30.30} | {"Тагове":20.20} | {"Година":6.6} | {"Език":7.7} |')
     print("-" * 122)
     for book in library:
-        print(f'| {book[0]:20.20} | {book[1]:20.20} | {", ".join(book[2]):30.30} | {", ".join(book[3]):20.20} | {book[4]:6.6} | {book[5]:7.7} |')
+        print(
+            f'| {book[0]:20.20} | {book[1]:20.20} | {", ".join(book[2]):30.30} | {", ".join(book[3]):20.20} | {book[4]:6.6} | {book[5]:7.7} |')
     print("-" * 122)
+
 
 def exit_from_program(library):
     # save_to_file("library.csv", library)
     pass
+
+
+def list_new_books(library):
+    """
+    Print the most recent book (the book with most recent year field)
+    :param library: the book library list
+    """
+
+    pass # TODO: Your code here ...
 
 
 if __name__ == '__main__':
@@ -157,7 +171,12 @@ if __name__ == '__main__':
         book[3] = book[3].split(",")
     print(library)
 
-    main_menu = [("Добави книга", add_book), ("Покажи всички книги", list_books), ("Изход", exit_from_program)]
+    main_menu = [
+        ("Добави книга", add_book),
+        ("Покажи всички книги", list_books),
+        ("Най-нови книги", list_new_books),
+        ("Изход", exit_from_program),
+    ]
     while True:
         print()
         for i in range(len(main_menu)):
