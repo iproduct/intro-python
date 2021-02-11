@@ -22,9 +22,10 @@ def input_book():
         else:
             print("Грешка - автори трябва да бъде с дължина поне 3 символа.")
 
-    # input tags - comma separated, each tag should be atleast 2 characters long
+    # input tags - comma separated, each tag should be at least 2 characters long
 
-    return [title, authors]
+    # return result book
+    return [title, authors, tags]
 
 if __name__ == '__main__':
     library = []
