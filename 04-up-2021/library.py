@@ -211,27 +211,38 @@ def list_by_title(library):
 
     pass # TODO: Your code here ...
 
+def dummy_func(library):
+    pass
 
-def list_by_predicate(library, predicate):
-    """
-    List books satisfying given predicate function
-    :param library: list of books
-    :param predicate: function of book argument returning True or False
-    :return: list books filtered by predicate
-    """
-    results = []
-    for book in library:
-        if predicate(book):
-            results.append(book)
-    return results
+# def list_by_predicate(library, predicate):
+#     """
+#     List books satisfying given predicate function
+#     :param library: list of books
+#     :param predicate: function of book argument returning True or False
+#     :return: list books filtered by predicate
+#     """
+#     # results = []
+#     # for book in library:
+#     #     if predicate(book):
+#     #         results.append(book)
+#     # return results
+#     return filter(predicate, library)
+
+
 
 def list_by_period(library):
     start = int(input("Start year:"))
     end = int(input("End year:"))
-    def is_published_in_period(book):
-        return int(book[4]) >= start and int(book[4]) <= end
-    results = list_by_predicate(library, is_published_in_period)
-    print_books(results)
+    # def is_published_in_period(book):
+    #     return int(book[4]) >= start and int(book[4]) <= end
+    print_books(filter(library, create_predicate_by_period(start, end)))
+
+
+def create_predicate_by_period(start, end):
+    # def is_published_in_period(book):
+    #     return int(book[4]) >= start and int(book[4]) <= end
+    return lambda book: int(book[4]) >= start and int(book[4]) <= end
+
 
 if __name__ == '__main__':
     library = load_from_file("library.csv")

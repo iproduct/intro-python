@@ -70,7 +70,7 @@
       <recent name="D:\CoursePython\git\intro-python\06-up-2021" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cv2_haar_cascade_demo">
+  <component name="RunManager" selected="Python.example01">
     <configuration name="cv2_basic_01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="06-up-2021" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,7 +159,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="example04-corners" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="example01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="06-up-2021" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,7 +172,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example04-corners.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.example01" />
         <item itemvalue="Python.cv2_haar_cascade_demo" />
         <item itemvalue="Python.cv2_camera_tresholding" />
         <item itemvalue="Python.cv2_camera_01" />
         <item itemvalue="Python.cv2_basic_01" />
-        <item itemvalue="Python.example04-corners" />
       </list>
     </recent_temporary>
   </component>
