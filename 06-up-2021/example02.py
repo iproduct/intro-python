@@ -15,15 +15,15 @@ if __name__ == '__main__':
     video.set(cv.CAP_PROP_FRAME_WIDTH, WIDTH)
     video.set(cv.CAP_PROP_FRAME_HEIGHT, HEIGHT)
     video.set(cv.CAP_PROP_BRIGHTNESS, 125)
-
-    cv.namedWindow("Video")
+    #
+    # cv.namedWindow("Video")
     kernel = np.ones((3, 3), np.uint8)
 
     while True:
         success, img = video.read()
         if not success:
             sys.exit("Could not find video.")
-        # img = cv.resize(img, (WIDTH, HEIGHT))
+        img = cv.resize(img, (WIDTH, HEIGHT))
         # cv.resizeWindow("Video", WIDTH, HEIGHT)
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         edges = cv.Canny(gray, 80, 200)
