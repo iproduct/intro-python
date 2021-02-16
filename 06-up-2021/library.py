@@ -19,22 +19,8 @@ functions:
     * main - the main function of the script
 """
 
-
 import re
-
-class Book:
-    def __init__(self, title, subtitle, authors, tags, year, language):
-        self.title = title
-        self.subtitle = subtitle
-        self.authors = authors
-        self.tags = tags
-        self.year = year
-        self.language = language
-
-    def format(self):
-        return f'| {self.title:20.20} | {self.subtitle:20.20} | {", ".join(self.authors):30.30} | ' \
-               f'{", ".join(self.tags):30.30} | {self.year:6.6} | {self.language:7.7} |'
-
+from book import Book
 
 def input_book():
     # input title
@@ -53,16 +39,18 @@ def input_book():
     # input authors - comma separated
     while True:
         answer = input("Въведете автори (разделени със запетайки):")
-        if len(answer) >= 3:
+        if len(answer) >= 5:
             authors = answer.split(",")
             i = 0
             while i < len(authors):
                 authors[i] = authors[i].strip()
                 if len(authors[i]) < 5:
-                    authors.pop(i)
+                    print("Грешка - името на всеки автор трябва да бъде с дължина поне 5 символа.")
+                    break
                 else:
                     i += 1
-            break
+            if i == len(authors):
+                break
         else:
             print("Грешка - автори трябва да бъде с дължина поне 3 символа.")
 
@@ -107,12 +95,12 @@ def input_book():
             print("Грешка - въведете валидen избор")
 
     # return result Book
-    return Book(title, subtitle, authors, tags, year, language)
+    return Book(None, title, subtitle, authors, tags, year, language)
 
 
 # File IO methods
 def load_from_file(filename):
-    table = []
+    library = []
     in_file = open(filename, "rt", encoding="utf-8")
     for line in in_file:
         line = line.strip()
@@ -138,10 +126,10 @@ def load_from_file(filename):
                 del record[i]
             else:
                 i += 1
-        table.append(record)
+        library.append(Book(int(record[0]), record[1], record[2], record[3].split(","), record[4].split(","), record[5], record[6], ))
 
     in_file.close()
-    return table
+    return library
 
 
 def save_to_file(filename, library):
@@ -152,37 +140,27 @@ def save_to_file(filename, library):
 
 
 def write_book(out, book):
-    for i in range(len(book)):
-        value = book[i]
-        # print( type(value) )
-        if isinstance(value, str):
-            out.write(value)
-        elif isinstance(value, list):
-            list_str = ",".join(value)
-            out.write(f'"{list_str}"')
-        else:
-            continue
-        if i != len(book) - 1:
-            out.write(",")
-    out.write("\n")
+        out.write('%s,%s,%s,"%s","%s",%s,%s\n'%(
+            book.id, book.title, book.subtitle, ",".join(book.authors), ",".join(book.tags), book.year, book.language))
 
 
 def print_books(books):
-    print("-" * 132)
+    print("-" * 154)
     print(
-        f'| {"Заглавие":20.20} | {"Под-загалвие":20.20} | {"Автори":30.30} | {"Тагове":30.30} | {"Година":6.6} | {"Език":7.7} |')
-    print("-" * 132)
+        f'| {"ID":4} | {"Заглавие":35.35} | {"Под-загалвие":20.20} | {"Автори":30.30} | {"Тагове":30.30} | {"Година":6.6} | {"Език":7.7} |')
+    print("-" * 154)
     for book in books:
         print(book.format())
-    print("-" * 132)
+        # print(Book.format(book))
+    print("-" * 154)
 
 
 # Menu functions
 def add_book(library):
     new_book = input_book()
+    new_book.id = max(map(lambda book: book.id, library)) + 1
     library.append(new_book)
-    print(library)
-    # save_to_file("library.csv", library)
+    save_to_file("library.csv", library)
 
 
 def list_books(library):
@@ -259,13 +237,10 @@ def create_predicate_by_period(start, end):
 
 
 if __name__ == '__main__':
-    # library = load_from_file("library.csv")
-    # for book in library:
-    #     book[2] = book[2].split(",")
-    #     book[3] = book[3].split(",")
-    # print(library)
+    library = load_from_file("library.csv")
+    # print([str(book) for book in library])
+    print(library)
 
-    library = []
     main_menu = [
         ("Добави книга", add_book),
         ("Покажи всички книги", list_books),
@@ -291,12 +266,3 @@ if __name__ == '__main__':
         except IndexError:
             print(f"Invalid choice.Choose between 1 and {len(main_menu)}")
 
-
-# print(f"__file__: {__file__}")
-# print(f"__package__: {__package__}")
-# print(f"__name__: {__name__}")
-    # book = input_book()
-    # library.append(book)
-    # print(f"New book added: {library}")
-    # # write to csv file
-    # save_to_file("library.csv", library)
