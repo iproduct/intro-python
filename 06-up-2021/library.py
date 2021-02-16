@@ -190,7 +190,7 @@ def list_by_tags(library):
         tags[i] = tags[i].strip()
     results = []
     for book in library:
-        if set(tags).intersection(set(book[3])) != set():
+        if set(tags).intersection(set(book.tags)) != set():
             results.append(book)
     print_books(results)
 
@@ -227,13 +227,13 @@ def list_by_period(library):
     end = int(input("End year:"))
     # def is_published_in_period(book):
     #     return int(book[4]) >= start and int(book[4]) <= end
-    print_books(filter(library, create_predicate_by_period(start, end)))
+    print_books(filter(create_predicate_by_period(start, end), library))
 
 
 def create_predicate_by_period(start, end):
     # def is_published_in_period(book):
     #     return int(book[4]) >= start and int(book[4]) <= end
-    return lambda book: int(book[4]) >= start and int(book[4]) <= end
+    return lambda book: start <= int(book.year) <= end
 
 
 if __name__ == '__main__':

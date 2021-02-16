@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60230d04-faf0-4666-a9a6-42de4192280d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/library.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library.py" beforeDir="false" afterPath="$PROJECT_DIR$/library.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613395662009</updated>
-      <workItem from="1613395679504" duration="13114000" />
+      <workItem from="1613395679504" duration="18221000" />
     </task>
     <task id="LOCAL-00001" summary="openCV demos added">
       <created>1613398522363</created>
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613404427883</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="class Book __repr__(), __str__(), next ID using map and lambda added">
+      <created>1613463609662</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613463609662</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,29 +237,19 @@
     <MESSAGE value="openCV demos added" />
     <MESSAGE value="examples added" />
     <MESSAGE value="class Book added" />
-    <option name="LAST_COMMIT_MESSAGE" value="class Book added" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/library.py</url>
-          <line>258</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="class Book __repr__(), __str__(), next ID using map and lambda added" />
+    <option name="LAST_COMMIT_MESSAGE" value="class Book __repr__(), __str__(), next ID using map and lambda added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/06_up_2021$library.coverage" NAME="library Coverage Results" MODIFIED="1613463440999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/06_up_2021$library.coverage" NAME="library Coverage Results" MODIFIED="1613471576865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$example02.coverage" NAME="example02 Coverage Results" MODIFIED="1613399404727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$cv2_camera_01.coverage" NAME="cv2_camera_01 Coverage Results" MODIFIED="1613398119332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$hanoy_towers.coverage" NAME="hanoy_towers Coverage Results" MODIFIED="1613397457865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$example04_corners.coverage" NAME="example04-corners Coverage Results" MODIFIED="1613397836998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$example01.coverage" NAME="example01 Coverage Results" MODIFIED="1613399172480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/06_up_2021$main.coverage" NAME="main Coverage Results" MODIFIED="1613397496741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$cv2_basic_01.coverage" NAME="cv2_basic_01 Coverage Results" MODIFIED="1613398101094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$cv2_camera_tresholding.coverage" NAME="cv2_camera_tresholding Coverage Results" MODIFIED="1613398170405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/06_up_2021$main.coverage" NAME="main Coverage Results" MODIFIED="1613471096185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$cv2_haar_cascade_demo.coverage" NAME="cv2_haar_cascade_demo Coverage Results" MODIFIED="1613399637971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/06_up_2021$example03.coverage" NAME="example03 Coverage Results" MODIFIED="1613399445535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
