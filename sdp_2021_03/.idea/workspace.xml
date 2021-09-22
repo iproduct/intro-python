@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dao/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/user_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/user_repository.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632303495359</updated>
-      <workItem from="1632303499664" duration="9978000" />
+      <workItem from="1632303499664" duration="13460000" />
     </task>
     <task id="LOCAL-00001" summary="separate code in model and controller packages">
       <created>1632311526958</created>
@@ -203,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632312130046</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactoring: UserRepository DAO class and package extracted">
+      <created>1632318309893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632318309893</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,10 +218,11 @@
     <MESSAGE value="separate code in model and controller packages" />
     <MESSAGE value="new projects added. sdp_2021_03: separate code in model and controller packages" />
     <MESSAGE value="login user repeatedly until successful" />
-    <option name="LAST_COMMIT_MESSAGE" value="login user repeatedly until successful" />
+    <MESSAGE value="refactoring: UserRepository DAO class and package extracted" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring: UserRepository DAO class and package extracted" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632318212088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632323051445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users.coverage" NAME="users Coverage Results" MODIFIED="1632305471084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users__1_.coverage" NAME="users (1) Coverage Results" MODIFIED="1632309497959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$user__1_.coverage" NAME="user (1) Coverage Results" MODIFIED="1632316562610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />

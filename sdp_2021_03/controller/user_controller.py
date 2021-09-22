@@ -9,7 +9,7 @@ class UserController:
         self.logged_user = None
 
     def login(self, email: str, password: str) -> bool:
-        user = self.user_repo.get_user_by_email(email)
+        user = self.user_repo.find_user_by_email(email)
         if user != None and user.check_password(password):
             self.logged_user = user
             return True
@@ -27,6 +27,14 @@ if __name__ == '__main__':
         User('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', 'admin'),
     ]
     user_repo = UserRepository(users)
+    print(f'Repository has {len(user_repo)} users.')
+    user_repo.add_user(User('Hrisitna Dimitrova', 'hrisitna@gmaIL.com', 'hristina'))
+    user_repo.add_user(User('Ivan Pavlov', 'ivan@gmail.com', 'ivan123'))
+
+    for user in user_repo:
+        print('+', user)
+    print(f'Repository has {len(user_repo)} users.')
+
     user_controller = UserController(user_repo) # DI implementation
     login_successful = False
     while not login_successful:
