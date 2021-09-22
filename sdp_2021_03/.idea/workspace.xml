@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/intro-python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-up-2021/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-up-2021/floodfill.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sdp_2021_02/.idea/sdp_2021_02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sdp_2021_03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple/.idea/simple.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/.idea/spd_2021_01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/dict_operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/factorial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/factorial_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/factorial_results.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/function_arguments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/generator_fib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/global_nonlocal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/lambda.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/list_iteration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/list_recursion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spd_2021_01/recursion_tree_sum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-up-2021/.idea/06-up-2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-up-2021/.idea/06-up-2021.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-up-2021/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-up-2021/background_subtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/../06-up-2021/background_subtraction.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yUQ4Jr9DyDbNVyik4ndQPAw399" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CoursePython\git\intro-python\sdp_2021_03\model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.users (1)">
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="sdp_2021_03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CoursePython\git\intro-python\sdp_2021_03\model\user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sdp_2021_03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CoursePython\git\intro-python\sdp_2021_03\model\user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="users" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="sdp_2021_03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CoursePython\git\intro-python\sdp_2021_03\users.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.users (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="" />
+      <created>1632303495359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632303495359</updated>
+      <workItem from="1632303499664" duration="5354000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sdp_2021_03$users.coverage" NAME="users Coverage Results" MODIFIED="1632305471084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$users__1_.coverage" NAME="users (1) Coverage Results" MODIFIED="1632309497959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
