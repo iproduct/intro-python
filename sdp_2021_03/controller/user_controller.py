@@ -33,9 +33,14 @@ if __name__ == '__main__':
         User('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', 'admin'),
     ]
     user_controller = UserController(users)
-    email = input('Erter email:')
-    password = input('Erter password:')
-    if user_controller.login(email, password):
-        print(f'You have successfully logged as: {user_controller.get_logged_user()}')
-    else:
-        print('Invalid email or password')
+    login_successful = False
+    while not login_successful:
+        email = input('Erter email:')
+        password = input('Erter password:')
+        if user_controller.login(email, password):
+            print(f'You have successfully logged as: {user_controller.get_logged_user()}')
+            login_successful = True
+        else:
+            print('Invalid email or password. Try again')
+
+
