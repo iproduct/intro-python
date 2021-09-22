@@ -37,3 +37,5 @@ if __name__ == '__main__':
 
     print(users[0].check_password('ivanp123')) # True
     print(users[0].check_password('ivanpetrov')) # False
+    print(users[0].__dict__)
+    print(User.__dict__)

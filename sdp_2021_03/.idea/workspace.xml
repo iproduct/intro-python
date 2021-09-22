@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dao/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.user_controller">
+    <configuration name="user (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sdp_2021_03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/user.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="user" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sdp_2021_03" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,6 +160,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.user_controller" />
+        <item itemvalue="Python.user (1)" />
         <item itemvalue="Python.users (1)" />
       </list>
     </recent_temporary>
@@ -146,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632303495359</updated>
-      <workItem from="1632303499664" duration="5978000" />
+      <workItem from="1632303499664" duration="9978000" />
     </task>
     <task id="LOCAL-00001" summary="separate code in model and controller packages">
       <created>1632311526958</created>
@@ -169,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632311665522</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="login user repeatedly until successful">
+      <created>1632312130046</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632312130046</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,11 +212,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="separate code in model and controller packages" />
     <MESSAGE value="new projects added. sdp_2021_03: separate code in model and controller packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="new projects added. sdp_2021_03: separate code in model and controller packages" />
+    <MESSAGE value="login user repeatedly until successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="login user repeatedly until successful" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632312042947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632318212088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users.coverage" NAME="users Coverage Results" MODIFIED="1632305471084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users__1_.coverage" NAME="users (1) Coverage Results" MODIFIED="1632309497959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$user__1_.coverage" NAME="user (1) Coverage Results" MODIFIED="1632316562610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>
 </project>
