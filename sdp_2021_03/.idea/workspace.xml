@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/decorators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decorators/class_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decorators/sampledec.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/decorators" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -40,11 +45,36 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CoursePython\git\intro-python\sdp_2021_03\decorators" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CoursePython\git\intro-python\sdp_2021_03\model" />
     </key>
   </component>
   <component name="RunManager" selected="Python.user_controller">
+    <configuration name="sampledec" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sdp_2021_03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/decorators" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decorators/sampledec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="user (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="sdp_2021_03" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,6 +189,7 @@
       <list>
         <item itemvalue="Python.user_controller" />
         <item itemvalue="Python.user (1)" />
+        <item itemvalue="Python.sampledec" />
         <item itemvalue="Python.users (1)" />
       </list>
     </recent_temporary>
@@ -171,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632303495359</updated>
-      <workItem from="1632303499664" duration="13460000" />
+      <workItem from="1632303499664" duration="22996000" />
     </task>
     <task id="LOCAL-00001" summary="separate code in model and controller packages">
       <created>1632311526958</created>
@@ -208,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632318309893</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="__len__, __iter__, and __next__ magic methods implemented">
+      <created>1632323558284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632323558284</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,12 +257,14 @@
     <MESSAGE value="new projects added. sdp_2021_03: separate code in model and controller packages" />
     <MESSAGE value="login user repeatedly until successful" />
     <MESSAGE value="refactoring: UserRepository DAO class and package extracted" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: UserRepository DAO class and package extracted" />
+    <MESSAGE value="__len__, __iter__, and __next__ magic methods implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="__len__, __iter__, and __next__ magic methods implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632323051445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1632390661216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$sampledec.coverage" NAME="sampledec Coverage Results" MODIFIED="1632387352638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/decorators" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users.coverage" NAME="users Coverage Results" MODIFIED="1632305471084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sdp_2021_03$users__1_.coverage" NAME="users (1) Coverage Results" MODIFIED="1632309497959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sdp_2021_03$user__1_.coverage" NAME="user (1) Coverage Results" MODIFIED="1632316562610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/sdp_2021_03$user__1_.coverage" NAME="user (1) Coverage Results" MODIFIED="1632389905400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>
 </project>

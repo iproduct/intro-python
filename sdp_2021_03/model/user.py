@@ -1,3 +1,6 @@
+from decorators import trace_get_attributes
+
+# @trace_get_attributes
 class User:
     next_id = 0
 
@@ -26,16 +29,31 @@ class User:
     def check_password(self, password: str) -> bool:
         return password == self.password
 
+class Author(User):
+    def __init__(self, name, email, password, rank = 'beginner'):
+        super().__init__(name, email, password, 'user')
+        self.rank = rank
+    def __str__(self):
+        return f'Author({super().__str__()}, Rank: {self.rank})'
+
+class Admin(User):
+    def __init__(self, name, email, password, phone):
+        super().__init__(name, email, password, 'admin')
+        self.phone = phone
+    def __str__(self):
+        return f'Admin({super().__str__()}, Phone: {self.phone})'
+
 if __name__ == '__main__':
-    users = [
-        User('Ivan Petrov', 'ivanp@abv.bg', 'ivanp123'),
-        User('Admin Admin', 'admin@mycompany.com', 'admin123', 'admin'),
-        User('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', 'admin'),
+    users: list[User] = [
+        Author('Ivan Petrov', 'ivanp@abv.bg', 'ivanp123'),
+        Admin('Admin Admin', 'admin@mycompany.com', 'admin123', '35928976564'),
+        Admin('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', '3592754632'),
         ]
+
     for user in users:
-        print(user.id, user.name)
+        print(user)
 
     print(users[0].check_password('ivanp123')) # True
     print(users[0].check_password('ivanpetrov')) # False
-    print(users[0].__dict__)
-    print(User.__dict__)
+    # print(users[0].__dict__)
+    # print(User.__dict__)

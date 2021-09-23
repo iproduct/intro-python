@@ -1,7 +1,8 @@
 from typing import Optional
 
 from dao import UserRepository
-from model import User
+from model import User, Author, Admin
+
 
 class UserController:
     def __init__(self, user_repo: UserRepository): # Dependency Injection (DI) - constructor based
@@ -22,14 +23,14 @@ class UserController:
 
 if __name__ == '__main__':
     users = [
-        User('Ivan Petrov', 'ivanp@abv.bg', 'ivanp123'),
-        User('Admin Admin', 'admin@mycompany.com', 'admin123', 'admin'),
-        User('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', 'admin'),
+        Author('Ivan Petrov', 'ivanp@abv.bg', 'ivanp123'),
+        Admin('Admin Admin', 'admin@mycompany.com', 'admin123', '35928976564'),
+        Admin('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', '3592754632'),
     ]
     user_repo = UserRepository(users)
     print(f'Repository has {len(user_repo)} users.')
-    user_repo.add_user(User('Hrisitna Dimitrova', 'hrisitna@gmaIL.com', 'hristina'))
-    user_repo.add_user(User('Ivan Pavlov', 'ivan@gmail.com', 'ivan123'))
+    user_repo.add_user(Author('Hrisitna Dimitrova', 'hrisitna@gmaIL.com', 'hristina', 'expert'))
+    user_repo.add_user(Author('Ivan Pavlov', 'ivan@gmail.com', 'ivan123', 'professional'))
 
     for user in user_repo:
         print('+', user)
