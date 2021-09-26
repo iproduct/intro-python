@@ -2,6 +2,7 @@ from typing import Optional
 
 from dao import UserRepository
 from model import User, Author, Admin
+from model.login import Login
 
 
 class UserController:
@@ -9,9 +10,9 @@ class UserController:
         self.user_repo = user_repo
         self.logged_user = None
 
-    def login(self, email: str, password: str) -> bool:
-        user = self.user_repo.find_user_by_email(email)
-        if user != None and user.check_password(password):
+    def login(self, login: Login) -> bool:
+        user = self.user_repo.find_user_by_email(login.email)
+        if user != None and user.check_password(login.password):
             self.logged_user = user
             return True
         else:
@@ -38,10 +39,14 @@ if __name__ == '__main__':
 
     user_controller = UserController(user_repo) # DI implementation
     login_successful = False
+    login = Login()
     while not login_successful:
-        email = input('Erter email:')
-        password = input('Erter password:')
-        if user_controller.login(email, password):
+        email = input(f"Enter email [<Enter> for '{login.email}']:").strip()
+        if email == '':
+            email = login.email
+        password = input('Enter password:')
+        login = Login(email, password)
+        if user_controller.login(login):
             print(f'You have successfully logged as: {user_controller.get_logged_user()}')
             login_successful = True
         else:

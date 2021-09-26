@@ -1,6 +1,7 @@
-from decorators import trace_get_attributes
+# from decorators import trace_get_attributes
+import decorators as dec
 
-# @trace_get_attributes
+# @dec.trace_get_attributes
 class User:
     next_id = 0
 
@@ -42,6 +43,8 @@ class Admin(User):
         self.phone = phone
     def __str__(self):
         return f'Admin({super().__str__()}, Phone: {self.phone})'
+
+default_admin = Admin('Admin Admin', 'admin@mycompany.com', 'admin123', '35928976564')
 
 if __name__ == '__main__':
     users: list[User] = [
