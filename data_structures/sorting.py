@@ -68,8 +68,20 @@ def quick_sort_rec(a: array, frm: int, to: int, level = 0):
     quick_sort_rec(a, frm, right, level + 1)
     quick_sort_rec(a, right+1, to, level + 1)
 
+def counting_sort(a:array, min_val: int = 0, max_val: int = 100):
+    count = array('I', [0 for i in range(min_val, max_val)])
+    for elem in a:
+        count[elem - min_val] += 1
+    print(count)
+    index = 0
+    for i in range(len(count)):
+        for j in range(count[i]):
+            a[index] = i + min_val
+            index += 1
+
 if __name__ == '__main__':
     # a = array('I', [64, 125, 17, 35, 72, 5, 13, 8, 63, 17, 54, 63, 95, 7, 14, 63]) #, 9, 75, 46, 3, 1, 46, 167 ,9, 25]) #[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) #[5, 8, 63, 17, 54, 63, 95, 7, 14, 63]) #, 9, 75, 46, 3, 1, 46, 167 ,9, 25])
-    a = array('I', [randint(1, 100) for i in range(40)])
-    quick_sort(a)
+    a = array('I', [randint(1, 10) for i in range(50)])
+    print(a)
+    counting_sort(a, 1, 11)
     print(a)
