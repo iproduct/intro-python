@@ -1,4 +1,5 @@
 from array import array
+from random import randint
 
 def bubble_sort(a: array):
     n = len(a)
@@ -42,9 +43,11 @@ def binary_search(elem, a: array, frm: int, to: int) -> int:
 def quick_sort(a: array):
     quick_sort_rec(a, 0, len(a))
 
-def quick_sort_rec(a: array, frm: int, to: int):
+def quick_sort_rec(a: array, frm: int, to: int, level = 0):
+    print(f'{" "*2*level}from: {frm} to {to}: {a[frm: to]}')
     if to - frm <= 1: #recursion bottom
         return
+    # partitioning elements less than or equal pivot to left, and bigger than pivot to the right
     pivot = a[frm]
     left = frm + 1
     right = to - 1
@@ -54,17 +57,19 @@ def quick_sort_rec(a: array, frm: int, to: int):
         while left <= right and a[right] > pivot:
             right -= 1
         if left < right:
-            print(f'swapping({left}:{a[left]}, {right}:{a[right]})')
+            # print(f'swapping({left}:{a[left]}, {right}:{a[right]})')
             a[left], a[right] = a[right], a[left]
         else:
             break
     a[frm], a[right] = a[right], a[frm]
-    print(pivot, frm, to, left, right, a)
+    # print(pivot, frm, to, left, right, a)
+
     #recursion step
-    quick_sort_rec(a, frm, right)
-    quick_sort_rec(a, right+1, to)
+    quick_sort_rec(a, frm, right, level + 1)
+    quick_sort_rec(a, right+1, to, level + 1)
 
 if __name__ == '__main__':
-    a = array('I', [5, 8, 63, 17, 54, 63, 95, 7, 14, 63, 9, 75, 46, 3, 1, 46, 167 ,9, 25]) #[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) #[5, 8, 63, 17, 54, 63, 95, 7, 14, 63]) #, 9, 75, 46, 3, 1, 46, 167 ,9, 25])
+    # a = array('I', [64, 125, 17, 35, 72, 5, 13, 8, 63, 17, 54, 63, 95, 7, 14, 63]) #, 9, 75, 46, 3, 1, 46, 167 ,9, 25]) #[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) #[5, 8, 63, 17, 54, 63, 95, 7, 14, 63]) #, 9, 75, 46, 3, 1, 46, 167 ,9, 25])
+    a = array('I', [randint(1, 100) for i in range(40)])
     quick_sort(a)
     print(a)
