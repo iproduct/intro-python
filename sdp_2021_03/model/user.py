@@ -1,7 +1,10 @@
+from functools import total_ordering
+
 # from decorators import trace_get_attributes
 import decorators as dec
 
 # @dec.trace_get_attributes
+@total_ordering
 class User:
     next_id = 0
 
@@ -27,6 +30,12 @@ class User:
     def __repr__(self):
         return f'User[ ID: {self.id}, Name: {self.name}, Email: {self.email}, Role: {self.role}]'
 
+    def __eq__(self, other):
+        return self.id == other.id
+
+    def __lt__(self, other):
+        return (self.name, self.id) < (other.name, other.id)
+
     def check_password(self, password: str) -> bool:
         return password == self.password
 
@@ -51,9 +60,11 @@ if __name__ == '__main__':
         Author('Ivan Petrov', 'ivanp@abv.bg', 'ivanp123'),
         Admin('Admin Admin', 'admin@mycompany.com', 'admin123', '35928976564'),
         Admin('Nadezda Hristova', 'nadia@mycompany.com', 'nadia123', '3592754632'),
-        ]
+        Admin('Admin Admin', 'admin2@mycompany.com', 'admin123', '3592897655'),
 
-    for user in users:
+    ]
+
+    for user in sorted(users):
         print(user)
 
     print(users[0].check_password('ivanp123')) # True
