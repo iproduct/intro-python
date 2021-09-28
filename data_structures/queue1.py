@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-   queue = list()
+   queue = []
    queue.insert(0, "One")
    queue.insert(0, "Two")
    queue.insert(0, "Three")
