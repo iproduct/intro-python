@@ -1,9 +1,12 @@
+from typing import Callable
+
+
 class AbstractTree:
     def size(self):
         raise NotImplemented('Method not implemented.')
-    def isEmpty(self):
-        raise NotImplemented('Method not implemented.')
     def values_dfs_preorder(self):
+        raise NotImplemented('Method not implemented.')
+    def values_dfs_postorder(self):
         raise NotImplemented('Method not implemented.')
     def nodes_dfs_preorder(self):
         raise NotImplemented('Method not implemented.')
@@ -17,13 +20,18 @@ class AbstractTree:
         raise NotImplemented('Method not implemented.')
     def children(self, p):
         raise NotImplemented('Method not implemented.')
-    def isInternal(self, p):
+    def is_internal(self, node):
         raise NotImplemented('Method not implemented.')
-    def isExternal(self, p):
+    def is_root(self, node):
         raise NotImplemented('Method not implemented.')
-    def isRoot(self, p):
+    def swap_elements(self, p, q):
         raise NotImplemented('Method not implemented.')
-    def swapElements(self, p, q):
+    def replace_element(self, p, o):
         raise NotImplemented('Method not implemented.')
-    def replaceElement(self, p, o):
+    def find(self, value):
         raise NotImplemented('Method not implemented.')
+    def find_first(self, value):
+        raise NotImplemented('Method not implemented.')
+    def find_by_predicate(self, predicate, start_from = None):
+        raise NotImplemented('Method not implemented.')
+

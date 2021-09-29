@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/tree.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/sdp_2021_04_data_structures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/sdp_2021_04_data_structures.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/abstract_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/abstract_tree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +228,9 @@
       <workItem from="1632303499664" duration="37822000" />
       <workItem from="1632722657390" duration="787000" />
       <workItem from="1632818218869" duration="1227000" />
+      <workItem from="1632905329174" duration="311000" />
+      <workItem from="1632905768140" duration="101000" />
+      <workItem from="1632906654001" duration="617000" />
     </task>
     <task id="LOCAL-00001" summary="separate code in model and controller packages">
       <created>1632311526958</created>
