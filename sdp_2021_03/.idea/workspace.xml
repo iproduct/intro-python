@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb06815-d555-42ad-b98d-c849858873ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/dijkstra_old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/sdp_2021_04_data_structures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/.idea/sdp_2021_04_data_structures.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdp_2021_04_data_structures/abstract_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sdp_2021_04_data_structures/abstract_tree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
