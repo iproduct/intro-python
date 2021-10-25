@@ -24,5 +24,5 @@ if __name__ == '__main__':
     # name = input("Enter your name:")
     # print_hi(name)
     # print(gcd(222, 234))
-    print("\n", calculate_pi(1000000000))
+    print("\n", calculate_pi(100000000))
 
