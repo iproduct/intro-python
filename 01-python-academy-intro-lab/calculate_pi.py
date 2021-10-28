@@ -1,11 +1,12 @@
 from mpmath import mp
 
-mp.dps = 500
-mp.pretty = True
+mp.dps = 1000
+# mp.pretty = True
 
 def calculate_pi(n):
     percent = n / 100
     acc = mp.mpf(0)
+    print(type(acc))
     for i in range(n):
         if i % percent == 0:
             print(chr(0x25A9), sep="", end="")
