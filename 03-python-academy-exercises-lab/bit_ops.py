@@ -1,3 +1,5 @@
+import enum
+
 if __name__ == '__main__':
     x = 127
     y = x & 3
@@ -29,3 +31,5 @@ if __name__ == '__main__':
     print(newtuple)
     print(newset)
     print(newdict)
+
+    [print(chr(utf), end="") for utf in range(0x1F500, 0x1F700)]

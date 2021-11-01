@@ -1,5 +1,7 @@
-import cProfile, pstats, io, time
-import re
+import cProfile
+import io
+import pstats
+
 import numpy as np
 
 
