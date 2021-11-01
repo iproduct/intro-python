@@ -179,7 +179,7 @@ if __name__ == '__main__':
     #     print(d)
 
     n = 10000
-    iters = 1000
+    iters = 100
     mylist = [x for x in range(n)]
     test_remove_by_index(mylist, iters)
     mylist = [x for x in range(n)]
