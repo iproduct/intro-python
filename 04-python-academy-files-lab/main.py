@@ -1,5 +1,9 @@
+def inverse_case(s: str) -> str:
+    s[0].islower()
+    return "".join([(c.upper() if c.islower() else c.lower()) for c in s])
+
 def compare_str_ignore_case(s: str) -> str:
-    return s.lower() # return lowercase of the string
+    return (s.lower(), inverse_case(s)) # return lowercase of the string
     # return str.lower(s)
 
 
@@ -29,6 +33,7 @@ def print_books(books):
 
 if __name__ == '__main__':
     l = ['Orange', 'orange', 'banana', 'kiwi', 'mango', 'pineapple'] # sample fruits list
+    # print([inverse_case(s) for s in l])
     l.sort(key=compare_str_ignore_case) # sorting fruits ignore case
     print(l)
 
