@@ -1,31 +1,38 @@
 def compare_str_ignore_case(s: str) -> str:
-    return s.lower()
+    return s.lower() # return lowercase of the string
     # return str.lower(s)
 
 
 def book_by_title(book):
-    return book[1]
+    return book[1] # return book title
 
 
 def book_by_author(book):
-    return book[3]
+    return book[3] # return book author
 
 
 def book_by_price(book):
-    return book[6]
+    return book[6] # return book price
 
 
 def print_books(books):
+    """
+    prints all books formatted as table
+    :param books: books to print
+    :return: string containing books as table
+    """
+    # for each book print the book
     for b in books:
         print(
             f'| {b[0]:>3d} | {b[1]:20.20s} | {b[2]:20.20s} | {b[3]:^15.15s} | {b[4]:^15.15s} | {b[5]:4d} | {str(b[6]) if len(b) > 6 else "-   ":>7.7s} |')
 
 
 if __name__ == '__main__':
-    l = ['Orange', 'orange', 'banana', 'kiwi', 'mango', 'pineapple']
-    l.sort(key=compare_str_ignore_case)
+    l = ['Orange', 'orange', 'banana', 'kiwi', 'mango', 'pineapple'] # sample fruits list
+    l.sort(key=compare_str_ignore_case) # sorting fruits ignore case
     print(l)
 
+    # sample books list containing each book as a tuple
     books = [
         (1, "Learning Python", "", "Марк Лътз, Дейвид Асър", "O'Reily", 1999, 22.7),
         (2, "Think Python", "An Introduction to Software Design", "Алън Б. Дауни", "O'Reily", 2002, 9.4),
@@ -54,6 +61,7 @@ if __name__ == '__main__':
     print(newt, ", ", t is newt)
     print()
     books_without_price = []
+    # calculate total books price
     suma = 0
     for book in books:
         (*la, price) = book
