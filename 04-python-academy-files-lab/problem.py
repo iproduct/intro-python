@@ -12,7 +12,7 @@ def count(file: io.IOBase) -> list[str]:
         pos = line.find("#")
         if pos >= 0:
             line = line[:pos]
-        words = re.split("[\s\.\,\:\;\?\!\"\'\{\}\[\]\(\)\+\=-\\\*]+", line)
+        words = re.split("[\s\.\,\:\;\?\!\"\'\{\}\[\]\(\)\+\=-\\\*%><]+|\d.", line)
 
         for word in words:
             if word:
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     words2_sorted = sorted(words2.items(), key=itemgetter(1), reverse=True)
     print(words1_sorted)
     print(words2_sorted)
-    all_words = set(words1)
+    all_words = words1.copy()
     all_words.update(words2)
     # print(all_words)
     results = [(w, words1.get(w, 0), words2.get(w, 0)) for w in all_words]
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     metric = 0
     for r in results:
         metric += abs(r[1] - r[2])
-    print(metric / len(results))
+    print(metric, len(results), metric / len(results), sep=", ")
