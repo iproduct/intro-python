@@ -12,10 +12,10 @@ class BookRepositoryJson(BookRepository):
         self.db_file_name = filename
 
     def load(self):
-        books_list = load_from_file(self.db_file_name)
-        for b in books_list:
-            book = Book(b["id"], b["title"], b["subtitle"], b["authors"],
-                        b["isbn"], b["publisher"], b["year"], b["price"], b["genre"], b["tags"], b["description"])
+        books_list = load_from_file(self.db_file_name, Book)
+        for book in books_list:
+            # book = Book(b["id"], b["title"], b["subtitle"], b["authors"],
+            #             b["isbn"], b["publisher"], b["year"], b["price"], b["genre"], b["tags"], b["description"])
             self.insert(book)
 
     def persist(self):

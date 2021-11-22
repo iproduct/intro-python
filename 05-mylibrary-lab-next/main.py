@@ -32,15 +32,15 @@ if __name__ == "__main__":
         41.82,
         description="Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
     )
-    # books = BookRepositoryJson()
-    # books.load()
-    # books.insert(b1)
-    # books.insert(b2)
-    #
-    # for book in books.find_all():
-    #     print(book)
+    books = BookRepositoryJson()
+    books.load()
+    books.insert(b1)
+    books.insert(b2)
 
-    # books.persist()
+    for book in books.find_all():
+        print(book)
 
-    books = load_from_file("books.json")
-    print(books)
+    books.persist()
+
+    # books = load_from_file("books.json", Book)
+    # print(books)
