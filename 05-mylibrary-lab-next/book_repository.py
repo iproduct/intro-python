@@ -1,15 +1,16 @@
 
+class IntIdSequence:
+    def __init__(self):
+        self.next_id = 0
+
+    def __next__(self):
+        self.next_id += 1
+        return self.next_id
 
 class BookRepository:
-    next_id = 0
-
-    @classmethod
-    def get_next_id(cls):
-        cls.next_id += 1
-        return cls.next_id
-
-    def __init__(self, books = {}, ):
+    def __init__(self, books = {}, id_sequence = None):
         self.books = books
+        self.id_sequence = id_sequence
 
     def find_all(self):
         return list(self.books.values())
@@ -30,7 +31,8 @@ class BookRepository:
         return self.find_by_predicate(lambda book : part in ",".join(book.authors))
 
     def insert(self, book):
-        # book.id = self.__class__.get_next_id()
+        if self.id_sequence is not None:
+            book.id = self.id_sequence.__next__()
         self.books[book.id] = book
         return book
 
