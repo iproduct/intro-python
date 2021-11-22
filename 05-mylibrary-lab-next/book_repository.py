@@ -12,7 +12,7 @@ class BookRepository:
         self.books = books
 
     def find_all(self):
-        return self.books.values()
+        return list(self.books.values())
 
     def find_by_id(self, id):
         return self.books[id]

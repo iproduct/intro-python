@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Head First Python",
+        "subtitle": "A Brain-Friendly Guide",
+        "authors": [
+            "Paul Barry"
+        ],
+        "isbn": "1491919531",
+        "publisher": "O'Reilly UK Ltd.",
+        "year": 2016,
+        "price": 41.82,
+        "genre": "Software Engineering",
+        "tags": [
+            "python",
+            "introduction",
+            "examples",
+            "programming"
+        ],
+        "description": "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
+    },
+    {
+        "id": 2,
+        "title": "Learning Python",
+        "subtitle": "Powerful Object-Oriented Programming",
+        "authors": [
+            "Mark Lutz"
+        ],
+        "isbn": "1449355730",
+        "publisher": "O'Reilly UK Ltd.",
+        "year": 2013,
+        "price": 49.53,
+        "genre": "Software Engineering",
+        "tags": [
+            "python",
+            "programming",
+            "oop"
+        ],
+        "description": "Get a comprehensive, in-depth introduction to the core Python language with this hands-on book. Based on author Mark Lutz's popular training course, this updated fifth edition will help you quickly write efficient, high-quality code with Python. It's an ideal way to begin, whether you're new to programming or a professional developer versed in other languages."
+    }
+]
+
