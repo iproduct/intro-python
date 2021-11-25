@@ -4,7 +4,7 @@ from book_repository_json import BookRepositoryJson, load_from_file
 
 if __name__ == "__main__":
     b1 = Book(
-        3,
+        5,
         "Head First Python",
         "A Brain-Friendly Guide",
         ["Paul Barry"],
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
     )
     b2 = Book(
-        4,
+        6,
         "Head First Python",
         "A Brain-Friendly Guide",
         ["Paul Barry"],
@@ -38,7 +38,9 @@ if __name__ == "__main__":
     books.insert(b1)
     books.insert(b2)
 
-    for book in books.find_all():
+    print(f"Boook repository has {len(books)} books in total:")
+
+    for book in books:
         print(book)
 
     books.persist()

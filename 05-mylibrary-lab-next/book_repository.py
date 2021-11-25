@@ -7,10 +7,28 @@ class IntIdSequence:
         self.next_id += 1
         return self.next_id
 
+class RepositoryIterator:
+    def __init__(self, repo):
+        self.items = repo.find_all()
+        self.next_id = -1
+
+    def __next__(self):
+        self.next_id += 1
+        if self.next_id < len(self.items):
+            return self.items[self.next_id]
+        else:
+            raise StopIteration
+
 class BookRepository:
     def __init__(self, books = {}, id_sequence = None):
         self.books = books
         self.id_sequence = id_sequence
+
+    def __len__(self):
+        return len(self.books)
+
+    def __iter__(self):
+        return RepositoryIterator(self)
 
     def find_all(self):
         return list(self.books.values())
@@ -46,5 +64,6 @@ class BookRepository:
         return removed
 
     def count(self):
-        return len(self.books)
+        return self.__len__( self.books)
+        # return BookRepository.__len__(self, self.books)
 

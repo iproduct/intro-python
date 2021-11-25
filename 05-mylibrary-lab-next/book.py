@@ -27,6 +27,9 @@ class Book(object):
                f"{', '.join(self.authors):^25.25s} | {self.isbn:^10.10s} | {self.publisher:^10.10s} " \
                f"| {self.year:<4d} | {self.price:>7.2f} | {self.genre:^15.15s} | {', '.join(self.tags):^30.30s} |"
 
+    def  __gt__(self, other):
+        return self.title > other.title
+
     def get_vat_price(self):
         if not hasattr(self, "vat_price"):
             self.vat_price = 1.2 * self.price

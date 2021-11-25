@@ -72,5 +72,40 @@
         "genre": "programming",
         "tags": [],
         "description": "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
+    },
+    {
+        "id": 5,
+        "title": "Head First Python",
+        "subtitle": "A Brain-Friendly Guide",
+        "authors": [
+            "Paul Barry"
+        ],
+        "isbn": "1491919531",
+        "publisher": "O'Reilly UK Ltd.",
+        "year": 2016,
+        "price": 41.82,
+        "genre": "Software Engineering",
+        "tags": [
+            "python",
+            "introduction",
+            "examples",
+            "programming"
+        ],
+        "description": "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
+    },
+    {
+        "id": 6,
+        "title": "Head First Python",
+        "subtitle": "A Brain-Friendly Guide",
+        "authors": [
+            "Paul Barry"
+        ],
+        "isbn": "1491919531",
+        "publisher": "O'Reilly UK Ltd.",
+        "year": 2016,
+        "price": 41.82,
+        "genre": "programming",
+        "tags": [],
+        "description": "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
     }
 ]

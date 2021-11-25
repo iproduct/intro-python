@@ -5,7 +5,6 @@ from book_repository import BookRepository
 
 DEFAULT_BOOKS_DB_FILE = "books.json"
 
-
 class BookRepositoryJson(BookRepository):
     def __init__(self, filename=DEFAULT_BOOKS_DB_FILE):
         super().__init__()
