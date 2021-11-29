@@ -23,7 +23,7 @@ class FeetToMeters:
         self.meters = StringVar()  # output model
 
         self.feet_entry = ttk.Entry(self.mainframe, width=7, textvariable=self.feet)  # bind model to view
-        self.feet_entry.grid(column=2, row=1, sticky=(W, E))
+        self.feet_entry.grid(column=1, row=1, columnspan=2, rowspan=1, sticky=(W, E))
 
         meter_label = ttk.Label(self.mainframe, textvariable=self.meters)  # bind model to view
         meter_label.grid(column=2, row=2, sticky=(W, E))
@@ -52,4 +52,5 @@ class FeetToMeters:
 if __name__ == '__main__':
     root = Tk()
     FeetToMeters(root)
+    print_hierarchy(root)
     root.mainloop()
