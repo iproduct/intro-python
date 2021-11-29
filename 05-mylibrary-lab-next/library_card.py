@@ -1,5 +1,5 @@
 from datetime import date, datetime, timedelta
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from book import Book
 
@@ -17,13 +17,13 @@ class LibraryCard:
     """Class for keeping track of books borrowed by library Users"""
     id: int
     user_id: int
-    borrowed_books : list[Borrowing]
+    borrowed_books : list[Borrowing] = field(default_factory=list)
 
     def get_overdue_borrowings(self):
         return filter(Borrowing.is_overdue, self.borrowed_books)
 
 if __name__ == "__main__":
-    lc1 = LibraryCard(1, 2, [])
+    lc1 = LibraryCard(1, 2)
     print(lc1)
     today = date.today()
     b1 = Borrowing(5, date(2021, 10,20), date(2021, 10,20) + timedelta(days=30))
