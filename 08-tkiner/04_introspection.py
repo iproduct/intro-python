@@ -1,12 +1,22 @@
 from tkinter import *
 from tkinter import ttk
 
+
 def calculate(*args):
     try:
         value = float(feet.get())
-        meters.set(int(0.3048 * value * 10000.0 + 0.5)/10000.0)
+        meters.set(int(0.3048 * value * 10000.0 + 0.5) / 10000.0)
     except ValueError:
         pass
+
+
+def print_hierarchy(w, depth=0):
+    print(
+        '  ' * depth + w.winfo_class() + ' w=' + str(w.winfo_width()) + ' h=' + str(w.winfo_height()) + ' x=' + str(
+            w.winfo_x()) + ' y=' + str(w.winfo_y()))
+    for i in w.winfo_children():
+        print_hierarchy(i, depth + 1)
+
 
 if __name__ == '__main__':
     root = Tk()
@@ -18,7 +28,7 @@ if __name__ == '__main__':
     root.rowconfigure(0, weight=1)
 
     feet = StringVar()
-    feet_entry = ttk.Entry(mainframe, width=12, textvariable=feet)
+    feet_entry = ttk.Entry(mainframe, width=7, textvariable=feet)
     feet_entry.grid(column=2, row=1, sticky=(W, E))
 
     meters = StringVar()
@@ -31,10 +41,11 @@ if __name__ == '__main__':
     ttk.Label(mainframe, text="meters").grid(column=3, row=2, sticky=W)
 
     for child in mainframe.winfo_children():
-        child.grid_configure(padx=20, pady=20)
-        print(child, "->" , child.configure())
+        child.grid_configure(padx=5, pady=5)
 
     feet_entry.focus()
     root.bind("<Return>", calculate)
+
+    print_hierarchy(root, 5)
 
     root.mainloop()
