@@ -1,7 +1,7 @@
-from datetime import date, datetime, timedelta
+import inspect
 from dataclasses import dataclass, field
+from datetime import date, timedelta
 
-from book import Book
 
 @dataclass
 class Borrowing:
@@ -23,6 +23,17 @@ class LibraryCard:
         return filter(Borrowing.is_overdue, self.borrowed_books)
 
 if __name__ == "__main__":
+    # generated method init code inspection
+    lines = inspect.getsource(LibraryCard.get_overdue_borrowings)
+    print(lines)
+    # following code gives an error: OSError: could not get source code
+    # lines = inspect.getsource(LibraryCard.__init__)
+    # print(lines)
+    # print(dill.source.getsource(LibraryCard.__init__))
+
+
+
+    # create a library card
     lc1 = LibraryCard(1, 2)
     print(lc1)
     today = date.today()

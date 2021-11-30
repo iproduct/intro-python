@@ -3,6 +3,7 @@ from tkinter import ttk
 
 if __name__ == '__main__':
     root = Tk()
+    root.geometry("800x400")
     root.title("Feet to Meters Calculator")
     mainframe = ttk.Frame(root, padding="50 30 50 30")
     mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
