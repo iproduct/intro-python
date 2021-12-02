@@ -35,3 +35,5 @@ if __name__ == '__main__':
     l = ttk.Label(f, text="No Answer"); l.grid(column=0, row=0, padx=5, pady=5)
     p = ttk.Progressbar(f, orient="horizontal", mode="determinate", maximum=20);
     p.grid(column=0, row=1, padx=5, pady=5)
+
+    root.mainloop()
