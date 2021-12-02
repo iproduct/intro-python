@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk, messagebox
 
 from utils.tkinter_utils import print_hierarchy
 
@@ -29,6 +29,12 @@ class Application:
         menu_file = Menu(menubar)
         menubar.add_cascade(menu=menu_file, label="File")
 
+        # File menu
+        menu_file.add_command(label="New", command = self.newFile)
+
+
+    def newFile(self):
+        messagebox.showinfo(title="File Open Dialog", message="Opening DB file ...")
 
 if __name__ == '__main__':
     root = Tk()
