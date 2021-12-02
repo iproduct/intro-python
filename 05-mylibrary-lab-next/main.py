@@ -1,49 +1,38 @@
-from book import Book
-from book_repository import BookRepository, IntIdSequence
-from book_repository_json import BookRepositoryJson, load_from_file
+from tkinter import *
+from tkinter import ttk
 
-if __name__ == "__main__":
-    b1 = Book(
-        5,
-        "Head First Python",
-        "A Brain-Friendly Guide",
-        ["Paul Barry"],
-        "1491919531",
-        "O'Reilly UK Ltd.",
-        2016,
-        41.82,
-        "Software Engineering",
-        [
-            "python",
-            "introduction",
-            "examples",
-            "programming"
-        ],
-        "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
-    )
-    b2 = Book(
-        6,
-        "Head First Python",
-        "A Brain-Friendly Guide",
-        ["Paul Barry"],
-        "1491919531",
-        "O'Reilly UK Ltd.",
-        2016,
-        41.82,
-        description="Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
-    )
-    # books = BookRepository(id_sequence=IntIdSequence())
-    books = BookRepositoryJson()
-    books.load()
-    books.insert(b1)
-    books.insert(b2)
+from utils.tkinter_utils import print_hierarchy
 
-    print(f"Boook repository has {len(books)} books in total:")
+WIDTH = 800
+HEIGHT = 600
 
-    for book in books:
-        print(book)
+class Application:
+    def __init__(self, root):
+        root.title("My Library")
+        # Get the current screen width and height
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
 
-    books.persist()
+        # Print the screen size
+        print("Screen width:", screen_width)
+        print("Screen height:", screen_height)
 
-    # books = load_from_file("books.json", Book)
-    # print(books)
+        left = (screen_width - WIDTH) // 2
+        top = (screen_height - HEIGHT) // 2
+
+        root.geometry(f"{WIDTH}x{HEIGHT}+{left}+{top}")
+        mainframe = ttk.Frame(root, padding="3 3 12 12")
+        mainframe.grid(column=0, row=0, sticky=(N, W, E, S) )
+
+        menubar = Menu(root)
+        root['menu'] = menubar
+        menu_file = Menu(menubar)
+        menubar.add_cascade(menu=menu_file, label="File")
+
+
+if __name__ == '__main__':
+    root = Tk()
+    Application(root)
+    print_hierarchy(root)
+    root.mainloop()
+

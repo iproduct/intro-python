@@ -1,7 +1,7 @@
 import json
 
-from book import Book
-from book_repository import BookRepository
+from model.book import Book
+from dao.book_repository import BookRepository
 
 DEFAULT_BOOKS_DB_FILE = "books.json"
 
