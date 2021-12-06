@@ -10,7 +10,8 @@ DIALOG_HEIGHT = 500
 
 
 class AddBookDialog:
-    def __init__(self, parent, width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, books_repo: BookRepositoryJson):
+    def __init__(self, parent, width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, application, books_repo: BookRepositoryJson):
+        self.application = application
         self.books_repo = books_repo
         self.parent = parent
         self.book_dlg = Toplevel(self.parent, *args)
@@ -70,7 +71,8 @@ class AddBookDialog:
         self.dismiss()
 
     def onNewDialog(self):
-        self.child_dialog = AddBookDialog(self.book_dlg, books_repo= self.books_repo)
+        self.application.addBook()
+        # self.child_dialog = AddBookDialog(self.book_dlg, books_repo= self.books_repo)
 
     def dismiss(self):
         self.book_dlg.grab_release()

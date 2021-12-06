@@ -3,6 +3,7 @@ from tkinter import *
 from dao.book_repository_json import BookRepositoryJson
 from presentation.add_book_dialog import AddBookDialog
 from presentation.app_main_window import AppMainWindow
+from presentation.show_books_view import ShowBooksView
 from utils.tkinter_utils import print_hierarchy
 
 
@@ -18,8 +19,10 @@ class Application:
         self.root.mainloop()
 
     def addBook(self):
-        self.add_book_dialog = AddBookDialog(self.root, books_repo=self.book_repository)
+       AddBookDialog(self.root, application=self, books_repo=self.book_repository) # self.add_book_dialog =
 
+    def browseBooks(self):
+        self.show_books_view = ShowBooksView(self.main_window )
 
 if __name__ == '__main__':
     app = Application(BookRepositoryJson())
