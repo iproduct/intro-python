@@ -1,3 +1,4 @@
+from functools import partial
 from tkinter import *
 from tkinter import ttk, messagebox
 
@@ -47,11 +48,8 @@ class AddBookDialog:
         self.subtitle_errors.grid(column=2, row=2, sticky=(E, W))
 
         # buttons
-        self.submit_button = ttk.Button(self.mainframe, text="Submit", command=self.onSubmit)
+        self.submit_button = ttk.Button(self.mainframe, text="Submit", command=partial(self.onSubmit, 12))
         self.submit_button.grid(column=1, row=3, sticky=(E))
-        self.submit_button = ttk.Button(self.mainframe, text="New Dialog", command=self.onNewDialog)
-        self.submit_button.grid(column=2, row=3, sticky=(E))
-
 
         # button = tk.Button(parent, text=text, font=(font), bg=bg, fg=fg, bd=bd, width=width, command=function)
         # button.grid(row=row, column=col, rowspan=rowspan, padx=padx, pady=pady, sticky=sticky)
@@ -64,15 +62,12 @@ class AddBookDialog:
         self.book_dlg.grab_set()
         self.book_dlg.wait_window()
 
-    def onSubmit(self):
+    def onSubmit(self, msg):
+        print(msg)
         book = Book(self.id.get(), self.title.get(), self.subtitle.get())
         self.books_repo.insert(book)
         self.books_repo.persist()
         self.dismiss()
-
-    def onNewDialog(self):
-        self.application.addBook()
-        # self.child_dialog = AddBookDialog(self.book_dlg, books_repo= self.books_repo)
 
     def dismiss(self):
         self.book_dlg.grab_release()

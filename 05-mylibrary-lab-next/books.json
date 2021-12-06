@@ -63,5 +63,18 @@
         "genre": "programming",
         "tags": [],
         "description": null
+    },
+    {
+        "id": "",
+        "title": "",
+        "subtitle": "",
+        "authors": null,
+        "isbn": null,
+        "publisher": null,
+        "year": null,
+        "price": null,
+        "genre": "programming",
+        "tags": [],
+        "description": null
     }
 ]

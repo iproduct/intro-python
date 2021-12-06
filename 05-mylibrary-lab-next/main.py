@@ -1,6 +1,7 @@
 from tkinter import *
 
 from dao.book_repository_json import BookRepositoryJson
+from model.book import Book
 from presentation.add_book_dialog import AddBookDialog
 from presentation.app_main_window import AppMainWindow
 from presentation.show_books_view import ShowBooksView
@@ -19,10 +20,10 @@ class Application:
         self.root.mainloop()
 
     def addBook(self):
-       AddBookDialog(self.root, application=self, books_repo=self.book_repository) # self.add_book_dialog =
+       self.add_book_dialog = AddBookDialog(self.root, application=self, books_repo=self.book_repository)
 
     def browseBooks(self):
-        self.show_books_view = ShowBooksView(self.main_window )
+        self.show_books_view = ShowBooksView(self.root, entity_cls=Book ,books_repo=self.book_repository)
 
 if __name__ == '__main__':
     app = Application(BookRepositoryJson())
