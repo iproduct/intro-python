@@ -48,6 +48,8 @@ class AddBookDialog:
         # buttons
         self.submit_button = ttk.Button(self.mainframe, text="Submit", command=self.onSubmit)
         self.submit_button.grid(column=1, row=3, sticky=(E))
+        self.submit_button = ttk.Button(self.mainframe, text="New Dialog", command=self.onNewDialog)
+        self.submit_button.grid(column=2, row=3, sticky=(E))
 
 
         # button = tk.Button(parent, text=text, font=(font), bg=bg, fg=fg, bd=bd, width=width, command=function)
@@ -66,6 +68,9 @@ class AddBookDialog:
         self.books_repo.insert(book)
         self.books_repo.persist()
         self.dismiss()
+
+    def onNewDialog(self):
+        self.child_dialog = AddBookDialog(self.book_dlg, books_repo= self.books_repo)
 
     def dismiss(self):
         self.book_dlg.grab_release()
