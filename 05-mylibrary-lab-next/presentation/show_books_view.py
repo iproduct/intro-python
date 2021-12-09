@@ -33,19 +33,19 @@ class ShowBooksView(ttk.Frame):
 
         self._insert_books()
 
-    def _insert_books(self) -> list[str]:
+    def _insert_books(self, books) -> list[str]:
+        self.books = books
         if hasattr(self, "book_pos_ids"):
             self.tree.delete(*self.book_pos_ids)
         self.book_pos_ids = list(map(
             lambda book: self.tree.insert('', END, values=tuple(book.__dict__.values())),
-            self.books)
+            books)
         )
         self.update_idletasks()
         return self.book_pos_ids
 
     def refresh(self, books):
-        self.books = books
-        self._insert_books()
+        self._insert_books(books)
 
 
         # # adding an item
