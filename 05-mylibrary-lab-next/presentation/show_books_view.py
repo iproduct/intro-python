@@ -2,13 +2,15 @@ from tkinter import *
 from tkinter import ttk
 
 from dao.book_repository import BookRepository
+from model.book import Book
 
 DEFAULT_COLUMN_WIDTH_PX = 100
 
 
 class ShowBooksView(ttk.Frame):
-    def __init__(self, parent, label="", *args, entity_cls, books_repo: BookRepository):
+    def __init__(self, parent, initial_books: list[Book] = [], *args, entity_cls, ):
         super().__init__(parent, *args, padding="3 0 0 0")
+        self.books = initial_books
         self.grid(column=0, row=0, sticky=(N, W, E, S))
 
         # define headings
@@ -29,10 +31,21 @@ class ShowBooksView(ttk.Frame):
         self.update_idletasks()
         parent.geometry(f"{self.tree.winfo_width() + 25}x{self.tree.winfo_height() + 200}")
 
+        self._insert_books()
 
-        item_ids = list(map(lambda book: self.tree.insert('', END, values=tuple(book.__dict__.values())), books_repo.find_all()))
-        item_ids = list(map(lambda book: self.tree.insert('', END, values=tuple(book.__dict__.values())), books_repo.find_all()))
-        item_ids = list(map(lambda book: self.tree.insert('', END, values=tuple(book.__dict__.values())), books_repo.find_all()))
+    def _insert_books(self) -> list[str]:
+        if hasattr(self, "book_pos_ids"):
+            self.tree.delete(*self.book_pos_ids)
+        self.book_pos_ids = list(map(
+            lambda book: self.tree.insert('', END, values=tuple(book.__dict__.values())),
+            self.books)
+        )
+        self.update_idletasks()
+        return self.book_pos_ids
+
+    def refresh(self, books):
+        self.books = books
+        self._insert_books()
 
 
         # # adding an item

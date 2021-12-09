@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "6afe6421-590a-11ec-8432-80fa5b51f267",
         "title": "Head First Python",
         "subtitle": "A Brain-Friendly Guide",
         "authors": [
@@ -20,7 +20,7 @@
         "description": "Want to learn the Python language without slogging your way through how-to manuals? With Head First Python, you&;ll quickly grasp Python&;s fundamentals, working with the built-in data structures and functions. Then you&;ll move on to building your very own webapp, exploring database management, exception handling, and data wrangling. If you&;re intrigued by what you can do with context managers, decorators, comprehensions, and generators, it&;s all here. This second edition is a complete learning experience that will help you become a bonafide Python programmer in no time."
     },
     {
-        "id": 2,
+        "id": "6afe6422-590a-11ec-a1a9-80fa5b51f267",
         "title": "Learning Python",
         "subtitle": "Powerful Object-Oriented Programming",
         "authors": [
@@ -55,97 +55,6 @@
         "id": "99af791b-590a-11ec-8b46-80fa5b51f267",
         "title": "bbbb",
         "subtitle": "bbbbbb",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "8904fd43-590b-11ec-ab03-80fa5b51f267",
-        "title": "ccc",
-        "subtitle": "cccccc",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "c3a0729c-590d-11ec-bb4d-80fa5b51f267",
-        "title": "",
-        "subtitle": "",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "f2516bfa-590d-11ec-bfff-80fa5b51f267",
-        "title": "dddd",
-        "subtitle": "dddddddd",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "d91ffa0b-5912-11ec-84fb-80fa5b51f267",
-        "title": "eeeeee",
-        "subtitle": "eeeeeeeeeee",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "0b39d51a-5913-11ec-a139-80fa5b51f267",
-        "title": "fff",
-        "subtitle": "ffffff",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "66522a05-5913-11ec-89f0-80fa5b51f267",
-        "title": "ggg",
-        "subtitle": "ggggg",
-        "authors": null,
-        "isbn": null,
-        "publisher": null,
-        "year": null,
-        "price": null,
-        "genre": "programming",
-        "tags": [],
-        "description": null
-    },
-    {
-        "id": "73139868-5913-11ec-895e-80fa5b51f267",
-        "title": "My Python New Book",
-        "subtitle": "Best one ...",
         "authors": null,
         "isbn": null,
         "publisher": null,

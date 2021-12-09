@@ -49,8 +49,8 @@ class BookRepository:
         return self.find_by_predicate(lambda book : part in ",".join(book.authors))
 
     def insert(self, book):
-        if self.id_sequence is not None:
-            book.id = self.id_sequence.__next__()
+        if len(str(book.id).strip()) == 0 and self.id_sequence is not None:
+            book.id = next(self.id_sequence)
         self.books[book.id] = book
         return book
 

@@ -6,8 +6,8 @@ from dao.book_repository import BookRepository
 DEFAULT_BOOKS_DB_FILE = "books.json"
 
 class BookRepositoryJson(BookRepository):
-    def __init__(self, filename=DEFAULT_BOOKS_DB_FILE):
-        super().__init__()
+    def __init__(self, filename=DEFAULT_BOOKS_DB_FILE, id_sequence = None):
+        super().__init__(id_sequence=id_sequence)
         self.db_file_name = filename
 
     def load(self):

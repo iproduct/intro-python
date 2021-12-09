@@ -37,8 +37,8 @@ class AppMainWindow(ttk.Frame):
         # Books menu
         menu_books = Menu(self.menubar)
         self.menubar.add_cascade(menu=menu_books, label="Books", underline=0)
-        menu_books.add_command(label='New', command=self.onNewBook, underline=2)
-        menu_books.add_command(label='Browse', command=self.onBrowseBooks)
+        menu_books.add_command(label='Add New Book', command=self.application.showAddBook, underline=2)
+        menu_books.add_command(label='Browse Books', command=self.application.browseBooks())
 
 
 
@@ -51,11 +51,6 @@ class AppMainWindow(ttk.Frame):
     def closeFile(self):
         messagebox.showinfo(title="File Close Dialog", message="Closing DB file ...")
 
-    def onNewBook(self):
-        self.application.addBook()
-
-    def onBrowseBooks(self):
-        self.application.browseBooks()
 
 
 

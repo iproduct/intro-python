@@ -1,8 +1,6 @@
 from functools import partial
 from tkinter import *
-from tkinter import ttk, messagebox
-
-from dao.book_repository_json import BookRepositoryJson
+from tkinter import ttk
 from model.book import Book
 from utils.tkinter_utils import get_ceter_window_left_top
 
@@ -11,9 +9,9 @@ DIALOG_HEIGHT = 500
 
 
 class AddBookDialog:
-    def __init__(self, parent, width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, application, books_repo: BookRepositoryJson):
+    def __init__(self, parent, initial_book = Book(), width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, application):
         self.application = application
-        self.books_repo = books_repo
+        self.initial_book = initial_book
         self.parent = parent
         self.book_dlg = Toplevel(self.parent, *args)
         self.book_dlg.title("Add Book")
@@ -65,8 +63,7 @@ class AddBookDialog:
     def onSubmit(self, msg):
         print(msg)
         book = Book(self.id.get(), self.title.get(), self.subtitle.get())
-        self.books_repo.insert(book)
-        self.books_repo.persist()
+        self.application.addBook(book)
         self.dismiss()
 
     def dismiss(self):
