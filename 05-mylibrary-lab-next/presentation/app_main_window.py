@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk, messagebox
 
 from dao.book_repository_json import BookRepositoryJson
-from presentation.add_book_dialog import AddBookDialog
+from presentation.add_edit_book_dialog import AddEditBookDialog
 from utils.tkinter_utils import print_hierarchy, get_ceter_window_left_top
 
 MAIN_WIDTH = 800
@@ -37,7 +37,7 @@ class AppMainWindow(ttk.Frame):
         # Books menu
         menu_books = Menu(self.menubar)
         self.menubar.add_cascade(menu=menu_books, label="Books", underline=0)
-        menu_books.add_command(label='Add New Book', command=self.application.showAddBook, underline=2)
+        menu_books.add_command(label='Add New Book', command=self.application.show_add_book, underline=2)
         menu_books.add_command(label='Browse Books', command=self.application.browseBooks())
 
 

@@ -8,10 +8,10 @@ DIALOG_WIDTH = 600
 DIALOG_HEIGHT = 500
 
 
-class AddBookDialog:
-    def __init__(self, parent, initial_book = Book(), width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, application):
+class AddEditBookDialog:
+    def __init__(self, parent, book = Book("", "", "", ""), width=DIALOG_WIDTH, height=DIALOG_HEIGHT, *args, application):
         self.application = application
-        self.initial_book = initial_book
+        self.book = book
         self.parent = parent
         self.book_dlg = Toplevel(self.parent, *args)
         self.book_dlg.title("Add Book")
@@ -24,6 +24,7 @@ class AddBookDialog:
         self.id = StringVar()
         self.title = StringVar()
         self.subtitle = StringVar()
+        self.reset()
 
         # form labels
         ttk.Label(self.mainframe, text="ID", justify=CENTER).grid(column=0, row=0, sticky=(E, W))
@@ -31,7 +32,8 @@ class AddBookDialog:
         ttk.Label(self.mainframe, text="Subtitle", justify=CENTER).grid(column=0, row=2, sticky=(E, W))
 
         # form Entries
-        self.id_entry = ttk.Entry(self.mainframe, textvariable=self.id, width=40).grid(column=1, row=0, sticky=(E, W))
+        self.id_entry = ttk.Entry(self.mainframe, textvariable=self.id, width=40, state=DISABLED).grid(column=1, row=0, sticky=(E, W))
+
         self.title_entry = ttk.Entry(self.mainframe, textvariable=self.title, width=40).grid(column=1, row=1,
                                                                                              sticky=(E, W))
         self.id_entry = ttk.Entry(self.mainframe, textvariable=self.subtitle, width=40).grid(column=1, row=2,
@@ -46,8 +48,10 @@ class AddBookDialog:
         self.subtitle_errors.grid(column=2, row=2, sticky=(E, W))
 
         # buttons
-        self.submit_button = ttk.Button(self.mainframe, text="Submit", command=partial(self.onSubmit, 12))
-        self.submit_button.grid(column=1, row=3, sticky=(E))
+        self.submit_button = ttk.Button(self.mainframe, text="Submit", command=self.onSubmit)
+        self.submit_button.grid(column=0, row=3, sticky=(E))
+        self.reset_button = ttk.Button(self.mainframe, text="Reset", command=self.reset)
+        self.reset_button.grid(column=1, row=3, sticky=(E))
 
         # button = tk.Button(parent, text=text, font=(font), bg=bg, fg=fg, bd=bd, width=width, command=function)
         # button.grid(row=row, column=col, rowspan=rowspan, padx=padx, pady=pady, sticky=sticky)
@@ -60,11 +64,15 @@ class AddBookDialog:
         self.book_dlg.grab_set()
         self.book_dlg.wait_window()
 
-    def onSubmit(self, msg):
-        print(msg)
+    def onSubmit(self):
         book = Book(self.id.get(), self.title.get(), self.subtitle.get())
-        self.application.addBook(book)
+        self.application.add_edit_book(book)
         self.dismiss()
+
+    def reset(self):
+        self.id.set(self.book.id)
+        self.title.set(self.book.title)
+        self.subtitle.set(self.book.subtitle)
 
     def dismiss(self):
         self.book_dlg.grab_release()
