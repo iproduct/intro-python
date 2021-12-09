@@ -15,7 +15,7 @@ if __name__ == "__main__":
     canvas1 = Canvas(root, width=400,
                      height=400)
 
-    canvas1.pack(fill="both", expand=True)
+    canvas1.grid(row=0, column=0, sticky=(W, N, E, S))
 
     # Display image
     canvas1.create_image(0, 0, image=bg,
@@ -43,4 +43,3 @@ if __name__ == "__main__":
 
     # Execute tkinter
     root.mainloop()
-
