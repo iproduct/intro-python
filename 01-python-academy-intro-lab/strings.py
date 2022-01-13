@@ -22,8 +22,14 @@ if __name__ == "__main__":
     Python!
     """
 
-    print(" ".join(re.split("\s+", a.strip())))
-    print(len(a))
+    b = " ".join(re.split("\s+", a.strip()))
+    print(b)
+    print(len(b))
+
+    l = list(b)
+    l[0] = "R"
+    print(l)
+    print("".join(l))
 
     # print python word positions in wikipedia_string
     text_to_lower = wiki_text.lower()
@@ -34,5 +40,7 @@ if __name__ == "__main__":
         pos = text_to_lower.find(serch_str.lower(), pos)
         if pos >= 0:
             print(f"Python occurance: {wiki_text[pos: pos + len(serch_str)]} [{pos} - {pos + len(serch_str)}]")
+            print("Python occurance: {text} [{start} - {end}]"
+                  .format(text = wiki_text[pos: pos + len(serch_str)], start = pos, end = pos + len(serch_str)))
             pos += len(serch_str)
     
