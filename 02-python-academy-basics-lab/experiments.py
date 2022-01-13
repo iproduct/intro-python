@@ -61,5 +61,5 @@ if __name__ == '__main__':
     print(digits_list.pop(3))  # mutate original list
     print(digits_list)
 
-    for d in set(date_str):
+    for d in set(date_str) :
         print(d)
