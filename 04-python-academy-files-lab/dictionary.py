@@ -31,6 +31,7 @@ if __name__ == "__main__":
     x = range(10)
 
     thisdict = dict.fromkeys(x, 1)
+    print(thisdict)
 
     thisdict2 = {item: item**2 for item in x if item%2 == 0}
 
