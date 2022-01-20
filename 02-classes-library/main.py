@@ -19,4 +19,6 @@ if __name__ == '__main__':
               "If you need help writing programs in Python 3, or want to update older Python 2 code, this book is "
               "just the ticket. Packed with practical recipes written and tested with Python 3.3, this unique "
               "cookbook is for experienced Python programmers who want to focus on modern tools and idioms.")
-    print(b1)
+    books = (b1, b2, b3)
+    for book in books:
+        print(book)
