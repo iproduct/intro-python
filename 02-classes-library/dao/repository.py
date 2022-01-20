@@ -6,7 +6,7 @@ class Repository:
         self.items = {}
 
     def create(self, item):
-        item.id = uuid.uuid1()
+        item.id = str(uuid.uuid1())
         self.items[item.id] = item
         return item
 
@@ -33,4 +33,4 @@ class Repository:
         return self.items[id]
 
     def count(self):
-        len(self.items)
+        return len(self.items)
