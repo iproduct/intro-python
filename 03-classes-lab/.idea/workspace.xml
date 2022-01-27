@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/point_property_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-classes-library/controller/book_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-classes-library/dao/book_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-classes-library/entity/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/entity/book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-classes-library/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inheritance.py" beforeDir="false" afterPath="$PROJECT_DIR$/inheritance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/point.py" beforeDir="false" afterPath="$PROJECT_DIR$/point.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_property_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/point_property_decorator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
-  <component name="RunManager" selected="Python.inheritance">
+  <component name="RunManager" selected="Python.point_property_decorator">
     <configuration name="inheritance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="03-classes-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.inheritance" />
         <item itemvalue="Python.point_property_decorator" />
         <item itemvalue="Python.point" />
+        <item itemvalue="Python.inheritance" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643016396881</updated>
       <workItem from="1643016401365" duration="614000" />
-      <workItem from="1643268549166" duration="7930000" />
+      <workItem from="1643268549166" duration="9902000" />
     </task>
     <task id="LOCAL-00001" summary="demos and presentations added">
       <created>1643273939137</created>
@@ -153,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643273939138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="inheritance Point demo added">
+      <created>1643278050199</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643278050199</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +172,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demos and presentations added" />
-    <option name="LAST_COMMIT_MESSAGE" value="demos and presentations added" />
+    <MESSAGE value="inheritance Point demo added" />
+    <option name="LAST_COMMIT_MESSAGE" value="inheritance Point demo added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -175,8 +187,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/03_classes_lab$point.coverage" NAME="point Coverage Results" MODIFIED="1643273036506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/03_classes_lab$point_property_decorator.coverage" NAME="point_property_decorator Coverage Results" MODIFIED="1643274710969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/03_classes_lab$point.coverage" NAME="point Coverage Results" MODIFIED="1643278611202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/03_classes_lab$point_property_decorator.coverage" NAME="point_property_decorator Coverage Results" MODIFIED="1643278875658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_classes_lab$inheritance.coverage" NAME="inheritance Coverage Results" MODIFIED="1643277165522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

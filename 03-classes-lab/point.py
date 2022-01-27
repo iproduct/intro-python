@@ -50,19 +50,23 @@ class Line:
     length = property(_get_length)
 
     def __str__(self):
-        return f"Line({self.a}, {self.b})"
+        return f"Line({self.a.__str__()}, {self.b.__str__()})"
 
 class ColoredPoint(Point):
     def __init__(self, x: float, y:float, color: str):
-        super().__init__()
+        super().__init__(x, y)
+        self.color = color
+
+    def __str__(self):
+        return f"<x: {self.x}, y: {self.y}, color: {self.color}>"
 
 
 if __name__ == "__main__":
-    p1 = Point(1, 3)
-    p2 = Point(4, 6)
+    p1 = ColoredPoint(1, 3, "RED")
+    p2 = ColoredPoint(4, 6, "BLUE")
     print(f"Distance between {p1} and {p2} is: {p1.distance(p2)}")
     l1 = Line(p1, p2)
     # print(f"Line between {l1._Line__a} and {l1._Line__b}")
     print(f"Line between {l1.a} and {l1.b}")
     print(f"{l1} length is: {l1.length}")
-    print(dir(Line))
+    # print(dir(Line))
