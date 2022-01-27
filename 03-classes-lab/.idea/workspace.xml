@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../02-classes-library/controller/book_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../02-classes-library/dao/book_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-classes-library/entity/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/entity/book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-classes-library/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point.py" beforeDir="false" afterPath="$PROJECT_DIR$/point.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point_property_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/point_property_decorator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643016396881</updated>
       <workItem from="1643016401365" duration="614000" />
-      <workItem from="1643268549166" duration="9902000" />
+      <workItem from="1643268549166" duration="11104000" />
     </task>
     <task id="LOCAL-00001" summary="demos and presentations added">
       <created>1643273939137</created>
