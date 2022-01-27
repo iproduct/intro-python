@@ -12,5 +12,5 @@ class C(A,B):
 		print("C")
 
 if __name__ == '__main__':
-    print(C())
+    C()
     print(C.mro())

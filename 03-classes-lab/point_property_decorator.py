@@ -29,32 +29,31 @@ class Line:
         self.__b = b
         # self.length = a.length(b) # not recommended
 
-    def _get_length(self):
+    @property
+    def length(self):
         """calculates line length"""
         return self.__a.distance(self.__b)
 
-    def _get_a(self):
+    @property
+    def a(self):
+        """First line end"""
         return self.__a
 
-    def _get_b(self):
-        return self.__b
-
-    def _set_a(self, a: Point):
+    @a.setter
+    def a(self, a: Point):
         self.__a = a
 
-    def _set_b(self, b: Point):
-        self.__b = b
+    @property
+    def b(self):
+        """Second line end"""
+        return self.__b
 
-    a = property(_get_a, _set_a, doc="Line point A")
-    b = property(_get_b, _set_b, doc="Line point B")
-    length = property(_get_length)
+    @b.setter
+    def b(self, b: Point):
+        self.__b = b
 
     def __str__(self):
         return f"Line({self.a}, {self.b})"
-
-class ColoredPoint(Point):
-    def __init__(self, x: float, y:float, color: str):
-        super().__init__()
 
 
 if __name__ == "__main__":
@@ -63,6 +62,9 @@ if __name__ == "__main__":
     print(f"Distance between {p1} and {p2} is: {p1.distance(p2)}")
     l1 = Line(p1, p2)
     # print(f"Line between {l1._Line__a} and {l1._Line__b}")
-    print(f"Line between {l1.a} and {l1.b}")
+    print(f"Line between {l1.a} and {l1.b}")  # RVal a & b properties
+    print(f"{l1} length is: {l1.length}") # RVal length property
+    l1.a = Point(0, 0)  # LVal a property
+    print(f"\nAfter change\nLine between {l1.a} and {l1.b}")
     print(f"{l1} length is: {l1.length}")
-    print(dir(Line))
+    # print(help(Line))
