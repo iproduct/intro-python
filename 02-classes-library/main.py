@@ -1,8 +1,10 @@
+from controller.book_controller import BookController
+from dao.book_repository import BookRepository
 from dao.repository import Repository
 from entity.book import Book
 
 if __name__ == '__main__':
-    b1 = Book(None, "Think Python", "An Introduction to Software Design", ("Allen B. Downey",), "1491939362",
+    b1 = Book(None, "Think Python", "An Introduction to Software Design", ("Allen B. Downey", "Mark Lutz"), "1491939362",
               "O'Reily", 2002, 9.7, "Software engineering", ("python", "introduction", "programming", "oop"),
               "If you want to learn how to program, working with Python is an excellent way to start. "
               "This hands-on guide takes you through the language a step at a time, beginning with basic "
@@ -22,10 +24,29 @@ if __name__ == '__main__':
               "cookbook is for experienced Python programmers who want to focus on modern tools and idioms.")
     books = (b1, b2, b3)
 
-    books_repo = Repository()
+    books_repo = BookRepository()
+    # for book in books:
+    #     books_repo.create(book)
+    #
+    # for book in books_repo.find_all():
+    #     print(book)
+    #
+    # print("\nBook titles containing 'Python':")
+    # for book in books_repo.find_by_title("Python"):
+    #     print(book)
+    #
+    # print("\nBook titles containing 'learning':")
+    # for book in books_repo.find_by_title("learning"):
+    #     print(book)
+    #
+    # print("\nBook authors containing 'Lutz':")
+    # for book in books_repo.find_by_author("Lutz"):
+    #     print(book)
+
+    book_controller = BookController(books_repo)
+
     for book in books:
-        books_repo.create(book)
+        book_controller.add_book(book)
 
-    for book in books_repo.find_all():
+    for book in book_controller.get_all_books():
         print(book)
-

@@ -24,8 +24,8 @@ class Book:
         self.description = description
 
     def __str__(self):
-        return f"| {self.id:>12.12s} | {self.title:<20.20s} | {self.subtitle:<25.25s} | " \
-               f"{', '.join(self.authors):<20.20s} | {self.isbn:<10.10s} | " \
+        return f"| {self.id:>12.12s} | {self.title:<20.20s} | {self.subtitle:<20.20s} | " \
+               f"{', '.join(self.authors):<25.25s} | {self.isbn:<10.10s} | " \
                f"{self.publisher:<10.10s} | {self.price:<6.2f} | {self.year:<4d} | " \
                f"{self.genre:<10.10s} | {', '.join(self.tags):<30.30s} |"
 
