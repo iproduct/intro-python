@@ -1,3 +1,4 @@
+from __future__ import annotations
 from math import sqrt
 
 
@@ -8,7 +9,7 @@ class Point:
         self.x = x
         self.y = y
 
-    def distance(self, other) -> float:
+    def distance(self, other: Point) -> float:
         """Calculates distance between self point and other point"""
         delta_x = self.x - other.x
         delta_y = self.y - other.y

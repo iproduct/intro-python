@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/01-up-2022-lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/04-files-lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/wikipedia.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/word_count.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point.py" beforeDir="false" afterPath="$PROJECT_DIR$/point.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -141,7 +156,8 @@
       <option name="presentableId" value="Default" />
       <updated>1643016396881</updated>
       <workItem from="1643016401365" duration="614000" />
-      <workItem from="1643268549166" duration="11104000" />
+      <workItem from="1643268549166" duration="11822000" />
+      <workItem from="1643612675157" duration="1554000" />
     </task>
     <task id="LOCAL-00001" summary="demos and presentations added">
       <created>1643273939137</created>
@@ -157,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643278050199</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="using forward references in typings: from __future__ import annotations">
+      <created>1643295920513</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643295920521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demos and presentations added" />
     <MESSAGE value="inheritance Point demo added" />
-    <option name="LAST_COMMIT_MESSAGE" value="inheritance Point demo added" />
+    <MESSAGE value="using forward references in typings: from __future__ import annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="using forward references in typings: from __future__ import annotations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,7 +205,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/03_classes_lab$point.coverage" NAME="point Coverage Results" MODIFIED="1643278611202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/03_classes_lab$point_property_decorator.coverage" NAME="point_property_decorator Coverage Results" MODIFIED="1643278875658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/03_classes_lab$point_property_decorator.coverage" NAME="point_property_decorator Coverage Results" MODIFIED="1643295845107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/03_classes_lab$inheritance.coverage" NAME="inheritance Coverage Results" MODIFIED="1643277165522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
