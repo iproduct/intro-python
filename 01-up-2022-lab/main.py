@@ -6,6 +6,16 @@ def fact_iter(n):
         result = result * i
     return result
 
+
+def fact_rec(n):
+    # recursion bottom
+    if n <= 1:
+        return 1
+    # recursion step
+    return n * fact_rec(n - 1)
+
+
 if __name__ == '__main__':
     n = int(input("Input N:"))
-    print(f"{n}! = ", fact_iter(n))
+    print(f"Iterative {n}! = ", fact_iter(n))
+    print(f"\nRecursive {n}! = ", fact_rec(n))
