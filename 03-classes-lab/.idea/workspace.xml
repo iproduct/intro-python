@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/01-up-2022-lab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01-up-2022-lab/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/04-files-lab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/wikipedia.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../04-files-lab/word_count.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-files-lab/todos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point.py" beforeDir="false" afterPath="$PROJECT_DIR$/point.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
