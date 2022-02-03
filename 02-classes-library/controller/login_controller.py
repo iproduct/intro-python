@@ -1,6 +1,6 @@
 from dao.user_repository import UserRepository
 from entity.user import User
-from exception.InvalidUsernameOrPasswordException import InvalidUsernameOrPasswordException
+from exception.credentials_exception import CredentialsException
 
 
 class LoginController:
@@ -10,17 +10,17 @@ class LoginController:
 
     def register(self, user: User) -> User:
         # TODO validate user
-        self.user_repository.create(user)
+        return self.user_repository.create(user)
 
     def login(self, username: str, password: str) -> User:
         user = self.user_repository.find_by_username(username)
-        if user.password == password:
-            self.logged_user = user
+        if user is not None and user.password == password:
+            self._logged_user = user
             return user
-        raise InvalidUsernameOrPasswordException("Invalid username or password")
+        raise CredentialsException("Invalid username or password. Try again.")
 
     def logout(self) -> User:
         self._logged_user = None
 
-    def get_logged_user(self):
+    def get_logged_user(self) -> User | None:
         return self._logged_user

@@ -1,9 +1,11 @@
 from controller.book_controller import BookController
+from controller.login_controller import LoginController
 from dao.book_repository import BookRepository
-from dao.repository import Repository
+from dao.user_repository import UserRepository
 from entity.book import Book
-from exception.InvalidUsernameOrPasswordException import InvalidUsernameOrPasswordException
-from util.fun_util import find
+from entity.user import User
+from view.main_menu_commands import RegisterCommand, LoginCommand, LogoutCommand, GetLoggedUserCommand
+from view.menu import MenuItem, Menu
 
 if __name__ == '__main__':
     b1 = Book(None, "Think Python", "An Introduction to Software Design", ("Allen B. Downey", "Mark Lutz"), "1491939362",
@@ -53,4 +55,16 @@ if __name__ == '__main__':
     for book in book_controller.get_all_books():
         print(book)
 
-    print(find(lambda s: "de" in s, ["abc", "def", "fgh"]))
+    # Login demo
+    user_repo = UserRepository()
+    login_controller = LoginController(user_repo)
+    login_controller.register(User(None, "Deafult", "Admin", "admin", "admin", "ADMIN"))
+    MAIN_MENU_ITEMS = [
+        MenuItem("Register new user", RegisterCommand(login_controller)),
+        MenuItem("Login", LoginCommand(login_controller)),
+        MenuItem("Logout", LogoutCommand(login_controller)),
+        MenuItem("Show logged user", GetLoggedUserCommand(login_controller)),
+    ]
+    main_menu = Menu(MAIN_MENU_ITEMS)
+    main_menu.show()
+    print("Good bye!")
