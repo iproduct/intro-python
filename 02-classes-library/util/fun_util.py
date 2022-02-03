@@ -1,7 +1,7 @@
 from typing import Iterable, Callable
 
 
-def find(iterable: Iterable, predicate: Callable[[object], bool]) -> object | None:
+def find(predicate: Callable[[object], bool], iterable: Iterable[object]) -> object | None:
     for item in iterable:
         if predicate(item):
             return item

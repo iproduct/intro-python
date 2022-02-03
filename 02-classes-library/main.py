@@ -53,4 +53,4 @@ if __name__ == '__main__':
     for book in book_controller.get_all_books():
         print(book)
 
-    print(find(["abc", "def", "fgh"], lambda s: "de" in s))
+    print(find(lambda s: "de" in s, ["abc", "def", "fgh"]))
