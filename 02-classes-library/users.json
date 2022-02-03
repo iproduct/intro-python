@@ -1,0 +1,29 @@
+[
+    {
+        "id": "f7f70df8-84e4-11ec-a93e-0c5415b58e01",
+        "first_name": "Deafult",
+        "last_name": "Admin",
+        "username": "admin",
+        "password": "admin",
+        "role": "ADMIN",
+        "active": true
+    },
+    {
+        "id": "f7f70df9-84e4-11ec-a7ad-0c5415b58e01",
+        "first_name": "aaaa",
+        "last_name": "aaaa",
+        "username": "aaaa",
+        "password": "aaaa",
+        "role": "READER",
+        "active": true
+    },
+    {
+        "id": "00a2123a-84e5-11ec-aad0-0c5415b58e01",
+        "first_name": "Trayan",
+        "last_name": "Iliev",
+        "username": "trayan",
+        "password": "trayan",
+        "role": "READER",
+        "active": true
+    }
+]
