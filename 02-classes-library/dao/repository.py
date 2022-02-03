@@ -24,7 +24,7 @@ class Repository:
         del self._items[id]
         return old
 
-    def find_all(self):
+    def find_all(self) -> list:
         return self._items.values()
 
     def find_by_id(self, id):

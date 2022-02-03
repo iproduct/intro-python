@@ -2,6 +2,8 @@ from controller.book_controller import BookController
 from dao.book_repository import BookRepository
 from dao.repository import Repository
 from entity.book import Book
+from exception.InvalidUsernameOrPasswordException import InvalidUsernameOrPasswordException
+from util.fun_util import find
 
 if __name__ == '__main__':
     b1 = Book(None, "Think Python", "An Introduction to Software Design", ("Allen B. Downey", "Mark Lutz"), "1491939362",
@@ -50,3 +52,5 @@ if __name__ == '__main__':
 
     for book in book_controller.get_all_books():
         print(book)
+
+    print(find(["abc", "def", "fgh"], lambda s: "de" in s))
