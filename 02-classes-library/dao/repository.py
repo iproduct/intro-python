@@ -25,7 +25,7 @@ class Repository:
         return old
 
     def find_all(self) -> list:
-        return self._items.values()
+        return list(self._items.values())
 
     def find_by_id(self, id):
         if id not in self._items:

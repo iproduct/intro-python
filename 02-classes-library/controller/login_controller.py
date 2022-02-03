@@ -10,7 +10,9 @@ class LoginController:
 
     def register(self, user: User) -> User:
         # TODO validate user
-        return self.user_repository.create(user)
+        created = self.user_repository.create(user)
+        self.user_repository.save()
+        return created
 
     def login(self, username: str, password: str) -> User:
         user = self.user_repository.find_by_username(username)

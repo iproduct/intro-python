@@ -13,4 +13,4 @@ class User:
     def __str__(self):
         return f"| {self.id:>12.12s} | {self.first_name:<15.15s} | {self.last_name:<15.15s} | " \
                f"{self.username:<15.15s} | {self.password:<15.15s} | " \
-               f"{self.role:<15.15s} | {self.active:<5s} |"
+               f"{self.role:<15.15s} | {self.active} |"

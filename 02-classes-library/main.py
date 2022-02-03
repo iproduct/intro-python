@@ -56,9 +56,12 @@ if __name__ == '__main__':
         print(book)
 
     # Login demo
-    user_repo = UserRepository()
+    user_repo = UserRepository("users.json", User)
+    user_repo.load()
+    for user in user_repo.find_all():
+        print(user)
     login_controller = LoginController(user_repo)
-    login_controller.register(User(None, "Deafult", "Admin", "admin", "admin", "ADMIN"))
+    # login_controller.register(User(None, "Deafult", "Admin", "admin", "admin", "ADMIN"))
     MAIN_MENU_ITEMS = [
         MenuItem("Register new user", RegisterCommand(login_controller)),
         MenuItem("Login", LoginCommand(login_controller)),
