@@ -7,10 +7,13 @@ def distance(ax, ay, bx, by):
 
 def input_float(message):
     while True:
-        data = float(input(message))
-        if 0 <= data <= 100:
-            return data
-        print("Error: Coordinates should be between 0 and 100.")
+        try:
+            data = float(input(message))
+            if 0 <= data <= 100:
+                return data
+            print("Error: Coordinates should be between 0 and 100.")
+        except ValueError as ex:
+            print(ex)
 
 
 if __name__ == '__main__':
