@@ -49,7 +49,7 @@ if __name__ == '__main__':
         words = re.split(r"[\s.,?!\(\)\{\}\[\];\-_\'\"]", line_text)
         # print(words)
         for word in words:
-            if len(word) < 3:
+            if len(word) < 3 or word in stop_words:
                 continue
             if word in word_counts:
                 word_counts[word] += 1
@@ -57,4 +57,4 @@ if __name__ == '__main__':
                 word_counts[word] = 1
     wc_list = list(word_counts.items())
     wc_list.sort(key=count_key, reverse=True)
-    print(wc_list)
+    print(wc_list[:20])
