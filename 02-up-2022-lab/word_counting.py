@@ -51,10 +51,12 @@ if __name__ == '__main__':
         for word in words:
             if len(word) < 3 or word in stop_words:
                 continue
-            if word in word_counts:
-                word_counts[word] += 1
-            else:
-                word_counts[word] = 1
-    wc_list = list(word_counts.items())
-    wc_list.sort(key=count_key, reverse=True)
-    print(wc_list[:20])
+            # if word in word_counts:
+            #     word_counts[word] += 1
+            # else:
+            #     word_counts[word] = 1
+            word_counts[word] = word_counts.get(word, 0) + 1
+    # wc_list = list(word_counts.items())
+    # wc_list.sort(key=count_key, reverse=True)
+    tags = sorted(word_counts.items(), key=count_key, reverse=True)
+    print(tags[:20])
