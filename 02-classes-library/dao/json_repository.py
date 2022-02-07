@@ -17,7 +17,7 @@ class JsonRepository(Repository):
 
     def load(self):
         with open(self.db_filename, "rt", encoding="utf-8") as f:
-            users = json.load(f, object_hook=object_hook(self.entity_class))
+            users = json.load(f, object_hook=object_hook(self.entity_class)) # IIFE
             for user in users:
                 self.create(user)
 
@@ -30,7 +30,7 @@ def dumper(obj):
 
 entity_class = None
 
-def object_hook(entity_class):
+def object_hook(entity_class): #HOF
     def obj_hook(jsdict):
         obj = entity_class()
         obj.__dict__ = jsdict
