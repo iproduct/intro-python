@@ -1,6 +1,8 @@
 import json
 
 from dao.repository import Repository
+from entity.book import Book
+from entity.user import User
 
 
 class JsonRepository(Repository):
@@ -25,6 +27,8 @@ def dumper(obj):
         return obj.to_json()
     except:
         return obj.__dict__
+
+entity_class = None
 
 def object_hook(entity_class):
     def obj_hook(jsdict):

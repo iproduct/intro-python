@@ -1,8 +1,9 @@
+from dao.json_repository import JsonRepository
 from dao.repository import Repository
 from entity.book import Book
 
 
-class BookRepository(Repository):
+class BookRepository(JsonRepository):
     def find_by_title(self, title_part: str) -> list[Book]:
         title_part_lower = title_part.lower()
         books_list = self.find_all()
