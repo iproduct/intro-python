@@ -17,5 +17,5 @@ def list_files_in_dir(dir_: str = '.', *, regex=None, recursive=False) -> Iterab
 
 
 if __name__ == "__main__":
-    for entry in list_files_in_dir(recursive=True):
+    for entry in list_files_in_dir(recursive=True, regex=r"^.*\.py$"):
         print(f"{entry.path:80s} {'<DIR>' if entry.is_dir() else str(entry.stat().st_size):>10s}")

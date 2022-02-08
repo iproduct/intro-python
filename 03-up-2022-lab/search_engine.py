@@ -11,6 +11,7 @@ from list_files_in_dir import list_files_in_dir
 # print(en_stops)
 
 PYTHON_DOCS_DIR = r"D:\CoursePython\python_docs\python-3.10.2-docs-html"
+HTML_REGEX = r"^.*\.htm[l]?$"
 
 stop_words = {'when', "didn't", 'wasn', 'y', 'few', 'below', 'into', 'there', 'his', 'these', 'about', 'if', 'again',
               'too', 'were', 'then', 'doing', 'haven', 'such', 'this', 'me', 'the', 'further', 'whom', 'having',
@@ -45,7 +46,7 @@ def index_text(lines: Iterable[str], num_keywords: int = 20, case_sensitive = Fa
         words = re.split(r"[\s.,?!\(\)\{\}\[\];\-_\'\"]", line_text)
         for word in words:
             word_lower = word.lower()
-            if len(word) < 3 or word_lower in stop_words:
+            if len(word) < 3 or word[0] == "&" or word_lower in stop_words:
                 continue
             if not case_sensitive:
                 word = word_lower
@@ -85,14 +86,14 @@ def count_key(word_count_tuple):
 
 if __name__ == '__main__':
     search_index = {}
-    for dir_entry in list_files_in_dir(PYTHON_DOCS_DIR):
+    for dir_entry in list_files_in_dir(PYTHON_DOCS_DIR, recursive=True, regex=HTML_REGEX):
         with open(dir_entry.path, encoding='utf-8') as f:
             text_lines = remove_tags(f)
             # for content in text_lines:
             #     # print(bytes(content, encoding='utf-8'))
             #     print(content)
             search_index[dir_entry.path] = index_text(text_lines, 30)
-            print(f"| {dir_entry.path:70.70s} | {str(search_index[dir_entry.path]):50.50s} |")
+            print(f"| {dir_entry.path:70.70s} | {str(search_index[dir_entry.path]):100.100s} |")
 
     # print results
     # for path in search_index:
