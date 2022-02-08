@@ -1,5 +1,6 @@
 import re
 from typing import Iterable
+from list_files_in_dir import list_files_in_dir
 
 # import nltk
 # from nltk.corpus import stopwords
@@ -9,6 +10,7 @@ from typing import Iterable
 #
 # print(en_stops)
 
+PYTHON_DOCS_DIR = r"D:\CoursePython\python_docs\python-3.10.2-docs-html"
 
 stop_words = {'when', "didn't", 'wasn', 'y', 'few', 'below', 'into', 'there', 'his', 'these', 'about', 'if', 'again',
               'too', 'were', 'then', 'doing', 'haven', 'such', 'this', 'me', 'the', 'further', 'whom', 'having',
@@ -82,9 +84,16 @@ def count_key(word_count_tuple):
 
 
 if __name__ == '__main__':
-    with open(r"D:\CoursePython\python_docs\python-3.10.2-docs-html\contents.html", encoding='utf-8') as f:
-        text_lines = remove_tags(f)
-        # for content in text_lines:
-        #     # print(bytes(content, encoding='utf-8'))
-        #     print(content)
-        print(index_text(text_lines, 30))
+    search_index = {}
+    for dir_entry in list_files_in_dir(PYTHON_DOCS_DIR):
+        with open(dir_entry.path, encoding='utf-8') as f:
+            text_lines = remove_tags(f)
+            # for content in text_lines:
+            #     # print(bytes(content, encoding='utf-8'))
+            #     print(content)
+            search_index[dir_entry.path] = index_text(text_lines, 30)
+            print(f"| {dir_entry.path:70.70s} | {str(search_index[dir_entry.path]):50.50s} |")
+
+    # print results
+    # for path in search_index:
+    #     print(f"| {path:70.70s} | {', '.join(search_index[path]): 50.50s} |")
