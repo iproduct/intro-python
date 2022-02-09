@@ -11,7 +11,7 @@ books = [
     (9, "Python Cookbook", "Recipes for Mastering Python 3", "Браян К. Джоунс и Дейвид М. Баазли", "O'Reily", 2011, 135.9)
 ]
 
-def find_most_expensive_book(book: list[tuple[int, str, str,str, int, float]]) -> tuple[int, str, str,str, int, float]:
+def find_most_expensive_book(book: list[tuple[int, str, str, str, str, int, float]]) -> tuple[int, str, str, str, str, int, float]:
     #TODO implement me
     return None
 
