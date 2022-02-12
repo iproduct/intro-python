@@ -1,5 +1,6 @@
 from functools import update_wrapper, wraps
 from logging import Logger
+from time import time_ns
 from typing import Callable
 
 
@@ -21,7 +22,7 @@ def logged(*, print_args=True, print_result=True):
         def wrapper(*args, **kwargs):
             print(f"Calling delegate: '{delegate.__name__}' " +
                   (f"with arguments: {args}, kwargs: {kwargs}" if print_args else ""))
-            result = delegate(*args, **kwargs)
+            result = delegate(*args, **kwargs) # call the delegate function
             print(f"--> Delegate '{delegate.__name__}' returned"
                   + (f" result: {result}" if print_result else ""))
             return result
@@ -30,9 +31,28 @@ def logged(*, print_args=True, print_result=True):
 
     return logged_decoratror
 
+def profile(unit="ns"):
+    def do_profile(delegate):
+        @wraps(delegate)
+        def wrapper(*args, **kwargs):
+            before = time_ns()
+            result = delegate(*args, **kwargs)  # call the delegate function
+            after = time_ns()
+            exec_time = after - before
+            if unit == "ms":
+                exec_time /= 1000000
+            print(f"Function '{delegate.__name__}' executed for: {exec_time} {unit}")
+            return result
+        return wrapper
+    return do_profile
+
 
 @logged()
+@profile("ms")
 def print_name(name: str, congrat="Hi") -> str:
+    sum = 0
+    for i in range(100000000):
+        sum += i
     print(name)
     return name.upper()
 
