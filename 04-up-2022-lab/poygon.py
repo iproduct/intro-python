@@ -17,7 +17,7 @@ class PolygonIterator:
 
 class Polygon:
     def __init__(self, *points: Point):
-        self.vertices = points
+        self.vertices = points # composition - has_a, multiplicity 3..*
 
     def __len__(self):
         return len(self.vertices)
@@ -31,6 +31,10 @@ class Polygon:
     def __iter__(self):
         for v in self.vertices:
             yield v
+
+    def area(self) -> float:
+        # TODO implement this
+        return 0
 
 if __name__ == "__main__":
     p1 = Point(4, 5)
