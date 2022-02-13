@@ -33,14 +33,16 @@ class Polygon:
             yield v
 
     def area(self) -> float:
-        # TODO implement this
+        # TODO implement this using formula:
+        # Area (A) = | (x1y2 – y1x2) + (x2y3 – y2x3)…. + (xny1 – ynx1)/2 |
         return 0
 
 if __name__ == "__main__":
     p1 = Point(4, 5)
-    p2 = Point(0, 9)
-    p3 = Point(1, 1)
+    p2 = Point(4, 0)
+    p3 = Point(0, 0)
     triangle = Polygon(p1, p2, p3)
     print(f"Triangle has {len(triangle)} points:")
     for p in triangle:
         print(p)
+    print("Area =", triangle) # expect: 10
