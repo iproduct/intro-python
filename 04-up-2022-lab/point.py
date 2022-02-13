@@ -27,7 +27,8 @@ class Point(object):
 
     def __str__(self):
         return f"({self.id}: {self.x},{self.y})"
-
+    def __add__(self, other: Point) -> Point:
+        return Point(self.x + other.x, self.y + other.y)
 
     def distance_to(self, other: Point) -> float:
         """
@@ -49,3 +50,4 @@ if __name__ == "__main__":
     print("Number of Pints created:", p1.next_id)
     print("Number of Pints created:", p1.__class__.next_id)
     print("Number of Pints created:", Point.next_id)
+    print(p1 + p3)
