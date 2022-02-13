@@ -34,7 +34,7 @@ class Polygon:
 
     def area(self) -> float:
         # TODO implement this using formula:
-        # Area (A) = | (x1y2 – y1x2) + (x2y3 – y2x3)…. + (xny1 – ynx1)/2 |
+        # Area (A) = | (x1y2 – y1x2) + (x2y3 – y2x3)…. + (xny1 – ynx1) | / 2
         return 0
 
 if __name__ == "__main__":
