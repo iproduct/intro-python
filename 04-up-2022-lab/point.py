@@ -25,7 +25,7 @@ class Point(object):
         self.x = x
         self.y = y
 
-    def __str__(self):
+    def __repr__(self):
         return f"({self.id}: {self.x},{self.y})"
     def __add__(self, other: Point) -> Point:
         return Point(self.x + other.x, self.y + other.y)

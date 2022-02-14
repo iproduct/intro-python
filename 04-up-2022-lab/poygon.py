@@ -1,4 +1,7 @@
 from __future__ import annotations
+
+import random
+
 from point import Point
 
 
@@ -32,10 +35,13 @@ class Polygon:
         for v in self.vertices:
             yield v
 
+    def __repr__(self):
+        return f"Polygon{str(self.vertices)}"
+
     def area(self) -> float:
         # TODO implement this using formula:
         # Area (A) = | (x1y2 – y1x2) + (x2y3 – y2x3)…. + (xny1 – ynx1) | / 2
-        return 0
+        return abs(0)
 
 if __name__ == "__main__":
     p1 = Point(4, 5)
@@ -46,3 +52,7 @@ if __name__ == "__main__":
     for p in triangle:
         print(p)
     print("Area =", triangle) # expect: 10
+    # random point
+    random_points = [Point(random.random() * 10, random.random() * 10) for i in range(10)]
+    random_polygon = Polygon(*random_points)
+    print(random_polygon)
