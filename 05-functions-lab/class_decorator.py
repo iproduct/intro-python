@@ -18,7 +18,16 @@ def say_goodbye(name):
     print(f"Goodbye {name}!")
 
 class process_file:
+    """
+        Decorator iterates all lines in a text file and processes each line using decorated function
+    """
     def __init__(self, filename, mode="r", callback=None):
+        """
+        Init decorator
+        :param filename: file name to process
+        :param mode: file open mode
+        :param callback: callback is called after processing whole file
+        """
         pass #TODO - Implement me
 
     def __call__(self, *args, **kwargs):
@@ -30,7 +39,7 @@ if __name__ == "__main__":
     say_goodbye("Maria")
     say_goodbye("Maria")
 
-    @process_file(filename="class_decorator.py")
+    @process_file("class_decorator.py", mode="rt")
     def print_comments(line: str):
         index = line.find("#")
         if index >= 0:
