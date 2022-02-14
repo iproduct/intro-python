@@ -1,3 +1,5 @@
+from functools import update_wrapper, wraps
+
 
 class CountCalls:
     def __init__(self, func):
@@ -30,8 +32,11 @@ class process_file:
         """
         pass #TODO - Implement me
 
-    def __call__(self, *args, **kwargs):
-        pass #TODO - Implement me
+    def __call__(self, func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            pass #TODO - Implement me
+        return wrapper
 
 if __name__ == "__main__":
     say_hello(name="Georgi")
@@ -44,3 +49,6 @@ if __name__ == "__main__":
         index = line.find("#")
         if index >= 0:
             print(line[index:])
+
+    print_comments()
+    print(print_comments.__name__)
