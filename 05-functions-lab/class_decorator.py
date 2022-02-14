@@ -3,6 +3,7 @@ from functools import update_wrapper, wraps
 
 class CountCalls:
     def __init__(self, func):
+        update_wrapper(self, func)
         self.delegate = func
         self.calls_count = 0
 
@@ -43,6 +44,7 @@ if __name__ == "__main__":
     say_hello("Petar")
     say_goodbye("Maria")
     say_goodbye("Maria")
+    print(say_hello.__name__)
 
     @process_file("class_decorator.py", mode="rt")
     def print_comments(line: str):
