@@ -18,7 +18,11 @@ def say_goodbye(name):
     print(f"Goodbye {name}!")
 
 class process_file:
-    pass #TODO - Implement me
+    def __init__(self, filename, mode="r", callback=None):
+        pass #TODO - Implement me
+
+    def __call__(self, *args, **kwargs):
+        pass #TODO - Implement me
 
 if __name__ == "__main__":
     say_hello(name="Georgi")
