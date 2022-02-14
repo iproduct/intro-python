@@ -41,6 +41,7 @@ class Line:
         return self.__a
 
     @a.setter
+    @regex("\w{8,20}")
     def a(self, a: Point):
         self.__a = a
 
