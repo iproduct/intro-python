@@ -61,24 +61,33 @@ if __name__ == '__main__':
     # Book JSON repository demo
     entity_class = Book
     books_repo.load()
-    for book in book_controller.get_all_books():
+
+    it = iter(books_repo)
+    try:
+        while True:
+            # it.__next__()
+            print(next(it))
+    except StopIteration:
+        pass
+    print()
+    for book in books_repo:
         print(book)
 
-    # Login demo
-    user_repo = UserRepository("users.json", User)
-    entity_class = User
-    user_repo.load()
-    for user in user_repo.find_all():
-        print(user)
-
-    login_controller = LoginController(user_repo)
-    # login_controller.register(User(None, "Deafult", "Admin", "admin", "admin", "ADMIN"))
-    MAIN_MENU_ITEMS = [
-        MenuItem("Register new user", RegisterCommand(login_controller)),
-        MenuItem("Login", LoginCommand(login_controller)),
-        MenuItem("Logout", LogoutCommand(login_controller)),
-        MenuItem("Show logged user", GetLoggedUserCommand(login_controller)),
-    ]
-    main_menu = Menu(MAIN_MENU_ITEMS)
-    main_menu.show()
-    print("Good bye!")
+    # # Login demo
+    # user_repo = UserRepository("users.json", User)
+    # entity_class = User
+    # user_repo.load()
+    # for user in user_repo.find_all():
+    #     print(user)
+    #
+    # login_controller = LoginController(user_repo)
+    # # login_controller.register(User(None, "Deafult", "Admin", "admin", "admin", "ADMIN"))
+    # MAIN_MENU_ITEMS = [
+    #     MenuItem("Register new user", RegisterCommand(login_controller)),
+    #     MenuItem("Login", LoginCommand(login_controller)),
+    #     MenuItem("Logout", LogoutCommand(login_controller)),
+    #     MenuItem("Show logged user", GetLoggedUserCommand(login_controller)),
+    # ]
+    # main_menu = Menu(MAIN_MENU_ITEMS)
+    # main_menu.show()
+    # print("Good bye!")
