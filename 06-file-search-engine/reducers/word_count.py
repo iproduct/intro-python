@@ -24,7 +24,7 @@ en_stops = {'when', "didn't", 'wasn', 'y', 'few', 'below', 'into', 'there', 'his
             'after', 'before', 'most', 'off', 'mustn', "won't"}
 
 
-def word_count_reducer(content_lines: Iterable[str], *, max_keywords=30) -> list[tuple[str, int]]:
+def word_count_reducer(content_lines: Iterable[str], *, max_keywords=100) -> list[tuple[str, int]]:
     """
     Reduces content_lines to list of (word, count) tuples
     :param content_lines: iterable of string lines
@@ -39,6 +39,7 @@ def word_count_reducer(content_lines: Iterable[str], *, max_keywords=30) -> list
         words_list = re.split(SPLIT_PATTERN, str)
         # print(f"{i:03d}: [{len(str)}] {str[:80]}")
         for word in words_list:
+            word = word.lower()
             if len(word) < 3 or word in en_stops:
                 continue
             word_counts[word] = word_counts.get(word, 0) + 1
