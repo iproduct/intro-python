@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa9c6c9-9e3c-4988-ac18-ab75edf08ed1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/06-file-search-engine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/dir_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/file_walker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filters/html_content_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filters/line_iterator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/dao/repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-classes-library/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/file_walker.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/file_walker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +43,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.file_walker">
+  <component name="RunManager" selected="Python.main">
     <configuration name="dir_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="06-file-search-engine" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,15 +125,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645086914617</updated>
-      <workItem from="1645086918294" duration="4256000" />
+      <workItem from="1645086918294" duration="6105000" />
     </task>
+    <task id="LOCAL-00001" summary="lazy racursive generator of DirEntries">
+      <created>1645092106553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645092106553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lazy racursive generator of DirEntries" />
+    <option name="LAST_COMMIT_MESSAGE" value="lazy racursive generator of DirEntries" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/06_file_search_engine$file_walker.coverage" NAME="file_walker Coverage Results" MODIFIED="1645092023782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/files" />
+    <SUITE FILE_PATH="coverage/06_file_search_engine$file_walker.coverage" NAME="file_walker Coverage Results" MODIFIED="1645092413682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/files" />
     <SUITE FILE_PATH="coverage/06_file_search_engine$dir_list.coverage" NAME="dir_list Coverage Results" MODIFIED="1645089515922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/files" />
+    <SUITE FILE_PATH="coverage/06_file_search_engine$main.coverage" NAME="main Coverage Results" MODIFIED="1645093789863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

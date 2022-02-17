@@ -1,6 +1,7 @@
 import os
 from typing import Iterable
 from re import Pattern, compile
+from os import DirEntry
 
 
 def walk_files_in_dir(dir_: str = '.', *, regex: Pattern | str | None = None, recursive: bool = False) -> Iterable[os.DirEntry]:
@@ -17,7 +18,7 @@ def walk_files_in_dir(dir_: str = '.', *, regex: Pattern | str | None = None, re
                 yield entry
 
 
-def print_dir_entry(path: bool = False, path_field_size = 70):
+def print_dir_entry(entry: DirEntry, *, path: bool = False, path_field_size = 70):
     stat = entry.stat()
     kind = 'DIR' if entry.is_dir() else 'FILE'
     data = entry.path if path else entry.name
@@ -26,4 +27,8 @@ def print_dir_entry(path: bool = False, path_field_size = 70):
 
 if __name__ == "__main__":
     for entry in walk_files_in_dir(r"D:\CoursePython\python-3.10.2-docs-html", recursive=True, regex=r"^.*\.html$"):
-        print_dir_entry(True)
+        print_dir_entry(entry, path=True)
+    # using walk
+    for root, dirs, files in os.walk(r"D:\CoursePython\python-3.10.2-docs-html"):
+        for file in files:
+            print(file)
