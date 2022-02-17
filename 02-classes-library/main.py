@@ -62,13 +62,20 @@ if __name__ == '__main__':
     entity_class = Book
     books_repo.load()
 
-    it = iter(books_repo)
+    it1 = books_repo.__iter__()
+    it2 = books_repo.__iter__()
     try:
         while True:
             # it.__next__()
-            print(next(it))
+            print(next(it1))
+            print(next(it2))
     except StopIteration:
         pass
+
+    print()
+    for book in books_repo:
+        print(book)
+
     print()
     for book in books_repo:
         print(book)

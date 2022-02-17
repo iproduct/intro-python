@@ -4,7 +4,14 @@ from re import Pattern, compile
 from os import DirEntry
 
 
-def walk_files_in_dir(dir_: str = '.', *, regex: Pattern | str | None = None, recursive: bool = False) -> Iterable[os.DirEntry]:
+def walk_files_in_dir(dir_: str = '.', *, regex: Pattern | str | None = None, recursive: bool = False) -> Iterable[DirEntry]:
+    """
+    Create a lazy generator walking all files in a directory recursively
+    :param dir_: directory to walk
+    :param regex: regext filename filter
+    :param recursive: to recursively wallk dirs or not
+    :return: DirEntry lazy generator of all file entries
+    """
     if regex is not None:
         regex = compile(regex) if isinstance(regex, str) else regex
     entries: list[os.DirEntry] = os.scandir(dir_)
