@@ -11,17 +11,19 @@ def html_content_filter(source_iterator: Iterable[str]) -> Iterable[str]:
         content = ""
         start = 0
         end = -1
-        while start >= 0:
-            start = line.find("<", end  + 1)
-            if start < 0:
-                content += line[end + 1:]
-            else:
-                content += line[end + 1:start]
-                end = line.find(">", start + 1)
-                if end < 0:
-                    break
-        content = content.strip()
-        if len(content) > 0:
-            yield content
+        # print(line)
+        # while start >= 0:
+        #     start = line.find("<", end  + 1)
+        #     if start < 0:
+        #         content += line[end + 1:]
+        #     else:
+        #         content += line[end + 1:start]
+        #         end = line.find(">", start + 1)
+        #         if end < 0:
+        #             break
+        # content = content.strip()
+        # if len(content) > 0:
+        #     yield content
+        yield line
 
 
