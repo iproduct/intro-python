@@ -10,7 +10,7 @@ class User:
         self.role = role
         self.active = active
 
-    def __str__(self):
-        return f"| {self.id:>12.12s} | {self.first_name:<15.15s} | {self.last_name:<15.15s} | " \
+    def __repr__(self):
+        return f"| {self.id:>12.12d} | {self.first_name:<15.15s} | {self.last_name:<15.15s} | " \
                f"{self.username:<15.15s} | {self.password:<15.15s} | " \
                f"{self.role:<15.15s} | {self.active} |"
