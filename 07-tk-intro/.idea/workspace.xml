@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7219dbfa-1057-4c76-87c4-4668df5cc2ea" name="Changes" comment="">
+    <list default="true" id="7219dbfa-1057-4c76-87c4-4668df5cc2ea" name="Changes" comment="MVC (MVVM) architectural pattgern implemented">
+      <change afterPath="$PROJECT_DIR$/view/utils/tkinter_utils.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../08-exercises/invalid_entity_data_exception.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../08-exercises/validate_json.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../08-tkinter-lab/component.py" afterDir="false" />
@@ -25,8 +26,6 @@
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/feet_to_meters.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/feet_to_meters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" afterDir="false" />
@@ -154,7 +153,7 @@
       <updated>1645440889287</updated>
       <workItem from="1645440892093" duration="2312000" />
       <workItem from="1646030623853" duration="277000" />
-      <workItem from="1646032127699" duration="7389000" />
+      <workItem from="1646032127699" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="MVC (MVVM) architectural pattgern implemented">
       <created>1646037894657</created>
@@ -163,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646037894657</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=" createWidgets() method extracted from init()">
+      <created>1646040372461</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646040372461</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +177,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC (MVVM) architectural pattgern implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="MVC (MVVM) architectural pattgern implemented" />
+    <MESSAGE value=" createWidgets() method extracted from init()" />
+    <option name="LAST_COMMIT_MESSAGE" value=" createWidgets() method extracted from init()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646040232788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
