@@ -3,11 +3,11 @@ from tkinter import *
 from controller.calculator_controller import CalculatorController
 from service.feet_to_meter_service import FeetToMeterService
 from view.feet_to_meters import FeetToMeters
-from view.utils.tkinter_utils import center_window
+from view.utils.tkinter_utils import center_resize_window
 
 if __name__ == "__main__":
     root = Tk()
-    center_window(root, 300, 150)
+    center_resize_window(root, 800, 400)
     root.columnconfigure(0, weight=1)
     root.rowconfigure(0, weight=1)
     service = FeetToMeterService()
