@@ -11,7 +11,7 @@ def find_primes(n):
     primes = []
     i = 0
     while i < n - 1:
-        while i < n - 1 and numbers[i] == False: # find first number that is True
+        while i < n - 1 and numbers[i] is False: # find first number that is True
             i += 1
         if i >= n-1:
             break
