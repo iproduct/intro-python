@@ -2,18 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7219dbfa-1057-4c76-87c4-4668df5cc2ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-classes-library/entity/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/entity/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/06-file-search-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/06-file-search-engine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/calculator_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/feet_to_meter_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/command/feet_to_meters_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/feet_to_meters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08-exercises/invalid_entity_data_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08-exercises/validate_json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/acad_2022_01_intro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/factorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/intro-python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/Python_2021_05.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,8 +64,57 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CoursePython\git\intro-python\07-tk-intro\presentation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="feet_to_meters (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="07-tk-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/view" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/view/feet_to_meters.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="feet_to_meters" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="07-tk-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CoursePython\git\intro-python\07-tk-intro\presentation\feet_to_meters.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="07-tk-intro" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -57,6 +136,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.feet_to_meters (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,6 +152,8 @@
       <option name="presentableId" value="Default" />
       <updated>1645440889287</updated>
       <workItem from="1645440892093" duration="2312000" />
+      <workItem from="1646030623853" duration="277000" />
+      <workItem from="1646032127699" duration="5577000" />
     </task>
     <servers />
   </component>
@@ -74,6 +161,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1645442623943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646037777302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/07_tk_intro$feet_to_meters__1_.coverage" NAME="feet_to_meters (1) Coverage Results" MODIFIED="1646035624342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
   </component>
 </project>

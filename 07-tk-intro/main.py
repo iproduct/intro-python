@@ -1,30 +1,15 @@
 from tkinter import *
-from tkinter import ttk
 
-def calculate(*args):
-    try:
-        value = float(feet.get())
-        meters.set(int(0.3048 *value *10000.0 + 0.5)/10000.0)
-    except ValueError:
-        pass
+from controller.calculator_controller import CalculatorController
+from service.feet_to_meter_service import FeetToMeterService
+from view.feet_to_meters import FeetToMeters
 
-root = Tk()
-root.title("Feet to Meters")
-
-mainframe = ttk.Frame(root, padding="3 3 12 12")
-mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-root.columnconfigure(0, weight=1)
-root.rowconfigure(0, weight=1)
-
-feet = StringVar()
-feet_entry = ttk.Entry(mainframe, width=7, textvariable=feet)
-feet_entry.grid(column=2, row=1, sticky=(W, E))
-
-meters = StringVar()
-ttk.Label(mainframe, textvariable=meters).grid(column=2, row=2, sticky=(W,E))
-
-ttk.Button(mainframe, text="Calculate", command=calculate).grid(column=3, row=3, sticky=(W))
-for child in mainframe.winfo_children():
-    child.grid_configure(padx=50, pady=10)
-
-root.mainloop()
+if __name__ == "__main__":
+    root = Tk()
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(0, weight=1)
+    service = FeetToMeterService()
+    controller = CalculatorController(service)
+    feet_to_meters = FeetToMeters(root, controller)
+    controller.view = feet_to_meters
+    root.mainloop()
