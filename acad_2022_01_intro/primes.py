@@ -11,12 +11,17 @@ def find_primes(n):
     primes = []
     i = 0
     while i < n - 1:
-        while i < n - 1 and numbers[i] is False: # find first number that is True
+        # find first number that is True - it is the next prime
+        while i < n - 1 and numbers[i] is False:
             i += 1
         if i >= n-1:
             break
+
+        # we have found the index i of the next prime num ber (i == prime - 2)
         prime = i + 2
         primes.append(prime)
+
+        # Set all numbers that are divided by prime to False, but only for primes <= sqrt(n)
         if prime * prime <= n:
             j = i
             while j < n-1:
