@@ -20,7 +20,7 @@ def step(count=0):
     if count == 20:  # done!
         result(42)
         return
-    root.after(1, lambda: step(count+1))
+    root.after(10, lambda: step(count+1))
 
 def result(answer):
     p['value'] = 0

@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa9c6c9-9e3c-4988-ac18-ab75edf08ed1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../02-classes-library/entity/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../02-classes-library/entity/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/06-file-search-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/06-file-search-engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/Python_2021_05.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08-exercises/invalid_entity_data_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08-exercises/validate_json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/acad_2022_01_intro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/factorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/intro-python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +210,7 @@
       <workItem from="1645127814877" duration="533000" />
       <workItem from="1645128369518" duration="596000" />
       <workItem from="1645424512148" duration="11329000" />
+      <workItem from="1645949183014" duration="608000" />
     </task>
     <task id="LOCAL-00001" summary="lazy racursive generator of DirEntries">
       <created>1645092106553</created>

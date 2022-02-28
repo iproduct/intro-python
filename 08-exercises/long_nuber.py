@@ -29,3 +29,4 @@ if __name__ == '__main__':
     print(f"start: {start}, end: {end}")
     result = s[:start] + "".join(list(map(lambda digit: f_map[int(digit) - 1], s[start: end]))) + s[end:]
     print(result)
+

@@ -28,6 +28,9 @@ class FeetToMeters(ttk.Frame):
         # ttk.Button(self, text="Calculate", command=partial(self.calculate, suffix="m")).grid(column=3, row=3, sticky=(W))
         # ttk.Button(self, text="Calculate", command=lambda *args, **kwargs: self.calculate("m", *args, **kwargs))\
         ttk.Button(self, text="Calculate", command=FeetToMetersCommand(self.controller)).grid(column=2, row=3, sticky=(W, N))
+        self.bind_all("<Return>", FeetToMetersCommand(self.controller))
+
+
         for child in self.winfo_children():
             child.grid_configure(padx=50, pady=10)
 
@@ -38,7 +41,7 @@ class FeetToMeters(ttk.Frame):
         for col in range(cols):
             self.columnconfigure(col, weight=1, minsize=50, pad=30)
 
-    # def calculate(self, suffix):
+    # def calculate(self, suffix="m"):
     #     try:
     #         self.meters.set(str(self.service.feet_to_meters(self.feet.get())) + suffix)
     #     except ValueError:
