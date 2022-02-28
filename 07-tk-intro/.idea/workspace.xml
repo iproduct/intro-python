@@ -25,10 +25,6 @@
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/feet_to_meters.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/feet_to_meters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/utils/tkinter_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/utils/tkinter_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" afterDir="false" />
@@ -156,7 +152,7 @@
       <updated>1645440889287</updated>
       <workItem from="1645440892093" duration="2312000" />
       <workItem from="1646030623853" duration="277000" />
-      <workItem from="1646032127699" duration="11893000" />
+      <workItem from="1646032127699" duration="12226000" />
     </task>
     <task id="LOCAL-00001" summary="MVC (MVVM) architectural pattgern implemented">
       <created>1646037894657</created>
@@ -179,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646041312723</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="grid geometry manager demo">
+      <created>1646045186445</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646045186445</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,10 +192,11 @@
     <MESSAGE value="MVC (MVVM) architectural pattgern implemented" />
     <MESSAGE value=" createWidgets() method extracted from init()" />
     <MESSAGE value="center and resize window utility function added" />
-    <option name="LAST_COMMIT_MESSAGE" value="center and resize window utility function added" />
+    <MESSAGE value="grid geometry manager demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="grid geometry manager demo" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646044860652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646045077548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/07_tk_intro$feet_to_meters__1_.coverage" NAME="feet_to_meters (1) Coverage Results" MODIFIED="1646035624342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
   </component>
 </project>
