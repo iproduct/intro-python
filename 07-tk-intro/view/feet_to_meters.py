@@ -8,11 +8,14 @@ from view.command.feet_to_meters_command import FeetToMetersCommand
 class FeetToMeters(ttk.Frame):
     def __init__(self, root, controller: CalculatorController):
         super().__init__(root, padding="3 3 12 12")
+        self.root = root
         self.controller = controller
         self.feet = StringVar() # View Models (following MVVM architecture)
         self.meters = StringVar() # View Models (following MVVM architecture)
+        self.createWidgets()
 
-        root.title('Feet to Meters Convertor')
+    def createWidgets(self):
+        self.root.title('Feet to Meters Convertor')
         self.grid(column=0, row=0, sticky=(N, W, E, S))
 
         feet_entry = ttk.Entry(self, width=7, textvariable=self.feet)
