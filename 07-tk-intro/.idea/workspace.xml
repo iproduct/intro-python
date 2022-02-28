@@ -25,6 +25,9 @@
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/05-mylibrary-lab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-mylibrary-lab-next/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demos/03-events.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/03-events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/feet_to_meters.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/feet_to_meters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-tkinter-lab/.idea/08-tkinter-lab.iml" afterDir="false" />
@@ -56,6 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -63,12 +67,37 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CoursePython\git\intro-python\07-tk-intro\demos" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\CoursePython\git\intro-python\07-tk-intro\view" />
       <recent name="D:\CoursePython\git\intro-python\07-tk-intro\presentation" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="03-events" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="07-tk-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/03-events.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="feet_to_meters (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="07-tk-intro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,6 +167,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.03-events" />
         <item itemvalue="Python.feet_to_meters (1)" />
       </list>
     </recent_temporary>
@@ -152,7 +182,7 @@
       <updated>1645440889287</updated>
       <workItem from="1645440892093" duration="2312000" />
       <workItem from="1646030623853" duration="277000" />
-      <workItem from="1646032127699" duration="12226000" />
+      <workItem from="1646032127699" duration="12980000" />
     </task>
     <task id="LOCAL-00001" summary="MVC (MVVM) architectural pattgern implemented">
       <created>1646037894657</created>
@@ -182,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646045186445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="event handling demo added">
+      <created>1646045280108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646045280108</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,10 +230,12 @@
     <MESSAGE value=" createWidgets() method extracted from init()" />
     <MESSAGE value="center and resize window utility function added" />
     <MESSAGE value="grid geometry manager demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="grid geometry manager demo" />
+    <MESSAGE value="event handling demo added" />
+    <option name="LAST_COMMIT_MESSAGE" value="event handling demo added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646045077548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/07_tk_intro$main.coverage" NAME="main Coverage Results" MODIFIED="1646045803755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/07_tk_intro$feet_to_meters__1_.coverage" NAME="feet_to_meters (1) Coverage Results" MODIFIED="1646035624342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
+    <SUITE FILE_PATH="coverage/07_tk_intro$03_events.coverage" NAME="03-events Coverage Results" MODIFIED="1646045734767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
   </component>
 </project>

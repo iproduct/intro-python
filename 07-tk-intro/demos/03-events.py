@@ -4,7 +4,7 @@ from tkinter import ttk
 if __name__ == '__main__':
     root = Tk()
     root.geometry("800x400+300+100")
-    root.title("Feet to Meters Calculator")
+    root.title("Tkinter Event Handling Demo")
     mainframe = ttk.Frame(root, padding="50 30 50 30")
     mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
     root.columnconfigure(0, weight=1)

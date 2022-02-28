@@ -14,7 +14,6 @@ class FeetToMeters(ttk.Frame):
         self.feet = StringVar() # View Models (following MVVM architecture)
         self.meters = StringVar() # View Models (following MVVM architecture)
         self.createWidgets()
-        # self.update_idletasks()
         print_hierarchy(root)
 
     def createWidgets(self):
