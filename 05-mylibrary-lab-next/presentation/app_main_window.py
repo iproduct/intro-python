@@ -27,9 +27,9 @@ class AppMainWindow(ttk.Frame):
         # File menu
         menu_file = Menu(self.menubar)
         self.menubar.add_cascade(menu=menu_file, label="File", underline=0)
-        menu_file.add_command(label='New', command = self.newFile, underline=0, accelerator="Alt+N")
-        self.bind("<Alt-N>", self.newFile)
-        print(menu_file.entryconfigure(0))
+        menu_file.add_command(label='New', command = self.newFile, underline=0, accelerator="Control+Shift+N")
+        self.bind_all("<Control-Shift-KeyPress-N>", self.newFile)
+        print("!!!", menu_file.entryconfigure(0))
         menu_file.add_command(label="Open ...", command = self.openFile)
         menu_file.add_command(label='Close', command = self.closeFile)
         menu_file.entryconfigure('Close', state=DISABLED)
@@ -42,7 +42,7 @@ class AppMainWindow(ttk.Frame):
 
 
 
-    def newFile(self):
+    def newFile(self, event = None):
         messagebox.showinfo(title="New File Dialog", message="Creating DB file ...")
 
     def openFile(self):

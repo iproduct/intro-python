@@ -17,6 +17,6 @@ if __name__ == '__main__':
 
     btn3 = tkinter.Button(bottom_frame, text = "Button3", fg = "purple").pack(side = "left") #'side' is used to left or right align the widgets
 
-    btn4 = tkinter.Button(bottom_frame, text = "Button4", fg = "orange").pack(side = "left")
+    btn4 = tkinter.Button(bottom_frame, text = "Button4", fg = "orange").pack(side = "right")
 
     window.mainloop()
