@@ -6,10 +6,12 @@ books = [
      135.9)
 ]
 
+
 def format(books: list[tuple]) -> str:
-        return '\n'.join(map(lambda book:
-            '| {0:4d} | {1:15.15s} | {2:30.30s} | {3:20.20s} | {4:15.15s} | {5:4d} | {6:8.2f} |'
-            .format(*book), books))
+    return '\n'.join(map(lambda book:
+                         '| {0:4d} | {1:15.15s} | {2:30.30s} | {3:20.20s} | {4:15.15s} | {5:4d} | {6:8.2f} |'
+                         .format(*book), books))
+
 
 if __name__ == '__main__':
     print(format(books))
