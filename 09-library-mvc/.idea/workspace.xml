@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/book_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/components/item_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/components/item_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/main_view.py" afterDir="false" />
-    </list>
+    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646640862599</updated>
-      <workItem from="1646640866904" duration="9682000" />
+      <workItem from="1646640866904" duration="10464000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -107,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646650493625</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ItemList using Treeview ttk component added">
+      <created>1646652193589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646652193589</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +120,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ItemList using Treeview ttk component added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646652002143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646652124936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
