@@ -19,12 +19,9 @@ if __name__ == "__main__":
     books_repo = BookRepository("books.json", Book)
     book_service = BookService(books_repo)
     book_controller = BookController(book_service)
+    book_controller.reload_books()
 
-
-    service = FeetToMeterService()
-    calc_controller = CalculatorController(service)
-    main_view = MainView(root, calc_controller,book_controller)
-    calc_controller.view = main_view
+    main_view = MainView(root, book_controller)
     book_controller.view = main_view
 
     # Start the app event loop

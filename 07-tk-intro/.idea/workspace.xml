@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7219dbfa-1057-4c76-87c4-4668df5cc2ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../08-tkinter-lab/notebook.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/controller/book_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/view/command/books/add_book_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/view/command/books/list_books_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/view/command/load_data_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/view/command/save_data_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-library-mvc/view/main_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/component.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/books.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/dao/json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/dao/json_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/dao/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/controller/book_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/controller/book_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../09-library-mvc/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/service/book_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/service/book_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/view/feet_to_meters.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/view/components/item_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/view/components/item_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/view/components/item_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/view/main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/view/main_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +208,7 @@
       <workItem from="1646078020188" duration="1108000" />
       <workItem from="1646629526776" duration="4387000" />
       <workItem from="1646646323583" duration="1769000" />
-      <workItem from="1646648382513" duration="604000" />
+      <workItem from="1646648382513" duration="2082000" />
     </task>
     <task id="LOCAL-00001" summary="MVC (MVVM) architectural pattgern implemented">
       <created>1646037894657</created>

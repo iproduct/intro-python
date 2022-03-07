@@ -6,8 +6,11 @@ class BookController:
         self.view = view
         self.service = service
 
+    def get_all_books(self):
+        return self.service.get_all_books()
+
     def reload_books(self):
-        self.service.reload_books()
+        return self.service.reload_books()
 
     def save_books(self):
-        self.service.save_books()
+        return self.service.save_books()
