@@ -11,7 +11,7 @@ label1 = tk.Label(
     fg='white'
 )
 
-label1.place(x=20, y=10)
+label1.place(x=20, y=10, width=200, height=150)
 
 # label 2
 label2 = tk.Label(
@@ -21,6 +21,6 @@ label2 = tk.Label(
     fg='white'
 )
 
-label2.place(relx=0.8, rely=0.2, relwidth=0.5, anchor='ne')
+label2.place(relx=0.5, rely=0.5, relwidth=0.5, anchor='center')
 
 root.mainloop()

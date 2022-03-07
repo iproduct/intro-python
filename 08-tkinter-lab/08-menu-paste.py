@@ -7,7 +7,7 @@ def launchFindDialog(*args):
 
 
 def newFile(*args):
-    messagebox.showinfo(message="Opening file ...")
+    messagebox.showinfo(message="Creating file ...")
 
 
 def openFile(*args):
@@ -15,13 +15,13 @@ def openFile(*args):
 
 
 def closeFile(*args):
-    messagebox.showinfo(message="Opening file ...")
+    messagebox.showinfo(message="Closing file ...")
 
 
 if __name__ == '__main__':
     root = Tk()
     print(root.tk.call('tk', 'windowingsystem'))  # returns x11, win32 or aqua
-    root.option_add('*tearOff', FALSE)
+    root.option_add('*tearOff', False)
 
     win = Toplevel(root)
     ttk.Entry(win).grid()
@@ -40,7 +40,8 @@ if __name__ == '__main__':
     menu_file.add_command(label='Close', command=closeFile)
 
     menu_edit.add_command(label="Paste", command=lambda: root.focus_get().event_generate("<<Paste>>"))
-    menu_edit.add_command(label="Find...", command=lambda: root.event_generate("<<OpenFindDialog>>"))
+    menu_edit.add_command(label='Find...', command=lambda: root.event_generate('<<OpenFindDialog>>'))
+    root.event_add('<<OpenFindDialog>>', '<Button-3>')
 
-    root.bind("<<OpenFindDialog>>", launchFindDialog)
+    root.bind('<<OpenFindDialog>>', launchFindDialog)
     root.mainloop()
