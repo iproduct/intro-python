@@ -19,4 +19,4 @@ class MyList:
 
 if __name__ == '__main__':
     mylist = MyList(range(10))
-    print(mylist[2:7])
+    print(mylist[2:7:2])
