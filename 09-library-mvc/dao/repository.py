@@ -55,3 +55,6 @@ class Repository:
 
     def count(self):
         return len(self._items)
+
+    def clear(self):
+        self._items.clear()

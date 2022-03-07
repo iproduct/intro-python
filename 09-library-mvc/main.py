@@ -1,11 +1,12 @@
 from tkinter import *
 
+from controller.book_controller import BookController
 from controller.calculator_controller import CalculatorController
 from dao.book_repository import BookRepository
 from entity.book import Book
 from service.book_service import BookService
 from service.feet_to_meter_service import FeetToMeterService
-from view.feet_to_meters import FeetToMeters
+from view.main_view import MainView
 from view.utils.tkinter_utils import center_resize_window
 
 if __name__ == "__main__":
@@ -16,10 +17,15 @@ if __name__ == "__main__":
 
     # Configure doamin repos and services
     books_repo = BookRepository("books.json", Book)
-    book_controller = BookService(books_repo)
+    book_service = BookService(books_repo)
+    book_controller = BookController(book_service)
+
 
     service = FeetToMeterService()
-    controller = CalculatorController(service)
-    feet_to_meters = FeetToMeters(root, controller)
-    controller.view = feet_to_meters
+    calc_controller = CalculatorController(service)
+    main_view = MainView(root, calc_controller,book_controller)
+    calc_controller.view = main_view
+    book_controller.view = main_view
+
+    # Start the app event loop
     root.mainloop()

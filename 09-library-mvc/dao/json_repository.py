@@ -16,6 +16,7 @@ class JsonRepository(Repository):
             json.dump(self.find_all(), f, indent=4, default=dumper)
 
     def load(self):
+        self.clear()
         with open(self.db_filename, "rt", encoding="utf-8") as f:
             users = json.load(f, object_hook=object_hook(self.entity_class)) # IIFE
             for user in users:

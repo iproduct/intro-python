@@ -2,41 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/09-library-mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/calculator_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/book_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/json_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/user_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/book.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exception/credentials_exception.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/book_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/feet_to_meter_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/login_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/fun_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/command/feet_to_meters_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/feet_to_meters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/utils/tkinter_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../09-mvc-library/.idea/02-classes-library.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../08-tkinter-lab/notebook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/book_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/command/books/add_book_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/command/books/list_books_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/command/load_data_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/command/save_data_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/components/item_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/main_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../07-tk-intro/demos/place01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../07-tk-intro/demos/place01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/08-menu-paste.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-tkinter-lab/08-menu-paste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/component.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/json_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/book_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/book_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/feet_to_meters.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view/command/books" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -60,6 +55,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CoursePython\git\intro-python\09-library-mvc\view\command\books" />
+      <recent name="D:\CoursePython\git\intro-python\09-library-mvc\view\command" />
       <recent name="D:\CoursePython\git\intro-python\09-library-mvc" />
       <recent name="D:\CoursePython\git\intro-python\09-library-mvc\controller" />
     </key>
@@ -99,14 +96,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646640862599</updated>
-      <workItem from="1646640866904" duration="633000" />
+      <workItem from="1646640866904" duration="8165000" />
     </task>
+    <task id="LOCAL-00001" summary="09-library-mvc initial commit">
+      <created>1646641608840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646641608840</updated>
+    </task>
+    <task id="LOCAL-00002" summary="examples added">
+      <created>1646641702234</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646641702234</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="09-library-mvc initial commit" />
+    <MESSAGE value="examples added" />
+    <option name="LAST_COMMIT_MESSAGE" value="examples added" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646641018954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646646213978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
