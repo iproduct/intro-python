@@ -49,12 +49,17 @@ class BookMainView(ttk.Frame):
                                      command=self.edit_book_command)
         self.add_button.grid(column=2, row=0, sticky=(N,E), padx=40, pady=20)
         self.add_button = ttk.Button(buttons_frame, text="Delete Books", padding=10,
-                                     command=self.show_add_book_command)
+                                     command=self.delete_selected)
         self.add_button.grid(column=3, row=0, sticky=(N,E), padx=40, pady=20)
 
         rows, cols = buttons_frame.grid_size()
         for col in range(cols):
             buttons_frame.columnconfigure(col,minsize=300, pad=30)
+
+    def delete_selected(self):
+        items = self.item_list.get_selected_tems()
+        ids = list(map(lambda item: item[0], items))
+        print(ids)
 
     def refresh(self):
         books = self.book_controller.get_all_books()

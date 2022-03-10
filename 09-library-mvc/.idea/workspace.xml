@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/view/command/books/delete_books_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/command/books/edit_book_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/command/books/show_add_book_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/components/books_main_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/components/item_form.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -16,13 +11,9 @@
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/book_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/book_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/book_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/command/books/add_book_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/command/books/add_book_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/components/books_main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/components/books_main_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/components/item_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/components/item_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/main_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646640862599</updated>
       <workItem from="1646640866904" duration="10464000" />
-      <workItem from="1646896121038" duration="13652000" />
+      <workItem from="1646896121038" duration="14433000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -131,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646652193589</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add/Edit components, commands and services added">
+      <created>1646910960284</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646910960284</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,9 +139,10 @@
     <MESSAGE value="09-library-mvc initial commit" />
     <MESSAGE value="examples added" />
     <MESSAGE value="ItemList using Treeview ttk component added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ItemList using Treeview ttk component added" />
+    <MESSAGE value="Add/Edit components, commands and services added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit components, commands and services added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646910743646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646911531721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

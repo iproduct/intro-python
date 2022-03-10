@@ -13,8 +13,6 @@ class BookController:
     def __init__(self, service: BookService, view=None):
         self.view = view
         self.service = service
-        self.show_add_book_command = ShowAddBookCommand(self)
-        self.add_book_command = AddBookCommand(self)
 
     def get_all_books(self):
         return self.service.get_all_books()
@@ -28,18 +26,9 @@ class BookController:
     def show_add_book(self):
         form = ItemForm(self.view,
                         Book("", "", "", [], "", "", datetime.now().year, 0.0, "", [], ""),
-                        self.add_book_command)
+                        AddBookCommand(self))
 
     def add_book(self, book: Book):
         self.service.add_book(book)
         self.view.refresh()
 
-    def show_edit_book(self, book_id):
-        window = Toplevel(self.view)
-        window.title("Add Book")
-        from view.components.item_form import ItemForm
-        form = ItemForm(window, self.service.get_all_book_by_id(book_id), self.add_book_command, edit=True)
-        form.grid(row=0, column=0, sticky=NSEW)
-        center_resize_window(window)
-        window.rowconfigure(0, weight=1)
-        window.columnconfigure(0, weight=1)

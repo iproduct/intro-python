@@ -54,3 +54,9 @@ class ItemList(ttk.Frame):
         self.item_pos_ids = list(map(set_item, self.items))
         self.update_idletasks()
         self.tree.see(self.item_pos_ids[-1])
+
+    def get_selected_tems(self):
+        items = []
+        for sel_item in self.tree.selection():
+            items.append(self.tree.item(sel_item, 'values'))
+        return items
