@@ -4,12 +4,14 @@ from tkinter import ttk
 from controller.book_controller import BookController
 from controller.calculator_controller import CalculatorController
 from view.command.books.add_book_command import AddBookCommand
+from view.command.books.delete_books_command import DeleteBooksCommand
+from view.command.books.edit_book_command import ShowEditBookCommand
 from view.command.books.list_books_command import ListBooksCommand
+from view.command.books.show_add_book_command import ShowAddBookCommand
 from view.command.exit_command import ExitCommand
-from view.command.feet_to_meters_command import FeetToMetersCommand
 from view.command.load_data_command import LoadDataCommand
 from view.command.save_data_command import SaveDataCommand
-from view.components.item_list import ItemList
+from view.components.books_main_view import BookMainView
 from view.utils.tkinter_utils import print_hierarchy
 
 
@@ -39,35 +41,29 @@ class MainView(ttk.Frame):
         menu_file.add_command(label="Exit", command=exit_command, underline=1, accelerator='Ctrl-Shift-X')
         root.bind_all("<Control-Shift-KeyPress-X>", exit_command )
 
+        # Create commands
+        self.show_add_book_command = ShowAddBookCommand(book_controller)
+        self.show_edit_book_command = ShowEditBookCommand(book_controller)
+        self.delete_books_command = DeleteBooksCommand(book_controller)
+        self.list_books_command = ListBooksCommand(book_controller)
+
         # Books menu
         menu_books = Menu(self.menubar)
         self.menubar.add_cascade(menu=menu_books, label="Books", underline=0)
-        menu_books.add_command(label="Add Book", command=AddBookCommand(book_controller))
-        menu_books.add_command(label="List Books", command=ListBooksCommand(book_controller))
+        menu_books.add_command(label="List Books", command=self.list_books_command)
+        menu_books.add_separator()
+        menu_books.add_command(label="Add Book", command=self.show_add_book_command)
+        menu_books.add_command(label="Edit Book", command=self.show_edit_book_command)
+        menu_books.add_command(label="Delete Books", command=self.delete_books_command)
+
 
         # Show items
-        self.item_list = ItemList(self.root, items=self.book_controller.get_all_books())
+        self.item_list = BookMainView(self.root, self.book_controller,
+                                      self.show_add_book_command,
+                                      self.show_edit_book_command,
+                                      self.delete_books_command)
 
         print_hierarchy(root)
 
-    # def createWidgets(self):
-    #     feet_entry = ttk.Entry(self, width=7, textvariable=self.feet)
-    #     feet_entry.grid(column=1, row=1, columnspan=2, ipadx=15, ipady=15, sticky=(W, E))
-    #
-    #     ttk.Label(self, textvariable=self.meters).grid(column=1, row=2, sticky=(W, E))
-    #
-    #     # ttk.Button(self, text="Calculate", command=partial(self.calculate, suffix="m")).grid(column=3, row=3, sticky=(W))
-    #     # ttk.Button(self, text="Calculate", command=lambda *args, **kwargs: self.calculate("m", *args, **kwargs))\
-    #     ttk.Button(self, text="Calculate", command=FeetToMetersCommand(self.calc_controller)).grid(column=2, row=3, sticky=(W, N))
-    #     self.bind_all("<Return>", FeetToMetersCommand(self.calc_controller))
-    #
-    #
-    #     for child in self.winfo_children():
-    #         child.grid_configure(padx=50, pady=10)
-    #
-    #     rows, cols = self.grid_size()
-    #     print(rows, cols)
-    #     for row in range(rows):
-    #         self.rowconfigure(row, weight=1, minsize=30, pad=30)
-    #     for col in range(cols):
-    #         self.columnconfigure(col, weight=1, minsize=50, pad=30)
+    def refresh(self):
+        self.item_list.refresh()
