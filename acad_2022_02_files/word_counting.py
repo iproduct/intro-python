@@ -22,7 +22,7 @@ stops= {'had', 'him', "isn't", "shan't", 'yourself', 'will', 'couldn', 'hadn', "
         'but', 'to', "you'll", 'does', 'wasn', 'while', 'my', 'are', 'our', "you'd", 'shouldn', "mustn't",
         'weren', 'such', 'shan', 'yourselves', 'very', "weren't", 'into', 'when', 't', 'has', 'y', "hadn't",
         'can', 'over'}
-print(stops)
+# print(stops)
 
 def index_file(file_name: str, max_words: int = 20) -> list[tuple[str, int]]:
     word_counts = {}
@@ -30,9 +30,14 @@ def index_file(file_name: str, max_words: int = 20) -> list[tuple[str, int]]:
         for line in f:
             words = re.split(r'\W+', line)
             for word in words:
+                word = word.lower()
+                if word in stops or len(word) < 3:
+                    continue
                 word_counts[word] = word_counts.get(word, 0) + 1
-    print(word_counts)
+        wc_items: list[tuple[str, int]] = list(word_counts.items())
+        wc_items.sort(key=lambda t: t[1], reverse=True)
+    return wc_items[:max_words]
 
 if __name__ == '__main__':
-    for word_count in index_file("wikipedia.txt"):
-        print(f'{word_count[0]:30s} -> {word_count[0]:4d}')
+    for word_count in index_file("wikipedia.txt", 15):
+        print(f'{word_count[0]:30s} -> {word_count[1]:4d}')
