@@ -30,5 +30,5 @@ if __name__ == "__main__":
     print(is_palindrom("abcdcab"))
     words = ['abcdcba', 'abcdcab', 'neveroddoreven', 'neverevenorodd']
 
-    palindrom = (words)
-    print(list(palindrom))
+    palindroms = (words) #TODO
+    print(list(palindroms))

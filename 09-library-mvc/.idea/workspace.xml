@@ -79,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646640862599</updated>
       <workItem from="1646640866904" duration="10464000" />
-      <workItem from="1646896121038" duration="14743000" />
+      <workItem from="1646896121038" duration="14761000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646911771500</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Delete selection implemented">
+      <created>1646911850262</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646911850262</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
