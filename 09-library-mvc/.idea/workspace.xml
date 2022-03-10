@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/book_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/components/books_main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/components/books_main_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/components/item_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/components/item_list.py" afterDir="false" />
-    </list>
+    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646640862599</updated>
       <workItem from="1646640866904" duration="10464000" />
-      <workItem from="1646896121038" duration="14433000" />
+      <workItem from="1646896121038" duration="14743000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -129,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646910960284</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Delete selection implemented">
+      <created>1646911771500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646911771500</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,9 +134,10 @@
     <MESSAGE value="examples added" />
     <MESSAGE value="ItemList using Treeview ttk component added" />
     <MESSAGE value="Add/Edit components, commands and services added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit components, commands and services added" />
+    <MESSAGE value="Delete selection implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete selection implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646911531721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1646911644580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
