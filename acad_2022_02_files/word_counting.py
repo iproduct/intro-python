@@ -1,4 +1,6 @@
 import re
+import sys
+
 import nltk
 
 # from nltk.corpus import stopwords
@@ -39,5 +41,10 @@ def index_file(file_name: str, max_words: int = 20) -> list[tuple[str, int]]:
     return wc_items[:max_words]
 
 if __name__ == '__main__':
-    for word_count in index_file("wikipedia.txt", 15):
+    print(str(sys.argv))
+    if len(sys.argv) > 1:
+        filename = sys.argv[1]
+    else:
+        filename = "wikipedia.txt"
+    for word_count in index_file(filename, 15):
         print(f'{word_count[0]:30s} -> {word_count[1]:4d}')
