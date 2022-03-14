@@ -3,7 +3,7 @@ from io import UnsupportedOperation
 if __name__ == '__main__':
     FILENAME = "wikipedia.txt"
     try:
-        f = open(FILENAME, "wt")
+        f = open(FILENAME, "rt")
         try:
             f.write("Lorum Ipsum" + "12")
         except UnsupportedOperation as ex:

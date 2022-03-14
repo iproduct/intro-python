@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058aeae-f102-48a3-9cca-6e3b487ccb22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/10-numpy-pandas-lab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matplot.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matplot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numpy01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numpy02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numpy03_universal.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/other.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/add_ufunc.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat.jpg" afterDir="false" />
@@ -28,6 +13,7 @@
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas01.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../10-numpy-pd/scipy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pd/main.py" beforeDir="false" />
@@ -198,12 +184,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647242888203</updated>
-      <workItem from="1647242892391" duration="10076000" />
+      <workItem from="1647242892391" duration="10743000" />
     </task>
+    <task id="LOCAL-00001" summary="numpydemos added">
+      <created>1647255169167</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647255169167</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="numpydemos added" />
+    <option name="LAST_COMMIT_MESSAGE" value="numpydemos added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -218,7 +216,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy02.coverage" NAME="numpy02 Coverage Results" MODIFIED="1647251500354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy03_universal.coverage" NAME="numpy03_universal Coverage Results" MODIFIED="1647252302844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy03_universal.coverage" NAME="numpy03_universal Coverage Results" MODIFIED="1647255138439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplot.coverage" NAME="matplot Coverage Results" MODIFIED="1647253131885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy01.coverage" NAME="numpy01 Coverage Results" MODIFIED="1647247226194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

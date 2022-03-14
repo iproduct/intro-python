@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="" />
+    <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/add_ufunc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat_tinted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/data/air_quality_no2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/decyobin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/jupyter-notebook-tutorial.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/matplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/scipy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/main.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +96,7 @@
       <updated>1646640862599</updated>
       <workItem from="1646640866904" duration="10464000" />
       <workItem from="1646896121038" duration="14761000" />
+      <workItem from="1647256292141" duration="684000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>

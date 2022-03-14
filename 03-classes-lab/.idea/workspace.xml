@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../05-functions-lab/jit_hello.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05-functions-lab/singleton_class_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/add_ufunc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat_tinted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/data/air_quality_no2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/dectobin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/jupyter-notebook-tutorial.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/matplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/scipy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point_property_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/point_property_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-files-lab/file_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../04-files-lab/file_exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +163,7 @@
       <workItem from="1643268549166" duration="11822000" />
       <workItem from="1643612675157" duration="1554000" />
       <workItem from="1644834255223" duration="1585000" />
+      <workItem from="1647274678716" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="demos and presentations added">
       <created>1643273939137</created>

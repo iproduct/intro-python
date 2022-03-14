@@ -2,27 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa9c6c9-9e3c-4988-ac18-ab75edf08ed1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../08-exercises/invalid_entity_data_exception.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../08-exercises/validate_json.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/acad_2022_01_intro.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_01_intro/factorial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/intro-python.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-exercises/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/long_nuber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/add_ufunc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat_tinted.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/data/air_quality_no2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/dectobin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/jupyter-notebook-tutorial.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/matplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/scipy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-files-lab/file_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../04-files-lab/file_exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +209,7 @@
       <workItem from="1645128369518" duration="596000" />
       <workItem from="1645424512148" duration="11329000" />
       <workItem from="1645949183014" duration="608000" />
+      <workItem from="1647274677500" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="lazy racursive generator of DirEntries">
       <created>1645092106553</created>
@@ -286,7 +285,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/06_file_search_engine$file_walker.coverage" NAME="file_walker Coverage Results" MODIFIED="1645092413682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/files" />
     <SUITE FILE_PATH="coverage/06_file_search_engine$dir_list.coverage" NAME="dir_list Coverage Results" MODIFIED="1645089515922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/files" />
-    <SUITE FILE_PATH="coverage/06_file_search_engine$matplotlib_demo.coverage" NAME="matplotlib_demo Coverage Results" MODIFIED="1645440298516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
+    <SUITE FILE_PATH="coverage/06_file_search_engine$matplotlib_demo.coverage" NAME="matplotlib_demo Coverage Results" MODIFIED="1647274841800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
     <SUITE FILE_PATH="coverage/06_file_search_engine$main.coverage" NAME="main Coverage Results" MODIFIED="1645435751817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
