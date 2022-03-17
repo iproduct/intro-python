@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "title": "Learning Python",
+        "subtitle": "",
+        "authors": [
+            "Марк Лътз",
+            "Дейвид Асър"
+        ],
+        "publisher": "O'Reily",
+        "year": 1997,
+        "price": 22.7
+    },
+    {
+        "id": 2,
+        "title": "Think Python",
+        "subtitle": "An Introduction to Software Design",
+        "authors": [
+            "Алън Б. Дауни"
+        ],
+        "publisher": "O'Reily",
+        "year": 2002,
+        "price": 9.4
+    },
+    {
+        "id": 3,
+        "title": "Python Cookbook",
+        "subtitle": "Recipes for Mastering Python 3",
+        "authors": [
+            "Браян К. Джоунс и Дейвид М. Баазли"
+        ],
+        "publisher": "O'Reily",
+        "year": 2011,
+        "price": 62.6
+    },
+    {
+        "id": 4,
+        "title": "Learning Python 2 ed.",
+        "subtitle": "",
+        "authors": [
+            "Марк Лътз",
+            "Дейвид Асър"
+        ],
+        "publisher": "O'Reily",
+        "year": 1998,
+        "price": 22.7
+    },
+    {
+        "id": 5,
+        "title": "Think Python 2 ed.",
+        "subtitle": "An Introduction to Software Design",
+        "authors": [
+            "Алън Б. Дауни"
+        ],
+        "publisher": "O'Reily",
+        "year": 2002,
+        "price": 19.4
+    },
+    {
+        "id": 6,
+        "title": "Python Cookbook 2",
+        "subtitle": "Recipes for Mastering Python 3",
+        "authors": [
+            "Браян К. Джоунс и Дейвид М. Баазли"
+        ],
+        "publisher": "O'Reily",
+        "year": 2011,
+        "price": 56.7
+    },
+    {
+        "id": 7,
+        "title": "Learning Python 3 ed.",
+        "subtitle": "",
+        "authors": [
+            "Марк Лътз",
+            "Дейвид Асър"
+        ],
+        "publisher": "O'Reily",
+        "year": 2001,
+        "price": 28.9
+    },
+    {
+        "id": 8,
+        "title": "Think Python 3 ed.",
+        "subtitle": "An Introduction to Software Design",
+        "authors": [
+            "Алън Б. Дауни"
+        ],
+        "publisher": "O'Reily",
+        "year": 2002,
+        "price": 23.4
+    },
+    {
+        "id": 9,
+        "title": "Python Cookbook 3 ed.",
+        "subtitle": "Recipes for Mastering Python 3",
+        "authors": [
+            "Браян К. Джоунс и Дейвид М. Баазли"
+        ],
+        "publisher": "O'Reily",
+        "year": 2011,
+        "price": 135.9
+    }
+]

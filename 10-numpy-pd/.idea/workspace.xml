@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d2a9942-8719-408e-a21d-14f6c6b05f26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/add_ufunc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/cat_tinted.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/air_quality_no2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dectobin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter-notebook-tutorial.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matplot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scipy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/intro-python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-up-2022-lab/matplotlib_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../05-up-2022-lab/matplotlib_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-file-search-engine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/10-numpy-pd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/matplotlib_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/matplotlib_demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +132,9 @@
       <module name="10-numpy-pd" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -213,6 +214,7 @@
       <workItem from="1646889839170" duration="725000" />
       <workItem from="1647235825608" duration="4619000" />
       <workItem from="1647240964237" duration="2802000" />
+      <workItem from="1647501376699" duration="750000" />
     </task>
     <servers />
   </component>

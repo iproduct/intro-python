@@ -1,13 +1,17 @@
-import sys
+import io
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-y = np.array([55, 15, 25, 5])
+if __name__ == "__main__":
+    y = np.array([35, 35, 25, 5])
 
-plt.pie(y)
-plt.show()
+    plt.pie(y)
+    plt.savefig("pie.png", format="png")
+    plt.show()
 
-#Two  lines to make our compiler able to draw:
-# plt.savefig(sys.stdout.buffer)
-# sys.stdout.flush()
+    # plt.savefig("pie.png")
+
+    #Two  lines to make our compiler able to draw:
+    # plt.savefig(sys.stdout.buffer)
+    # sys.stdout.flush()

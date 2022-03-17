@@ -4,7 +4,7 @@
     <list default="true" id="8aa9c6c9-9e3c-4988-ac18-ab75edf08ed1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acad_2022_02_files/word_counting.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_02_files/word_counting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_02_files/json_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_02_files/json_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1645128369518" duration="596000" />
       <workItem from="1645424512148" duration="11329000" />
       <workItem from="1645949183014" duration="608000" />
-      <workItem from="1647274677500" duration="837000" />
+      <workItem from="1647274677500" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="lazy racursive generator of DirEntries">
       <created>1645092106553</created>
