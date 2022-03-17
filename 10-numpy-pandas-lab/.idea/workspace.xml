@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f058aeae-f102-48a3-9cca-6e3b487ccb22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas03.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas03.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workouts.png" beforeDir="false" afterPath="$PROJECT_DIR$/workouts.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f058aeae-f102-48a3-9cca-6e3b487ccb22" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +197,7 @@
       <updated>1647242888203</updated>
       <workItem from="1647242892391" duration="10743000" />
       <workItem from="1647498838748" duration="1646000" />
-      <workItem from="1647501645602" duration="14214000" />
+      <workItem from="1647501645602" duration="14255000" />
     </task>
     <task id="LOCAL-00001" summary="numpydemos added">
       <created>1647255169167</created>
@@ -260,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647515214490</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="pandas03 demo updated">
+      <created>1647517371839</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647517371839</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pandas03 demo updated">
+      <created>1647517390227</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647517390227</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +282,8 @@
     <MESSAGE value="color map scatter plot" />
     <MESSAGE value="pandas01 demo added" />
     <MESSAGE value="pandas03 demo added" />
-    <option name="LAST_COMMIT_MESSAGE" value="pandas03 demo added" />
+    <MESSAGE value="pandas03 demo updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="pandas03 demo updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
