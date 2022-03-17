@@ -24,7 +24,7 @@ if __name__ == "__main__":
             raise MyException("Risen from except clause: " + str(ex)) from ex
     except MyException as ex:
         exinfo = sys.exc_info()
-        print("Catched:", ex, ", Exc. info:")
+        print("Catched:", ex, ", Exc. info:", exinfo, ":")
         traceback.print_tb(exinfo[2], file=sys.stdout)
 
 
