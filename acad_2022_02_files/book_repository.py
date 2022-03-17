@@ -6,7 +6,7 @@ SAMPLE_BOOKS = [
     (3, "Python Cookbook", "Recipes for Mastering Python 3", ["Браян К. Джоунс", "Дейвид М. Баазли"], "O'Reily", 2011, 62.6)
 ]
 
-def create_book_repository(json_filename)-> list[book]:
+def create_book_repository(json_filename: str)-> list[book]:
     # TODO write you code here - load books from json file or in case of exception use SAMPLE_BOOKS
     pass
 
