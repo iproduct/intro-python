@@ -22,7 +22,12 @@ if __name__ == "__main__":
     print(workouts.corr())
 
     # plot charts
-    workouts.plot()
+    # workouts.plot()
+    # workouts.plot(kind='scatter', x='Duration', y='Calories')
+    # workouts.plot(kind='scatter', x='Duration', y='Maxpulse')
+
+    workouts["Duration"].plot(kind='hist', bins=20)
+
     plt.savefig("workouts.png", format="png")
     plt.show()
 
