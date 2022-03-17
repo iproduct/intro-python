@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058aeae-f102-48a3-9cca-6e3b487ccb22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/matplotlib04.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pie.png" beforeDir="false" afterPath="$PROJECT_DIR$/pie.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +44,7 @@
       <recent name="D:\CoursePython\git\intro-python\10-numpy-pandas-lab" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.matplotlib04">
+  <component name="RunManager" selected="Python.pandas01">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="10-numpy-pandas-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="numpy03_universal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pandas01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="10-numpy-pandas-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -170,7 +168,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/numpy03_universal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pandas01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pandas01" />
         <item itemvalue="Python.matplotlib04" />
         <item itemvalue="Python.matplotlib03" />
         <item itemvalue="Python.matplotlib02" />
         <item itemvalue="Python.matplotlib_demo" />
-        <item itemvalue="Python.numpy03_universal" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +197,7 @@
       <updated>1647242888203</updated>
       <workItem from="1647242892391" duration="10743000" />
       <workItem from="1647498838748" duration="1646000" />
-      <workItem from="1647501645602" duration="4864000" />
+      <workItem from="1647501645602" duration="5521000" />
     </task>
     <task id="LOCAL-00001" summary="numpydemos added">
       <created>1647255169167</created>
@@ -229,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647505681121</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="color map scatter plot">
+      <created>1647506583974</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647506583974</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
