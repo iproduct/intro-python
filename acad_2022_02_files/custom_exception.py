@@ -1,4 +1,5 @@
 import sys
+import traceback
 
 
 class MyException(Exception):
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     except MyException as ex:
         exinfo = sys.exc_info()
         print("Catched:", ex, ", Exc. info:")
-        print (exinfo[2].tb_frame.__repr__())
+        traceback.print_tb(exinfo[2], file=sys.stdout)
 
 
     print("Program contounes normally.")
