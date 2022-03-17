@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058aeae-f102-48a3-9cca-6e3b487ccb22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/workouts.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/workouts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas01.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/workouts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/workouts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas02.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas02.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
       <recent name="D:\CoursePython\git\intro-python\10-numpy-pandas-lab" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pandas02">
+  <component name="RunManager" selected="Python.pandas03">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="10-numpy-pandas-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,28 +62,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="matplotlib02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="10-numpy-pandas-lab" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,13 +158,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pandas03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="10-numpy-pandas-lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pandas03.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pandas03" />
         <item itemvalue="Python.pandas02" />
         <item itemvalue="Python.pandas01" />
         <item itemvalue="Python.matplotlib04" />
         <item itemvalue="Python.matplotlib03" />
-        <item itemvalue="Python.matplotlib02" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +200,7 @@
       <updated>1647242888203</updated>
       <workItem from="1647242892391" duration="10743000" />
       <workItem from="1647498838748" duration="1646000" />
-      <workItem from="1647501645602" duration="9815000" />
+      <workItem from="1647501645602" duration="12347000" />
     </task>
     <task id="LOCAL-00001" summary="numpydemos added">
       <created>1647255169167</created>
@@ -245,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647508348127</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pandas01 demo added">
+      <created>1647512483948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647512483948</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,11 +276,12 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$pandas03.coverage" NAME="pandas03 Coverage Results" MODIFIED="1647514933553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplotlib02.coverage" NAME="matplotlib02 Coverage Results" MODIFIED="1647505123347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplotlib03.coverage" NAME="matplotlib03 Coverage Results" MODIFIED="1647505645084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy02.coverage" NAME="numpy02 Coverage Results" MODIFIED="1647251500354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$numpy03_universal.coverage" NAME="numpy03_universal Coverage Results" MODIFIED="1647255138439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$pandas02.coverage" NAME="pandas02 Coverage Results" MODIFIED="1647512298390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$pandas02.coverage" NAME="pandas02 Coverage Results" MODIFIED="1647514207032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplotlib_demo.coverage" NAME="matplotlib_demo Coverage Results" MODIFIED="1647502764654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplot.coverage" NAME="matplot Coverage Results" MODIFIED="1647253131885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/10_numpy_pandas_lab$matplotlib04.coverage" NAME="matplotlib04 Coverage Results" MODIFIED="1647506551234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
