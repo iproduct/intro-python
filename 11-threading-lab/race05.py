@@ -12,7 +12,7 @@ class FakeDatabase:
         logging.info("Thread %s: starting update", name)
         self._lock.acquire()
         local_copy = self.value
-        local_copy += 2
+        local_copy += 1
         time.sleep(0.1)
         self.value = local_copy
         self._lock.release()
