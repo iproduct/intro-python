@@ -198,6 +198,7 @@
       <workItem from="1647242892391" duration="10743000" />
       <workItem from="1647498838748" duration="1646000" />
       <workItem from="1647501645602" duration="14255000" />
+      <workItem from="1647803799207" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="numpydemos added">
       <created>1647255169167</created>
@@ -269,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647517390227</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="presentations added">
+      <created>1647803843795</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1647803843795</updated>
+    </task>
+    <task id="LOCAL-00012" summary="demos added">
+      <created>1647803865865</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1647803865865</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +298,9 @@
     <MESSAGE value="pandas01 demo added" />
     <MESSAGE value="pandas03 demo added" />
     <MESSAGE value="pandas03 demo updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="pandas03 demo updated" />
+    <MESSAGE value="presentations added" />
+    <MESSAGE value="demos added" />
+    <option name="LAST_COMMIT_MESSAGE" value="demos added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
