@@ -27,7 +27,7 @@ def consumer(pipeline, event):
 
 class Pipeline(queue.Queue):
     def __init__(self):
-        super().__init__(maxsize=10)
+        super().__init__(maxsize=3)
 
     def get_message(self, name):
         logging.debug("%s:about to get from queue", name)

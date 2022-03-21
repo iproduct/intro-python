@@ -29,7 +29,7 @@ if __name__ == "__main__":
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
-    pipeline = queue.Queue(maxsize=10)
+    pipeline = queue.Queue(maxsize=3)
     event = threading.Event()
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         executor.submit(producer, pipeline, event)
