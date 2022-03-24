@@ -1,4 +1,8 @@
 # content of test_class.py
+import pytest
+
+
+@pytest.mark.slow
 class TestClass:
     def test_one(self):
         x = "this"

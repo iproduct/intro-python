@@ -1,0 +1,7 @@
+Feature: showing off behave
+
+  Scenario: run a simple test
+    Given we have behave installed ... passed in 0.000s
+    When we implement a test ... passed in 0.000s
+    Then behave will test it for us! ... passed in 0.000s
+
