@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c65f29-d8ea-4cd6-82b7-04fef6d81268" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/invalid_entity_data_exception.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validate_json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../10-requests-bs4/requests_bs03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/12-testing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/asyncdemos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/asyncdemos/asyncio_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/numbers_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_aiohttp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_asyncio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_exception02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_tempdir04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_skipping_failures03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_str.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/long_nuber.py" beforeDir="false" afterPath="$PROJECT_DIR$/long_nuber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/Python_2022_09.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/Python_2022_09.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645687174078</updated>
       <workItem from="1645687179285" duration="5752000" />
+      <workItem from="1648101986931" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="exercises and examples added">
       <created>1645689875800</created>
