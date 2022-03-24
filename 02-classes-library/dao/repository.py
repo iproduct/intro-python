@@ -44,10 +44,10 @@ class Repository:
             return None
         return self._items[id]
 
-    # def __iter__(self):
-    #     # self._values = self._items.values().__iter__()
-    #     return RepositoryIterator(list(self._items.values()))
-    #     # return iter(self._items.values())
+    def __iter__(self):
+        # self._values = self._items.values().__iter__()
+        return RepositoryIterator(list(self._items.values()))
+        # return iter(self._items.values())
 
     def __iter__(self):
         for item in list(self._items.values()):
