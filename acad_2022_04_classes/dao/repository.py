@@ -30,7 +30,9 @@ class Repository:
 
     def __iter__(self):
         # return iter(self._entities.values())
-        return RepositoryIterator(self._entities.values())
+        # return RepositoryIterator(self._entities.values())
+        for entity in self._entities.values():
+            yield entity
 
     def find_all(self):
         return self._entities.values()
