@@ -1,4 +1,19 @@
+from typing import Iterator
+
 from exception.entity_not_found_exception import EntityNotFoundException
+
+
+class RepositoryIterator(Iterator):
+    def __init__(self, iterable):
+        self._nextIndex = 0
+        self._values = list(iterable)
+
+    def __next__(self):
+        if self._nextIndex < len(self._values):
+            result = self._values[self._nextIndex]
+            self._nextIndex += 1
+            return result
+        raise StopIteration
 
 
 class Repository:
@@ -12,6 +27,10 @@ class Repository:
     def __add__(self, other):
         self._entities.update(other._entities)
         return self
+
+    def __iter__(self):
+        # return iter(self._entities.values())
+        return RepositoryIterator(self._entities.values())
 
     def find_all(self):
         return self._entities.values()

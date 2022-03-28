@@ -6,8 +6,19 @@ from entity.person import Person
 
 def print_all_persons(repo):
     print()
-    for p in repo.find_all():
-        print(p.get_formatted_str())
+    it1 = iter(repo)
+    it2 = iter(repo)
+    try:
+        while True:
+            p1 = next(it1)
+            p2 = next(it2)
+            print(p1.get_formatted_str())
+            print(p2.get_formatted_str())
+    except StopIteration:
+        pass
+    print()
+    # for p in repo:
+    #     print(p.get_formatted_str())
     print(f'Number of persons: {len(repo)}')
 
 
