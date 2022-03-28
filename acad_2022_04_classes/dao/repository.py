@@ -18,7 +18,7 @@ class RepositoryIterator(Iterator):
 
 class Repository:
     def __init__(self, idGenerator):
-        self._entities = {}
+        self._entities: dict = {}
         self._idGenrator = idGenerator
 
     def __len__(self):
