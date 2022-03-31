@@ -58,7 +58,8 @@ class Repository:
         :param entity: entity to be created
         :return: created new entity with assignes
         """
-        entity.id = self._idGenrator.get_next_id()
+        if entity.id is None:
+            entity.id = self._idGenrator.get_next_id()
         self._entities[entity.id] = entity
         return entity
 
@@ -71,6 +72,12 @@ class Repository:
         old = self.find_by_id(id)
         del self._entities[id]
         return old
+
+    def clear(self):
+        self._entities.clear()
+
+    def add_all(self, entities_iterable):
+        self._entities.update(map(lambda entity: (entity.id, entity), entities_iterable))
 
     def count(self):
         return len(self._entities)

@@ -1,74 +1,95 @@
 [
     {
-        "id": "d98ace8b-b11c-11ec-be3e-0c5415b58e01",
+        "id": "a6e8d509-b128-11ec-a2a4-0c5415b58e01",
         "f_name": "John",
         "l_name": "Doe",
         "age": 45,
-        "_Person__type_name": "Person",
+        "_module": "entity.user",
+        "_class": "User",
         "username": "john",
         "password": "john123",
-        "role": "ADMIN"
+        "role": {
+            "name": "ADMIN",
+            "_module": "entity.user",
+            "_class": "Role"
+        }
     },
     {
-        "id": "d98ace8c-b11c-11ec-86bd-0c5415b58e01",
+        "id": "a6e8d50a-b128-11ec-b12a-0c5415b58e01",
         "f_name": "Jane",
         "l_name": "Doe",
         "age": 35,
-        "_Person__type_name": "Person",
+        "_module": "entity.user",
+        "_class": "User",
         "username": "jane",
         "password": "jane123",
-        "role": "USER"
+        "role": {
+            "name": "USER",
+            "_module": "entity.user",
+            "_class": "Role"
+        }
     },
     {
-        "id": "d98ace8d-b11c-11ec-b592-0c5415b58e01",
+        "id": "a6e8d50b-b128-11ec-b7bc-0c5415b58e01",
         "f_name": "Jim",
         "l_name": "Doe",
         "age": 45,
-        "_Person__type_name": "Person",
+        "_module": "entity.user",
+        "_class": "User",
         "username": "jim",
         "password": "jim123",
-        "role": "USER"
+        "role": {
+            "name": "USER",
+            "_module": "entity.user",
+            "_class": "Role"
+        }
     },
     {
-        "id": "d98a804c-b11c-11ec-8b16-0c5415b58e01",
+        "id": "a6e8d503-b128-11ec-8c31-0c5415b58e01",
         "f_name": "Ivan",
         "l_name": "Doe",
         "age": 25,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     },
     {
-        "id": "d98ace86-b11c-11ec-a4cc-0c5415b58e01",
+        "id": "a6e8d504-b128-11ec-a16c-0c5415b58e01",
         "f_name": "Dimitar",
         "l_name": "Hristov",
         "age": 35,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     },
     {
-        "id": "d98ace87-b11c-11ec-a781-0c5415b58e01",
+        "id": "a6e8d505-b128-11ec-b529-0c5415b58e01",
         "f_name": "Maria",
         "l_name": "Georgieva",
         "age": 27,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     },
     {
-        "id": "d98ace88-b11c-11ec-997e-0c5415b58e01",
+        "id": "a6e8d506-b128-11ec-8481-0c5415b58e01",
         "f_name": "Ivan",
         "l_name": "Petrov",
         "age": 42,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     },
     {
-        "id": "d98ace89-b11c-11ec-ae0c-0c5415b58e01",
+        "id": "a6e8d507-b128-11ec-be34-0c5415b58e01",
         "f_name": "John",
         "l_name": "Smith",
         "age": 39,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     },
     {
-        "id": "d98ace8a-b11c-11ec-875f-0c5415b58e01",
+        "id": "a6e8d508-b128-11ec-b94d-0c5415b58e01",
         "f_name": "Johanna",
         "l_name": "Harrison",
         "age": 27,
-        "_Person__type_name": "Person"
+        "_module": "entity.person",
+        "_class": "Person"
     }
 ]

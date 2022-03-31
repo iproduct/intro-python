@@ -4,9 +4,8 @@ from dao.repository import Repository
 
 
 class JsonRepository(Repository):
-    def __init__(self, idGenerator, db_filename, entity_class):
+    def __init__(self, idGenerator, db_filename):
         super().__init__(idGenerator)
-        self.entity_class = entity_class
         self.db_filename = db_filename
 
     def save(self):
@@ -16,9 +15,8 @@ class JsonRepository(Repository):
     def load(self):
         self.clear()
         with open(self.db_filename, "rt", encoding="utf-8") as f:
-            users = json.load(f, object_hook=object_hook(self.entity_class))  # IIFE
-            for user in users:
-                self.create(user)
+            entities = json.load(f, object_hook=object_hook)
+            self.add_all(entities)
 
 
 # Helpers
@@ -29,10 +27,14 @@ def dumper(obj):
         return obj.__dict__
 
 
-def object_hook(entity_class):  # HOF
-    def obj_hook(jsdict):
-        obj = entity_class()
-        obj.__dict__ = jsdict
-        return obj
+def object_hook(jsdict):
+    entity_module_name = jsdict['_module']
+    entity_class_name = jsdict['_class']
+    module = __import__(entity_module_name, fromlist=[entity_class_name])
+    cls = getattr(module, entity_class_name)
+    if hasattr(cls, 'from_json'):
+        return cls.from_json(jsdict)
+    obj = cls()
+    obj.__dict__ = jsdict
+    return obj
 
-    return obj_hook

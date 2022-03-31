@@ -54,7 +54,7 @@ if __name__ == '__main__':
     # comparing persons
     p5, p6 = other_repo.find_all()
     print(p5, p6, p5 > p6, sep="\n")
-    print(p5._Person__type_name)
+    # print(p5._Person__type_name)
 
     # properties demo
     p1.l_name = "Doe" # LValue
@@ -73,3 +73,6 @@ if __name__ == '__main__':
 
     # JsonRepository persistence demo
     userRepo.save()
+    userRepo.load()
+    print('\n', 'After Loading:')
+    print_all_formatted(userRepo.find_all())

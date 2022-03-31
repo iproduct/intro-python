@@ -14,12 +14,13 @@ class Person:
     #     cls.nextId += 1
     #     return cls.nextId
 
-    def __init__(self, f_name, l_name, age, id = None):
+    def __init__(self, f_name=None, l_name=None, age=None, id=None):
         self.id = id
         self.f_name = f_name
         self.l_name = l_name
         self.age = age
-        # self.__type_name='Person'
+        self._module = self.__class__.__module__
+        self._class = self.__class__.__name__
 
     # def _get_f_name(self):
     #     # print(f"Called _get_f_name()")
@@ -72,6 +73,7 @@ class Person:
     def get_formatted_str(self):
         return f'| {str(self.id):24s} | {self.f_name:15.15s} | {self.l_name:15.15s} | {self.age:3d} |'
 
+
 if __name__ == "__main__":
     p1 = Person('Ivan', 'Petrov', 25)
     p2 = Person('Dimitar', 'Hristov', 35)
@@ -86,4 +88,3 @@ if __name__ == "__main__":
         print(p.get_formatted_str())
 
     # print('Class Person.__dict__:', Person.__dict__)
-
