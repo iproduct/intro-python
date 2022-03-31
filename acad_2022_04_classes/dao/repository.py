@@ -56,7 +56,7 @@ class Repository:
         """
         Created new entity in the repository and assigns it a unique id using idGenrator provided in __init__()
         :param entity: entity to be created
-        :return: created new entity with assigned unique id
+        :return: created new entity with assignes
         """
         entity.id = self._idGenrator.get_next_id()
         self._entities[entity.id] = entity

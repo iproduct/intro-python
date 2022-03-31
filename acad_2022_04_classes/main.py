@@ -1,10 +1,12 @@
 from dao.id_generator_int import IdGeneratorInt
 from dao.id_generator_uuid import IdGeneratorUuid
 from dao.repository import Repository
+from dao.user_repository import UserRepository
 from entity.person import Person
+from entity.user import User, Role
 
 
-def print_all_persons(repo):
+def print_all_formatted(repo):
     # print()
     # it1 = iter(repo)
     # it2 = iter(repo)
@@ -33,7 +35,7 @@ if __name__ == '__main__':
     persons_repo = Repository(id_gen)
     for p in persons:
         persons_repo.create(p)
-    print_all_persons(persons_repo)
+    print_all_formatted(persons_repo)
 
     # second: Person = persons_repo.find_by_id(2)
     # second.f_name = 'Mitko'
@@ -44,10 +46,10 @@ if __name__ == '__main__':
     other_repo = Repository(id_gen)
     other_repo.create(Person('John', 'Smith', 39))
     other_repo.create(Person('Johanna', 'Harrison', 27))
-    print_all_persons(other_repo)
+    print_all_formatted(other_repo)
 
     persons_repo += other_repo
-    print_all_persons(persons_repo)
+    print_all_formatted(persons_repo)
 
     # comparing persons
     p5, p6 = other_repo.find_all()
@@ -56,6 +58,14 @@ if __name__ == '__main__':
 
     # properties demo
     p1.l_name = "Doe" # LValue
-    name = p1.f_name + " " + p1.l_name # RValue
-    print(name)
-    del p1.l_name
+    # name = p1.f_name + " " + p1.l_name # RValue
+
+    # users demo
+    userRepo = UserRepository(id_gen)
+    u1 = User('John', 'Doe', 45, 'john', 'john123', Role.ADMIN)
+    u2 = User('Jane', 'Doe', 35, 'jane', 'jane123')
+    u3 = User('Jim', 'Doe', 45, 'jim', 'jim123')
+    userRepo.create(u1)
+    userRepo.create(u2)
+    userRepo.create(u3)
+    print_all_formatted(userRepo.find_all())
