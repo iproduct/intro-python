@@ -16,39 +16,39 @@ class Person:
 
     def __init__(self, f_name, l_name, age, id = None):
         self.id = id
-        self._f_name = f_name
-        self._l_name = l_name
+        self.f_name = f_name
+        self.l_name = l_name
         self.age = age
-        self.__type_name='Person'
+        # self.__type_name='Person'
 
-    def _get_f_name(self):
-        # print(f"Called _get_f_name()")
-        return self._f_name
+    # def _get_f_name(self):
+    #     # print(f"Called _get_f_name()")
+    #     return self._f_name
+    #
+    # def _set_f_name(self, value):
+    #     # print(f"Called _set_f_name({value})")
+    #     self._f_name = value
+    #
+    # def _del_f_name(self):
+    #     # print(f"Called _del_f_name()")
+    #     del self._f_name
+    #
+    # f_name = property(_get_f_name, _set_f_name, _del_f_name, "Person's first name")
 
-    def _set_f_name(self, value):
-        # print(f"Called _set_f_name({value})")
-        self._f_name = value
-
-    def _del_f_name(self):
-        # print(f"Called _del_f_name()")
-        del self._f_name
-
-    f_name = property(_get_f_name, _set_f_name, _del_f_name, "Person's first name")
-
-    @property
-    def l_name(self):
-        # print(f"Called @property l_name()")
-        return self._l_name
-
-    @l_name.setter
-    def l_name(self, value):
-        # print(f"Called @l_name.setter({value})")
-        self._l_name = value
-
-    @l_name.deleter
-    def l_name(self):
-        # print(f"Called @l_name.deleter()")
-        del self._l_name
+    # @property
+    # def l_name(self):
+    #     # print(f"Called @property l_name()")
+    #     return self._l_name
+    #
+    # @l_name.setter
+    # def l_name(self, value):
+    #     # print(f"Called @l_name.setter({value})")
+    #     self._l_name = value
+    #
+    # @l_name.deleter
+    # def l_name(self):
+    #     # print(f"Called @l_name.deleter()")
+    #     del self._l_name
 
     def _is_valid_operand(self, other):
         return (hasattr(other, "f_name") and

@@ -61,11 +61,15 @@ if __name__ == '__main__':
     # name = p1.f_name + " " + p1.l_name # RValue
 
     # users demo
-    userRepo = UserRepository(id_gen)
+    userRepo = UserRepository(id_gen, 'users_db.json')
     u1 = User('John', 'Doe', 45, 'john', 'john123', Role.ADMIN)
     u2 = User('Jane', 'Doe', 35, 'jane', 'jane123')
     u3 = User('Jim', 'Doe', 45, 'jim', 'jim123')
     userRepo.create(u1)
     userRepo.create(u2)
     userRepo.create(u3)
+    userRepo += persons_repo
     print_all_formatted(userRepo.find_all())
+
+    # JsonRepository persistence demo
+    userRepo.save()
