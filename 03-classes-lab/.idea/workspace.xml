@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1bf4d08-a790-4a9b-88c3-4c3ffade5be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../10-requests-bs4/requests_bs03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/12-testing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/asyncdemos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/asyncdemos/asyncio_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/numbers_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_aiohttp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_asyncio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_exception02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest_tempdir04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_skipping_failures03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_str.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_widget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/ pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/simple/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/simple/point.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../12-testing/tests/test_point.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../08-exercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/Python_2022_09.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/Python_2022_09.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-testing/tests/test_pytest01.py" beforeDir="false" afterPath="$PROJECT_DIR$/../12-testing/tests/test_pytest01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12-testing/tests/tutorial.feature" beforeDir="false" afterPath="$PROJECT_DIR$/../12-testing/tests/features/tutorial.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +155,7 @@
       <workItem from="1647274678716" duration="594000" />
       <workItem from="1648102600626" duration="129000" />
       <workItem from="1648102752818" duration="4000" />
+      <workItem from="1648114544073" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="demos and presentations added">
       <created>1643273939137</created>

@@ -2,21 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/add_ufunc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/assets/cat_tinted.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/data/air_quality_no2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/decyobin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/jupyter-notebook-tutorial.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/matplot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/pandas01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../10-numpy-pd/scipy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pandas-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/10-numpy-pd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10-numpy-pd/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../10-numpy-pd/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/intro-python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-functions-lab/.idea/05-functions-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-functions-lab/.idea/05-functions-lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05-functions-lab/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05-functions-lab/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-functions-lab/.idea/06-functions-lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-functions-lab/.idea/06-functions-lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../06-functions-lab/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../06-functions-lab/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/dao/json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/dao/json_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/dao/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/dao/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/entity/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/entity/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/entity/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/entity/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/users_db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/users_db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +39,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2638MXChnT1voAhWBrfgFsXGJ0J" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -97,6 +105,7 @@
       <workItem from="1646640866904" duration="10464000" />
       <workItem from="1646896121038" duration="14761000" />
       <workItem from="1647256292141" duration="684000" />
+      <workItem from="1648736913590" duration="2476000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -154,6 +163,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="09-library-mvc initial commit" />
     <MESSAGE value="examples added" />
     <MESSAGE value="ItemList using Treeview ttk component added" />
