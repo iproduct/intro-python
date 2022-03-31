@@ -5,20 +5,20 @@ from entity.person import Person
 
 
 def print_all_persons(repo):
+    # print()
+    # it1 = iter(repo)
+    # it2 = iter(repo)
+    # try:
+    #     while True:
+    #         p1 = next(it1)
+    #         p2 = next(it2)
+    #         print(p1.get_formatted_str())
+    #         print(p2.get_formatted_str())
+    # except StopIteration:
+    #     pass
     print()
-    it1 = iter(repo)
-    it2 = iter(repo)
-    try:
-        while True:
-            p1 = next(it1)
-            p2 = next(it2)
-            print(p1.get_formatted_str())
-            print(p2.get_formatted_str())
-    except StopIteration:
-        pass
-    print()
-    # for p in repo:
-    #     print(p.get_formatted_str())
+    for p in repo:
+        print(p.get_formatted_str())
     print(f'Number of persons: {len(repo)}')
 
 
@@ -26,7 +26,8 @@ if __name__ == '__main__':
     p1 = Person('Ivan', 'Petrov', 25)
     p2 = Person('Dimitar', 'Hristov', 35)
     p3 = Person('Maria', 'Georgieva', 27)
-    persons = [p1, p2, p3]
+    p4 = Person('Ivan', 'Petrov', 42)
+    persons = [p1, p2, p3, p4]
 
     id_gen = IdGeneratorUuid()
     persons_repo = Repository(id_gen)
@@ -47,3 +48,14 @@ if __name__ == '__main__':
 
     persons_repo += other_repo
     print_all_persons(persons_repo)
+
+    # comparing persons
+    p5, p6 = other_repo.find_all()
+    print(p5, p6, p5 > p6, sep="\n")
+    print(p5._Person__type_name)
+
+    # properties demo
+    p1.l_name = "Doe" # LValue
+    name = p1.f_name + " " + p1.l_name # RValue
+    print(name)
+    del p1.l_name
