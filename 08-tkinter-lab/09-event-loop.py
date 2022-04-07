@@ -5,7 +5,8 @@ from tkinter import ttk
 def start():
     b.configure(text='Stop', command=stop)
     l['text'] = 'Working...'
-    global interrupt; interrupt = False
+    global interrupt
+    interrupt = False
     root.after(1, step)
 
 def stop():
@@ -16,11 +17,11 @@ def step(count=0):
     if interrupt:
         result(None)
         return
-    root.after(100)  # next step in our operation; don't take too long!
-    if count == 20:  # done!
+    # root.after(1000)  # next step in our operation; don't take too long!
+    if count == 100:  # done!
         result(42)
         return
-    root.after(10, lambda: step(count+1))
+    root.after(1000, lambda: step(count+1))
 
 def result(answer):
     p['value'] = 0
