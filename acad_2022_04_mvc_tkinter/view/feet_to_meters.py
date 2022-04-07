@@ -21,14 +21,14 @@ class FeetToMeters(ttk.Frame):
         self.grid(column=0, row=0, sticky=NSEW)
 
         # Create view-models
-        feet = StringVar()
-        meters = StringVar()
+        self.feet = StringVar()
+        self.meters = StringVar()
 
         # Add views - text Entry (input) and Label (output) widgets
-        feet_entry = ttk.Entry(self, width=12, textvariable=feet)
+        feet_entry = ttk.Entry(self, width=12, textvariable=self.feet)
         feet_entry.grid(column=2, row=1, sticky=EW)
 
-        ttk.Label(self, textvariable=meters).grid(column=2, row=2, sticky=W)
+        ttk.Label(self, textvariable=self.meters).grid(column=2, row=2, sticky=W)
 
         # Add child widgets
         # btn_calc = ttk.Button(self, text='Calculate', command=lambda : print('Calculating...'))
