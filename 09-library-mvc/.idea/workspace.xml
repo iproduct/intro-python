@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/view/command/exit_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/view/feet_to_meters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/view/utils/tkinter_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/controller/calculator_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/service/feet_to_meter_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/view/command/calculate_feet_to_meters_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/dao/json_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/dao/json_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acad_2022_04_classes/users_db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_classes/users_db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/util/func_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_04_mvc_tkinter/util/func_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
