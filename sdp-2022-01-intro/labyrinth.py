@@ -6,7 +6,15 @@ labyrinth = [
     (0, 1, 0, 1, 0),
 ]
 
+
 def next_move(lab, point_xy, visited):
+    """
+    Find next move in a labyrinth without loops
+    :param lab: the labyrinth
+    :param point_xy: start
+    :param visited: list of visited points
+    :return: path found
+    """
     x, y = point_xy
     height = len(labyrinth)
     width = len(labyrinth[0])
@@ -41,6 +49,7 @@ def find_path(lab, x_start, y_start, x_end, y_end):
         y, x = point
         result_path.append((x, y))
     return result_path
+
 
 if __name__ == '__main__':
     print('Path found:', find_path(labyrinth, 0, 0, 4, 4))
