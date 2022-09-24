@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa9c6c9-9e3c-4988-ac18-ab75edf08ed1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-classes-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acad_2022_02_files/json_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acad_2022_02_files/json_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09-library-mvc/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi_2022_python_01/calculate_pi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi_2022_python_01/factoriel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fmi_2022_python_01/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09-library-mvc/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/../09-library-mvc/books.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +197,7 @@
       <workItem from="1645424512148" duration="11329000" />
       <workItem from="1645949183014" duration="608000" />
       <workItem from="1647274677500" duration="1431000" />
+      <workItem from="1652461268061" duration="34000" />
     </task>
     <task id="LOCAL-00001" summary="lazy racursive generator of DirEntries">
       <created>1645092106553</created>

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7fec0c-a395-424e-a928-5394c44009bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../07-tk-intro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../08-tkinter-lab/09-event-loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/../08-tkinter-lab/09-event-loop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books.json" beforeDir="false" afterPath="$PROJECT_DIR$/books.json" afterDir="false" />
     </list>
@@ -91,7 +90,9 @@
       <workItem from="1647256292141" duration="684000" />
       <workItem from="1648736913590" duration="2476000" />
       <workItem from="1649095037801" duration="1912000" />
-      <workItem from="1649341646989" duration="3646000" />
+      <workItem from="1649341646989" duration="4090000" />
+      <workItem from="1649691293261" duration="6045000" />
+      <workItem from="1651248110069" duration="243000" />
     </task>
     <task id="LOCAL-00001" summary="09-library-mvc initial commit">
       <created>1646641608840</created>
@@ -142,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646911850262</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="demos updated">
+      <created>1649355445015</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649355445015</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,9 +163,10 @@
     <MESSAGE value="ItemList using Treeview ttk component added" />
     <MESSAGE value="Add/Edit components, commands and services added" />
     <MESSAGE value="Delete selection implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete selection implemented" />
+    <MESSAGE value="demos updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="demos updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1649355338467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/09_library_mvc$main.coverage" NAME="main Coverage Results" MODIFIED="1651248117313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
