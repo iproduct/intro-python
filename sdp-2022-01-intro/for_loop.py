@@ -15,8 +15,8 @@ if __name__ == '__main__':
             print(ch, end=', ')
         print()
 
-    for key in char_counts:
-        print(key, '->', char_counts[key])
+    # for key in char_counts:
+    #     print(key, '->', char_counts[key])
 
     char_counts_list = list(char_counts.items())
     char_counts_list.sort(key=lambda char_count: char_count[1], reverse=True)

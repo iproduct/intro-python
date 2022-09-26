@@ -1,11 +1,15 @@
-labyrinth = [
-    (0, 1, 0, 1, 1),
-    (0, 1, 0, 0, 0),
-    (0, 0, 0, 1, 0),
-    (1, 1, 0, 1, 0),
-    (0, 1, 0, 1, 0),
-]
+import sys
 
+# labyrinth = [
+#     (0, 1, 0, 1, 1),
+#     (0, 1, 0, 0, 0),
+#     (0, 0, 0, 1, 0),
+#     (1, 1, 0, 1, 0),
+#     (0, 1, 0, 1, 0),
+# ]
+
+def read_labyrinth(filename):
+    pass
 
 def next_move(lab, point_xy, visited):
     """
@@ -52,4 +56,6 @@ def find_path(lab, x_start, y_start, x_end, y_end):
 
 
 if __name__ == '__main__':
-    print('Path found:', find_path(labyrinth, 0, 0, 4, 4))
+    labyrinth = read_labyrinth('lab01.txt')
+    print('Path found:', find_path(labyrinth, 0, 0, 4, 4), sep='\n',file=sys.stdout)
+    print('Path found:', find_path(labyrinth, 0, 0, 4, 4), sep='\n',file=open("labyrinth_path.txt", "at"), flush=True)
