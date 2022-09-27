@@ -20,6 +20,12 @@ class User(Person):
     def __str__(self):
         return f"{super().__str__()} {self.username:<12} | {self.password:<12} | {self.role:^6} |"
 
+#TODO: Implement class Student inheriting from User, with following attributes:
+#fn, year, courses, grades (dict from course_id to the grade for the course)
+
+#TODO: Implement class Course with following attributes:
+#id, name, credits, description
+
 if __name__ == '__main__':
     ivan = Person('Ivan', 'Petrov', 'ivanp@abv.bg', 28)
     petar = Person('Petar', 'Hristov', 'peterh@gmail.com', 35)
