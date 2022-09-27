@@ -5,5 +5,5 @@ def countdown(n):
     yield 'Demo finished.'
 
 if __name__ == '__main__':
-    for x in countdown(10):
+    for x in countdown(100):
         print(x)

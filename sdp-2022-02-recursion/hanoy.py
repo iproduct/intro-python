@@ -1,5 +1,5 @@
-def draw(d1, d2, d3):
-    n = len(d1) + len(d2) + len(d3)
+def draw(discs):
+    n = len(discs[0]) + len(discs[1]) + len(discs[2])
     width = 6 * n + 9
     height = n
     buf = [[' ' for j in range(width)] for i in range(height)]
@@ -13,7 +13,6 @@ def draw(d1, d2, d3):
             buf[row][col] = '|'
 
     # draw disks
-    discs = (d1, d2, d3)
     for i in range(3):
         num_disks = len(discs[i])
         for j in range(num_disks):
@@ -30,5 +29,28 @@ def draw(d1, d2, d3):
     for row in buf:
         print(''.join(row))
 
+def init_discs(n):
+    return[[i for i in range(n, 0, -1)], [], []]
+
+def move(discs, frm, to):
+    disc = discs[frm].pop()
+    discs[to].append(disc)
+    draw(discs)
+    input('Hit <Enter> to continue')
+
+def solve(discs, n, frm, to):
+    other = 3 - frm - to
+    if n == 1:
+        move(discs, frm, to)
+    else:
+        solve(discs, n - 1, frm, other)
+        move(discs, frm, to)
+        solve(discs, n - 1, other, to)
+
 if __name__ == '__main__':
-    draw([5,4,3,2,1], [], [])
+    n = int(input("Number of discs: "))
+    discs = init_discs(n)
+    draw(discs)
+    input('Hit <Enter> to continue')
+    solve(discs, n, 0, 2)
+
