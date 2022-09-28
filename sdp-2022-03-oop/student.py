@@ -1,5 +1,9 @@
+from datetime import datetime
+
+
 class Person:
     next_id = 0
+
     def __init__(self, fname, lname, email, age):
         self.__class__.next_id += 1
         self.id = Person.next_id
@@ -7,24 +11,32 @@ class Person:
         self.lname = lname
         self.email = email
         self.age = age
+
     def __str__(self):
         return f"| {self.id:>3} | {self.fname + ' ' + self.lname:<25} | {self.email:<25} | {self.age:>3} |"
+
 
 class User(Person):
     def __init__(self, fname, lname, email, age, username, password, role):
         super().__init__(fname, lname, email, age)
         self.username = username
-        self.password = password
+        self._password = password
         self.role = role
+
+    @property
+    def password(self):
+        print(f"Password of user '{self.username}' was accessed on {datetime.now().isoformat(timespec='seconds')}")
+        return self._password
 
     def __str__(self):
         return f"{super().__str__()} {self.username:<12} | {self.password:<12} | {self.role:^6} |"
 
-#TODO: Implement class Student inheriting from User, with following attributes:
-#fn, year, courses, grades (dict from course_id to the grade for the course)
 
-#TODO: Implement class Course with following attributes:
-#id, name, credits, description
+# TODO: Implement class Student inheriting from User, with following attributes:
+# fn, year, courses, grades (dict from course_id to the grade for the course)
+
+# TODO: Implement class Course with following attributes:
+# id, name, credits, description
 
 if __name__ == '__main__':
     ivan = Person('Ivan', 'Petrov', 'ivanp@abv.bg', 28)
