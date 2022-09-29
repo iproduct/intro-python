@@ -14,8 +14,6 @@ class User:
         return f"| {self.id!s:>28} | {self.fname + ' ' + self.lname:<25} | {self.username!s:<12} " \
                f"| {self.password!s:<12} | {self.role!s:^6} | {self.active!s:^5} |"
 
-print(__name__)
-
 if __name__ == '__main__':
     ivan = User('Ivan', 'Petrov', 'ivan', 'ivan123', 'Admin')
     petar = User('Petar', 'Hristov', 'peter', 'petar123', 'User')
