@@ -1,4 +1,6 @@
 import sys
+from linked_list_stack import Stack
+
 
 labyrinth = [
     (0, 1, 0, 1, 1),
@@ -33,7 +35,8 @@ def next_move(lab, point_xy, visited):
 
 def find_path(lab, x_start, y_start, x_end, y_end):
     current = (x_start, y_start)
-    current_path = [current]
+    current_path = Stack()
+    current_path.push(current)
     visited = {current}
 
     while current != (x_end, y_end):
@@ -41,14 +44,13 @@ def find_path(lab, x_start, y_start, x_end, y_end):
         # backtracking - step back
         if current == None:
             current_path.pop()
-            current = current_path.pop()
-        current_path.append(current)
+            current= current_path.peek()
+        else:
+            current_path.push(current)
         visited.add(current)
         # print(current, '->', current_path)
-    result_path = []
-    for point in current_path:
-        y, x = point
-        result_path.append((x, y))
+    result_path = [point for point in current_path]
+    result_path.reverse()
     return result_path
 
 

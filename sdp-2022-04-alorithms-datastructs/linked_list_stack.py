@@ -11,6 +11,13 @@ class Stack:
     def __init__(self):
         self.top = None
 
+    def __iter__(self):
+        node = self.top
+        while node is not None:
+            yield node.value
+            node = node.next
+
+
     def push(self, value):
         if self.top is None:
             self.top = Node(value)
