@@ -1,0 +1,47 @@
+[
+    {
+        "id": "e2f45adb-e43a-4e81-916b-0d91154dd9ec",
+        "fname": "Ivan",
+        "lname": "Petrov",
+        "username": "ivan",
+        "password": "ivan123",
+        "role": "Admin",
+        "active": true
+    },
+    {
+        "id": "7b85396f-9112-4db9-970f-ccbc5a0bb26e",
+        "fname": "Petar",
+        "lname": "Hristov",
+        "username": "peter",
+        "password": "petar123",
+        "role": "User",
+        "active": true
+    },
+    {
+        "id": "3f9011ff-ba7a-40c9-9476-330c8577073b",
+        "fname": "John",
+        "lname": "Doe",
+        "username": "john",
+        "password": "john123",
+        "role": "Admin",
+        "active": true
+    },
+    {
+        "id": "ebf10669-ddd2-47e5-81c9-2c0527218da7",
+        "fname": "Jane",
+        "lname": "Doe",
+        "username": "jane",
+        "password": "jane123",
+        "role": "Admin",
+        "active": true
+    },
+    {
+        "id": "1ee91a88-e1f4-41c7-88cd-05695c4f9a4f",
+        "fname": "Sam",
+        "lname": "Neuman",
+        "username": "sam",
+        "password": "sam123",
+        "role": "User",
+        "active": true
+    }
+]

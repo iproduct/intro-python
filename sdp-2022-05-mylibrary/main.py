@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from dao.json_repository import JsonRepository
+from model.user import User
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    # ivan = User('Ivan', 'Petrov', 'ivan', 'ivan123', 'Admin')
+    # petar = User('Petar', 'Hristov', 'peter', 'petar123', 'User')
+    # john = User('John', 'Doe', 'john', 'john123', 'Admin')
+    # jane = User('Jane', 'Doe', 'jane', 'jane123', 'Admin')
+    # sam = User('Sam', 'Neuman', 'sam', 'sam123', 'User')
+    # users = [ivan, petar, john, jane, sam]
+    #
+    user_repo = JsonRepository('users.json', User)
+    user_repo.load()
+    # for user in users:
+    #     user_repo.create(user)
+    # all_users = user_repo.findAll()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+    for user in user_repo:
+        print(user)
+
+    # user_repo.save()

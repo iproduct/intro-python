@@ -1,7 +1,7 @@
 import uuid
 
 class User:
-    def __init__(self, fname, lname, username, password, role, active = True, id = None):
+    def __init__(self, fname = None, lname = None, username = None, password = None, role=None, active = True, id = None):
         self.id = id
         self.fname = fname
         self.lname = lname
@@ -11,8 +11,8 @@ class User:
         self.active = active
 
     def __str__(self):
-        return f"| {self.id!s:>28} | {self.fname + ' ' + self.lname:<25} | {self.username:<12} " \
-               f"| {self.password:<12} | {self.role:^6} | {self.active!s:^5} |"
+        return f"| {self.id!s:>28} | {self.fname + ' ' + self.lname:<25} | {self.username!s:<12} " \
+               f"| {self.password!s:<12} | {self.role!s:^6} | {self.active!s:^5} |"
 
 print(__name__)
 
