@@ -1,3 +1,5 @@
+import random
+
 from student import User
 
 class UserRepoIterator:
@@ -64,3 +66,5 @@ if __name__ == '__main__':
 
     for user in user_repo:
         print(user)
+
+    random.randint(1, 100)
