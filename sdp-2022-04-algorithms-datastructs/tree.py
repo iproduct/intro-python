@@ -1,4 +1,6 @@
 from abstract_tree import AbstractTree
+from linked_list_queue import Queue
+from linked_list_stack import Stack
 from typing import Callable, Iterable
 
 class TreeNode:
@@ -73,6 +75,21 @@ class Tree(AbstractTree):
             for child in reversed(node.children):
                 stack.push(child)
 
+    def values_bfs_postorder(self):
+        for node in self.nodes_bfs_preorder():
+            yield node.data
+
+    def nodes_bfs_preorder(self):
+        queue = Queue()
+        if self.root is None: return
+        queue.enqueue(self.root)
+        while not queue.is_empty():
+            node = queue.dequeue()
+            # pre-visit strategy
+            yield node
+            for child in node.children:
+                queue.enqueue(child)
+
     def find(self, value) -> list[TreeNode]:
         predicate = lambda tree_node: tree_node.data == value
         return self.find_by_predicate(predicate, self.root)
@@ -116,6 +133,11 @@ if __name__ == '__main__':
     if node_c != None:
         t.add_children(node_c, TreeNode('E'), TreeNode('F'), TreeNode('G'))
     print(f'Tree:{t}, of size:{t.size}')
-    # for node in t.nodes_dfs_preorder():
-    #     print(node.data, end=', ')
-    # print()
+
+    for node in t.nodes_dfs_preorder():
+        print(node.data, end=', ')
+    print()
+
+    for node in t.nodes_bfs_preorder():
+        print(node.data, end=', ')
+    print()

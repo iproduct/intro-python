@@ -42,7 +42,7 @@ class Queue:
     def peek(self):
         return None if self.last is None else self.last.value
 
-    def empty(self):
+    def is_empty(self):
         return self.last is None
 
     def __str__(self):
@@ -63,5 +63,5 @@ if __name__ == '__main__':
     queue.enqueue(42)
     queue.enqueue(79)
     print(queue)
-    while not queue.empty():
+    while not queue.is_empty():
         print(queue.dequeue())

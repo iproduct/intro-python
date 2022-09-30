@@ -36,7 +36,7 @@ class Stack:
     def peek(self):
         return None if self.top is None else self.top.value
 
-    def empty(self):
+    def is_empty(self):
         return  self.top is None
 
     def __str__(self):
@@ -57,5 +57,5 @@ if __name__ == '__main__':
     stack.push(42)
     stack.push(79)
     print(stack)
-    while not stack.empty():
+    while not stack.is_empty():
         print(stack.pop())

@@ -56,7 +56,7 @@ if __name__ == '__main__':
     g.add_edge('D', 'C', 3)
     g.add_edge('D', 'E', 1)
     g.add_edge('D', 'F', 2)
-    g.add_edge('E', 'F', 0)
+    g.add_edge('E', 'F', 1)
 
     start = 'A'
     distances, prev = dijkstra(g, start)
