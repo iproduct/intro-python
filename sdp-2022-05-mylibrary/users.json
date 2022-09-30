@@ -1,0 +1,52 @@
+[
+    {
+        "id": "5b6dbe35-d0be-4c35-b50a-4ba3ed5af731",
+        "fname": "Ivan",
+        "lname": "Petrov",
+        "username": "ivan",
+        "password": "ivan123",
+        "role": "Admin",
+        "active": true,
+        "_class": "User"
+    },
+    {
+        "id": "20928ae2-2c6d-4349-b794-e76849d7ecbb",
+        "fname": "Petar",
+        "lname": "Hristov",
+        "username": "peter",
+        "password": "petar123",
+        "role": "User",
+        "active": true,
+        "_class": "User"
+    },
+    {
+        "id": "bc0aa820-fc96-491f-a878-9646775496a5",
+        "fname": "John",
+        "lname": "Doe",
+        "username": "john",
+        "password": "john123",
+        "role": "Admin",
+        "active": true,
+        "_class": "User"
+    },
+    {
+        "id": "ce75d876-0780-4b15-b361-5677302c1363",
+        "fname": "Jane",
+        "lname": "Doe",
+        "username": "jane",
+        "password": "jane123",
+        "role": "Admin",
+        "active": true,
+        "_class": "User"
+    },
+    {
+        "id": "e8d23fc1-d301-4937-b2d6-98746bedb6de",
+        "fname": "Sam",
+        "lname": "Neuman",
+        "username": "sam",
+        "password": "sam123",
+        "role": "User",
+        "active": true,
+        "_class": "User"
+    }
+]
