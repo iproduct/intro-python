@@ -20,6 +20,8 @@ class AbstractTree:
         raise NotImplemented('Method not implemented.')
     def children(self, p):
         raise NotImplemented('Method not implemented.')
+    def is_empty(self):
+        raise NotImplemented('Method not implemented.')
     def is_internal(self, node):
         raise NotImplemented('Method not implemented.')
     def is_root(self, node):
