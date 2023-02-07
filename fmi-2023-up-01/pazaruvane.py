@@ -1,10 +1,11 @@
-product_type = tuple[str, float]
+product_type = tuple[str, float] # product name and price
+purchase_type = tuple[str, float, float] # product name, price, and quantity
 
 def print_products_menu(product_prices: list[product_type]):
     for index, product_price in enumerate(product_prices):
         print(f'{index + 1}: {product_price[0]}')
 
-def input_product(product_prices: list[product_type]) -> product_type:
+def input_product(product_prices: list[product_type]) -> purchase_type:
     """
     Inputs a product from command line
     :return: a tuple of product name and quantity
@@ -13,10 +14,12 @@ def input_product(product_prices: list[product_type]) -> product_type:
     answer = input('Select product index (empty for exit):').strip()
     if len(answer) == 0:
         return None
-    index = int(answer)
-    product_name = product_prices[index - 1][0]
-    qty = float(input(f'{product_name} quantity:').strip())
-    return (product_name, qty)
+    index = int(answer) - 1
+    product_price = product_prices[index]
+    name = product_price[0]
+    price = product_price[1]
+    qty = float(input(f'{name} [{price} lv] quantity:').strip())
+    return (name, price, qty)
 
 def input_product_list(product_prices: list[product_type]) -> list[product_type]:
     products = []
@@ -30,8 +33,8 @@ def input_product_list(product_prices: list[product_type]) -> list[product_type]
     return products
 
 
-def stringify_product(product: product_type) -> str:
-    return f'{product[0]:<15s} -> {product[1]:7.2f}\n'
+def stringify_product(product: purchase_type) -> str:
+    return f'{product[0]:<15s} [{product[1]:6.2f}] -> {product[2]:7.2f} | {product[1] * product[2]:7.2f}\n'
 
 def save_product_list(products: list[product_type]):
     product_strings = map(stringify_product, products)
