@@ -19,7 +19,9 @@ if __name__ == '__main__':
         qty = fruits_qty[fruit]
         # print(f'{fruit:10} -> {qty[index]:6.2f}')
         # print('%-10s -> %6.2f' % (fruit, qty))
-        print('%-10s -> %6.2f' % (fruit, qty))
+        print('{0:^10s} -> {1:6.2f}'.format(fruit, qty))
         sum += qty
     print('-' * 20)
     print(f'{"Total":10} -> {sum:6.2f}')
+    print('\n')
+    print(fruits[3][-7:-1:2])
