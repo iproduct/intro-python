@@ -1,20 +1,28 @@
 product_type = tuple[str, float]
-def input_product() -> product_type:
+
+def print_products_menu(product_prices: list[product_type]):
+    for index, product_price in enumerate(product_prices):
+        print(f'{index + 1}: {product_price[0]}')
+
+def input_product(product_prices: list[product_type]) -> product_type:
     """
     Inputs a product from command line
     :return: a tuple of product name and quantity
     """
-    product_name = input('Product name (empty for end):').strip()
-    if len(product_name) == 0:
+    print_products_menu(product_prices)
+    answer = input('Select product index (empty for exit):').strip()
+    if len(answer) == 0:
         return None
-    qty = float(input('Quantity:').strip())
+    index = int(answer)
+    product_name = product_prices[index - 1][0]
+    qty = float(input(f'{product_name} quantity:').strip())
     return (product_name, qty)
 
-def input_product_list() -> list[product_type]:
+def input_product_list(product_prices: list[product_type]) -> list[product_type]:
     products = []
     finished = False
     while not finished:
-        product = input_product()
+        product = input_product(product_prices)
         if product is None:
             finished = True
         else:
@@ -41,7 +49,7 @@ def load_product_prices(filename: str) -> list[product_type]:
 
 if __name__ == '__main__':
     product_prices = load_product_prices('product_prices.csv')
-    print(product_prices)
-    products = input_product_list()
+    # print(product_prices)
+    products = input_product_list(product_prices)
     save_product_list(products)
     print('Shopping saved succesfully')
