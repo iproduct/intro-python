@@ -8,13 +8,18 @@ def filter(filtered_list: list[str], filter_str: str) -> list[str]:
 if __name__ == '__main__':
     fruits = ['Apple', 'Banana', 'Kiwi', 'Pineapple', 'Orange', 'Cherry', 'Grape']
     qty = [120, 45.84356, 80, 95, 110, 45.334546, 150]
+    fruits_qty = dict(zip(fruits, qty))
+    print(fruits_qty)
     # s = ' | '.join(l)
     # print(filter(l, 'an'));
 
     print('Cocktail Recipe:')
     sum = 0
-    for (index, fruit) in enumerate(fruits):
-        print(f'{fruit:10} -> {qty[index]:6.2f}')
-        sum += qty[index]
+    for fruit in fruits_qty:
+        qty = fruits_qty[fruit]
+        # print(f'{fruit:10} -> {qty[index]:6.2f}')
+        # print('%-10s -> %6.2f' % (fruit, qty))
+        print('%-10s -> %6.2f' % (fruit, qty))
+        sum += qty
     print('-' * 20)
     print(f'{"Total":10} -> {sum:6.2f}')
