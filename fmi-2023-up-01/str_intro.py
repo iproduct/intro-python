@@ -1,7 +1,7 @@
 def filter(filtered_list: list[str], filter_str: str) -> list[str]:
     result = []
     for s in filtered_list:
-        if s.lower().find(filter_str) >= 0:
+        if s.lower().find(filter_str.lower()) >= 0:
             result.append(s)
     return result
 
