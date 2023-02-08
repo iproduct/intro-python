@@ -36,6 +36,21 @@ def sort_words(word_counts: dict[str, int]) -> list[tuple[str, int]]:
     wc_list.sort(key=get_count, reverse=True)
     return wc_list
 
+def zip_word_counts(wc1: dict[str, int], wc2: dict[str, int]) -> list[dict[str, int, int]]:
+    words1 = set(wc1.keys())
+    words2 = set(wc2.keys())
+    words = words1.union(words2)
+    results = []
+    for word in words:
+        results.append((word, wc1.get(word, 0), wc2.get(word, 0)))
+    results.sort(key=lambda wcc: wcc[1] + wcc[2], reverse=True)
+    return  results
+
+def calculate_difference(wcc: list[dict[str, int, int]]) -> float:
+    sum = 0
+    for word, count1, count2 in wcc:
+        sum += abs(count1 - count2)
+    return sum / len(wcc)
 
 if __name__ == '__main__':
     # 1
@@ -61,5 +76,10 @@ if __name__ == '__main__':
     #5
     wc_sorted1 = sort_words(wc1)
     wc_sorted2 = sort_words(wc2)
-    print(wc_sorted1)
-    print(wc_sorted2)
+
+    #6
+    wcc = zip_word_counts(wc1, wc2)
+    print(wcc)
+
+    #7
+    print(f'\nDifference measure betwen {file1} and {file2}: {calculate_difference(wcc)}')
