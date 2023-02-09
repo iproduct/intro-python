@@ -19,6 +19,20 @@ def input_contact():
     with open('contacts.csv', 'at', encoding='utf-8') as f:
         f.write(line)
 
+
+def delete_contact():
+    print(f'\nDelete Contact:')
+    with open('contacts.csv', 'rt', encoding='utf-8') as f:
+        lines = f.readlines()
+    for index, line in enumerate(lines):
+        line = line.strip()
+        parts = line.split(',')
+        print(f'{index + 1} | {parts[0].strip():20} | {parts[1].strip():15}')
+    selected = int(input('Select contact to delete:'))
+    lines.pop(selected - 1)
+    with open('contacts.csv', 'wt', encoding='utf-8') as f:
+        f.writelines(lines)
+
 def run_menu(options: list[tuple[str, Callable]]):
     while True:
         print()
@@ -36,6 +50,7 @@ def finish():
 main_menu = [
     ('Print All Contacts', print_contacts),
     ('Add New Contact', input_contact),
+    ('Delete Contact', delete_contact),
     ('Exit', finish)
 ]
 
