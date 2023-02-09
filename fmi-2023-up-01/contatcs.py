@@ -12,7 +12,7 @@ def get_print_contacts():
         if len(line) == 0:
             continue
         parts = line.split(',')
-        print(f'{index + 1} | {parts[0].strip():20} | {parts[1].strip():15}')
+        print(f'{index + 1:3} | {parts[0].strip():20} | {parts[1].strip():15}')
     return lines
 
 def input_contact():
@@ -49,6 +49,18 @@ def edit_contact():
     with open('contacts.csv', 'wt', encoding='utf-8') as f:
         f.writelines(lines)
 
+def search_contact():
+    search = input('Part of the name to search:').lower()
+    with open('contacts.csv', 'rt', encoding='utf-8') as f:
+        lines = f.readlines()
+    for index, line in enumerate(lines):
+        parts = line.split(',')
+        if len(parts) >= 2:
+            name = parts[0].strip()
+            phone = parts[1].strip()
+            if search in name.lower():
+                print(f'{index + 1:3} | {name:20} | {phone:15}')
+
 def run_menu(options: list[tuple[str, Callable]]):
     while True:
         print()
@@ -65,6 +77,7 @@ def finish():
 
 main_menu = [
     ('Print All Contacts', print_contacts),
+    ('Search Contacts', search_contact),
     ('Add New Contact', input_contact),
     ('Edit Contact', edit_contact),
     ('Delete Contact', delete_contact),
