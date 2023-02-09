@@ -1,6 +1,7 @@
 from typing import Callable
 
 def print_contacts():
+    print(f'\nAll Contacts:')
     with open('contacts.csv', 'rt', encoding='utf-8') as f:
         lines = f.readlines()
     for line in lines:
@@ -11,6 +12,7 @@ def print_contacts():
         print(f'{parts[0].strip():20} | {parts[1].strip():15}')
 
 def input_contact():
+    print(f'\nAdd New Contact:')
     name = input('Name:')
     phone = input('Phone:')
     line = f'\n{name},{phone}'
@@ -18,11 +20,17 @@ def input_contact():
         f.write(line)
 
 def run_menu(options: list[tuple[str, Callable]]):
-    for index, option in enumerate(options):
-        print(f'{index + 1}: {option[0]}')
+    while True:
+        print()
+        print('-'*20)
+        for index, option in enumerate(options):
+            print(f'{index + 1}: {option[0]}')
+        print('-' * 20)
+        selected = int(input('Select option:'))
+        options[selected - 1][1]()
 
 def finish():
-    print('Goodbye from Personal Contacts program.')
+    print('\nGoodbye from Personal Contacts program.')
     exit()
 
 main_menu = [
