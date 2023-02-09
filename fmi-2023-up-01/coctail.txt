@@ -1,0 +1,11 @@
+Cocktail Recipe:
+--------------------
+Apple      -> 120.00
+Banana     ->  45.84
+Kiwi       ->  80.00
+Pineapple  ->  95.00
+Orange     -> 110.00
+Cherry     ->  45.33
+Grape      -> 150.00
+--------------------
+Total      -> 646.18
