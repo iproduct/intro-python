@@ -66,6 +66,7 @@ def finish():
 main_menu = [
     ('Print All Contacts', print_contacts),
     ('Add New Contact', input_contact),
+    ('Edit Contact', edit_contact),
     ('Delete Contact', delete_contact),
     ('Exit', finish)
 ]
