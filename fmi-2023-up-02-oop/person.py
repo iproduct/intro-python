@@ -10,3 +10,5 @@ class Person(object):
     def __eq__(self, other):
         return self.id == other.id
 
+    def say_hi(self):
+        return f'Hi {self.name} in role: {self.role}'

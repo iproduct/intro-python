@@ -26,6 +26,7 @@ if __name__ == '__main__':
     print(u3)
     print(f'Is u2 User?: {isinstance(u2, User)}')
     print(f'Is u2 Person?: {isinstance(u2, Person)}')
+    print(f'Is u2 Addresable?: {isinstance(u2, Addressable)}')
     print(f'Is u2 object?: {isinstance(u2, object)}')
     print(f'Is u2 dict?: {isinstance(u2, dict)}')
     print(u2.get_label())
