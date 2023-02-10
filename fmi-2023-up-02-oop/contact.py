@@ -1,11 +1,11 @@
 class Contact:
-    def __init__(self, id, name, phone):
+    def __init__(self, name, phone, id=None):
         self.id = id
         self.name = name
         self.phone = phone
 
     def __str__(self):
-        return f'{self.id:3d} | {self.name:<20s} | {self.phone:<15s}'
+        return f'{self.id:<32s} | {self.name:<20.20s} | {self.phone:<15.15s}'
 
     def __eq__(self, other):
         return self.id == other.id
