@@ -23,4 +23,4 @@ class InputContactView():
                 break
             print("Error: Phone must contain digits, whitespace, '(', ')', '+' and '-' only, between 6 and 15 long.")
         contact = Contact(name, phone)
-        print(contact)
+        self.controller.create_new_contact(contact)

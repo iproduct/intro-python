@@ -10,6 +10,10 @@ class ContactController:
         self.filename = filename
         self.repo = contact_repo
 
+    def create_new_contact(self, contact: Contact):
+        self.repo.create(contact)
+        self.repo.save()
+
     def start(self):
         self.repo.create(Contact('Trayan Iliev', '0878-2345678'))
         self.repo.create(Contact('Maria Petrova', '08976789543'))
