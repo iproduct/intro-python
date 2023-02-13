@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from model.contact import Contact
+from presentation.input_contact_view import InputContactView
 from repository.contact_repository_csv import ContactRepositoryCsv as ContactRepo
 
 
@@ -15,6 +18,8 @@ class ContactController:
         self.repo.load(self.filename)
         for cont in self.repo.find_all():
             print(cont)
+        input_contact_view = InputContactView(self)
+        input_contact_view.show()
 
 if __name__ == '__main__':
     ctrl = ContactController('conacts.csv', ContactRepo()) # Constructor-based dependency injection
