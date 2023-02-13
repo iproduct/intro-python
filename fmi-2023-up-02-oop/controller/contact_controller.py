@@ -1,11 +1,11 @@
-from contact import Contact
-from contact_repository_csv import ContactRepositoryCsv
+from model.contact import Contact
+from repository.contact_repository_csv import ContactRepositoryCsv as ContactRepo
 
 
 class ContactController:
-    def __init__(self, filename):
+    def __init__(self, filename, contact_repo):
         self.filename = filename
-        self.repo = ContactRepositoryCsv()
+        self.repo = contact_repo
 
     def start(self):
         self.repo.create(Contact('Trayan Iliev', '0878-2345678'))
@@ -17,5 +17,5 @@ class ContactController:
             print(cont)
 
 if __name__ == '__main__':
-    ctrl = ContactController('conacts.csv')
+    ctrl = ContactController('conacts.csv', ContactRepo()) # Constructor-based dependency injection
     ctrl.start()

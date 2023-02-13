@@ -1,5 +1,5 @@
-from contact import Contact
-from contact_repository import ContactRepository
+from model.contact import Contact
+from repository.contact_repository import ContactRepository
 
 
 class ContactRepositoryCsv(ContactRepository):

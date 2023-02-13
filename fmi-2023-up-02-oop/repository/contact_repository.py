@@ -1,5 +1,5 @@
 from typing import Iterable
-from contact import Contact
+from model.contact import Contact
 from uuid import uuid4
 
 
