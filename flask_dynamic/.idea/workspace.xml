@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c29e5591-6ed0-4d71-8fc2-7a6ae41b0320" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../12-sdp-trees/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-sdp-trees/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flask_tutorial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask_tutorial/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/conacts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/contact_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/contact_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/repository/contact_repository_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2023-up-02-oop/repository/contact_repository_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hello-flask-lab-b/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-flask-lab-b/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro-flask-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-flask-lab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python-web-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python-web-demo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +49,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\CoursePython\git\intro-python\flask_dynamic\templates\auth" />
@@ -214,6 +228,8 @@
       <workItem from="1579590153727" duration="2212000" />
       <workItem from="1580806029073" duration="782000" />
       <workItem from="1607519491922" duration="119000" />
+      <workItem from="1682706421659" duration="3000" />
+      <workItem from="1682706441507" duration="634000" />
     </task>
     <servers />
   </component>

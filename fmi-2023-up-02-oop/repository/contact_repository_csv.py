@@ -4,6 +4,7 @@ from repository.contact_repository import ContactRepository
 
 class ContactRepositoryCsv(ContactRepository):
     def __init__(self, filename):
+        super().__init__()
         self.filename = filename
 
     def load(self):
