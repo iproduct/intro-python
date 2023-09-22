@@ -4,9 +4,13 @@ class Student:
     """Models a student in learning management system"""
     next_id = 0
 
+    @classmethod
+    def get_next_id(cls):
+        cls.next_id += 1
+        return cls.next_id
+
     def __init__(self, fn, name, bdate, course=1):
-        Student.next_id += 1
-        self.id = Student.next_id
+        self.id = self.__class__.get_next_id()
         self.fn = fn
         self.name = name
         self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date()
@@ -14,7 +18,8 @@ class Student:
 
     def __str__(self):
         return f'| {self.id:>3d} | {str(self.fn):>8s} | {self.name:30s} | {self.birth_date.strftime("%d.%m.%Y"):10s} | {self.get_age():3d} | {self.course:6d} |'
-
+    def __repr__(self):
+        return f'Student({self.id}, {str(self.fn)}, {self.name}, {self.birth_date.strftime("%d.%m.%Y")}, {self.get_age()}, {self.course})'
     def get_age(self):
         today = date.today()
         age = today.year - self.birth_date.year
