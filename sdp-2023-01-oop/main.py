@@ -2,15 +2,18 @@ from datetime import date, datetime
 
 class Student:
     """Models a student in learning management system"""
+    next_id = 0
 
     def __init__(self, fn, name, bdate, course=1):
+        Student.next_id += 1
+        self.id = Student.next_id
         self.fn = fn
         self.name = name
         self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date()
         self.course = course
 
     def __str__(self):
-        return f'| {str(self.fn):>8s} | {self.name:30s} | {self.birth_date.strftime("%d.%m.%Y"):10s} | {self.get_age():3d} | {self.course:6d} |'
+        return f'| {self.id:>3d} | {str(self.fn):>8s} | {self.name:30s} | {self.birth_date.strftime("%d.%m.%Y"):10s} | {self.get_age():3d} | {self.course:6d} |'
 
     def get_age(self):
         today = date.today()
@@ -20,7 +23,7 @@ class Student:
         return age
 
 def print_students(students):
-    print(f'| {"FN":^8s} | {"Name":^30s} | {"Birth Date":^10s} | {"Age":^3s} | {"Course":^6s} |')
+    print(f'| {"ID":>3s} | {"FN":^8s} | {"Name":^30s} | {"Birth Date":^10s} | {"Age":^3s} | {"Course":^6s} |')
     for student in students:
         print(student)
 
