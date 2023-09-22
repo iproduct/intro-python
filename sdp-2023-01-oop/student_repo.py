@@ -4,22 +4,28 @@ from student import Student, print_students
 class StudentRepository:
     def __init__(self, initial_students_list=None):
         students_list = [] if initial_students_list is None else initial_students_list
-        self.students: dict[Student] = {s.id: s for s in students_list}
+        self.__students: dict[Student] = {s.id: s for s in students_list}
+
+    def __len__(self):
+        return len(self.__students)
+
+    def __iter__(self):
+        return iter(self.__students.values())
 
     def find_all(self):
-        return list(self.students.values())
+        return list(self.__students.values())
 
     def find_by_id(self, id: str) -> list[Student]:
-        return self.students[id]
+        return self.__students[id]
 
     def find_by_fn(self, fn: str) -> list[Student]:
-        return [s for s in self.students.values() if s.fn == str(fn)]
+        return [s for s in self.__students.values() if s.fn == str(fn)]
 
     def find_by_name(self, name_part: str) -> list[Student]:
-        return [s for s in self.students.values() if name_part.lower() in s.name.lower()]
+        return [s for s in self.__students.values() if name_part.lower() in s.name.lower()]
 
     def add(self, student: Student):
-        self.students[student.id] = student
+        self.__students[student.id] = student
 
 if __name__ == '__main__':
     students = [
@@ -32,7 +38,9 @@ if __name__ == '__main__':
     repo = StudentRepository(students)
     repo.add(Student('68359', 'Atanas Petrov', '18.11.1979', 4))
 
-    print_students(repo.find_all())
+    for student in repo:
+        print(student)
+    print(f'Number of students: {len(repo)}')
 
     print()
     print(repo.find_by_id(2))
@@ -40,3 +48,6 @@ if __name__ == '__main__':
     print(repo.find_by_fn('65305'))
     print()
     print_students(repo.find_by_name('Georgi'))
+
+    print()
+    print(repo.find_by_id(2).id)
