@@ -35,6 +35,7 @@ if __name__ == '__main__':
         Student('65306', 'Georgi Genov', '21.09.1982', 3),
         Student('65307', 'Temenuzka Georgieva', '21.09.1982', 4),
     ]
+    students[1].name = 'Hristina Dimitrova-Georgieva'
     repo = StudentRepository(students)
     repo.add(Student('68359', 'Atanas Petrov', '18.11.1979', 4))
 
