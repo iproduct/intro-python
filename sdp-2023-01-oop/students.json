@@ -36,9 +36,9 @@
     },
     {
         "_id": 6,
-        "_name": "Dimitar Petrov",
-        "birth_date": "1999-11-18",
-        "fn": "11111",
-        "course": 1
+        "_name": "Atanas Petrov",
+        "birth_date": "1979-11-18",
+        "fn": "68359",
+        "course": 4
     }
 ]

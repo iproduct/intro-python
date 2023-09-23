@@ -1,33 +1,17 @@
 from persistable import Persistable
+from repository import Repository
 from student import Student, print_students
 
 
-class StudentRepository(Persistable):
+class StudentRepository(Repository, Persistable):
     def __init__(self, initial_students_list=None, file_name='students.json'):
-        super().__init__(file_name, Student)
-        students_list = [] if initial_students_list is None else initial_students_list
-        self.__students: dict[Student] = {s.id: s for s in students_list}
-
-    def __len__(self):
-        return len(self.__students)
-
-    def __iter__(self):
-        return iter(self.__students.values())
-
-    def find_all(self):
-        return list(self.__students.values())
-
-    def find_by_id(self, id: str) -> list[Student]:
-        return self.__students[id]
-
+        Repository.__init__(self, initial_students_list)
+        Persistable.__init__(self, file_name, Student)
     def find_by_fn(self, fn: str) -> list[Student]:
-        return [s for s in self.__students.values() if s.fn == str(fn)]
+        return [s for s in self.find_all() if s.fn == str(fn)]
 
     def find_by_name(self, name_part: str) -> list[Student]:
-        return [s for s in self.__students.values() if name_part.lower() in s.name.lower()]
-
-    def append(self, student: Student):
-        self.__students[student.id] = student
+        return [s for s in self.find_all() if name_part.lower() in s.name.lower()]
 
 if __name__ == '__main__':
     students = [
@@ -55,7 +39,7 @@ if __name__ == '__main__':
     print()
     print(repo.find_by_id(2).id)
 
-    # repo.save()
+    repo.save()
 
     repo_from_file = StudentRepository()
     repo_from_file.load()
