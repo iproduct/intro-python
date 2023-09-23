@@ -9,7 +9,7 @@ class Person:
         cls._next_id += 1
         return cls._next_id
 
-    def __init__(self, fn, name, bdate, course=1):
+    def __init__(self, name, bdate):
         self._id = self.__class__.get_next_id()
         self._name = name
         self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date()
@@ -33,21 +33,29 @@ class Person:
             age -= 1
         return age
 
+    def __str__(self):
+        return f'| {self.id:>3d} | {self.name:30s} | {self.birth_date.strftime("%d.%m.%Y"):10s} | {self.get_age():3d} |'
+
+    def __repr__(self):
+        return f'Person({self._id}, {self._name}, {self.birth_date.strftime("%d.%m.%Y")})'
+
+
 class Student(Person):
     """Models a student in learning management system"""
 
     def __init__(self, fn, name, bdate, course=1):
+        super().__init__(name, bdate)
         self.fn = fn
         self.course = course
 
     def __str__(self):
-        return f'| {self._id:>3d} | {str(self.fn):>8s} | {self._name:30s} | {self.birth_date.strftime("%d.%m.%Y"):10s} | {self.get_age():3d} | {self.course:6d} |'
+        return f'{super().__str__()} {str(self.fn):>8s} | {self.course:6d} |'
     def __repr__(self):
-        return f'Student({self._id}, {str(self.fn)}, {self._name}, {self.birth_date.strftime("%d.%m.%Y")}, {self.get_age()}, {self.course})'
+        return f'Student({self.id}, {str(self.fn)}, {self.name}, {self.birth_date.strftime("%d.%m.%Y")}, {self.course})'
 
 
 def print_students(students):
-    print(f'| {"ID":>3s} | {"FN":^8s} | {"Name":^30s} | {"Birth Date":^10s} | {"Age":^3s} | {"Course":^6s} |')
+    print(f'| {"ID":>3s} | {"Name":^30s} | {"Birth Date":^10s} | {"Age":^3s} | {"FN":^8s} | {"Course":^6s} |')
     for student in students:
         print(student)
 
@@ -59,3 +67,6 @@ if __name__ == '__main__':
         Student('65305', 'Ivan Genov', '21.09.1982', 2),
     ]
     print_students(students)
+
+    p1 = Person('Hristo Stoilov', '18.09.1985')
+    print(p1)
