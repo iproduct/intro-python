@@ -1,8 +1,10 @@
+from persistable import Persistable
 from student import Student, print_students
 
 
-class StudentRepository:
-    def __init__(self, initial_students_list=None):
+class StudentRepository(Persistable):
+    def __init__(self, initial_students_list=None, file_name='students.json'):
+        super().__init__(file_name, Student)
         students_list = [] if initial_students_list is None else initial_students_list
         self.__students: dict[Student] = {s.id: s for s in students_list}
 
@@ -24,7 +26,7 @@ class StudentRepository:
     def find_by_name(self, name_part: str) -> list[Student]:
         return [s for s in self.__students.values() if name_part.lower() in s.name.lower()]
 
-    def add(self, student: Student):
+    def append(self, student: Student):
         self.__students[student.id] = student
 
 if __name__ == '__main__':
@@ -36,8 +38,8 @@ if __name__ == '__main__':
         Student('65307', 'Temenuzka Georgieva', '21.09.1982', 4),
     ]
     students[1].name = 'Hristina Dimitrova-Georgieva'
-    repo = StudentRepository(students)
-    repo.add(Student('68359', 'Atanas Petrov', '18.11.1979', 4))
+    repo = StudentRepository(students, 'students.json')
+    repo.append(Student('68359', 'Atanas Petrov', '18.11.1979', 4))
 
     for student in repo:
         print(student)
@@ -52,3 +54,11 @@ if __name__ == '__main__':
 
     print()
     print(repo.find_by_id(2).id)
+
+    # repo.save()
+
+    repo_from_file = StudentRepository()
+    repo_from_file.load()
+
+    print_students(repo_from_file.find_all())
+

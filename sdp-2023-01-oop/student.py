@@ -9,10 +9,10 @@ class Person:
         cls._next_id += 1
         return cls._next_id
 
-    def __init__(self, name, bdate):
+    def __init__(self, name = None, bdate = None):
         self._id = self.__class__.get_next_id()
         self._name = name
-        self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date()
+        self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date() if bdate is not None else None
 
     @property
     def id(self):
@@ -43,7 +43,7 @@ class Person:
 class Student(Person):
     """Models a student in learning management system"""
 
-    def __init__(self, fn, name, bdate, course=1):
+    def __init__(self, fn = None, name = None, bdate = None, course=1):
         super().__init__(name, bdate)
         self.fn = fn
         self.course = course
