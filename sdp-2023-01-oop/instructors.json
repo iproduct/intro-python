@@ -1,0 +1,47 @@
+[
+    {
+        "_id": 1,
+        "_name": "Georgi Petrov",
+        "birth_date": "1999-07-23",
+        "emp_start_date": "2010-09-01",
+        "courses": [
+            "UP",
+            "SDP"
+        ],
+        "department": "IT"
+    },
+    {
+        "_id": 2,
+        "_name": "Hristina Dimitrova",
+        "birth_date": "2005-05-07",
+        "emp_start_date": "2015-03-01",
+        "courses": [
+            "UP",
+            "SDP"
+        ],
+        "department": "IT"
+    },
+    {
+        "_id": 3,
+        "_name": "Ivan Genov",
+        "birth_date": "1982-09-21",
+        "emp_start_date": "2003-07-01",
+        "courses": [
+            "UP",
+            "SDP"
+        ],
+        "department": "IT"
+    },
+    {
+        "_id": 4,
+        "_name": "Georgi Genov",
+        "birth_date": "1982-09-21",
+        "emp_start_date": "2003-07-01",
+        "courses": [
+            "UP",
+            "SDP",
+            "Python"
+        ],
+        "department": "SE"
+    }
+]
