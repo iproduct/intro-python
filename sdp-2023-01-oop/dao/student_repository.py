@@ -1,6 +1,6 @@
 from persistable import Persistable
 from repository import Repository
-from student import Student, print_students
+from model.student import Student, print_students
 
 
 class StudentRepository(Repository, Persistable):

@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 1,
+        "_name": "Georgi Petrov",
+        "birth_date": "1999-07-23",
+        "fn": "65300",
+        "course": 1
+    },
+    {
+        "_id": 2,
+        "_name": "Hristina Dimitrova-Georgieva",
+        "birth_date": "2005-05-07",
+        "fn": "65301",
+        "course": 2
+    },
+    {
+        "_id": 3,
+        "_name": "Ivan Genov",
+        "birth_date": "1982-09-21",
+        "fn": "65305",
+        "course": 2
+    },
+    {
+        "_id": 4,
+        "_name": "Georgi Genov",
+        "birth_date": "1982-09-21",
+        "fn": "65306",
+        "course": 3
+    },
+    {
+        "_id": 5,
+        "_name": "Temenuzka Georgieva",
+        "birth_date": "1982-09-21",
+        "fn": "65307",
+        "course": 4
+    },
+    {
+        "_id": 6,
+        "_name": "Atanas Petrov",
+        "birth_date": "1979-11-18",
+        "fn": "68359",
+        "course": 4
+    }
+]

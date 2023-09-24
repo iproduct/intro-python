@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from person import Person
+from model.person import Person
 
 class Instructor(Person):
     def __init__(self, name = None, bdate = None, department = None, courses = None, emp_start_date = None):

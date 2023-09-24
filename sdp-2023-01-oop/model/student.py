@@ -1,4 +1,4 @@
-from person import Person
+from model.person import Person
 
 class Student(Person):
     """Models a student in learning management system"""

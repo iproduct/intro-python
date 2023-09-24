@@ -1,4 +1,4 @@
-from instructor import Instructor, print_instructors
+from model.instructor import Instructor, print_instructors
 from persistable import Persistable
 from repository import Repository
 
