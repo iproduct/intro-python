@@ -1,11 +1,14 @@
 from itertools import permutations
 from typing import Iterator
 
+from logged_decorator import logged
+
 
 def str_perm_gen(s: str) -> Iterator[str]:
     for letters in permutations(s):
         yield ''.join(letters)
 
+@logged
 def get_perm(tuple):
     n = len(tuple)
     if n <= 1:                  # recursion bottom
@@ -18,8 +21,8 @@ def get_perm(tuple):
 
 
 if __name__ == '__main__':
-    for p in get_perm(tuple('abcd')):
+    for p in get_perm(tuple('abcde')):
         print(''.join(p), end=', ')
     print()
-    for p in str_perm_gen('abcd'):
+    for p in str_perm_gen('abcde'):
         print(p, end=', ')

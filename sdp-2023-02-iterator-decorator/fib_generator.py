@@ -1,3 +1,7 @@
+from logged_decorator import logged
+
+
+# @logged
 def fib_gen(number):
     a, b = 0, 1
     for i in range(number):
