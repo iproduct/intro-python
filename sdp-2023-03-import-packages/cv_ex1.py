@@ -3,6 +3,8 @@ cv_ex1.py - read and show image
 
 """
 import cv2
+
+
 if __name__ == "__main__":
     # read the color image
     img1 = cv2.imread('lena.bmp')
