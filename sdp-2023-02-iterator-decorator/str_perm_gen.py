@@ -8,7 +8,7 @@ def str_perm_gen(s: str) -> Iterator[str]:
     for letters in permutations(s):
         yield ''.join(letters)
 
-@logged
+@logged(print_args=False)
 def get_perm(tuple):
     n = len(tuple)
     if n <= 1:                  # recursion bottom

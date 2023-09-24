@@ -1,6 +1,5 @@
 from typing import Callable
 
-
 def logged(print_args = True, print_result = True) -> Callable:
     def logged_instance(delegate: Callable) -> Callable:
         def wrapper(*args, **kwargs):
@@ -10,6 +9,8 @@ def logged(print_args = True, print_result = True) -> Callable:
             result = delegate(*args, **kwargs)
             if print_result:
                 print(' -> ', result)
+            else:
+                print()
             return result
 
         return wrapper
