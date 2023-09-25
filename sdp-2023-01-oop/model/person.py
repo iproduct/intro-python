@@ -10,9 +10,9 @@ class Person:
         return cls._next_id
 
     def __init__(self, name = None, bdate = None):
-        self._id = self.__class__.get_next_id()
-        self._name = name
-        self.birth_date = datetime.strptime(bdate, '%d.%m.%Y').date() if bdate is not None else None
+        self._id: str = self.__class__.get_next_id()
+        self._name:str = name
+        self.birth_date: date = datetime.strptime(bdate, '%d.%m.%Y').date() if bdate is not None else None
 
     @property
     def id(self):

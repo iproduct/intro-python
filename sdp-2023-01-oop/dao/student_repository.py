@@ -1,5 +1,5 @@
-from persistable import Persistable
-from repository import Repository
+from dao.persistable import Persistable
+from dao.repository import Repository
 from model.student import Student, print_students
 
 
