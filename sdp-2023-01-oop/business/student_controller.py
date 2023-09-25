@@ -15,10 +15,11 @@ class StudentController:
 
     def validate_student(self, student: Student):
         violations: list[str] = []
-        if len(student.name.strip()) < 5:
-            violations.append(f'Invalid student name: {student.name}')
+        name_len = len(student.name.strip())
+        if  name_len < 5 or name_len > 40:
+            violations.append(f'Student name should be between 5 and 40 characters long: "{student.name}"')
         if re.match(r'^(\d{5,6}|\dMI\d{7})$', student.fn) is None:
-            violations.append(f'Invalid faculty number: {student.name}')
+            violations.append(f'Faculty number should be in 5 or 6 digits OR "<digit>MI<7_digits>" format: "{student.fn}"')
 
         if len(violations) > 0:
             raise InvalidEntityData('Invalid student data', violations)
@@ -33,4 +34,4 @@ if __name__ == '__main__':
     ]
     repo = StudentRepository(students, 'students.json')
     controller: StudentController = StudentController(repo)
-    controller.add_student(Student('68359', 'At', '18.11.1979', 4))
+    controller.add_student(Student('68359', 'Atanas Georgiev', '18.11.1979', 4))
