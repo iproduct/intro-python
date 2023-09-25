@@ -13,13 +13,18 @@ class StudentController:
         self.validate_student(student)
         self._student_repo.append(student)
 
+    def get_all_students(self):
+        return self._student_repo.find_all()
+
     def validate_student(self, student: Student):
         violations: list[str] = []
         name_len = len(student.name.strip())
         if  name_len < 5 or name_len > 40:
             violations.append(f'Student name should be between 5 and 40 characters long: "{student.name}"')
-        if re.match(r'^(\d{5,6}|\dMI\d{7})$', student.fn) is None:
-            violations.append(f'Faculty number should be in 5 or 6 digits OR "<digit>MI<7_digits>" format: "{student.fn}"')
+        if re.match(r'^(\d{5,6}|\dMI\d{7})$', str(student.fn)) is None:
+            violations.append(f'Faculty number should be in 5 or 6 digits OR "<digit>MI<7_digits>": "{student.fn}"')
+        if student.course < 1 or student.course > 4:
+            violations.append(f'Student course should be between 1 and 4: "{student.course}"')
 
         if len(violations) > 0:
             raise InvalidEntityData('Invalid student data', violations)
@@ -34,4 +39,12 @@ if __name__ == '__main__':
     ]
     repo = StudentRepository(students, 'students.json')
     controller: StudentController = StudentController(repo)
-    controller.add_student(Student('68359', 'Atanas Georgiev', '18.11.1979', 4))
+    try:
+        controller.add_student(Student('68359', 'Atanas Georgiev', '18.11.1979', 4))
+    except InvalidEntityData as ex:
+        violations = '\n - '.join(ex.violations)
+        print(f'The student data is invalid:\n - {violations}')
+    finally:
+        for student in controller.get_all_students():
+            print(student)
+        print('Demo finished.')
