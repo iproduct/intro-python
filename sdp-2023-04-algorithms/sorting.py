@@ -37,7 +37,7 @@ def sort_ins(a):
 
 
 def quick_sort(a, start = 0, end = None):
-    if end == None:
+    if end is None:
         end = len(a)
     if end - start <= 1:   # recursion bottom
         return
