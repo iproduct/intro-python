@@ -41,7 +41,7 @@ def quick_sort(a, start = 0, end = None):
         end = len(a)
     if end - start <= 1:   # recursion bottom
         return
-    pivot = a[end - 1]
+    pivot = a[end - 1]     #recursion step
     i = start
     j = end - 2
     while i <= j:
