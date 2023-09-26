@@ -49,7 +49,7 @@ class LinkedList:
             i += 1
         return node
 
-    def append(self, value):
+    def push(self, value):
         self.insert(value, self.length)
 
     def pop(self, index=None):
@@ -60,20 +60,23 @@ class LinkedList:
         if index == 0:
             result = self.first.value
             self.first = self.first.next
-            self.first.prev = None
+            if self.first is not None:
+                self.first.prev = None
             if self.first is None:
                 self.last = None
         elif index == self.length - 1:
-            result = self.first.value
+            result = self.last.value
             self.last = self.last.prev
             self.last.next = None
             if self.last is None:
                 self.first = None
         else:
             node = self._nth_node(index)
+            result = node.value
             node.prev.next = node.next
             node.next.prev = node.prev
         self.length -= 1
+        return result
 
     def peek(self, index=None):
         if index is None:
@@ -81,3 +84,18 @@ class LinkedList:
         if index < 0 or index >= self.length:
             raise IndexError(f'Invalid index = {index}, should be between 0 and {self.length - 1}')
         return self._nth_node(index)
+
+
+if __name__ == "__main__":
+    my_list = LinkedList()
+    values = [1222, 315, 433, 12, 7, 52, 610, 42, 34, 72, 320, 95]
+    for v in values:
+        my_list.push(v)
+
+    for e in my_list:
+        print(e, end = ', ')
+    print()
+
+    for i in range(my_list.length):
+        print(my_list.pop(), end = ', ')
+
