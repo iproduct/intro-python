@@ -90,7 +90,7 @@ if __name__ == "__main__":
     my_list = LinkedList()
     values = [1222, 315, 433, 12, 7, 52, 610, 42, 34, 72, 320, 95]
     for v in values:
-        my_list.push(v)
+        my_list.insert(v,0)
 
     for e in my_list:
         print(e, end = ', ')
