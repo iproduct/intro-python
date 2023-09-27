@@ -62,11 +62,38 @@ class Tree:
             for child in reversed(node.children):
                 stack.append(child)
 
-    def bfs_pre_values(self) -> Iterator[Any]:
-        return map(lambda node: node.data, self.bfs_pre())
+    def dfs_post_values(self) -> Iterator[Any]:
+        return map(lambda node: node.data, self.dfs_post())
+
+    def dfs_post(self) -> Iterator[TreeNode]:
+        stack = deque()
+        visited = deque()
+        if self.root is None:
+            return
+        stack.append(self.root)
+        while len(stack) > 0:
+            node: TreeNode = stack.pop()
+            #post-visit
+            visited.appendleft(node)
+            for child in node.children:
+                stack.append(child)
+        for node in visited:
+            yield node
 
     def bfs_pre(self) -> Iterator[TreeNode]:
-        pass
+        stack = deque()
+        if self.root is None:
+            return
+        stack.append(self.root)
+        while len(stack) > 0:
+            node: TreeNode = stack.pop()
+            #previsit
+            yield node
+            for child in node.children:
+                stack.appendleft(child)
+
+    def bfs_pre_values(self) -> Iterator[Any]:
+        return map(lambda node: node.data, self.bfs_pre())
 
     def find_node_dfs(self, value):
         for node in self.dfs_pre():
@@ -82,4 +109,6 @@ if __name__ == '__main__':
     print(t)
     print(f'Size: {t.size()}')
     print(', '.join(t.dfs_pre_values()))
+    print(', '.join(t.bfs_pre_values()))
+    print(', '.join(t.dfs_post_values()))
 
