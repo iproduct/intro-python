@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Iterator
+from typing import Iterator, Any
 
 
 class TreeNode:
@@ -47,6 +47,9 @@ class Tree:
             count += 1
         return count
 
+    def dfs_pre_values(self) -> Iterator[Any]:
+        return map(lambda node: node.data, self.dfs_pre())
+
     def dfs_pre(self) -> Iterator[TreeNode]:
         stack = deque()
         if self.root is None:
@@ -56,8 +59,14 @@ class Tree:
             node: TreeNode = stack.pop()
             #previsit
             yield node
-            for child in node.children:
+            for child in reversed(node.children):
                 stack.append(child)
+
+    def bfs_pre_values(self) -> Iterator[Any]:
+        return map(lambda node: node.data, self.bfs_pre())
+
+    def bfs_pre(self) -> Iterator[TreeNode]:
+        pass
 
     def find_node_dfs(self, value):
         for node in self.dfs_pre():
@@ -72,4 +81,5 @@ if __name__ == '__main__':
     t.find_node_dfs('D').add_children([TreeNode('X', [TreeNode('V'), TreeNode('W')]), TreeNode('Y')])
     print(t)
     print(f'Size: {t.size()}')
+    print(', '.join(t.dfs_pre_values()))
 
