@@ -62,8 +62,19 @@ if __name__ == '__main__':
     g.add_edge('D', 'C', 3)
     g.add_edge('D', 'E', 1)
     g.add_edge('D', 'F', 2)
-    g.add_edge('E', 'F', 0)
+    g.add_edge('E', 'F', 1)
     print(g)
-    dist, prev = g.dijkstra('A')
+    start = 'A'
+    dist, prev = g.dijkstra(start)
     print(dist)
     print(prev)
+
+    for node in dist:
+        path = []
+        nxt = node
+        while nxt != start:
+            path.append(nxt)
+            nxt = prev[nxt]
+        path.append(start)
+        path.reverse()
+        print(f'{node}: {dist[node]} -> {path}')
