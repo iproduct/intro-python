@@ -1,17 +1,26 @@
 NodeType = type(str)
 
 class Graph:
-    def __init__(self, nodes: list(NodeType) = None, edges: list[tuple[NodeType, NodeType, int]] = None) -> None:
+    def __init__(self, nodes: list[NodeType] = None, edges: list[tuple[NodeType, NodeType, int]] = None) -> None:
         self.nodes: set[NodeType] = set() if nodes is None else set(nodes)
         self.edges: dict[NodeType, dict[NodeType, int]] = dict()
         for node in nodes:
             self.edges[node]: dict[NodeType, int] = dict()
         if edges is not None:
             for edge in edges:
-                self.add_edge(edge)
+                self.add_edge(*edge)
 
-    def add_edge(self, edge: tuple[NodeType, NodeType, int]) -> None:
-        self.edges[edge[0]][edge[1]] = edge[2]
+    def __str__(self):
+        result = ''
+        nodes_sorted = list(self.nodes)
+        nodes_sorted.sort()
+        for node in nodes_sorted:
+            result += f'{node} -> {self.edges[node]}\n'
+        return result
+
+
+    def add_edge(self, start: NodeType, end: NodeType, dist: int) -> None:
+        self.edges[start][end] = dist
 
     def dijkstra(self, initial: NodeType) -> tuple[dict[NodeType, int], dict[NodeType, NodeType]]:
         visited: dict[NodeType, int] = {initial: 0}
@@ -40,3 +49,21 @@ class Graph:
                     prev[edge_node] = min_node
 
         return visited, prev
+
+if __name__ == '__main__':
+    g = Graph([chr(chcode) for chcode in range(ord('A'),ord('G'))])
+    g.add_edge('A', 'B', 3)
+    g.add_edge('A', 'C', 10)
+    g.add_edge('B', 'C', 8)
+    g.add_edge('C', 'B', 2)
+    g.add_edge('B', 'D', 3)
+    g.add_edge('B', 'E', 5)
+    g.add_edge('C', 'E', 5)
+    g.add_edge('D', 'C', 3)
+    g.add_edge('D', 'E', 1)
+    g.add_edge('D', 'F', 2)
+    g.add_edge('E', 'F', 0)
+    print(g)
+    dist, prev = g.dijkstra('A')
+    print(dist)
+    print(prev)
