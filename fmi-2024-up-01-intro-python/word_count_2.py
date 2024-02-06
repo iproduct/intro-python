@@ -13,7 +13,7 @@ if __name__ == '__main__':
     f = open(filename, 'rt', encoding='utf-8')
     word_counts = dict()
     for line in f:
-        words = re.split(r'[\W\d]+', line.lower())
+        words = re.split(r'[^a-zA-Z_\-]+', line.lower())
         for word in words:
             if word in stopwords_set:
                 continue
@@ -23,6 +23,7 @@ if __name__ == '__main__':
                 word_counts[word] += 1
             else:
                 word_counts[word] = 1
+    f.close()
 
     wc_list = list(word_counts.items())
     wc_list.sort(key=lambda wc: wc[1], reverse=True)
