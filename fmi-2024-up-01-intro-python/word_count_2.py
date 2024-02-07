@@ -25,6 +25,5 @@ if __name__ == '__main__':
                 word_counts[word] = 1
     f.close()
 
-    wc_list = list(word_counts.items())
-    wc_list.sort(key=lambda wc: wc[1], reverse=True)
+    wc_list = sorted(word_counts.items(), key=lambda wc: wc[1], reverse=True)
     print(wc_list[:10])

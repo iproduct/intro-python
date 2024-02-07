@@ -35,11 +35,8 @@ if __name__ == "__main__":
             print('Invalid number - try again.')
             continue
         guess = [int(digit) for digit in list(str(guess_num))]
-        if len(guess) != 4:
+        if len(set(guess)) != 4:  # there are repeated digit in the number
             print('Invalid attempt - try again.')
-            continue
-        if len(set(guess)) != len(guess):  # there are repeated digit in the number
-            print('Invalid attempt - digits should be unique.')
             continue
         print(guess)
         cows, bulls = find_cows_and_bulls(number, guess)
