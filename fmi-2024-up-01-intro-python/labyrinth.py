@@ -28,14 +28,14 @@ def find_neighbours(start, lab):
     return results
 
 def find_path(start, goal, lab, visited):
-    if start == goal:
+    if start == goal: #recursion bottom
         return [goal]
     neighbours = find_neighbours(start, lab)
     for neighbour in neighbours:
-        if neighbour in visited:
+        if neighbour in visited: # skip checking neighbour if already visited - prevent cyclic labyrinth traversal
             continue
         visited.append(neighbour)
-        path = find_path(neighbour, goal, lab, visited)
+        path = find_path(neighbour, goal, lab, visited) #recursion step
         if path is not None:
             path.insert(0, start) # prepend start to found path
             return path
