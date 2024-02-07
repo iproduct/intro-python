@@ -34,7 +34,7 @@ def find_path(start, goal, lab, visited):
     for neighbour in neighbours:
         if neighbour in visited: # skip checking neighbour if already visited - prevent cyclic labyrinth traversal
             continue
-        visited.append(neighbour)
+        visited.add(neighbour)
         path = find_path(neighbour, goal, lab, visited) #recursion step
         if path is not None:
             path.insert(0, start) # prepend start to found path
@@ -42,5 +42,5 @@ def find_path(start, goal, lab, visited):
     return None
 if __name__ == "__main__":
     n = find_neighbours((2,3), lab)
-    path = find_path(start, goal, lab, [])
+    path = find_path(start, goal, lab, set())
     print(path)
