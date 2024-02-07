@@ -37,7 +37,7 @@ def find_path(start, goal, lab, visited):
         visited.append(neighbour)
         path = find_path(neighbour, goal, lab, visited)
         if path is not None:
-            path.insert(0, start)
+            path.insert(0, start) # prepend start to found path
             return path
     return None
 if __name__ == "__main__":
