@@ -37,10 +37,9 @@ def find_path(start, goal, lab, visited):
         visited.append(neighbour)
         path = find_path(neighbour, goal, lab, visited)
         if path is not None:
-            return [start] + path
+            return [start].extend(path)
     return None
 if __name__ == "__main__":
     n = find_neighbours((2,3), lab)
     path = find_path(start, goal, lab, [])
     print(path)
-    
