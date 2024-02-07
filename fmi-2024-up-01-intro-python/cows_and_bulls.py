@@ -29,7 +29,11 @@ if __name__ == "__main__":
     print(number)
     attempts = 0
     while attempts < MAX_ATTEMPTS:
-        guess_num = int(input("Enter your guess:"))
+        try:
+            guess_num = int(input("Enter your guess:"))
+        except ValueError:
+            print('Invalid number - try again.')
+            continue
         guess = [int(digit) for digit in list(str(guess_num))]
         if len(guess) != 4:
             print('Invalid attempt - try again.')
