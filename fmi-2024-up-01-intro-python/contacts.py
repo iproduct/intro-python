@@ -45,6 +45,8 @@ sample_contacts = [
     }
 ]
 
+contacts = []
+
 def format_contact(contact: dict) -> str:
     result = ''
     phones_str = ', '.join([f'{ph["type"]}: {ph["number"]}' for ph in contact['phones']])
@@ -58,6 +60,9 @@ def print_contacts(contacts):
     for contact in contacts:
         print(format_contact(contact))
 
+def print_contacts_handler():
+    print_contacts(contacts)
+
 
 def save_contacts(db_filename):
     with open(db_filename, 'wt', encoding='utf-8') as f:
@@ -65,13 +70,43 @@ def save_contacts(db_filename):
 
 
 def load_contacts(db_filename):
+    global contacts
     with open(db_filename, 'rt', encoding='utf-8') as f:
-        return json.load(f)
+        contacts = json.load(f)
 
+def exit_handler():
+    save_contacts(CONTACTS_DB_FILE)
+    print('Good bye - have a nice day!')
+    exit(0)
+
+MAIN_MENU = [
+    {
+        "label": "Print all contacts",
+        "handler": print_contacts_handler,
+    },
+    {
+        "label": "Exit",
+        "handler": exit_handler
+    },
+]
+
+def show_menu() -> int:
+    print()
+    for i, option in enumerate(MAIN_MENU, start=1):
+        print(f'{i:>1d}: {option["label"]}')
+    while True:
+        try:
+            choice = int(input("Choose an option: ")) - 1
+        except ValueError:
+            print('Not a number - try again.')
+        if 0 <= choice < len(MAIN_MENU):
+            break
+        print('Invalid choice - try again.')
+    return choice
 
 
 if __name__ == "__main__":
-    save_contacts(CONTACTS_DB_FILE)
-
-    contacts_list = load_contacts(CONTACTS_DB_FILE)
-    print_contacts(contacts_list)
+    load_contacts(CONTACTS_DB_FILE)
+    while True:
+        choice = show_menu()
+        MAIN_MENU[choice]['handler']()
