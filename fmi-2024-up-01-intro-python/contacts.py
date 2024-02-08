@@ -1,5 +1,7 @@
 import json
 
+CONTACTS_DB_FILE = 'contacts.json'
+
 sample_contacts = [
     {
         "id": 1,
@@ -56,10 +58,20 @@ def print_contacts(contacts):
     for contact in contacts:
         print(format_contact(contact))
 
-if __name__ == "__main__":
-    with open('contacts.json', 'wt', encoding='utf-8') as f:
+
+def save_contacts(db_filename):
+    with open(db_filename, 'wt', encoding='utf-8') as f:
         json.dump(sample_contacts, f, indent=4)
 
-    with open('contacts.json', 'rt', encoding='utf-8') as f:
-        contacts_list = json.load(f)
-        print_contacts(contacts_list)
+
+def load_contacts(db_filename):
+    with open(db_filename, 'rt', encoding='utf-8') as f:
+        return json.load(f)
+
+
+
+if __name__ == "__main__":
+    save_contacts(CONTACTS_DB_FILE)
+
+    contacts_list = load_contacts(CONTACTS_DB_FILE)
+    print_contacts(contacts_list)
