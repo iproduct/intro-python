@@ -20,15 +20,21 @@ def read_record(f):
     qty, = struct.unpack('f', qty_bytes)
     return ing, qty
 
+
+def write_record(f, record):
+    ingredient, quantity = record
+    ing_bytes = bytes(ingredient, encoding='utf-8')
+    l = len(ing_bytes)
+    f.write(ing_bytes + b'\x00' * (INGREDIENT_SIZE - l))
+    qty_bytes = struct.pack("f", quantity)
+    f.write(qty_bytes)
+
+
 if __name__ == '__main__':
     cocktail = list(zip(fruits, qty))
     with open('cocktail.bin', 'wb') as f:
-        for ingredient, quantity in cocktail:
-            ing_bytes = bytes(ingredient, encoding='utf-8')
-            l = len(ing_bytes)
-            f.write(ing_bytes + b'\x00' * (INGREDIENT_SIZE - l))
-            qty_bytes = struct.pack("f", quantity)
-            f.write(qty_bytes)
+        for item in cocktail:
+            write_record(f, item)
 
     with open('cocktail.bin', 'rb') as f:
         f.seek(0, os.SEEK_END)
@@ -36,8 +42,9 @@ if __name__ == '__main__':
         f.seek(0, os.SEEK_SET)
         while f.tell() < size:
             ing, qty = read_record(f)
-            print(ing, qty)
+            print(ing, qty, sep=', ')
 
+        # find 5-th record - direct access file
         f.seek(4 * RECORD_SIZE, os.SEEK_SET)
         ing, qty = read_record(f)
         print("\n5-th record:\n", ing, qty)
