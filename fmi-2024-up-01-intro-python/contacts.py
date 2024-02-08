@@ -1,3 +1,5 @@
+import json
+
 sample_contacts = [
     {
         "first": "Trayan",
@@ -41,4 +43,9 @@ sample_contacts = [
 
 
 if __name__ == "__main__":
-    pass
+    with open('contacts.json', 'wt', encoding='utf-8') as f:
+        json.dump(sample_contacts, f, indent=4)
+
+    with open('contacts.json', 'rt', encoding='utf-8') as f:
+        contacts_list = json.load(f)
+        print(contacts_list)
