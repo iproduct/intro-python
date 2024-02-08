@@ -23,9 +23,12 @@ def read_record(f):
 
 def write_record(f, record):
     ingredient, quantity = record
+    buffer = bytearray(INGREDIENT_SIZE)
     ing_bytes = bytes(ingredient, encoding='utf-8')
     l = len(ing_bytes)
-    f.write(ing_bytes + b'\x00' * (INGREDIENT_SIZE - l))
+    buffer[:l] = ing_bytes
+    f.write(buffer)
+    # f.write(ing_bytes + b'\x00' * (INGREDIENT_SIZE - l))
     qty_bytes = struct.pack("f", quantity)
     f.write(qty_bytes)
 
