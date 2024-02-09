@@ -73,7 +73,7 @@ def print_contacts_handler():
 
 def save_contacts(db_filename):
     with open(db_filename, 'wt', encoding='utf-8') as f:
-        json.dump(sample_contacts, f, indent=4)
+        json.dump(contacts, f, indent=4)
 
 
 def load_contacts(db_filename):
@@ -107,7 +107,7 @@ def input_contact() -> dict:
             contact['address']['country'] = country
             break
         print('Country code should be two uppercase characters. Try again.')
-    contact['address']['country'] = input('Input city:') # optional
+    contact['address']['city'] = input('Input city:') # optional
     contact['address']['street'] = input('Input street address:') # optional
     contact['phones'] = []
 
@@ -126,18 +126,31 @@ def input_contact() -> dict:
                 continue
             if phone['type'] is None:
                 print(f'Your chice should be a number 1 - {len(PHONE_TYPES)}. Try again.')
-        while True:
+                continue
+            break
+
+        while not complete:
             phone['number'] = input('Input phone number [ex. (03592) 123456]:')
-            if re.match('^[\d\s()]{6,15}$'):
+            if re.match('^[\d\s()]{6,15}$', phone['number']):
                 contact['phones'].append(phone)
                 break
             print('Phone number should contain only digits, spaces and parenthesis (). Try again.')
     return contact
 
+def add_contact_handler():
+    contact = input_contact()
+    contact['id'] = contacts[-1]['id'] + 1
+    contacts.append(contact)
+    save_contacts(CONTACTS_DB_FILE)
+
 MAIN_MENU = [
     {
         "label": "Print all contacts",
         "handler": print_contacts_handler,
+    },
+    {
+        "label": "Add contact",
+        "handler": add_contact_handler,
     },
     {
         "label": "Exit",
