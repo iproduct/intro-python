@@ -1,4 +1,5 @@
 import json
+import re
 
 CONTACTS_DB_FILE = 'contacts.json'
 
@@ -45,6 +46,12 @@ sample_contacts = [
     }
 ]
 
+PHONE_TYPES = {
+    1: 'MOBILE',
+    2: 'HOME',
+    3: 'WORK',
+}
+
 contacts = []
 
 def format_contact(contact: dict) -> str:
@@ -79,6 +86,54 @@ def exit_handler():
     print('Good bye - have a nice day!')
     exit(0)
 
+def input_contact() -> dict:
+    contact = dict()
+    while True:
+        contact['first'] = input('Input first name:')
+        if len(contact['first']) >= 1:
+            break
+        print('Fist name is mandatory. Try again.')
+    while True:
+        contact['last'] = input('Input last name:')
+        if len(contact['last']) >= 2:
+            break
+        print('Last name sholud be at least 2 characters long. Try again.')
+    contact['address'] = dict()
+    while True:
+        country = input('Input country code [ENTER for BG]:').upper()
+        if country == '':
+            country = 'BG'
+        if len(country) == 2:
+            contact['address']['country'] = country
+            break
+        print('Country code should be two uppercase characters. Try again.')
+    contact['address']['country'] = input('Input city:') # optional
+    contact['address']['street'] = input('Input street address:') # optional
+    contact['phones'] = []
+
+    complete = False
+    while not complete:
+        phone = dict()
+        while True:
+            type_choice = input('Input phone type [1) for MOBILE, 2) for HOME 3) for WORK, ENTER to cancel]:')
+            if type_choice == '':
+                complete = True
+                break
+            try:
+                phone['type'] = PHONE_TYPES[int(type_choice)]
+            except ValueError:
+                print(f'Your chice should be a number 1 - {len(PHONE_TYPES)}. Try again.')
+                continue
+            if phone['type'] is None:
+                print(f'Your chice should be a number 1 - {len(PHONE_TYPES)}. Try again.')
+        while True:
+            phone['number'] = input('Input phone number [ex. (03592) 123456]:')
+            if re.match('^[\d\s()]{6,15}$'):
+                contact['phones'].append(phone)
+                break
+            print('Phone number should contain only digits, spaces and parenthesis (). Try again.')
+    return contact
+
 MAIN_MENU = [
     {
         "label": "Print all contacts",
@@ -106,6 +161,7 @@ def show_menu() -> int:
 
 
 if __name__ == "__main__":
+    # save_contacts(CONTACTS_DB_FILE) # uncomment to create db first time
     load_contacts(CONTACTS_DB_FILE)
     while True:
         choice = show_menu()
