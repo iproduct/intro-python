@@ -19,10 +19,11 @@ if __name__ == '__main__':
                 continue
             if word == '':
                 break
-            if word in word_counts:
-                word_counts[word] += 1
-            else:
-                word_counts[word] = 1
+            # if word in word_counts:
+            #     word_counts[word] += 1
+            # else:
+            #     word_counts[word] = 1
+            word_counts[word] = word_counts.get(word, 0) + 1
     f.close()
 
     wc_list = sorted(word_counts.items(), key=lambda wc: wc[1], reverse=True)
