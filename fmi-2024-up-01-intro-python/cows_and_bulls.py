@@ -1,7 +1,16 @@
+"""
+Popular "Cows and bulls" game implmentation
+"""
+
 import random
+
 
 MAX_ATTEMPTS = 8
 def generate_number():
+    """
+    generate random 4 unique digits number
+    :return: the generated random number
+    """
     l = [n for n in range(0, 10)]
     while l[0] == 0:
         random.shuffle(l)

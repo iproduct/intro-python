@@ -1,4 +1,4 @@
-import json
+from json import load, dump
 import re
 
 CONTACTS_DB_FILE = 'contacts.json'
@@ -73,13 +73,13 @@ def print_contacts_handler():
 
 def save_contacts(db_filename):
     with open(db_filename, 'wt', encoding='utf-8') as f:
-        json.dump(contacts, f, indent=4)
+        dump(contacts, f, indent=4)
 
 
 def load_contacts(db_filename):
     global contacts
     with open(db_filename, 'rt', encoding='utf-8') as f:
-        contacts = json.load(f)
+        contacts = load(f)
 
 def exit_handler():
     save_contacts(CONTACTS_DB_FILE)
