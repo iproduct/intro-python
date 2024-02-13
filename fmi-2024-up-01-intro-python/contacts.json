@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "first": "Trayan",
+        "last": "Iliev",
+        "address": {
+            "country": "BG",
+            "city": "Sofia",
+            "street": "Jamaes Bouchier Blvd., 42"
+        },
+        "phones": [
+            {
+                "type": "work",
+                "number": "+3592895423"
+            },
+            {
+                "type": "mobile",
+                "number": "+359885167243"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "first": "Georgi",
+        "last": "Spasov",
+        "address": {
+            "country": "BG",
+            "city": "Plovdiv",
+            "street": "Pet tepeta, 18"
+        },
+        "phones": [
+            {
+                "type": "work",
+                "number": "+3594312345"
+            },
+            {
+                "type": "mobile",
+                "number": "+359889195572"
+            }
+        ]
+    },
+    {
+        "first": "Hristo",
+        "last": "Georgiev",
+        "address": {
+            "country": "BG",
+            "city": "Sofia",
+            "street": "Tsar ovoboditel, 65"
+        },
+        "phones": [
+            {
+                "type": "MOBILE",
+                "number": "0887 14 30 20"
+            },
+            {
+                "type": "HOME",
+                "number": "(03592) 174060"
+            }
+        ],
+        "id": 3
+    },
+    {
+        "first": "Ivelina",
+        "last": "Petrova",
+        "address": {
+            "country": "BG",
+            "city": "Sofia",
+            "street": "1000"
+        },
+        "phones": [
+            {
+                "type": "MOBILE",
+                "number": "0359885 172040"
+            }
+        ],
+        "id": 4
+    }
+]
