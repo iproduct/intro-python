@@ -1,0 +1,22 @@
+[
+    {
+        "first": "Trayan",
+        "last": "Iliev",
+        "address": "Sofia 1000",
+        "phones": [
+            {
+                "number": "0889765443",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "0e596991-e1b8-4f3c-b37a-c06c15074675"
+        },
+        "_class": "Contact"
+    }
+]

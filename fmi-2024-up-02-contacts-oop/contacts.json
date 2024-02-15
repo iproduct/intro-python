@@ -2,10 +2,10 @@
     {
         "first": "Trayan",
         "last": "Iliev",
-        "address": "Sofia",
+        "address": "Sofia 1000",
         "phones": [
             {
-                "number": "4354354354353",
+                "number": "0889765443",
                 "type": {
                     "_class": "PhoneType",
                     "value": "MOBILE"
@@ -15,7 +15,47 @@
         ],
         "id": {
             "_class": "UUID",
-            "value": "506d730d-c4ab-4af5-8d9e-8f0201a9222b"
+            "value": "0e596991-e1b8-4f3c-b37a-c06c15074675"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "John",
+        "last": "Doe",
+        "address": "London",
+        "phones": [
+            {
+                "number": "044567893221",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "0ece6c67-27d2-4333-bdd7-a0c12fb0c682"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "Jane",
+        "last": "Smith",
+        "address": "Bristol",
+        "phones": [
+            {
+                "number": "044786543222",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "23f51d97-e90c-4b0b-9d1f-ecf6ee422c6e"
         },
         "_class": "Contact"
     }

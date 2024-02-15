@@ -6,7 +6,7 @@ from contact import Contact, Phone, PhoneType
 class InputContactView:
     def __init__(self):
         pass
-    def input_contact(self) -> Contact:
+    def show(self) -> Contact:
         contact = Contact()
         while True:
             contact.first = input('Input first name:')
@@ -40,6 +40,16 @@ class InputContactView:
                     break
                 print('Phone number should contain only digits, spaces and parenthesis (). Try again.')
         return contact
+
+class ShowContactsView:
+    def __init__(self):
+        pass
+
+    def show(self, contacts):
+        print()
+        for contact in contacts:
+            print(contact)
+
 
 if __name__ == '__main__':
     view = InputContactView()
