@@ -1,27 +1,12 @@
-{
-    "id": 1,
-    "first": "Trayan",
-    "last": "Iliev",
-    "address": {
-        "country": "BG",
-        "city": "Sofia",
-        "street": "Jamaes Bouchier Blvd., 42"
-    },
-    "phones": [
-        {
-            "type": "work",
-            "number": "+3592895423"
-        },
-        {
-            "type": "mobile",
-            "number": "+359885167243"
-        },
-    ]
-}
+from enum import Enum
 
+class PhoneType(Enum):
+    MOBILE = 1
+    HOME = 2
+    WORK = 3
 
 class Phone:
-    def __init__(self, number, type='MOBILE'):
+    def __init__(self, number: str ='', type: PhoneType = PhoneType.MOBILE):
         self.number = number
         self.type = type
 
@@ -37,7 +22,7 @@ class Contact:
         cls.last_id += 1
         return cls.last_id
 
-    def __init__(self, first: str, last: str, address: str, phones: list[Phone] = None):
+    def __init__(self, first: str = "", last: str = "", address: str = "", phones: list[Phone] = None):
         # self.id = self.__class__.__get_next_id()
         # self.id = Contact.__get_next_id()
         self.id = self.__get_next_id()
