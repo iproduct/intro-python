@@ -1,21 +1,5 @@
 from typing import Callable
 
-MAIN_MENU = [
-    {
-        "label": "Print all contacts",
-        "handler": print_contacts_handler,
-    },
-    {
-        "label": "Add contact",
-        "handler": add_contact_handler,
-    },
-    {
-        "label": "Exit",
-        "handler": exit_handler
-    },
-]
-
-
 class Item:
     def __init__(self, label: str, handler: Callable[[], None]):
         self.label = label
