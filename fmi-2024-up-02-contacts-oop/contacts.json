@@ -2,13 +2,21 @@
     {
         "first": "Trayan",
         "last": "Iliev",
-        "address": "Sofia 1000",
+        "address": "Sofia",
         "phones": [
             {
-                "number": "088765432",
-                "type": "MOBILE"
+                "number": "4354354354353",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
             }
         ],
-        "id": "56f15250-45ec-49e7-ae15-cfb24c9aea18"
+        "id": {
+            "_class": "UUID",
+            "value": "506d730d-c4ab-4af5-8d9e-8f0201a9222b"
+        },
+        "_class": "Contact"
     }
 ]

@@ -2,6 +2,7 @@ from enum import Enum
 from json import dump, load
 import uuid
 
+from contact import PhoneType
 from menus import Menu, Item
 from views import InputContactView
 
@@ -50,11 +51,27 @@ class MainController:
 
 def dumper(obj):
     if isinstance(obj, Enum):
-        return obj.name
+        return {
+            '_class': obj.__class__.__name__,
+            "value": obj.name
+        }
     elif isinstance(obj, uuid.UUID):
-        return str(obj)
+        return {
+            '_class': obj.__class__.__name__,
+            "value": str(obj)
+        }
     else:
-        return obj.__dict__
+        result = dict(obj.__dict__)
+        result.update({"_class": obj.__class__.__name__})
+        return result
+
+
+def obj_hook(jsondict):
+    pass
+    # obj = cls()
+    # del jsdict['_class']
+    # obj.__dict__ = jsdict
+    # return obj
 
 
 if __name__ == '__main__':
