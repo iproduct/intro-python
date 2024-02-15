@@ -1,19 +1,22 @@
 from json import dump, load
+import uuid
 
 from menus import Menu, Item
+from views import InputContactView
 
 
 class MainController:
-    def __init__(self, db_filename):
+    def __init__(self, db_filename, input_view: InputContactView):
         self.db_filename = db_filename
+        self.input_view = input_view
+        self.contacts = []
         self.menu = self.create_menu()
 
-    @staticmethod
-    def create_menu():
+    def create_menu(self):
         return Menu([
             Item("Print all contacts", lambda: None),
             Item("Add contact", lambda: None),
-            Item("Exit", lambda: None),
+            Item("Exit", self.exit_handler),
         ])
 
     def run(self):
@@ -24,12 +27,23 @@ class MainController:
 
     def save_contacts(self):
         with open(self.db_filename, 'wt', encoding='utf-8') as f:
-            dump(contacts, f, indent=4)
+            dump(self.contacts, f, indent=4)
 
     def load_contacts(self):
-        global contacts
         with open(self.db_filename, 'rt', encoding='utf-8') as f:
-            contacts = load(f)
+            self.contacts = load(f)
+
+    # Handlers
+    def input_contact_handler(self):
+        contact = self.input_view.input_contact()
+        contact.id = uuid.uuid4()
+        self.contacts.append(contact)
+        self.save_contacts()
+
+    def exit_handler(self):
+        self.save_contacts()
+        print('Good bye - have a nice day!')
+        exit(0)
 
 
 if __name__ == '__main__':

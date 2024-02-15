@@ -15,12 +15,12 @@ class Phone:
 
 
 class Contact:
-    last_id = 0
-
-    @classmethod
-    def __get_next_id(cls):
-        cls.last_id += 1
-        return cls.last_id
+    # last_id = 0
+    #
+    # @classmethod
+    # def __get_next_id(cls):
+    #     cls.last_id += 1
+    #     return cls.last_id
 
     def __init__(self, first: str = "", last: str = "", address: str = "", phones: list[Phone] = None):
         # self.id = self.__class__.__get_next_id()
