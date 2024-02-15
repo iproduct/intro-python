@@ -11,7 +11,7 @@ class Phone:
         self.type = type
 
     def __str__(self):
-        return f'{self.type}: {self.number}'
+        return f'{self.type.name}: {self.number}'
 
 
 class Contact:
@@ -33,7 +33,7 @@ class Contact:
 
     def __str__(self):
         result = ''
-        phones_str = ', '.join([f'{ph.type}: {ph.number}' for ph in self.phones])
+        phones_str = ', '.join([f'{ph.type.name}: {ph.number}' for ph in self.phones])
         result += f'| {self.id:>3d} | ' \
                   f'{self.first + " " + self.last:<15.15s} | ' \
                   f'{self.address:<40.40s} | ' \
@@ -42,9 +42,9 @@ class Contact:
 
 if __name__ == '__main__':
     contacts = [
-        Contact('Trayan', 'Iliev', 'Sofia, 1000', [Phone('+3592 891234', 'HOME'), Phone('+35989 123456')]),
+        Contact('Trayan', 'Iliev', 'Sofia, 1000', [Phone('+3592 891234', PhoneType.HOME), Phone('+35989 123456')]),
         Contact('Georgi', 'Hristov', 'Plodiv, Pet tepeta, 17}', [Phone('+35988 654321')]),
-        Contact('Mary', 'Smith', 'London', [Phone('+59 8956661234', 'HOME')]),
+        Contact('Mary', 'Smith', 'London', [Phone('+59 8956661234', PhoneType.HOME)]),
         Contact('John', 'Smith', 'London'),
     ]
 

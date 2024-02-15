@@ -1,4 +1,6 @@
-from contact import Contact, Phone
+import re
+
+from contact import Contact, Phone, PhoneType
 
 
 class InputContactView:
@@ -17,29 +19,29 @@ class InputContactView:
                 break
             print('Last name sholud be at least 2 characters long. Try again.')
         contact.address = input('Input address:') # optional
-        contact['phones'] = []
         complete = False
         while not complete:
             phone = Phone()
             while True:
-                type_choice = input('Input phone type [1) for MOBILE, 2) for HOME 3) for WORK, ENTER to cancel]:')
+                options = ', '.join([f'{pt.value} for {pt.name}' for pt in PhoneType])
+                type_choice = input(f'Input phone type [{options}, ENTER to cancel]:')
                 if type_choice == '':
                     complete = True
                     break
                 try:
-                    phone.type = PHONE_TYPES[int(type_choice)]
+                    phone.type = PhoneType(int(type_choice))
+                    break
                 except ValueError:
-                    print(f'Your chice should be a number 1 - {len(PHONE_TYPES)}. Try again.')
-                    continue
-                if phone['type'] is None:
-                    print(f'Your chice should be a number 1 - {len(PHONE_TYPES)}. Try again.')
-                    continue
-                break
-
+                    print(f'Your chice should be a number 1 - {len(PhoneType)}. Try again.')
             while not complete:
-                phone['number'] = input('Input phone number [ex. (03592) 123456]:')
-                if re.match('^[\d\s()]{6,15}$', phone['number']):
-                    contact['phones'].append(phone)
+                phone.number = input('Input phone number [ex. (03592) 123456]:')
+                if re.match(r'^[\d\s()]{6,15}$', phone.number):
+                    contact.phones.append(phone)
                     break
                 print('Phone number should contain only digits, spaces and parenthesis (). Try again.')
         return contact
+
+if __name__ == '__main__':
+    view = InputContactView()
+    c = view.input_contact()
+    print(c)
