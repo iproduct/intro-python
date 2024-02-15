@@ -1,4 +1,5 @@
 from json import dump, load
+
 from menus import Menu, Item
 
 
@@ -20,7 +21,6 @@ class MainController:
         while True:
             handler = self.menu.show()
             handler()
-
 
     def save_contacts(self):
         with open(self.db_filename, 'wt', encoding='utf-8') as f:
