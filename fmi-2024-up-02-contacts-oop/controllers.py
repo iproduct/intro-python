@@ -1,3 +1,4 @@
+from enum import Enum
 from json import dump, load
 import uuid
 
@@ -15,7 +16,7 @@ class MainController:
     def create_menu(self):
         return Menu([
             Item("Print all contacts", lambda: None),
-            Item("Add contact", lambda: None),
+            Item("Add contact", self.input_contact_handler),
             Item("Exit", self.exit_handler),
         ])
 
@@ -27,7 +28,7 @@ class MainController:
 
     def save_contacts(self):
         with open(self.db_filename, 'wt', encoding='utf-8') as f:
-            dump(self.contacts, f, indent=4)
+            dump(self.contacts, f, indent=4, default=dumper)
 
     def load_contacts(self):
         with open(self.db_filename, 'rt', encoding='utf-8') as f:
@@ -38,6 +39,7 @@ class MainController:
         contact = self.input_view.input_contact()
         contact.id = uuid.uuid4()
         self.contacts.append(contact)
+        print(self.contacts)
         self.save_contacts()
 
     def exit_handler(self):
@@ -46,6 +48,16 @@ class MainController:
         exit(0)
 
 
+def dumper(obj):
+    if isinstance(obj, Enum):
+        return obj.name
+    elif isinstance(obj, uuid.UUID):
+        return str(obj)
+    else:
+        return obj.__dict__
+
+
 if __name__ == '__main__':
-    ctrl = MainController('contacts.json')
+    input_contact_view = InputContactView()
+    ctrl = MainController('contacts.json', input_contact_view)
     ctrl.run()

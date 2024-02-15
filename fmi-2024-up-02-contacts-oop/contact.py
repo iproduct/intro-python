@@ -1,12 +1,14 @@
 from enum import Enum
 
+
 class PhoneType(Enum):
     MOBILE = 1
     HOME = 2
     WORK = 3
 
+
 class Phone:
-    def __init__(self, number: str ='', type: PhoneType = PhoneType.MOBILE):
+    def __init__(self, number: str = '', type: PhoneType = PhoneType.MOBILE):
         self.number = number
         self.type = type
 
@@ -25,7 +27,7 @@ class Contact:
     def __init__(self, first: str = "", last: str = "", address: str = "", phones: list[Phone] = None):
         # self.id = self.__class__.__get_next_id()
         # self.id = Contact.__get_next_id()
-        self.id = self.__get_next_id()
+        # self.id = self.__get_next_id()
         self.first = first
         self.last = last
         self.address = address
@@ -34,11 +36,15 @@ class Contact:
     def __str__(self):
         result = ''
         phones_str = ', '.join([f'{ph.type.name}: {ph.number}' for ph in self.phones])
-        result += f'| {self.id:>3d} | ' \
+        result += f'| {self.id} | ' \
                   f'{self.first + " " + self.last:<15.15s} | ' \
                   f'{self.address:<40.40s} | ' \
                   f'{phones_str:50.50s} |'
         return result
+
+    def __repr__(self):
+        return str(self)
+
 
 if __name__ == '__main__':
     contacts = [

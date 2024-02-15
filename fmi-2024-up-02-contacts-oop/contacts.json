@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "first": "Trayan",
+        "last": "Iliev",
+        "address": "Sofia 1000",
+        "phones": [
+            {
+                "number": "088765432",
+                "type": "MOBILE"
+            }
+        ],
+        "id": "56f15250-45ec-49e7-ae15-cfb24c9aea18"
+    }
+]
