@@ -17,7 +17,7 @@ def word_statistics(file_name: str) -> dict[str, int]:
                 continue
             for word in line_words:
                 word = word.lower()
-                if word in stopwords:
+                if word in nltk_words:
                     continue
                 if word in words:
                     words[word] = words[word] + 1
