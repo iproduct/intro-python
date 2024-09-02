@@ -58,5 +58,33 @@
             "value": "23f51d97-e90c-4b0b-9d1f-ecf6ee422c6e"
         },
         "_class": "Contact"
+    },
+    {
+        "first": "Georgi",
+        "last": "Petrov",
+        "address": "",
+        "phones": [
+            {
+                "number": "02456789",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "HOME"
+                },
+                "_class": "Phone"
+            },
+            {
+                "number": "088765432",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "8987364e-2614-4864-82f2-40f552564705"
+        },
+        "_class": "Contact"
     }
 ]

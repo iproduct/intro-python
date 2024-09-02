@@ -1,6 +1,6 @@
 import re
 
-from contact import Contact, Phone, PhoneType
+from model.contact import Contact, Phone, PhoneType
 
 
 class InputContactView:
@@ -31,8 +31,8 @@ class InputContactView:
                 try:
                     phone.type = PhoneType(int(type_choice))
                     break
-                except ValueError:
-                    print(f'Your chice should be a number 1 - {len(PhoneType)}. Try again.')
+                except ValueError as ex:
+                    print(f'Your chice should be a number 1 - {len(PhoneType)}. Try again:', ex)
             while not complete:
                 phone.number = input('Input phone number [ex. (03592) 123456]:')
                 if re.match(r'^[\d\s()]{6,15}$', phone.number):

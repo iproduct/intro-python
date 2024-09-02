@@ -2,9 +2,9 @@ from enum import Enum
 from json import dump, load
 import uuid
 
-from contact import PhoneType, Phone, Contact
-from menus import Menu, Item
-from views import InputContactView, ShowContactsView
+from model.contact import PhoneType, Phone, Contact
+from view.menus import Menu, Item
+from view.views import InputContactView, ShowContactsView
 
 
 class MainController:
@@ -89,9 +89,3 @@ def object_hook_factory(entity_classes_dict): #HOF, closure
             return obj
     return obj_hook
 
-
-if __name__ == '__main__':
-    input_contact_view = InputContactView()
-    show_contacts_view = ShowContactsView()
-    ctrl = MainController('contacts.json', input_contact_view, show_contacts_view)
-    ctrl.run()

@@ -8,7 +8,15 @@ class Item:
 
 class Menu:
     def __init__(self, items: list[Item]):
-        self.items = items
+        self.__items = items
+
+    @property
+    def items(self):
+        return self.__items
+
+    @items.setter
+    def items(self, items):
+        self.__items = items
 
     def show(self) -> Callable[[], None]:
         print()

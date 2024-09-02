@@ -1,0 +1,26 @@
+JSON (JavaScript Object Notation, pronounced /ˈdʒeɪsən/ or /ˈdʒeɪˌsɒn/) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). It is a commonly used data format with diverse uses in electronic data interchange, including that of web applications with servers.
+
+JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. JSON filenames use the extension .json.
+
+Douglas Crockford originally specified the JSON format in the early 2000s.[1] He and Chip Morningstar sent the first JSON message in April 2001.
+
+Naming and pronunciation
+The 2017 international standard (ECMA-404 and ISO/IEC 21778:2017) specifies that "JSON" is "pronounced /ˈdʒeɪ.sən/, as in 'Jason and The Argonauts'".[2][3] The first (2013) edition of ECMA-404 did not address the pronunciation.[4] The UNIX and Linux System Administration Handbook states, "Douglas Crockford, who named and promoted the JSON format, says it's pronounced like the name Jason. But somehow, 'JAY-sawn'[a] seems to have become more common in the technical community."[5] Crockford said in 2011, "There's a lot of argument about how you pronounce that, but I strictly don't care."[1]
+
+Standards
+After RFC 4627 had been available as its "informational" specification since 2006, JSON was first standardized in 2013, as ECMA-404.[4] RFC 8259, published in 2017, is the current version of the Internet Standard STD 90, and it remains consistent with ECMA-404.[6] That same year, JSON was also standardized as ISO/IEC 21778:2017.[2] The ECMA and ISO/IEC standards describe only the allowed syntax, whereas the RFC covers some security and interoperability considerations.[7]
+
+History
+
+Douglas Crockford at the Yahoo Building (2007)
+JSON grew out of a need for a real-time server-to-browser session communication protocol without using browser plugins such as Flash or Java applets, the dominant methods used in the early 2000s.[8]
+
+Crockford first specified and popularized the JSON format.[1] The acronym originated at State Software, a company cofounded by Crockford and others in March 2001. The cofounders agreed to build a system that used standard browser capabilities and provided an abstraction layer for Web developers to create stateful Web applications that had a persistent duplex connection to a Web server by holding two Hypertext Transfer Protocol (HTTP) connections open and recycling them before standard browser time-outs if no further data were exchanged. The cofounders had a round-table discussion and voted on whether to call the data format JSML (JavaScript Markup Language) or JSON (JavaScript Object Notation), as well as under what license type to make it available. The JSON.org[9] website was launched in 2001. In December 2005, Yahoo! began offering some of its Web services in JSON.[10]
+
+A precursor to the JSON libraries was used in a children's digital asset trading game project named Cartoon Orbit at Communities.com [citation needed] (the State cofounders had all worked at this company previously) for Cartoon Network [citation needed], which used a browser side plug-in with a proprietary messaging format to manipulate DHTML elements (this system is also owned by 3DO [citation needed]). Upon discovery of early Ajax capabilities, digiGroups, Noosh, and others used frames to pass information into the user browsers' visual field without refreshing a Web application's visual context, realizing real-time rich Web applications using only the standard HTTP, HTML, and JavaScript capabilities of Netscape 4.0.5+ and Internet Explorer 5+. Crockford then found that JavaScript could be used as an object-based messaging format for such a system. The system was sold to Sun Microsystems, Amazon.com, and EDS.
+
+JSON was based on a subset of the JavaScript scripting language (specifically, Standard ECMA-262 3rd Edition—December 1999[11]) and is commonly used with JavaScript, but it is a language-independent data format. Code for parsing and generating JSON data is readily available in many programming languages. JSON's website lists JSON libraries by language.
+
+In October 2013, Ecma International published the first edition of its JSON standard ECMA-404.[4] That same year, RFC 7158 used ECMA-404 as a reference. In 2014, RFC 7159 became the main reference for JSON's Internet uses, superseding RFC 4627 and RFC 7158 (but preserving ECMA-262 and ECMA-404 as main references). In November 2017, ISO/IEC JTC 1/SC 22 published ISO/IEC 21778:2017[2] as an international standard. On December 13, 2017, the Internet Engineering Task Force obsoleted RFC 7159 when it published RFC 8259, which is the current version of the Internet Standard STD 90.[12][13]
+
+Crockford added a clause to the JSON license stating, "The Software shall be used for Good, not Evil", in order to open-source the JSON libraries while mocking corporate lawyers and those who are overly pedantic. On the other hand, this clause led to license compatibility problems of the JSON license with other open-source licenses since open-source software and free software usually imply no restrictions on the purpose of use.[14]
