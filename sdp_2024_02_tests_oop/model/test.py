@@ -9,7 +9,7 @@ class Test:
         self.minutes = minutes
 
     def __str__(self):
-        questions_str = '\n\n'.join(map(lambda question: str(question), self.questions))
+        questions_str = ''.join(map(lambda question: str(question), self.questions))
         return f'Test: {self.title}\n{questions_str}\n'
 
 

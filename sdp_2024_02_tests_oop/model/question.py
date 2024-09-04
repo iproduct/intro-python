@@ -13,3 +13,7 @@ class Question:
         self.answers = answers if answers is not None else []
         self.weigth = weight
         self.type = type
+
+    def __str__(self):
+        answers_str = '   - ' + '\n   - '.join(map(lambda answer: str(answer), self.answers))
+        return f'Q: {self.question} [{str(self.type).split('.')[1]}] - W: {self.weigth}\n{answers_str}\n'
