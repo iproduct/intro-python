@@ -1,6 +1,6 @@
 def sum_tree(l):
     sum = 0
-    if isinstance(l, list):
+    if type(l) == list:
         for i in l:
             sum += sum_tree(i)
     else:
@@ -10,3 +10,5 @@ def sum_tree(l):
 if __name__ == '__main__':
     L = [1, [2, [3, 4], 5], 6, [7, 8]]
     print(sum_tree(L))
+    print(type(list))
+    print(list.__dict__)
