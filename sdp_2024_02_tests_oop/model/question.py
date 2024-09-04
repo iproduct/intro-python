@@ -8,8 +8,8 @@ class QuestionType(Enum):
     OPEN_QUESTION = 3
 
 class Question:
-    def __init__(self, question:str=None, answers:list[Answer]=None, points:int=None, type:QuestionType=QuestionType.MULTIPLE_CHOICE ):
+    def __init__(self, question:str=None, answers:list[Answer]=None, weight:float=1, type:QuestionType=QuestionType.MULTIPLE_CHOICE ):
         self.question = question
         self.answers = answers if answers is not None else []
-        self.points = points
+        self.weigth = weight
         self.type = type
