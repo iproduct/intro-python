@@ -58,5 +58,8 @@ if __name__ == '__main__':
     #     print()
 
     controller = TestController()
-    controller.current_test = test
-    controller.saveTest()
+    # controller.current_test = test
+    # controller.saveTest()
+    controller.loadTest('9c5b94b1-35ad-49bb-b118-8e8fc24abf80')
+    print('\nAFTER JSON DESERIALIZATION:')
+    print(controller.current_test)
