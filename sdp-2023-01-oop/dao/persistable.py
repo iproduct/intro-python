@@ -26,3 +26,4 @@ class Persistable:
             obj = self.cls()
             obj.__dict__ = item
             self.append(obj)
+

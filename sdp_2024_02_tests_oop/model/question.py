@@ -12,7 +12,7 @@ class Question:
         self.text = text
         self.answers = answers if answers is not None else []
         self.weigth = weight
-        self.type = type.value
+        self.type = type
 
     def __str__(self):
         answers_str = '   - ' + '\n   - '.join(map(lambda answer: str(answer), self.answers))

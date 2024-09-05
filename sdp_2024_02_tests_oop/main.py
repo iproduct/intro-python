@@ -22,7 +22,7 @@ if __name__ == '__main__':
                      Answer('tuple', 1 ),
                  ], 1, QuestionType.MULTIPLE_RESPONSE),
     ]
-    test = Test('1', 'Python OOP', questions, minutes=10)
+    test = Test('9c5b94b1-35ad-49bb-b118-8e8fc24abf80', 'Python OOP', questions, minutes=10)
     print(test)
     # for question in test:
     #     print(question.text)
