@@ -1,0 +1,53 @@
+{
+    "id": "1",
+    "title": "Python OOP",
+    "questions": [
+        {
+            "text": "Does Python support multiple inheritsance?",
+            "answers": [
+                {
+                    "text": "Yes",
+                    "points": 1
+                },
+                {
+                    "text": "No",
+                    "points": 0
+                }
+            ],
+            "weigth": 3,
+            "type": 1
+        },
+        {
+            "text": "Which types are immutable in Python?",
+            "answers": [
+                {
+                    "text": "str",
+                    "points": 1
+                },
+                {
+                    "text": "int",
+                    "points": 1
+                },
+                {
+                    "text": "list",
+                    "points": 0
+                },
+                {
+                    "text": "dict",
+                    "points": 0
+                },
+                {
+                    "text": "set",
+                    "points": 0
+                },
+                {
+                    "text": "tuple",
+                    "points": 1
+                }
+            ],
+            "weigth": 1,
+            "type": 2
+        }
+    ],
+    "minutes": 10
+}
