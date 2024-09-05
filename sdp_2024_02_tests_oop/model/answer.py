@@ -3,4 +3,4 @@ class Answer:
         self.answer = answer
         self.points = points
     def __str__(self):
-        return f'{self.answer}: {self.points}'
+        return f'{self.answer}: {self.points} points'
