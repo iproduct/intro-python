@@ -1,0 +1,70 @@
+{
+    "id": "9c5b94b1-35ad-49bb-b118-8e8fc24abf80",
+    "title": "Python OOP",
+    "questions": [
+        {
+            "text": "Does Python support multiple inheritsance?",
+            "answers": [
+                {
+                    "text": "Yes",
+                    "points": 1,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "No",
+                    "points": 0,
+                    "_class": "Answer"
+                }
+            ],
+            "weigth": 3,
+            "type": {
+                "_class": "QuestionType",
+                "value": "MULTIPLE_CHOICE"
+            },
+            "_class": "Question"
+        },
+        {
+            "text": "Which types are immutable in Python?",
+            "answers": [
+                {
+                    "text": "str",
+                    "points": 1,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "int",
+                    "points": 1,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "list",
+                    "points": 0,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "dict",
+                    "points": 0,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "set",
+                    "points": 0,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "tuple",
+                    "points": 1,
+                    "_class": "Answer"
+                }
+            ],
+            "weigth": 1,
+            "type": {
+                "_class": "QuestionType",
+                "value": "MULTIPLE_RESPONSE"
+            },
+            "_class": "Question"
+        }
+    ],
+    "minutes": 10,
+    "_class": "Test"
+}
