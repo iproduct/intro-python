@@ -6,7 +6,7 @@ class TestIterator:
         self.questions = questions
         self.pos = -1
     def __next__(self) -> Question:
-        if self.pos == len(self.questions):
+        if self.pos == len(self.questions) - 1:
             raise StopIteration
         else:
             self.pos += 1

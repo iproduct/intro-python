@@ -1,6 +1,6 @@
 class Answer:
-    def __init__(self, answer, points:int=0):
-        self.answer = answer
+    def __init__(self, text, points:int=0):
+        self.text = text
         self.points = points
     def __str__(self):
-        return f'{self.answer}: {self.points} points'
+        return f'{self.text}: {self.points} points'
