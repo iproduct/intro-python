@@ -63,6 +63,47 @@
                 "value": "MULTIPLE_RESPONSE"
             },
             "_class": "Question"
+        },
+        {
+            "text": "Explain polymorphism in OOP.",
+            "answers": [],
+            "weigth": 1,
+            "type": {
+                "_class": "QuestionType",
+                "value": "OPEN_QUESTION"
+            },
+            "_class": "Question"
+        },
+        {
+            "text": "What is the type of *args when implementing function with variable number of positional arguments?",
+            "answers": [
+                {
+                    "text": "list",
+                    "points": 0,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "set",
+                    "points": 0,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "tuple",
+                    "points": 1,
+                    "_class": "Answer"
+                },
+                {
+                    "text": "dict",
+                    "points": 0,
+                    "_class": "Answer"
+                }
+            ],
+            "weigth": 1,
+            "type": {
+                "_class": "QuestionType",
+                "value": "MULTIPLE_CHOICE"
+            },
+            "_class": "Question"
         }
     ],
     "minutes": 10,
