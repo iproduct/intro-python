@@ -4,6 +4,7 @@ from controller.test_controller import TestController
 from model.test import Test
 from model.question import Question, QuestionType
 from model.answer import Answer
+from view.question_view import QuestionView
 
 if __name__ == '__main__':
     questions = [
@@ -63,3 +64,6 @@ if __name__ == '__main__':
     controller.loadTest('9c5b94b1-35ad-49bb-b118-8e8fc24abf80')
     print('\nAFTER JSON DESERIALIZATION:')
     print(controller.current_test)
+
+    question_view = QuestionView(controller)
+    question_view.inputQuestion()
