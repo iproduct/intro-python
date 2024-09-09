@@ -4,7 +4,9 @@ from abc import ABC, abstractmethod
 class Node:
     def __init__(self, data, nxt=None):
         self.data = data
-        self.nxt = next
+        self.nxt = nxt
+    def __repr__(self):
+        return f'({self.data}, {id(self.nxt) if self.nxt is not None else None})'
 
 class Stack(ABC):
     @abstractmethod
@@ -38,3 +40,20 @@ class StackLinkedList(Stack):
         return self.top.data
     def is_empty(self):
         return self.top is None
+    def __repr__(self):
+        l = []
+        head = self.top
+        while head is not None:
+            l.append(str(head))
+            head = head.nxt
+        return '|'.join(l)
+
+
+if __name__ == '__main__':
+    stack = StackLinkedList()
+    for i in range(1, 11):
+        stack.push(i)
+        print(stack)
+    while not stack.is_empty():
+        print(stack.pop())
+        print(stack)
