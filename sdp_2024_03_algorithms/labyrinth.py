@@ -1,3 +1,5 @@
+from json.decoder import scanstring
+
 
 class Labyrinth:
     def __init__(self, width=0, height=0):
@@ -13,6 +15,10 @@ class Labyrinth:
 
     def is_free(self, col, row) -> bool:
         return self.__rows[row][col] == '_'
+
+    def draw_path(self, path: list[tuple[int, int]]):
+        for i,(x,y) in enumerate(path):
+            self.__rows[y] = self.__rows[y][:x] + str(i%10) + self.__rows[y][x+1:]
 
     def load(self, filename):
         with open(filename, 'r') as f:
@@ -35,17 +41,17 @@ class FindPath:
         self.__visited = set()
 
     def find_path(self,  start: tuple[int, int], end: tuple[int, int]) -> list[tuple[int, int]]:
-        print(start, end, self.__visited)
+        # print(start, end, self.__visited)
         self.__visited.add(start)
         if start == end:
-            print(f'Path: {[start]}')
+            # print(f'Path: {[start]}')
             return [start]
         for neighbour in self.get_free_neighbours(start):
             if neighbour not in self.__visited:
                 pth = self.find_path(neighbour, end)
                 if pth is not None:
-                    pth = pth.insert(0, start)
-                    print(f'Path: {pth}')
+                    pth.insert(0, start)
+                    # print(f'Path: {pth}')
                     return pth
         return None
 
@@ -73,3 +79,5 @@ if __name__ == '__main__':
     # print(f'Free neighbours of {cell} are: {find_path.get_free_neighbours(cell)}')
     path = find_path.find_path((0, 0), (lab.width - 1, lab.height - 1))
     print(path)
+    lab.draw_path(path)
+    print(lab)
