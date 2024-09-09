@@ -56,22 +56,17 @@ class FindPath:
         return None
 
     def find_paths(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
-        # print(start, end, self.__visited)
         if start == end:
-            # print(f'Path: {[start]}')
             return [[start]]
         result_paths = []
+        self.__visited.add(start)
         for neighbour in self.get_free_neighbours(start):
             if neighbour not in self.__visited:
-                self.__visited.add(start)
-                # print(f'Neighbour: {neighbour}, visited: {self.__visited}')
                 paths = self.find_paths(neighbour, end)
-                self.__visited.remove(start)
                 for p in paths:
                     p.insert(0, start)
                     result_paths.append(p)
-                    # print(f'Path: {pth}')
-
+        self.__visited.remove(start)
         return result_paths
 
     def get_free_neighbours(self, start: tuple[int, int]) -> list[tuple[int, int]]:
