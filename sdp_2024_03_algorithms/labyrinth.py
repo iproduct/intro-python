@@ -7,17 +7,29 @@ class Labyrinth:
     def __str__(self):
         return '\n'.join([str(row) for row in self.__rows])
 
-    def get_cell(self, col, row):
+    def get_cell(self, col :int, row :int):
         return self.__rows[row][col]
 
-    def is_free(self, col, row) -> bool:
-        return self.__rows[row][col] == '_'
+    def is_free(self, col :int, row :int) -> bool:
+        return self.get_cell(col, row) == '_'
 
     def draw_path(self, path: list[tuple[int, int]]) -> str:
         draw_result = self.__rows[:]
         for i,(x,y) in enumerate(path):
             draw_result[y] = draw_result[y][:x] + str(i%10) + draw_result[y][x+1:]
         return '\n'.join(draw_result)
+
+    def get_free_neighbours(self, col_row: tuple[int, int]) -> list[tuple[int, int]]:
+        neighbours = []
+        if col_row[0] > 0 and self.is_free(col_row[0] - 1, col_row[1]):
+            neighbours.append((col_row[0] - 1, col_row[1]))
+        if col_row[0] < self.width - 1 and self.is_free(col_row[0] + 1, col_row[1]):
+            neighbours.append((col_row[0] + 1, col_row[1]))
+        if col_row[1] > 0 and self.is_free(col_row[0], col_row[1] - 1):
+            neighbours.append((col_row[0], col_row[1] - 1))
+        if col_row[1] < self.height - 1 and self.is_free(col_row[0], col_row[1] + 1):
+            neighbours.append((col_row[0], col_row[1] + 1))
+        return neighbours
 
     def load(self, filename):
         with open(filename, 'r') as f:
@@ -38,7 +50,6 @@ class FindPath:
     def __init__(self, labyrinth: Labyrinth):
         self.labyrinth = labyrinth
         self.__visited = set()
-        self.__shortest_path = None
 
     def find_path(self,  start: tuple[int, int], end: tuple[int, int]) -> list[tuple[int, int]]:
         # print(start, end, self.__visited)
@@ -46,7 +57,7 @@ class FindPath:
         if start == end:
             # print(f'Path: {[start]}')
             return [start]
-        for neighbour in self.get_free_neighbours(start):
+        for neighbour in self.labyrinth.get_free_neighbours(start):
             if neighbour not in self.__visited:
                 pth = self.find_path(neighbour, end)
                 if pth is not None:
@@ -60,7 +71,7 @@ class FindPath:
             return [[start]]
         result_paths = []
         self.__visited.add(start)
-        for neighbour in self.get_free_neighbours(start):
+        for neighbour in self.labyrinth.get_free_neighbours(start):
             if neighbour not in self.__visited:
                 paths = self.find_paths(neighbour, end)
                 for p in paths:
@@ -69,17 +80,7 @@ class FindPath:
         self.__visited.remove(start)
         return result_paths
 
-    def get_free_neighbours(self, start: tuple[int, int]) -> list[tuple[int, int]]:
-        neighbours = []
-        if start[0] > 0 and self.labyrinth.is_free(start[0] - 1, start[1]):
-            neighbours.append((start[0] - 1, start[1]))
-        if start[0] < self.labyrinth.width - 1 and self.labyrinth.is_free(start[0] + 1, start[1]):
-            neighbours.append((start[0] + 1, start[1]))
-        if start[1] > 0 and self.labyrinth.is_free(start[0], start[1] - 1):
-            neighbours.append((start[0], start[1] - 1))
-        if start[1] < self.labyrinth.height - 1 and self.labyrinth.is_free(start[0], start[1] + 1):
-            neighbours.append((start[0], start[1] + 1))
-        return neighbours
+
 
 if __name__ == '__main__':
     # lab = Labyrinth(10,10)
