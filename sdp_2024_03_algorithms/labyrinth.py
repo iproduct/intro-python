@@ -1,6 +1,3 @@
-from json.decoder import scanstring
-
-
 class Labyrinth:
     def __init__(self, width=0, height=0):
         self.width = width
