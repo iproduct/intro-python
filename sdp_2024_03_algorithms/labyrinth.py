@@ -17,7 +17,7 @@ class Labyrinth:
     def load(self, filename):
         with open(filename, 'r') as f:
             lines= f.readlines()
-            self.width = len(lines[0])
+            self.width = len(lines[0]) - 1
             self.height = len(lines)
             self.__rows.clear()
             for line in lines:
@@ -30,15 +30,24 @@ class Labyrinth:
 
 
 class FindPath:
-    def __init__(self, labyrinth: Labyrinth, start: tuple[int, int], end: tuple[int, int]):
+    def __init__(self, labyrinth: Labyrinth):
         self.labyrinth = labyrinth
-        self.start = start
-        self.end = end
+        self.__visited = set()
 
     def find_path(self,  start: tuple[int, int], end: tuple[int, int]) -> list[tuple[int, int]]:
+        print(start, end, self.__visited)
+        self.__visited.add(start)
         if start == end:
+            print(f'Path: {[start]}')
             return [start]
-
+        for neighbour in self.get_free_neighbours(start):
+            if neighbour not in self.__visited:
+                pth = self.find_path(neighbour, end)
+                if pth is not None:
+                    pth = pth.insert(0, start)
+                    print(f'Path: {pth}')
+                    return pth
+        return None
 
     def get_free_neighbours(self, start: tuple[int, int]) -> list[tuple[int, int]]:
         neighbours = []
@@ -59,3 +68,8 @@ if __name__ == '__main__':
     lab = Labyrinth()
     lab.load('labyrinth01.txt')
     print(lab)
+    find_path = FindPath(lab)
+    # cell = (4,4)
+    # print(f'Free neighbours of {cell} are: {find_path.get_free_neighbours(cell)}')
+    path = find_path.find_path((0, 0), (lab.width - 1, lab.height - 1))
+    print(path)
