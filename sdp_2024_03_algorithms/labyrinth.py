@@ -13,7 +13,7 @@ class Labyrinth:
     def is_free(self, col, row) -> bool:
         return self.__rows[row][col] == '_'
 
-    def draw_path(self, path: list[tuple[int, int]]):
+    def draw_path(self, path: list[tuple[int, int]]) -> str:
         draw_result = self.__rows[:]
         for i,(x,y) in enumerate(path):
             draw_result[y] = draw_result[y][:x] + str(i%10) + draw_result[y][x+1:]
