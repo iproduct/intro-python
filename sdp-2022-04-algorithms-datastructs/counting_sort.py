@@ -1,18 +1,21 @@
+from random import randint
+
 a= []
+MAX_VALUE = 20
 for i in range(100):
-    a.append(random.randint(1,20))
+    a.append(randint(1,MAX_VALUE))
 
 def counting_sort(a):
-    output = []
-    count = [0 for i in range(MAX_VALUE)]
+    count = [0 for i in range(MAX_VALUE + 1)]
 
-    for i in a:
-        count[a[i]] += 1
-
-    for i in range(MAX_VALUE):
+    for val in a:
+        count[val] += 1
+    a.clear()
+    for i in range(MAX_VALUE + 1):
         for j in range(count[i]):
-            output.push(i)
+            a.append(i)
 
 if __name__ == '__main__':
-    quick_sort(a)
+    print(a)
+    counting_sort(a)
     print(a)
