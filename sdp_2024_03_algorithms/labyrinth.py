@@ -5,7 +5,7 @@ class Labyrinth:
         self.__rows = ['_' * width] * height
 
     def __str__(self):
-        return '\n'.join([str(row) for row in self.__rows])
+        return '\n'.join(self.__rows)
 
     def get_cell(self, col :int, row :int):
         return self.__rows[row][col]
@@ -67,9 +67,10 @@ class FindPath:
         return None
 
     def find_paths(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
-        if start == end:
+        if start == end: # recursion bottom
             return [[start]]
-        result_paths = []
+
+        result_paths = [] # recursion step
         self.__visited.add(start)
         for neighbour in self.labyrinth.get_free_neighbours(start):
             if neighbour not in self.__visited:
@@ -87,16 +88,20 @@ if __name__ == '__main__':
     # print(lab)
     # lab.save('labyrinth01.txt')
     lab = Labyrinth()
-    lab.load('labyrinth02.txt')
+    lab.load('labyrinth01.txt')
     print(lab)
     find_path = FindPath(lab)
     # cell = (4,4)
     # print(f'Free neighbours of {cell} are: {find_path.get_free_neighbours(cell)}')
     paths = find_path.find_paths((0, 0), (lab.width - 1, lab.height - 1))
-    for p in paths:
-        print(p)
-        print(lab.draw_path(p))
+    # for p in paths:
+    #     print(p)
+    #     print(lab.draw_path(p))
 
     paths.sort(key=lambda path: len(path))
+    min_len = len(paths[0])
     for p in paths:
+        if len(p) > min_len:
+            break
         print(p)
+        print(lab.draw_path(p))
