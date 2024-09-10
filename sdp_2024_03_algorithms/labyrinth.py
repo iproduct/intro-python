@@ -1,3 +1,7 @@
+from stack_linked_list import Stack, StackLinkedList
+from trace_decorator import profile
+
+
 class Labyrinth:
     def __init__(self, width=0, height=0):
         self.width = width
@@ -66,7 +70,11 @@ class FindPath:
                     return pth
         return None
 
-    def find_paths(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
+    @profile
+    def find_paths_rec(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
+        return self.__find_paths_rec(start, end)
+
+    def __find_paths_rec(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
         if start == end: # recursion bottom
             return [[start]]
 
@@ -74,13 +82,45 @@ class FindPath:
         self.__visited.add(start)
         for neighbour in self.labyrinth.get_free_neighbours(start):
             if neighbour not in self.__visited:
-                paths = self.find_paths(neighbour, end)
+                paths = self.__find_paths_rec(neighbour, end)
                 for p in paths:
                     p.insert(0, start)
                     result_paths.append(p)
         self.__visited.remove(start)
         return result_paths
 
+    @profile
+    def find_paths(self,  start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
+        unvisited_neighbours_stack = StackLinkedList()
+        unvisited_neighbours_stack.push(start)
+        result_paths = []
+        current = start
+        path = []
+        while not unvisited_neighbours_stack.is_empty():
+            # print(f'Path: {path}')
+            # print(f'Unvisited: {unvisited_neighbours_stack}')
+            current = unvisited_neighbours_stack.pop()
+            if current is None:  # remove node from path to find alternative paths
+                path.pop()
+                continue
+            path.append(current)
+            unvisited_neighbours_stack.push(None)
+            if current == end:
+                result_paths.append(path[:])
+            neighbours = [neighbour for neighbour in self.labyrinth.get_free_neighbours(current) if neighbour not in path]
+            for neighbour in neighbours:
+                unvisited_neighbours_stack.push(neighbour)
+
+        return result_paths
+
+def print_shortest_paths(labyrinth: Labyrinth, paths: list[list[tuple[int, int]]]) -> None:
+    paths.sort(key=lambda path: len(path))
+    min_len = len(paths_rec[0])
+    for p in paths:
+        if len(p) > min_len:
+            break
+        print(p)
+        print(labyrinth.draw_path(p))
 
 
 if __name__ == '__main__':
@@ -93,15 +133,11 @@ if __name__ == '__main__':
     find_path = FindPath(lab)
     # cell = (4,4)
     # print(f'Free neighbours of {cell} are: {find_path.get_free_neighbours(cell)}')
-    paths = find_path.find_paths((0, 0), (lab.width - 1, lab.height - 1))
+    paths_rec = find_path.find_paths_rec((0, 0), (lab.width - 1, lab.height - 1))
+    paths_iter = find_path.find_paths((0, 0), (lab.width - 1, lab.height - 1))
     # for p in paths:
     #     print(p)
     #     print(lab.draw_path(p))
 
-    paths.sort(key=lambda path: len(path))
-    min_len = len(paths[0])
-    for p in paths:
-        if len(p) > min_len:
-            break
-        print(p)
-        print(lab.draw_path(p))
+    print_shortest_paths(lab, paths_rec)
+    print_shortest_paths(lab, paths_iter)
