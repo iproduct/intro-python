@@ -1,3 +1,4 @@
+from queue import QueueLinkedList
 from stack_linked_list import Stack, StackLinkedList
 from trace_decorator import profile
 
@@ -119,7 +120,6 @@ class FindPath:
         unexplored_paths_stack = StackLinkedList()
         unexplored_paths_stack.push([start])
         result_paths = []
-        visited = {}
         while not unexplored_paths_stack.is_empty():
             current_path = unexplored_paths_stack.pop()
             # print(f'Path: {current_path}')
@@ -130,6 +130,29 @@ class FindPath:
                     new_path = current_path[:]
                     new_path.append(neighbour)
                     unexplored_paths_stack.push(new_path)
+
+        return result_paths
+
+    # find shortest paths first using DFS
+    @profile
+    def find_paths_iter_bfs(self, start: tuple[int, int], end: tuple[int, int]) -> list[list[tuple[int, int]]]:
+        unexplored_paths_queue = QueueLinkedList()
+        unexplored_paths_queue.enqueue([start])
+        result_paths = []
+        while not unexplored_paths_queue.is_empty():
+            current_path = unexplored_paths_queue.dequeue()
+            # print(f'Path: {current_path}')
+            if current_path[-1] == end:
+                if len(result_paths) == 0 or len(current_path) == len(result_paths[-1]):
+                    result_paths.append(current_path)
+                else:
+                    break
+
+            for neighbour in self.labyrinth.get_free_neighbours(current_path[-1]):
+                if neighbour not in current_path:
+                    new_path = current_path[:]
+                    new_path.append(neighbour)
+                    unexplored_paths_queue.enqueue(new_path)
 
         return result_paths
 
@@ -155,7 +178,7 @@ if __name__ == '__main__':
     # cell = (4,4)
     # print(f'Free neighbours of {cell} are: {find_path.get_free_neighbours(cell)}')
     paths_rec = find_path.find_paths_rec((0, 0), (lab.width - 1, lab.height - 1))
-    paths_iter = find_path.find_paths_iter_dfs((0, 0), (lab.width - 1, lab.height - 1))
+    paths_iter = find_path.find_paths_iter_bfs((0, 0), (lab.width - 1, lab.height - 1))
     # for p in paths:
     #     print(p)
     #     print(lab.draw_path(p))
