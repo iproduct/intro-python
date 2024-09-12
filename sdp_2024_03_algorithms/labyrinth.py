@@ -1,4 +1,4 @@
-from queue import QueueLinkedList
+from queue_linked_list import QueueLinkedList
 from stack_linked_list import Stack, StackLinkedList
 from trace_decorator import profile
 

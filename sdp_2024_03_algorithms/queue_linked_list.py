@@ -41,7 +41,7 @@ class QueueLinkedList(Queue):
         if self.head is None:
             raise Exception('Queue is empty')
         data = self.head.data
-        self.head = self.head.nxt
+        self.head = self.head.next
         return data
 
     def peek(self):
@@ -57,7 +57,7 @@ class QueueLinkedList(Queue):
         head = self.head
         while head is not None:
             l.append(str(head))
-            head = head.nxt
+            head = head.next
         return '|'.join(l)
 
 if __name__ == '__main__':

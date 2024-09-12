@@ -32,7 +32,7 @@ class StackLinkedList(Stack):
         if self.top is None:
             return None
         data = self.top.data
-        self.top = self.top.nxt
+        self.top = self.top.next
         return data
     def peek(self):
         if self.top is None:
@@ -45,7 +45,7 @@ class StackLinkedList(Stack):
         head = self.top
         while head is not None:
             l.append(str(head))
-            head = head.nxt
+            head = head.next
         return '|'.join(l)
 
 
