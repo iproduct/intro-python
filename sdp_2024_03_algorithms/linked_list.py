@@ -77,7 +77,6 @@ class LinkedList:
     def insert(self, data, index):
         if index < 0 or index > self.__size:
             raise IndexError('Index out of range')
-
         if self.__first is None: # empty list
             node = Node(data)
             self.__first = node
@@ -95,12 +94,10 @@ class LinkedList:
             node = Node(data, found.prev, found)
             found.prev.next = node
             found.prev = node
-
         self.__size += 1
 
     def append(self, data):
         self.insert(data, self.__size)
-        print(self)
 
     def __get_nth_node(self, index):
         if index < 0 or index > self.__size:
@@ -112,7 +109,7 @@ class LinkedList:
                 node = node.next
         else:
             node = self.__last
-            while index < self.__size and node.next is not None:
+            while index < self.__size - 1 and node.prev is not None:
                 index += 1
                 node = node.prev
         return node
@@ -120,7 +117,9 @@ class LinkedList:
     def get(self, index):
         return self.__get_nth_node(index).data
 
-    def pop(self, index):
+    def pop(self, index = None):
+        if index == None:
+            index = self.__size - 1
         if index < 0 or index >= self.__size:
             raise IndexError('Index out of range')
         if index == 0:
@@ -139,7 +138,7 @@ class LinkedList:
             node.prev.next = node.next
             node.next.prev = node.prev
         self.__size -= 1
-        return node
+        return node.data
 
     def is_empty(self):
         return self.__size == 0
@@ -148,5 +147,11 @@ if __name__ == '__main__':
     l = LinkedList()
     print(l)
     for it in range(26):
-        l.append(chr(ord('A') + it))
+        index = len(l) // 2
+        # print(index, len(l), l)
+        l.insert(chr(ord('A') + it), len(l))
+        # l.insert(chr(ord('A') + it), index)
+        # print('After insert: ', l)
     print(l)
+    for i in range(len(l)):
+        print(l.pop(len(l) // 2), end=', ')
