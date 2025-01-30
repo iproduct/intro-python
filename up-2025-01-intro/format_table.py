@@ -22,16 +22,18 @@ def format_table(columns: list[str], data: list[tuple[str|int]]) -> str:
     print('Max lengths of columns:', lengths)
 
     # TODO 2) print first row with column labels
-
     result = '|'
     for col in range(len(columns)):
-        result += f' {columns[col].ljust(lengths[col])} |'
+        result += f' {columns[col].center(lengths[col])} |'
 
     # TODO 3) print next rows with data
     for row in range(len(data)):
         result += '\n|'
         for col in range(len(columns)):
-            result += f' {str(data[row][col]).ljust(lengths[col])} |'
+            if type(data[row][col]) == str:
+                result += f' {str(data[row][col]).ljust(lengths[col])} |'
+            else:
+                result += f' {str(data[row][col]).rjust(lengths[col])} |'
 
     result += '\n'
     return result
