@@ -8,9 +8,11 @@ users = [
 
 columns = ('No', 'Name', 'Family', 'Age', 'City', 'Phone', 'Date')
 
-def format_table(columns: list[str], data: list[tuple[str|int]]) -> str:
+def format_table(columns: tuple[str], data: list[tuple[str|int]]) -> str:
     # TODO 1) claculate the width of each column
-    all_data = [columns] + data
+    all_data = [columns]
+    all_data.extend(data)
+    print(all_data)
     lengths = []
     for col in range(len(all_data[0])): # for each column
         maxlen = 0
