@@ -81,16 +81,16 @@ class Tree:
             yield node
 
     def bfs_pre(self) -> Iterator[TreeNode]:
-        stack = deque()
+        queue = deque()
         if self.root is None:
             return
-        stack.append(self.root)
-        while len(stack) > 0:
-            node: TreeNode = stack.pop()
+        queue.appendleft(self.root)
+        while len(queue) > 0:
+            node: TreeNode = queue.pop()
             #previsit
             yield node
             for child in node.children:
-                stack.appendleft(child)
+                queue.appendleft(child)
 
     def bfs_pre_values(self) -> Iterator[Any]:
         return map(lambda node: node.data, self.bfs_pre())
