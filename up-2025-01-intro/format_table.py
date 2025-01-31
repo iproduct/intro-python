@@ -40,6 +40,7 @@ def format_table(columns: tuple[str], data: list[tuple[str|int]]) -> str:
     result += '\n'
     return result
 
+
 if __name__ == "__main__":
     print(users)
     print(format_table(columns, users))
