@@ -1,9 +1,9 @@
 def dfs(tree: list | int) -> list[int]:
     if isinstance(tree, int):
         return [tree]
-    childeren = tree[1:]
+    children = tree[1:]
     leaves = []
-    for child in childeren:
+    for child in children:
         leaves.extend(dfs(child))
     return leaves
 
