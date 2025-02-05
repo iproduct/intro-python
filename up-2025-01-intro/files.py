@@ -1,8 +1,8 @@
 from labirynth import print_labyrinth
 
 def read_labyrinth(filename: str) -> list[list[int]]:
-    # f = open(filename, 'rt')
     labyrinth = []
+    # f = open(filename, 'rt')
     with open(filename, 'rt') as f:
         lines = f.readlines()
         rows, cols = lines[0].split(',')
