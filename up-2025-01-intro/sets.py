@@ -2,6 +2,7 @@ if __name__ == "__main__":
     s = {1, 2, 3, 4, 5}
     for e in s:
         print(e)
+    print(len(s))
     # print(s[0]) # Error
 
     print()
@@ -10,6 +11,7 @@ if __name__ == "__main__":
     d["b"] = 32
     for k in d:
         print(k, d[k])
+    print(len(d))
 
     print()
 
