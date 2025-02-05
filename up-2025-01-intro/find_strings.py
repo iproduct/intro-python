@@ -21,3 +21,5 @@ if __name__ == '__main__':
     indices = find_indices(s, keyword)
     for i in indices:
         print(f'{s[i:i + len(keyword)]} -> {i}')
+
+    print('www.example.com'.lstrip('cmowz.'))
