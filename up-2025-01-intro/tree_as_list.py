@@ -9,11 +9,11 @@ def dfs(tree: list | int) -> list[int]:
 
 def print_tree(tree: list | int, level = 0):
     if isinstance(tree, int):
-        print(' ' * ((level-1 if level > 0 else 0)*4), '\u2515', '\u2501' * 3, end='', sep='')
+        print(' ' * ((level-1 if level > 0 else 0)*2), '\u2515', '\u2501' * 1, end='', sep='')
         print(tree)
     else:
-        print(' ' * ((level-1 if level > 0 else 0)*4), '\u2515', '\u2501' * 3, end='', sep='')
-        print(f'{tree[0]}:')
+        print(' ' * ((level-1 if level > 0 else 0)*2), '\u2515', '\u2501' * 1, end='', sep='')
+        print(f'{tree[0]}')
         childeren = tree[1:]
         for child in childeren:
             print_tree(child, level + 1)
