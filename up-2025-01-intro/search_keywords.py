@@ -1,6 +1,5 @@
 from keywords import print_file_keywords
 
-
 def load_kewords(dbfilename: str) -> dict[str, list[tuple[str, int]]]:
     results = {}
     with open(dbfilename) as db:
