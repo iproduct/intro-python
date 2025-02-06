@@ -10,7 +10,7 @@ from os.path import isfile, join
 # nltk.download('stopwords')
 stops = set(stopwords.words('english'))
 
-def get_count(word_count: tuple[str, int]) -> int:
+def get_count(word_count: tuple[str, int|float]) -> int|float:
     return word_count[1]
 
 def get_keywords(lines: Iterable[str], count = 100) -> list[tuple[str, int]]:
@@ -48,6 +48,6 @@ def print_file_keywords(file_keywords: dict[str, list[tuple[str, int]]]) -> None
             print(f'       {keyword[0]:30s} -> {keyword[1]:>4d}')
 
 if __name__ == '__main__':
-    file_keywords = index_dir('articles',20)
+    file_keywords = index_dir('articles',100)
     write_keywords(file_keywords,'keywords.db')
     print_file_keywords(file_keywords)
