@@ -39,12 +39,15 @@ def write_keywords(file_keywords: dict[str, list[tuple[str, int]]], dbfilename: 
     with open(dbfilename, 'wt') as db:
         for filename, keywords in file_keywords.items():
             kw_str_list = [f'{keyword[0]}:{keyword[1]}' for keyword in keywords]
-            db.write(f'{filename}, {','.join(kw_str_list)}\n')
+            db.write(f'{filename},{','.join(kw_str_list)}\n')
 
-if __name__ == '__main__':
-    file_keywords = index_dir('articles',20)
-    write_keywords(file_keywords,'keywords.db')
+def print_file_keywords(file_keywords: dict[str, list[tuple[str, int]]]) -> None:
     for filename, keywords in file_keywords.items():
         print(f'{filename}:')
         for keyword in keywords:
             print(f'       {keyword[0]:30s} -> {keyword[1]:>4d}')
+
+if __name__ == '__main__':
+    file_keywords = index_dir('articles',20)
+    write_keywords(file_keywords,'keywords.db')
+    print_file_keywords(file_keywords)
