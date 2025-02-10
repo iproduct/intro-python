@@ -15,7 +15,7 @@ class Student:
         return cls.next_id
 
 
-    def __init__(self, name, fn, semester):
+    def __init__(self, name = None, fn = None, semester = None):
         # self.__class__.next_id += 1
         self.id = self.__class__.get_next_id()
         self.name = name
