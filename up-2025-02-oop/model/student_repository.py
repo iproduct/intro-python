@@ -6,8 +6,16 @@ class StudentRepository:
         self._students = students if students is not None else []
     def add(self, student):
         self._students.append(student)
-    def get_all(self):
+    @property
+    def students(self):
         return self._students
+    @students.setter
+    def students(self, students):
+        self._students = students
+    def __len__(self):
+        return len(self._students)
+    def __iter__(self):
+        return iter(self._students)
 
 
 if __name__ == '__main__':
@@ -17,8 +25,10 @@ if __name__ == '__main__':
     course1_repo.add(george)
     trayan = Student('Trayan Iliev', '0MI12345', 2)
     course2_repo.add(trayan)
-    print(course1_repo.get_all())
-    print(course2_repo.get_all())
+    print(course1_repo.students)
+    print(course2_repo.students)
+    course2_repo.students = []
+    print(course2_repo.students)
 
 
 

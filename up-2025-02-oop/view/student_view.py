@@ -45,5 +45,6 @@ if __name__ == '__main__':
     # create view using repository
     student_view = StudentView(students_book)
     student_view.input()
-    for s in students_book.get_all():
+    for s in students_book:
         print(s)
+    print(f'Total number of students: {len(students_book)}')

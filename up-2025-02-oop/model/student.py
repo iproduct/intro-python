@@ -17,10 +17,14 @@ class Student:
 
     def __init__(self, name = None, fn = None, semester = None):
         # self.__class__.next_id += 1
-        self.id = self.__class__.get_next_id()
+        self._id = self.__class__.get_next_id()
         self.name = name
         self.semester = semester
         self.fn = fn
+
+    @property
+    def id(self):
+        return self._id
 
     def change_semester(self, new_semester):
         self.semester = new_semester
@@ -30,6 +34,7 @@ class Student:
 
 if __name__ == '__main__':
     trayan = Student('Trayan Iliev', '0MI12345', 2)
+    print(f'Trayan\'s ID: {trayan.id}')
     print(trayan)
     print(trayan.fn)
     trayan.change_semester(3)
