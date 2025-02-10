@@ -28,9 +28,22 @@ class StudentView:
                 s.semester = int(input('Semester: '))
             except ValueError:
                 print('Semester should be a number.')
-            if 1 <= len(s.semester) <= 10:
+                continue
+            if 1 <= s.semester <= 10:
                 break
             print('Valid semesters are between 1 and 10.')
 
         self.student_repo.add(s)
 
+if __name__ == '__main__':
+    students_book = StudentRepository()
+    george = Student('George', '0PH23235', 1)
+    students_book.add(george)
+    trayan = Student('Trayan Iliev', '0MI12345', 2)
+    students_book.add(trayan)
+
+    # create view using repository
+    student_view = StudentView(students_book)
+    student_view.input()
+    for s in students_book.get_all():
+        print(s)
