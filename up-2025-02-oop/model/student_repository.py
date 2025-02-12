@@ -3,19 +3,19 @@ from model.student import Student
 
 class StudentRepository:
     def __init__(self, students=None):
-        self._students = students if students is not None else []
+        self.__students = students if students is not None else []
     def add(self, student):
-        self._students.append(student)
+        self.__students.append(student)
     @property
     def students(self):
-        return self._students
+        return self.__students
     @students.setter
     def students(self, students):
-        self._students = students
+        self.__students = students
     def __len__(self):
-        return len(self._students)
+        return len(self.__students)
     def __iter__(self):
-        return iter(self._students)
+        return iter(self.__students)
 
 
 if __name__ == '__main__':
@@ -27,8 +27,7 @@ if __name__ == '__main__':
     course2_repo.add(trayan)
     print(course1_repo.students)
     print(course2_repo.students)
-    course2_repo.students = []
-    print(course2_repo.students)
+    print(course2_repo._StudentRepository__students)
 
 
 
