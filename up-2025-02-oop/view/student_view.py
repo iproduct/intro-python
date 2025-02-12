@@ -1,5 +1,5 @@
 from model.student import Student
-from model.student_repository import StudentRepository
+from dao.student_repository import StudentRepository
 
 
 class StudentView:
