@@ -17,10 +17,10 @@ class Student(Person):
     #     return cls.next_id
 
 
-    def __init__(self, name = None, address = None, phone = None, email = None, fn = None, semester = None, idf = None):
+    def __init__(self, name = None, address = None, phone = None, email = None, fn = None, semester = None, sid = None):
         # self.__class__.next_id += 1
         # self._id = self.__class__.get_next_id()
-        super().__init__(name, address, phone, email, idf)
+        super().__init__(name, address, phone, email, sid)
         self.semester = semester
         self.fn = fn
 
@@ -31,11 +31,11 @@ class Student(Person):
         return f'{super().__str__()}, FN:{self.fn}, Sem: {self.semester}'
 
     def __repr__(self):
-        return f'Student(ID: {self.idf}, Name: {self.name}, FN:{self.fn}, Sem: {self.semester})'
+        return f'Student(ID: {self.id}, Name: {self.name}, FN:{self.fn}, Sem: {self.semester})'
 
 if __name__ == '__main__':
     trayan = Student('Trayan Iliev','Sofia 1000', '0887453214', 'trayan@gmail.com',  '0MI12345', 2, )
-    print(f'Trayan\'s ID: {trayan.idf}')
+    print(f'Trayan\'s ID: {trayan.id}')
     print(trayan)
     print(trayan.fn)
     trayan.change_semester(3)

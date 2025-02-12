@@ -2,8 +2,8 @@ from model.person import Person
 
 class Instructor(Person):
     def __init__(self, name = None, address = None, phone = None, email = None, degree= '', room = None,
-                 courses = None, idf = None):
-        super().__init__(name, address, phone, email, idf)
+                 courses = None, iid = None):
+        super().__init__(name, address, phone, email, iid)
         self.degree = degree
         self.room = room
         self.courses = courses if courses is not None else []
@@ -15,5 +15,5 @@ class Instructor(Person):
         return f'{super().__str__()}, {f"Degree: {self.degree}, " if self.degree else ""}Room:{self.room}, Course: {self.courses}'
 
     def __repr__(self):
-        return (f'Instructor(ID: {self.idf}, Degree: {self.degree}, Name: {self.name}, FN:{self.room}, '
+        return (f'Instructor(ID: {self.id}, Degree: {self.degree}, Name: {self.name}, FN:{self.room}, '
                 f'Courses: {self.courses})')
