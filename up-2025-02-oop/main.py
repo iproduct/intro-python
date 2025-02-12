@@ -14,11 +14,22 @@ if __name__ == '__main__':
     trayan = Instructor('Trayan Iliev', 'Sofia 1000', '0887453214', 'trayan@gmail.com',
                         '', '305', courses= ['UP', 'SDP', 'IA with Gen AI'])
     george = Student('George', fn='0PH23235', semester=1)
+    ana = Student('Ana', fn='0MI123456', semester=2)
 
-    person_repo = RepositoryInMemory(IdGenAutoincrement())
-    person_repo.add(trayan)
-    person_repo.add(george)
-    print_persons(person_repo.find_all())
+    # print('Persons:')
+    # person_repo = RepositoryInMemory(IdGenAutoincrement())
+    # person_repo.add(trayan)
+    # person_repo.add(george)
+    # print_persons(person_repo.find_all())
 
+    print('Instructors:')
+    instructor_repo = RepositoryInMemory(IdGenAutoincrement())
+    instructor_repo.add(trayan)
+    print_persons(instructor_repo.find_all())
+
+    print('\nStudents:')
     student_repo = RepositoryInMemory(IdGenAutoincrement())
+    student_repo.add(george)
+    student_repo.add(ana)
+    print_persons(student_repo.find_all())
 
