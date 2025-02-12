@@ -2,6 +2,7 @@ from collections.abc import Iterable
 
 from dao.idgen_autoincrement import IdGenAutoincrement
 from dao.repository_inmemory import RepositoryInMemory
+from dao.student_repository_inmemory import StudentRepositoryInMemory
 from model.instructor import Instructor
 from model.person import Person
 from model.student import Student
@@ -28,8 +29,10 @@ if __name__ == '__main__':
     print_persons(instructor_repo.find_all())
 
     print('\nStudents:')
-    student_repo = RepositoryInMemory(IdGenAutoincrement())
+    student_repo = StudentRepositoryInMemory(IdGenAutoincrement())
     student_repo.add(george)
     student_repo.add(ana)
     print_persons(student_repo.find_all())
+    fn = '0PH23235'
+    print(f'\nFN: {fn} -> {student_repo.find_by_fn(fn)}')
 
