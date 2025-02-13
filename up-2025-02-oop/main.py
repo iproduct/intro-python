@@ -35,4 +35,7 @@ if __name__ == '__main__':
     print_persons(student_repo.find_all())
     fn = '0PH23235'
     print(f'\nFN: {fn} -> {student_repo.find_by_fn(fn)}')
-
+    print(trayan in student_repo)
+    print('\nStudents using iterator:')
+    for student in student_repo:
+        print(student)

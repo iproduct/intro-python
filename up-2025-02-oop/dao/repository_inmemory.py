@@ -1,13 +1,21 @@
+from typing import TypeVar
+
 from dao.id_generator import IdGenerator
 from dao.repository import Repository
 
 
-class RepositoryInMemory(Repository):
+class RepositoryInMemory[T](Repository):
     def __init__(self, id_generator: IdGenerator):
         self.id_generator = id_generator
         self._entities = {}
 
-    def add(self, entity):
+    def __contains__(self, item: T) -> bool:
+        return item in set(self._entities.values())
+
+    def __iter__(self):
+        return iter(self._entities.values())
+
+    def add(self, entity: T):
         entity.id = self.id_generator.generate_id()
         self._entities[entity.id] = entity
         return entity
