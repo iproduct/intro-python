@@ -20,6 +20,6 @@ def fib(n):
 if __name__ == '__main__':
     sys.setrecursionlimit(2000)
     sys.set_int_max_str_digits(10000)
-    n = 30
+    n = 1000
     print(n, '->', fib(n))
     print(f'Number calls: {calls}')
