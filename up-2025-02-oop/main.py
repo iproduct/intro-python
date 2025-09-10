@@ -39,3 +39,6 @@ if __name__ == '__main__':
     print('\nStudents using iterator:')
     for student in student_repo:
         print(student)
+
+    d = {}
+    print(d['a'])
