@@ -42,9 +42,5 @@ if __name__ == '__main__':
     for student in person_repo:
         print(student)
 
-    print(person_repo.find_by_id(1).__dict__, '\n')
-    print(Student.__dict__)
-    print(Student.__annotations__)
-
     # d = {}
     # print(d['a'])

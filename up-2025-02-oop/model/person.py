@@ -12,11 +12,21 @@ class Person:
     #     return cls.__next_id
 
     def __init__(self, name = None, address = None, phone = None, email = None, pid = None):
-        # self.id = self.get_next_id() if pid is None else pid
-        self.email = email
-        self.phone = phone
-        self.address = address
-        self.name = name
+        self.id = pid
+        self.__email = email
+        self.__phone = phone
+        self.__address = address
+        self.__name = name
+
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
+
 
     def __hash__(self):
         return hash(self.id)
@@ -25,4 +35,4 @@ class Person:
         return self.id == other.id
 
     def __repr__(self):
-        return f'ID: {self.id}, Name: {self.name}, Addr:{self.address}, Phone: {self.phone}, Email: {self.email}'
+        return f'ID: {self.id}, Name: {self.name}, Addr:{self.address}, Phone: {self.phone}, Email: {self.__email}'

@@ -16,8 +16,8 @@ class Student(Person):
     def change_semester(self, new_semester):
         self.semester = new_semester
 
-    # def __str__(self):
-    #     return f'{super().__str__()}, FN:{self.fn}, Sem: {self.semester}'
+    def __str__(self):
+        return f'{super().__str__()}, FN:{self.fn}, Sem: {self.semester}'
 
     def __repr__(self):
         return f'Student(ID: {self.id}, Name: {self.name}, FN:{self.fn}, Sem: {self.semester})'
