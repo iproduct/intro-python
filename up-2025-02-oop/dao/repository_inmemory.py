@@ -15,12 +15,15 @@ class RepositoryInMemory[T](Repository):
     def __iter__(self):
         return iter(self._entities.values())
 
+    def __len__(self) -> int:
+        return len(self._entities)
+
     def add(self, entity: T):
         entity.id = self.id_generator.generate_id()
         self._entities[entity.id] = entity
         return entity
 
-    def edit(self, entity):
+    def edit(self, entity: T):
         self._entities[entity.id] = entity
         return entity
 

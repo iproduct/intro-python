@@ -1,25 +1,14 @@
 from model.person import Person
 
-all_students = []
-
 
 class Student(Person):
-    # next_id = 0
-
-    # @staticmethod
-    # def get_next_id():
-    #     __class__.next_id += 1
-    #     return __class__.next_id
-
-    # @classmethod
-    # def get_next_id(cls):
-    #     cls.next_id += 1
-    #     return cls.next_id
+    __next_id: int = 42
 
 
     def __init__(self, name = None, address = None, phone = None, email = None, fn = None, semester = None, sid = None):
-        # self.__class__.next_id += 1
-        # self._id = self.__class__.get_next_id()
+        # self.__class__.__next_id += 1
+        # self.__class__.__base__.__init__(self, name, address, phone, email, sid)
+        # Person.__init__(self, name, address, phone, email, sid)
         super().__init__(name, address, phone, email, sid)
         self.semester = semester
         self.fn = fn
@@ -27,8 +16,8 @@ class Student(Person):
     def change_semester(self, new_semester):
         self.semester = new_semester
 
-    def __str__(self):
-        return f'{super().__str__()}, FN:{self.fn}, Sem: {self.semester}'
+    # def __str__(self):
+    #     return f'{super().__str__()}, FN:{self.fn}, Sem: {self.semester}'
 
     def __repr__(self):
         return f'Student(ID: {self.id}, Name: {self.name}, FN:{self.fn}, Sem: {self.semester})'
@@ -44,6 +33,7 @@ if __name__ == '__main__':
     george = Student('George', fn = '0PH23235', semester = 1)
     print(f'{id(george)}: {george}')
 
+    all_students = []
     all_students.append(trayan)
     all_students.append(george)
 

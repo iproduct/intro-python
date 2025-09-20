@@ -57,9 +57,9 @@ def print_name(name: str, congrat="Hi") -> str:
     print(name)
     return name.upper()
 
-@repeat(times=10) # TODO: implement it
-def print_random_int():
-    print(random.randint(1,100))
+# @repeat(times=10) # TODO: implement it
+# def print_random_int():
+#     print(random.randint(1,100))
 
 
 if __name__ == '__main__':
