@@ -18,11 +18,13 @@ if __name__ == '__main__':
     ana = Student('Ana', fn='0MI123456', semester=2)
 
     # print('Persons:')
-    person_repo = RepositoryInMemory(IdGenAutoincrement())
+    repo1 = StudentRepositoryInMemory(IdGenAutoincrement())
+    repo2 = StudentRepositoryInMemory(IdGenAutoincrement())
+
     # person_repo.add(trayan)
-    person_repo.add(george)
-    person_repo.add(ana)
-    print('Num students:', len(person_repo))
+    repo1.add(george)
+    repo2.add(ana)
+    print('Num students:', len(repo1))
     # print_persons(person_repo.find_all())
 
     # print('Instructors:')
@@ -39,7 +41,7 @@ if __name__ == '__main__':
     # print(f'\nFN: {fn} -> {student_repo.find_by_fn(fn)}')
     # print(trayan in student_repo)
     # print('\nStudents using iterator:')
-    for student in person_repo:
+    for student in repo1:
         print(student)
 
     # d = {}

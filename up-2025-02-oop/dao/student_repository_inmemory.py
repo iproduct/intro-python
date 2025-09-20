@@ -1,8 +1,10 @@
 from dao.id_generator import IdGenerator
 from dao.repository_inmemory import RepositoryInMemory
 from dao.student_repository import StudentRepository
+from decorators.singleton import singleton
 
 
+@singleton
 class StudentRepositoryInMemory(RepositoryInMemory, StudentRepository):
     def __init__(self, id_generator: IdGenerator):
         super().__init__(id_generator)
