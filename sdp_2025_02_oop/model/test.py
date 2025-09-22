@@ -14,7 +14,7 @@ from model.question import Question
 
 
 class Test:
-    def __init__(self, id: str=None, title:str=None, questions: list[Question] = None, minutes:int=None):
+    def __init__(self, title:str=None, questions: list[Question] = None, minutes:int=None, id: str=None):
         self.id = id
         self.title = title
         self.questions = questions if questions is not None else []
