@@ -60,8 +60,9 @@ class RepositoryJsonFile[T](Repository):
                 result = dict(obj.__dict__)
                 result.update({"__class": obj.__class__.__name__})
                 return result
-        dir = os.path.dirname(self.filename)
-        if dir:
+
+        dirname = os.path.dirname(self.filename)
+        if dirname:
             os.makedirs(dir, exist_ok=True)
         self.load_from_file()
         with open(self.filename, 'w') as f:
