@@ -1,0 +1,22 @@
+{
+    "f0df6752-a506-4fef-be2b-11d7e68510bd": {
+        "id": "f0df6752-a506-4fef-be2b-11d7e68510bd",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "name": "George",
+        "semester": 1,
+        "fn": "0PH23235",
+        "__class": "Student"
+    },
+    "95193d17-4848-414d-a694-43881e7d572b": {
+        "id": "95193d17-4848-414d-a694-43881e7d572b",
+        "email": null,
+        "phone": null,
+        "address": null,
+        "name": "Ana",
+        "semester": 2,
+        "fn": "0MI123456",
+        "__class": "Student"
+    }
+}
