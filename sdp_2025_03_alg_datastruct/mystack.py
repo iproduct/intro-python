@@ -19,12 +19,14 @@ class StackLL(Stack):
     def push(self, item):
         new_node = Node(item, self.top)
         self.top = new_node
+        self.size += 1
 
     def pop(self):
         if self.is_empty():
             return None
         data = self.top.data
         self.top = self.top.prev
+        self.size -= 1
         return data
 
     def peek(self):
