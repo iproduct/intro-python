@@ -1,6 +1,6 @@
-{
-    "f0df6752-a506-4fef-be2b-11d7e68510bd": {
-        "id": "f0df6752-a506-4fef-be2b-11d7e68510bd",
+[
+    {
+        "id": "0a82b973-7b30-4cf7-a433-66f0ad12e80d",
         "email": null,
         "phone": null,
         "address": null,
@@ -9,8 +9,8 @@
         "fn": "0PH23235",
         "__class": "Student"
     },
-    "95193d17-4848-414d-a694-43881e7d572b": {
-        "id": "95193d17-4848-414d-a694-43881e7d572b",
+    {
+        "id": "1a7efede-1981-45ff-baa2-fa4a257dac64",
         "email": null,
         "phone": null,
         "address": null,
@@ -19,4 +19,4 @@
         "fn": "0MI123456",
         "__class": "Student"
     }
-}
+]
