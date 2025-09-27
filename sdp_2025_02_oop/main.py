@@ -16,17 +16,18 @@ def print_persons(persons: Iterable[Person]):
 if __name__ == '__main__':
     # trayan = Instructor('Trayan Iliev', 'Sofia 1000', '0887453214', 'trayan@gmail.com',
     #                     '', '305', courses= ['UP', 'SDP', 'IA with Gen AI'])
-    george = Student('George', fn='0PH23235', semester=1)
-    ana = Student('Ana', fn='0MI123456', semester=2)
+    # george = Student('George', fn='0PH23235', semester=1)
+    # ana = Student('Ana', fn='0MI123456', semester=2)
 
     # print('Persons:')
     student_repo = StudentRepositoryJsonFile('students.json', IdGenUuid())
 
     # person_repo.add(trayan)
-    student_repo.add(george)
-    student_repo.add(ana)
-    print('Num students:', len(student_repo))
+    # student_repo.add(george)
+    # student_repo.add(ana)
+    print('BEFORE - Num students:', len(student_repo))
     print_persons(student_repo.find_all())
+    print('AFTER - Num students:', len(student_repo))
 
     # print('Instructors:')
     # instructor_repo = RepositoryInMemory(IdGenAutoincrement())

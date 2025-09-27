@@ -1,3 +1,7 @@
+from queue import Queue
+from queue_ll import QueueLL
+
+
 def fib_gen(n: int):
     a, b = 0, 1
     for i in range(n):
@@ -5,11 +9,11 @@ def fib_gen(n: int):
         a, b = b, a + b
 
 if __name__ == "__main__":
-    stack = []
+    queue: Queue[int] = QueueLL()
     for fib in fib_gen(10):
-        stack.append(fib)
+        queue.enqueue(fib)
 
-    while len(stack) > 0:
-        elem = stack.pop(0)
+    while not queue.is_empty() :
+        elem = queue.dequeue()
         print(elem)
     
