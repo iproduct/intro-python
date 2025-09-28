@@ -1,0 +1,136 @@
+[
+    {
+        "id": "1b81876f-abd9-432b-a171-899a0e455657",
+        "title": "Python Programming",
+        "questions": [
+            {
+                "id": 0,
+                "text": "Does Python support multiple inheritance?",
+                "answers": [
+                    {
+                        "id": 0,
+                        "text": "Yes",
+                        "points": 1,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 1,
+                        "text": "No",
+                        "points": 0,
+                        "__class": "Answer"
+                    }
+                ],
+                "weight": 1,
+                "type": {
+                    "__class": "QuestionType",
+                    "value": "MULTIPLE_CHOICE"
+                },
+                "__class": "Question"
+            },
+            {
+                "id": 0,
+                "text": "Which types are immutable in Python",
+                "answers": [
+                    {
+                        "id": 0,
+                        "text": "str",
+                        "points": 1,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 1,
+                        "text": "int",
+                        "points": 1,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 2,
+                        "text": "list",
+                        "points": 0,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 3,
+                        "text": "dict",
+                        "points": 0,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 4,
+                        "text": "set",
+                        "points": 0,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 5,
+                        "text": "tuple",
+                        "points": 1,
+                        "__class": "Answer"
+                    }
+                ],
+                "weight": 1,
+                "type": {
+                    "__class": "QuestionType",
+                    "value": "MULTIPLE_RESPONSE"
+                },
+                "__class": "Question"
+            },
+            {
+                "id": 0,
+                "text": "Are there interfaces in Python?",
+                "answers": [
+                    {
+                        "id": 0,
+                        "text": "Yes",
+                        "points": 0,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 1,
+                        "text": "No",
+                        "points": 1,
+                        "__class": "Answer"
+                    }
+                ],
+                "weight": 1,
+                "type": {
+                    "__class": "QuestionType",
+                    "value": "MULTIPLE_CHOICE"
+                },
+                "__class": "Question"
+            },
+            {
+                "id": 0,
+                "text": "Which method allows to merge two lists in Python?",
+                "answers": [
+                    {
+                        "id": 0,
+                        "text": "append",
+                        "points": 0,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 1,
+                        "text": "extend",
+                        "points": 1,
+                        "__class": "Answer"
+                    },
+                    {
+                        "id": 2,
+                        "text": "insert",
+                        "points": 0,
+                        "__class": "Answer"
+                    }
+                ],
+                "weight": 1,
+                "type": {
+                    "__class": "QuestionType",
+                    "value": "MULTIPLE_CHOICE"
+                },
+                "__class": "Question"
+            }
+        ],
+        "minutes": 20,
+        "__class": "Test"
+    }
+]
