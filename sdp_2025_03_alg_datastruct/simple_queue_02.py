@@ -1,4 +1,4 @@
-from queue import Queue
+from myqueue import Queue
 from queue_ll import QueueLL
 
 

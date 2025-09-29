@@ -1,5 +1,5 @@
 from linked_list import LinkedList
-from queue import Queue
+from myqueue import Queue
 
 
 class QueueLL(Queue):
