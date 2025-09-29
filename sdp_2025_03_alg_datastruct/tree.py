@@ -1,4 +1,11 @@
 from abc import ABC, abstractmethod
+from enum import Enum
+from typing import Iterator
+
+class TreeVisitOrder(Enum):
+    PREORDER = 1
+    POSTORDER = 2
+    INORDER = 3
 
 class BinaryTree[T](ABC):
     def root(self) -> T:
@@ -19,7 +26,10 @@ class BinaryTree[T](ABC):
     def size(self) -> int:
             pass
     @abstractmethod
-    def depth(self, val: T) -> int:
+    def tree_depth(self, val: T) -> int:
+            pass
+    @abstractmethod
+    def node_depth(self, val: T) -> int:
             pass
     @abstractmethod
     def add(self, val:T):
@@ -28,8 +38,15 @@ class BinaryTree[T](ABC):
     def remove(self, val:T):
             pass
     @abstractmethod
-    def find(self, val: T) -> T:
+    def exists(self, val: T) -> bool:
             pass
     @abstractmethod
     def is_leaf(self, val: T) -> bool:
         pass
+    @abstractmethod
+    def iter_dfs(self, order: TreeVisitOrder, ltr: bool) -> Iterator[T]:
+        pass
+    @abstractmethod
+    def iter_bfs(self) -> Iterator[T]:
+        pass
+
