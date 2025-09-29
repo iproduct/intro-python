@@ -4,32 +4,32 @@ class BinaryTree[T](ABC):
     def root(self) -> T:
             pass
     @abstractmethod
-    def left_child(self, node: T) -> T:
+    def left_child(self, val: T) -> T:
             pass
     @abstractmethod
-    def right_child(self, node: T) -> T:
+    def right_child(self, val: T) -> T:
             pass
     @abstractmethod
-    def parent(self, node: T) -> T:
+    def parent(self, val: T) -> T:
             pass
     @abstractmethod
-    def sibling(self, node: T) -> T:
+    def sibling(self, val: T) -> T:
             pass
     @abstractmethod
     def size(self) -> int:
             pass
     @abstractmethod
-    def depth(self, node: T) -> int:
+    def depth(self, val: T) -> int:
             pass
     @abstractmethod
-    def add(self, node:T):
+    def add(self, val:T):
             pass
     @abstractmethod
-    def remove(self, node:T):
+    def remove(self, val:T):
             pass
     @abstractmethod
-    def find(self, node: T) -> T:
+    def find(self, val: T) -> T:
             pass
     @abstractmethod
-    def is_leaf(self, node: T) -> bool:
+    def is_leaf(self, val: T) -> bool:
         pass
