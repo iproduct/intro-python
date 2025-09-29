@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Tree[T](ABC):
+class BinaryTree[T](ABC):
     def root(self) -> T:
             pass
     @abstractmethod
