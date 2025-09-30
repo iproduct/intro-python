@@ -3,10 +3,11 @@ from typing import Callable, Any
 from heap import Heap
 
 
-class MaxHeapArray[T](Heap):
+class MinHeapArray[T](Heap):
     def __init__(self, key: Callable[[T], Any] = lambda x: x):
         self.key = key
         self.elements = []
+        self.locator = {}
 
     def _get_left(self, index: int) -> int:
         return 2 * index + 1
@@ -17,16 +18,27 @@ class MaxHeapArray[T](Heap):
     def _get_parent(self, index: int) -> int:
         return index // 2
 
-    def insert(self, value: T):
-        self.elements.append(value)
-        index = len(self.elements) - 1
+    def _heepify(self, index, value):
         while index > 0:
             parent_index = self._get_parent(index)
-            if self.key(self.elements[parent_index]) < self.key(self.elements[index]):
+            if self.key(self.elements[parent_index]) > self.key(self.elements[index]):
                 self.elements[parent_index], self.elements[index] = self.elements[index], self.elements[parent_index]
+                self.locator[self.elements[parent_index]] = parent_index
+                self.locator[self.elements[index]] = index
                 index = parent_index
             else:
                 break
+        self.locator[value] = index
+
+
+    def insert(self, value: T):
+        self.elements.append(value)
+        index = len(self.elements) - 1
+        self._heepify(index, value)
+
+    def update_priority(self, value: T):
+        index = self.locator[value]
+        self._heepify(index, value)
 
     def extract(self) -> T:
         result = self.elements[0]
@@ -38,12 +50,14 @@ class MaxHeapArray[T](Heap):
             left = self._get_left(i)
             right = self._get_right(i)
             largest = i
-            if left < len(self.elements) and self.key(self.elements[left]) > self.key(self.elements[largest]):
+            if left < len(self.elements) and self.key(self.elements[left]) < self.key(self.elements[largest]):
                 largest = left
-            if right < len(self.elements) and self.key(self.elements[right]) > self.key(self.elements[largest]):
+            if right < len(self.elements) and self.key(self.elements[right]) < self.key(self.elements[largest]):
                 largest = right
             if largest != i:
                 self.elements[i], self.elements[largest] = self.elements[largest], self.elements[i]
+                self.locator[self.elements[i]] = i
+                self.locator[self.elements[largest]] = largest
             else:
                 break
             i = largest
@@ -53,7 +67,7 @@ class MaxHeapArray[T](Heap):
         return len(self.elements) == 0
 
 if __name__ == '__main__':
-    heap: Heap[int] = MaxHeapArray()
+    heap: Heap[int] = MinHeapArray()
     heap.insert(5)
     heap.insert(10)
     heap.insert(2)
