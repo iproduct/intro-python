@@ -1,8 +1,10 @@
 from abc import ABC
-from typing import Callable
+from typing import Callable, Set
 from typing import Iterator
 
+from myqueue import Queue
 from mystack import StackLL
+from queue_ll import QueueLL
 from stack import Stack
 from tree import BinaryTree, TreeVisitOrder
 
@@ -10,12 +12,11 @@ ELEMENT_WIDTH = 6
 
 
 class BTNode[T]:
-    def __init__(self, val: T, parent: 'BTNode[T]' = None, left: 'BTNode[T]' = None, right: 'BTNode[T]' = None, visited:bool = False):
+    def __init__(self, val: T, parent: 'BTNode[T]' = None, left: 'BTNode[T]' = None, right: 'BTNode[T]' = None):
         self.val = val
         self.left = left
         self.right = right
         self.parent = parent
-        self.visited = visited
 
 
     def __str__(self):
@@ -212,17 +213,17 @@ class BinaryTreeLinked[T](BinaryTree[T]):
 
     def _iter_dfs_nodes(self, order:TreeVisitOrder = TreeVisitOrder.PREORDER, ltr: bool = True) -> Iterator[T]:
         stack: Stack[BTNode[T]] = StackLL()
+        visited: Set[BTNode[T]] = set()
         if self.root is None:
             return
         stack.push(self.root)
         while not stack.is_empty():
-            node = stack.pop()
-            if order == TreeVisitOrder.PREORDER or node.visited:
-               yield node
-            else:
-                node_copy = BTNode(node.val, node.parent, node.left, node.right, True)
-                stack.push(node_copy)
-            if not node.is_leaf() and not node.visited:
+            node = stack.peek()
+            if order == TreeVisitOrder.PREORDER or node in visited:
+                node = stack.pop()
+                yield node
+
+            if not node.is_leaf() and not node in visited:
                 if ltr:
                     if node.right is not None:
                         stack.push(node.right)
@@ -233,12 +234,34 @@ class BinaryTreeLinked[T](BinaryTree[T]):
                         stack.push(node.left)
                     if node.right is not None:
                         stack.push(node.right)
+            visited.add(node)
 
     def iter_dfs(self, order: TreeVisitOrder = TreeVisitOrder.PREORDER, ltr: bool = True) -> Iterator[BTNode[T]]:
         return (node.val for node in self._iter_dfs_nodes(order, ltr))
 
-    def iter_bfs(self) -> Iterator[T]:
-        pass
+    def _iter_bfs_nodes(self, ltr: bool = True) -> Iterator[T]:
+        queue: Queue[BTNode[T]] = QueueLL()
+        if self.root is None:
+            return
+        queue.enqueue(self.root)
+        while not queue.is_empty():
+            node = queue.dequeue()
+            yield node
+
+            if not node.is_leaf():
+                if ltr:
+                    if node.left is not None:
+                        queue.enqueue(node.left)
+                    if node.right is not None:
+                        queue.enqueue(node.right)
+                else:
+                    if node.right is not None:
+                        queue.enqueue(node.right)
+                    if node.left is not None:
+                        queue.enqueue(node.left)
+
+    def iter_bfs(self, ltr: bool) -> Iterator[T]:
+        return (node.val for node in self._iter_bfs_nodes(ltr))
 
 
 if __name__ == '__main__':
@@ -252,6 +275,7 @@ if __name__ == '__main__':
     t.add(41)
     t.add(11)
     t.add(3)
+    t.add(9)
 
     print(t)
     # t.remove(5)
@@ -259,5 +283,5 @@ if __name__ == '__main__':
     print(t.tree_depth(2))
 
     print('______________________________')
-    for node in t._iter_dfs_nodes(TreeVisitOrder.POSTORDER, False):
+    for node in t._iter_bfs_nodes(False):
         print(node.val, end=' ')

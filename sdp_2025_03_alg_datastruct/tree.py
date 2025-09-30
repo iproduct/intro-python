@@ -47,6 +47,6 @@ class BinaryTree[T](ABC):
     def iter_dfs(self, order: TreeVisitOrder, ltr: bool) -> Iterator[T]:
         pass
     @abstractmethod
-    def iter_bfs(self) -> Iterator[T]:
+    def iter_bfs(self, ltr: bool) -> Iterator[T]:
         pass
 
