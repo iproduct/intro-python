@@ -35,10 +35,10 @@ class MinHeapArray[T](Heap):
         index = len(self.elements) - 1
         self.locator[value] = index
         index = self._heepify(index, value)
-        print(f'Inseted {value} at index {index}')
+        # print(f'Inseted {value} at index {index}')
 
     def update_priority(self, value: T):
-        print(f'Updating priority for {value}: {self.elements}, {self.locator}')
+        # print(f'Updating priority for {value}: {self.elements}, {self.locator}')
         index = self.locator[value]
         if index is not None:
             self._heepify(index, value)
