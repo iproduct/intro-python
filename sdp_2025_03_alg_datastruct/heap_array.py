@@ -18,7 +18,7 @@ class MinHeapArray[T](Heap):
     def _get_parent(self, index: int) -> int:
         return index // 2
 
-    def _heepify(self, index, value):
+    def _heepify(self, index, value) -> int:
         while index > 0:
             parent_index = self._get_parent(index)
             if self.key(self.elements[parent_index]) > self.key(self.elements[index]):
@@ -28,23 +28,30 @@ class MinHeapArray[T](Heap):
                 index = parent_index
             else:
                 break
-        self.locator[value] = index
-
+        return index
 
     def insert(self, value: T):
         self.elements.append(value)
         index = len(self.elements) - 1
-        self._heepify(index, value)
+        self.locator[value] = index
+        index = self._heepify(index, value)
+        print(f'Inseted {value} at index {index}')
 
     def update_priority(self, value: T):
+        print(f'Updating priority for {value}: {self.elements}, {self.locator}')
         index = self.locator[value]
-        self._heepify(index, value)
+        if index is not None:
+            self._heepify(index, value)
 
     def extract(self) -> T:
+        if self.is_empty():
+            return None
         result = self.elements[0]
+        self.locator[self.elements[0]] = None
         if len(self.elements) == 1:
             return self.elements.pop()
         self.elements[0] = self.elements.pop()
+        self.locator[self.elements[0]] = 0
         i = 0
         while i < len(self.elements):
             left = self._get_left(i)

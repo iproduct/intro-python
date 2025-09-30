@@ -31,17 +31,14 @@ class Graph[T]:
             result += '\n'
         return result
 
-
-
     def dijkstra(self, start: T) -> tuple[dict[T, int], dict[T, T]]:
         dist: dict[T, int] = {}
         prev: dict[T, T] = {}
         pq = MinHeapArray(key = lambda node: dist[node])
         for v in self.nodes:
-            dist[v] = sys.maxsize
+            dist[v] = 0 if v == start else sys.maxsize
             prev[v] = None
             pq.insert(v)
-        dist[start] = 0
         while not pq.is_empty():
             u = pq.extract()
             dist_u = dist[u]
@@ -66,7 +63,7 @@ if __name__ == '__main__':
     g.add_edge('D', 'C', 3)
     g.add_edge('D', 'E', 1)
     g.add_edge('D', 'F', 2)
-    g.add_edge('E', 'F', 1)
+    g.add_edge('E', 'F', 0)
     print(g)
     start = 'A'
     dist, prev = g.dijkstra(start)
@@ -76,6 +73,6 @@ if __name__ == '__main__':
         while current != start:
             current = prev[current]
             path.append(current)
-        path.append(current)
-        print(f'{v}: {dist_v}: {path.reverse()}')
+        path.reverse()
+        print(f'{v}: {dist_v}: {path}')
 
