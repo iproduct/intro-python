@@ -20,3 +20,10 @@ class ContactRepositoryJson(ContactRepository):
             for contact in data:
                 self.contacts[contact.id] = contact
 
+
+    def save(self):
+        def dumper(obj):
+            return obj.__dict__
+        with open(self.db_filename, 'wt') as json_file:
+            json.dump(self.find_all(), json_file, indent=4, default=dumper)
+
