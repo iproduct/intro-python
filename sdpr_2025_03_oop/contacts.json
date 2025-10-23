@@ -1,0 +1,22 @@
+[
+    {
+        "first_name": "Trayan",
+        "last_name": "Iliev",
+        "phone_number": "0887543211",
+        "email": "t_iliev@gmial.com",
+        "address": "Sofia, J.Bouchier 5",
+        "created": "23.10.2025",
+        "modified": "23.10.2025",
+        "id": "979d5773fd5a45d99e8ed189974eafd1"
+    },
+    {
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "phone_number": "0883456211",
+        "email": "jsmith@gmial.com",
+        "address": "London",
+        "created": "23.10.2025",
+        "modified": "23.10.2025",
+        "id": "2c5d52003070496daa2a7aacc5fef089"
+    }
+]
