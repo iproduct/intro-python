@@ -18,4 +18,4 @@ def are_brackets_correct(expression: str) -> (bool, int):
     return len(stack) == 0, len(expression)
 
 if __name__ == '__main__':
-    print(are_brackets_correct("}(}{([])}){}"))
+    print(are_brackets_correct("(}{([])}){}"))
