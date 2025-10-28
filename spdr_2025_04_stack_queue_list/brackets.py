@@ -10,6 +10,7 @@ def are_brackets_correct(expression: str) -> (bool, int):
             stack.append(char)
             print('-> ', char, " : ", stack)
         else:
+            if len(stack) == 0: return False, index
             last_bracket = stack.pop()
             print('<- ', last_bracket, " : ", stack)
             if bracket_correspondence_map[last_bracket] != char:
@@ -17,4 +18,4 @@ def are_brackets_correct(expression: str) -> (bool, int):
     return len(stack) == 0, len(expression)
 
 if __name__ == '__main__':
-    print(are_brackets_correct("({([])}){}"))
+    print(are_brackets_correct("}(}{([])}){}"))
