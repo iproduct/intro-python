@@ -12,6 +12,9 @@ if __name__ == '__main__':
     df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list("ABCD"))
     print(df)
 
+    ages = pd.Series([52, 53, 58], name="Ages")
+    print(ages, ages.shape)
+
     df = pd.DataFrame(
         {
             "Name": [
@@ -23,10 +26,10 @@ if __name__ == '__main__':
             "Sex": ["male", "male", "female"],
         }
     )
+    df = df.join(ages)
     print(df)
     print(df["Age"])
-    ages = pd.Series([22, 35, 58], name="Age")
-    print(ages)
+
 
     air_quality = pd.read_csv("data/air_quality_no2.csv", index_col=0, parse_dates=True)
     print(air_quality.head())

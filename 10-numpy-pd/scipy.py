@@ -1,5 +1,5 @@
 
-from imageio import imread, imsave
+from imageio.v2 import imread, imsave
 if __name__ == '__main__':
     # Read an JPEG image into a numpy array
     img = imread('assets/cat.jpg')
@@ -11,10 +11,11 @@ if __name__ == '__main__':
     # numpy broadcasting means that this leaves the red channel unchanged,
     # and multiplies the green and blue channels by 0.95 and 0.9
     # respectively.
-    img_tinted = img * [1, 0.95, 0.9]
+    img_tinted = img * [1, 0.85, 0.8]
+    img_tinted = img_tinted.astype('uint8')
 
     # Resize the tinted image to be 300 by 300 pixels.
-    #img_tinted = imresize(img_tinted, (300, 300))
+    # img_tinted = imresize(img_tinted, (300, 300))
 
     # Write the tinted image back to disk
     imsave('assets/cat_tinted.jpg', img_tinted)
