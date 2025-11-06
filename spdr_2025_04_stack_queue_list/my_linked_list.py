@@ -25,6 +25,18 @@ class LinkedList[T]:
             yield current
             current = current.nxt
 
+    def __iter__(self):
+       for node in  self._iter_nodes():
+           yield node.data
+
+    def __repr__(self):
+        result = '['
+        for node in self._iter_nodes():
+            result += str(node.data)
+            if node != self.tail:
+                result += ', '
+        result += ']'
+        return result
 
     def append(self, data: T) -> Node[T]:
         node = Node(data)
@@ -38,9 +50,7 @@ class LinkedList[T]:
         self.size += 1
         return self
 
-
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.append(1).append(2).append(3).append(4).append(5)
-    for node in ll._iter_nodes():
-        print(node.data)
+    ll.append('a').append('b').append('c').append('d').append('e').append('f')
+    print(ll)
