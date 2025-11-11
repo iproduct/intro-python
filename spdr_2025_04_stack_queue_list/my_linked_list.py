@@ -1,4 +1,4 @@
-from typing import Iterator
+from typing import Iterator, Iterable
 
 
 class Node[T]:
@@ -11,10 +11,13 @@ class Node[T]:
 
 
 class LinkedList[T]:
-    def __init__(self):
+    def __init__(self, values: Iterable[T] = None):
         self.front = None
         self.back = None
         self.size = 0
+        if values is not None:
+            for value in values:
+                self.append(value)
 
     def __len__(self):
         return self.size
@@ -90,18 +93,26 @@ class LinkedList[T]:
             self.prepend(val)
         elif index == self.size:
             self.append(val)
-
-
-
+        else:
+            node = self._get_node(index)
+            prev_node = node.prev
+            inserted = Node(val, prev_node, node)
+            prev_node.nxt = inserted
+            node.prev = inserted
         self.size += 1
 
-
+def reverse(ll: 'LinkedList[T]') -> 'LinkedList[T]':
+    result_list = LinkedList()
+    for val in ll:
+        result_list.prepend(val)
+    return result_list
 
 if __name__ == '__main__':
-    ll = LinkedList()
-    ll.append('a').prepend('b').prepend('c').prepend('d').prepend('e').prepend('f')
+    ll = LinkedList(['a', 'c', 'd', 'e', 'f'])
+    # ll.append('a').prepend('b').prepend('c').prepend('d').prepend('e').prepend('f')
     for elem in ll:
         print(elem, end=', ')
     print(f'\nll[3] = {ll[2]}')
-    ll[3] = '42'
+    ll.insert(5,'42')
     print(ll)
+    print(reverse(ll))
