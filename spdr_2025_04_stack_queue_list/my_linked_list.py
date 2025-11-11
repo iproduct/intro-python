@@ -48,16 +48,18 @@ class LinkedList[T]:
             i += 1
 
     def __setitem__(self, index: int, val):
+        self._get_node(index).data = val
+
+    def _get_node(self, index: int) -> Node[T]:
         if index < 0 or index >= self.size:
             raise IndexError(f'Index {index} out of range')
         i = 0
         for node in self._iter_nodes():
             if i == index:
-                node.data = val
+                return node
             i += 1
 
-
-    def append(self, data: T) -> Node[T]:
+    def append(self, data: T) -> 'LinkedList[T]':
         node = Node(data)
         if self.front is None:
             self.front = node
@@ -69,7 +71,7 @@ class LinkedList[T]:
         self.size += 1
         return self
 
-    def prepend(self, data: T) -> Node[T]:
+    def prepend(self, data: T) -> 'LinkedList[T]':
         node = Node(data)
         if self.front is None:
             self.front = node
@@ -80,6 +82,19 @@ class LinkedList[T]:
             self.front = node
         self.size += 1
         return self
+
+    def insert(self, index: int, val: T) -> 'LinkedList[T]':
+        if index < 0 or index > self.size:
+            raise IndexError(f'Index {index} out of range')
+        if index == 0:
+            self.prepend(val)
+        elif index == self.size:
+            self.append(val)
+
+
+
+        self.size += 1
+
 
 
 if __name__ == '__main__':
