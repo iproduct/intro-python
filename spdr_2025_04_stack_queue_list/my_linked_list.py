@@ -50,8 +50,20 @@ class LinkedList[T]:
         self.size += 1
         return self
 
+    def prepend(self, data: T) -> Node[T]:
+        node = Node(data)
+        if self.front is None:
+            self.front = node
+            self.back = node
+        else:
+            self.front.prev = node
+            node.nxt = self.front
+            self.front = node
+        self.size += 1
+        return self
+
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.append('a').append('b').append('c').append('d').append('e').append('f')
+    ll.append('a').prepend('b').prepend('c').prepend('d').prepend('e').prepend('f')
     for elem in ll:
         print(elem, end=', ')
