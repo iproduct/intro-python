@@ -38,6 +38,25 @@ class LinkedList[T]:
         result += ']'
         return result
 
+    def __getitem__(self, index: int) -> T:
+        if index < 0 or index >= self.size:
+            raise IndexError(f'Index {index} out of range')
+        i = 0
+        for val in self.__iter__():
+            if i == index:
+                return val
+            i += 1
+
+    def __setitem__(self, index: int, val):
+        if index < 0 or index >= self.size:
+            raise IndexError(f'Index {index} out of range')
+        i = 0
+        for node in self._iter_nodes():
+            if i == index:
+                node.data = val
+            i += 1
+
+
     def append(self, data: T) -> Node[T]:
         node = Node(data)
         if self.front is None:
@@ -62,8 +81,12 @@ class LinkedList[T]:
         self.size += 1
         return self
 
+
 if __name__ == '__main__':
     ll = LinkedList()
     ll.append('a').prepend('b').prepend('c').prepend('d').prepend('e').prepend('f')
     for elem in ll:
         print(elem, end=', ')
+    print(f'\nll[3] = {ll[2]}')
+    ll[3] = '42'
+    print(ll)
