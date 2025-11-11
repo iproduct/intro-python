@@ -53,4 +53,5 @@ class LinkedList[T]:
 if __name__ == '__main__':
     ll = LinkedList()
     ll.append('a').append('b').append('c').append('d').append('e').append('f')
-    print(ll)
+    for elem in ll:
+        print(elem, end=', ')
