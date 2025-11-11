@@ -107,12 +107,21 @@ def reverse(ll: 'LinkedList[T]') -> 'LinkedList[T]':
         result_list.prepend(val)
     return result_list
 
+def is_sorted_asc(ll: 'LinkedList[T]') -> bool:
+    current = ll.front
+    while current and current.nxt:
+        if current.data > current.nxt.data:
+            return False
+        current = current.nxt
+    return True
+
 if __name__ == '__main__':
     ll = LinkedList(['a', 'c', 'd', 'e', 'f'])
     # ll.append('a').prepend('b').prepend('c').prepend('d').prepend('e').prepend('f')
     for elem in ll:
         print(elem, end=', ')
     print(f'\nll[3] = {ll[2]}')
-    ll.insert(5,'42')
+    # ll.insert(5,'42')
     print(ll)
+    print('Is sorted ASC: ', is_sorted_asc(ll))
     print(reverse(ll))
