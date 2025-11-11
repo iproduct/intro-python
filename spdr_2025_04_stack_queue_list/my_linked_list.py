@@ -12,15 +12,15 @@ class Node[T]:
 
 class LinkedList[T]:
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self.front = None
+        self.back = None
         self.size = 0
 
     def __len__(self):
         return self.size
 
     def _iter_nodes(self) -> Iterator[Node[T]]:
-        current = self.head
+        current = self.front
         while current:
             yield current
             current = current.nxt
@@ -33,20 +33,20 @@ class LinkedList[T]:
         result = '['
         for node in self._iter_nodes():
             result += str(node.data)
-            if node != self.tail:
+            if node != self.back:
                 result += ', '
         result += ']'
         return result
 
     def append(self, data: T) -> Node[T]:
         node = Node(data)
-        if self.head is None:
-            self.head = node
-            self.tail = node
+        if self.front is None:
+            self.front = node
+            self.back = node
         else:
-            self.tail.nxt = node
-            node.prev = self.tail
-            self.tail = node
+            self.back.nxt = node
+            node.prev = self.back
+            self.back = node
         self.size += 1
         return self
 
