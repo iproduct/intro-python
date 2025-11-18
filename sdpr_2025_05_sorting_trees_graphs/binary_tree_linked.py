@@ -62,8 +62,20 @@ class BinaryTreeLinked[T](BinaryTree[T]):
     def node_depth(self, node: T) -> int:
         pass
 
-    def add(self, node: T):
-        pass
+    def add(self, val: T):
+        if self.root is None:
+            self.root = BTNode(val)
+        node, found = self._find(val)
+        if found:
+            node.val = val
+        else:
+            new_node = BTNode(val)
+            new_node.parent = node
+            if val < node.val:
+                node.left = new_node
+            else:
+                node.right = new_node
+        self.size = self.size + 1
 
     def remove(self, node: T):
         pass
