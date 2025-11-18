@@ -45,6 +45,8 @@ def quick_sort[T](array: list[T], start: int = 0, end: int = None):
     quick_sort(array, start, j + 1)
     quick_sort(array, j + 2, end)
 
+def counting_sort[T](array: list[T]):
+    pass
 
 if __name__ == '__main__':
     a = [213, 12, 5, 17, 8, 29, 54, 82, 1, 7, 1, 2, 67, 2, 17, 3, 14, 7, 18, 171, 17]
