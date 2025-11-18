@@ -45,10 +45,46 @@ def quick_sort[T](array: list[T], start: int = 0, end: int = None):
     quick_sort(array, start, j + 1)
     quick_sort(array, j + 2, end)
 
-def counting_sort[T](array: list[T]):
-    pass
+MAX_VALUE = 301
+
+def counting_sort[T](array: list[T]): # O(N + MAX_VALUE)
+    counts = [0] * MAX_VALUE
+    for elem in array:
+        counts[elem] += 1
+    k = 0
+    for i in range(MAX_VALUE):
+        for j in range(counts[i]):
+            array[k] = i
+            k += 1
+
+def merge_sort[T](array: list[T]):
+    if len(array) > 1:
+        mid = len(array) // 2
+        left = array[:mid]
+        right = array[mid:]
+        merge_sort(left)
+        merge_sort(right)
+
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                array[k] = left[i]
+                i += 1
+            else:
+                array[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            array[k] = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            array[k] = right[j]
+            j += 1
+            k += 1
 
 if __name__ == '__main__':
     a = [213, 12, 5, 17, 8, 29, 54, 82, 1, 7, 1, 2, 67, 2, 17, 3, 14, 7, 18, 171, 17]
-    quick_sort(a)
+    counting_sort(a)
     print(a)
