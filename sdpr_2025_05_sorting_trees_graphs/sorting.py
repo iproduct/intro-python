@@ -86,5 +86,5 @@ def merge_sort[T](array: list[T]):
 
 if __name__ == '__main__':
     a = [213, 12, 5, 17, 8, 29, 54, 82, 1, 7, 1, 2, 67, 2, 17, 3, 14, 7, 18, 171, 17]
-    counting_sort(a)
+    merge_sort(a)
     print(a)
