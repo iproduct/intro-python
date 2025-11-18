@@ -44,8 +44,14 @@ class BinaryTreeLinked[T](BinaryTree[T]):
     def root(self):
         return self.root
 
-    def sibling(self, node: T) -> T:
-        pass
+    def sibling(self, val: T) -> T:
+        node, found = self._find(val)
+        if found and node.parent is not None:
+            parent = node.parent
+            if parent.left == node:
+                return parent.right
+            else:
+                return parent.left
 
     def size(self) -> int:
         pass
