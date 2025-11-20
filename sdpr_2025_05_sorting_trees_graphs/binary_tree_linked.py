@@ -1,4 +1,4 @@
-from typing import Iterator
+from typing import Iterator, Callable
 
 from binary_tree import BinaryTree
 
@@ -20,10 +20,48 @@ class BTNode[T]:
     def is_root(self):
         return self.parent is None
 
+ELEMENT_WIDTH = 6
+
 class BinaryTreeLinked[T](BinaryTree[T]):
     def __init__(self):
         self.root = None
         self.size = 0
+
+    def __str__(self):
+        result = ''
+        def visit_node(node: BTNode[T], depth: int, is_right: bool) -> bool:
+            nonlocal result
+            if is_right:
+                result += f'{str(node.val).rjust(ELEMENT_WIDTH)}{"" if node.is_leaf() else "->"}'
+            else:
+                if node.parent.right is None:
+                    result += 'None'
+                result += f'\n{' ' * (ELEMENT_WIDTH + 2) * depth}{str(node.val).rjust(ELEMENT_WIDTH)}{"" if node.is_leaf() else "->"}'
+            return True
+        self._traverse_dfs_pre_rtl(visit_node)
+        return result
+
+    def _traverse_dfs_pre_rtl(self,
+                              visitor: Callable[[BTNode[T], int, bool], bool],
+                              root: BTNode[T] = None,
+                              depth: int = 0,
+                              child_index: int = -1) -> bool:
+        if root is None:
+           root = self.root
+        if root is None:
+            return False
+        cont = visitor(root, depth, child_index)
+        if cont and root.right is not None:
+            cont = self._traverse_dfs_pre_rtl(visitor, root.right, depth + 1, 1)
+        if cont and root.left is not None:
+            cont = self._traverse_dfs_pre_rtl(visitor, root.left, depth + 1, 0)
+        return cont
+
+
+
+
+
+
 
     def _find(self, val: T, root: BTNode[T] = None) -> tuple[BTNode[T], bool]:
         if root is None:
