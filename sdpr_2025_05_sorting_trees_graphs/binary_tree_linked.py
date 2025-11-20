@@ -58,11 +58,6 @@ class BinaryTreeLinked[T](BinaryTree[T]):
         return cont
 
 
-
-
-
-
-
     def _find(self, val: T, root: BTNode[T] = None) -> tuple[BTNode[T], bool]:
         if root is None:
             root = self.root
