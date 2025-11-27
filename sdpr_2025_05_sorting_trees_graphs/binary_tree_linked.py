@@ -90,8 +90,15 @@ class BinaryTreeLinked[T](BinaryTree[T]):
     def size(self) -> int:
         pass
 
-    def tree_depth(self, node: T) -> int:
-        pass
+    def tree_depth(self, node: T = None) -> int:
+        if node is None:
+            return self._height(self.root)
+        return self._height(node)
+
+    def _height(self, node: BTNode[T]) -> int:
+        if node is None:
+            return 0
+        return 1 + max(self._height(node.left), self._height(node.right))
 
     def node_depth(self, node: T) -> int:
         pass
