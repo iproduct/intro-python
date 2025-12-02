@@ -1,8 +1,9 @@
+from collections import deque
 from typing import Callable
 
 
-class TreeNode:
-    def __init__(self, val, parent=None, children=None):
+class TreeNode[T]:
+    def __init__(self, val: T, parent=None, children=None):
         if children is None:
             children = []
         self.val = val
@@ -25,14 +26,14 @@ class TreeNode:
 ELEMENT_WIDTH = 5
 
 
-class Tree:
-    def __init__(self, root=None):
+class Tree[T]:
+    def __init__(self, root: TreeNode[T] = None):
         self.root = root
 
     def __str__(self):
         result = ''
 
-        def visit_node(node: TreeNode, depth: int, child_index: int) -> bool:
+        def visit_node(node: TreeNode[T], depth: int, child_index: int) -> bool:
             # print('====>', repr(node), depth, is_right)
             nonlocal result
             if child_index == 0:
@@ -45,8 +46,8 @@ class Tree:
         return result
 
     def _traverse_dfs_pre_rtl(self,
-                              visitor: Callable[[TreeNode, int, int], bool],
-                              root: TreeNode = None,
+                              visitor: Callable[[TreeNode[T], int, int], bool],
+                              root: TreeNode[T] = None,
                               depth: int = 0,
                               child_index: int = 0) -> bool:
         if root is None:
@@ -61,12 +62,23 @@ class Tree:
                 break
         return cont
 
-    def _insert_child(slef, parent_node: TreeNode, child_node: TreeNode):
+    def _insert_child(slef, parent_node: TreeNode[T], child_node: TreeNode[T]):
         parent_node.children.append(child_node)
         child_node.parent = parent_node
 
+    def _find_first_node_bfs(self, predicate: Callable[[TreeNode[T]], bool]) -> TreeNode[T]:
+        queue = deque()
+        queue.appendleft(self.root)
+        while queue:
+            current = queue.pop()
+            if predicate(current):
+                return current
+            for child in current.children:
+                queue.appendleft(child)
+
     def insert(self, parent_val, child_val):
         pass
+
 
 if __name__ == '__main__':
     root = TreeNode("C:")
@@ -88,3 +100,10 @@ if __name__ == '__main__':
     tree._insert_child(dir2, dir22)
     tree._insert_child(dir2, dir23)
     print(tree)
+    def is_jane(node: TreeNode) -> bool:
+        return node.val == "jane"
+    def is_progs_ignore_case(node: TreeNode) -> bool:
+        return node.val.lower() == "progs".lower()
+    users_dir = tree._find_first_node_bfs(is_progs_ignore_case)
+    # users_dir = tree._find_first_node_bfs(lambda node: node.val == "jane")
+    print(repr(users_dir))
