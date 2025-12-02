@@ -121,16 +121,16 @@ class BinaryTreeLinked[T](BinaryTree[T]):
         # print('====>find- return: ', repr(node), found)
         self.size = self.size + 1
 
-    def remove(self, node: T):
+    def remove(self, val: T):
         pass
 
-    def exists(self, node: T) -> bool:
+    def exists(self, val: T) -> bool:
         pass
 
-    def is_leaf(self, node: T) -> bool:
+    def is_leaf(self, val: T) -> bool:
         pass
 
-    def is_root(self, node: T) -> bool:
+    def is_root(self, val: T) -> bool:
         pass
 
     def iter_dfs(self) -> Iterator[T]:
@@ -153,5 +153,6 @@ if __name__ == '__main__':
     t.add(9)
 
     print(t)
+    print('dept = ', t.tree_depth())
 
 
