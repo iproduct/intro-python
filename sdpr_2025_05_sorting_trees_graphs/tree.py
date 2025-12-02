@@ -77,33 +77,36 @@ class Tree[T]:
                 queue.appendleft(child)
 
     def insert(self, parent_val, child_val):
-        pass
+        parent = self._find_first_node_bfs(lambda node: node.val == parent_val)
+        self._insert_child(parent, TreeNode(child_val))
 
 
 if __name__ == '__main__':
-    root = TreeNode("C:")
-    tree = Tree(root)
-    dir1 = TreeNode("Progs")
-    dir2 = TreeNode("Users")
-    dir3 = TreeNode("Data")
-    tree._insert_child(root, dir1)
-    tree._insert_child(root, dir2)
-    tree._insert_child(root, dir3)
-    dir11 = TreeNode("Word")
-    dir12 = TreeNode("Excel")
-    tree._insert_child(dir1, dir11)
-    tree._insert_child(dir1, dir12)
-    dir21 = TreeNode("john")
-    dir22 = TreeNode("jane")
-    dir23 = TreeNode("ava")
-    tree._insert_child(dir2, dir21)
-    tree._insert_child(dir2, dir22)
-    tree._insert_child(dir2, dir23)
-    print(tree)
-    def is_jane(node: TreeNode) -> bool:
-        return node.val == "jane"
-    def is_progs_ignore_case(node: TreeNode) -> bool:
-        return node.val.lower() == "progs".lower()
-    users_dir = tree._find_first_node_bfs(is_progs_ignore_case)
-    # users_dir = tree._find_first_node_bfs(lambda node: node.val == "jane")
-    print(repr(users_dir))
+
+
+    # root = TreeNode("C:")
+    # tree = Tree(root)
+    # dir1 = TreeNode("Progs")
+    # dir2 = TreeNode("Users")
+    # dir3 = TreeNode("Data")
+    # tree._insert_child(root, dir1)
+    # tree._insert_child(root, dir2)
+    # tree._insert_child(root, dir3)
+    # dir11 = TreeNode("Word")
+    # dir12 = TreeNode("Excel")
+    # tree._insert_child(dir1, dir11)
+    # tree._insert_child(dir1, dir12)
+    # dir21 = TreeNode("john")
+    # dir22 = TreeNode("jane")
+    # dir23 = TreeNode("ava")
+    # tree._insert_child(dir2, dir21)
+    # tree._insert_child(dir2, dir22)
+    # tree._insert_child(dir2, dir23)
+    # print(tree)
+    # def is_jane(node: TreeNode) -> bool:
+    #     return node.val == "jane"
+    # def is_progs_ignore_case(node: TreeNode) -> bool:
+    #     return node.val.lower() == "progs".lower()
+    # users_dir = tree._find_first_node_bfs(is_progs_ignore_case)
+    # # users_dir = tree._find_first_node_bfs(lambda node: node.val == "jane")
+    # print(repr(users_dir))
