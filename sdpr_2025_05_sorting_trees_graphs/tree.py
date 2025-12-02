@@ -82,7 +82,19 @@ class Tree[T]:
 
 
 if __name__ == '__main__':
-
+    tnum = Tree(TreeNode(42))
+    tnum.insert(42, 12)
+    tnum.insert(42, 5)
+    tnum.insert(42, 102)
+    tnum.insert(5, 15)
+    tnum.insert(5, 35)
+    tnum.insert(102, 14)
+    tnum.insert(102, 53)
+    tnum.insert(53, 64)
+    tnum.insert(53, 78)
+    tnum.insert(102, 4)
+    tnum.insert(12, 17)
+    print(tnum)
 
     # root = TreeNode("C:")
     # tree = Tree(root)
