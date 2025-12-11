@@ -7,6 +7,12 @@ class Cell:
         self.y = y
         self.neighbors = []
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __hash__(self):
+        return hash((self.x, self.y))
+
     def __repr__(self):
         return f'Cell({self.x}, {self.y})'
 
@@ -38,25 +44,27 @@ class Labirynth:
         return neighbours
 
     def find_shortest_path_bfs(self, start_x_y_tuple, target_x_y_tuple):
+        start_cell = self.cells[start_x_y_tuple]
+        target_cell = self.cells[target_x_y_tuple]
         paths_queue = deque()
-        paths_queue.append([start_x_y_tuple])
-        visited_x_y_tuples = set() # O(1)
-        visited_x_y_tuples.add(start_x_y_tuple)
+        paths_queue.append([start_cell])
+        visited_cells = set() # O(1)
+        visited_cells.add(start_cell)
         while paths_queue:
             current_path = paths_queue.popleft()
             print(current_path)
-            current_x_y_tuple = current_path[-1]
-            if current_x_y_tuple == target_x_y_tuple:
+            current_cell = current_path[-1]
+            if current_cell == target_cell:
                 return current_path
-            for neighbor in self.cells[current_x_y_tuple].neighbors:
-                neighbor_x_y_tuple = (neighbor.x, neighbor.y)
-                if  neighbor_x_y_tuple not in visited_x_y_tuples:
-                    visited_x_y_tuples.add( neighbor_x_y_tuple)
-                    paths_queue.append(current_path + [neighbor_x_y_tuple])
+            for neighbor in current_cell.neighbors:
+                if  neighbor not in visited_cells:
+                    visited_cells.add( neighbor)
+                    paths_queue.append(current_path + [neighbor])
         return None
 
 if __name__ == '__main__':
-    lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3)])
+    lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3), (4,3)])
+    # lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3), (4,3), (1,2)]) # None = no path
     print('Shortest path:', lab.find_shortest_path_bfs((0, 0), (3, 4)))
 
 
