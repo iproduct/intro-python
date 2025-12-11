@@ -16,7 +16,7 @@ class Cell:
     def __repr__(self):
         return f'Cell({self.x}, {self.y})'
 
-class Labirynth:
+class Labyrinth:
     def __init__(self, size: int, blocked_list_x_y_tuples):
         self.size = size
         self.cells = {}
@@ -63,8 +63,8 @@ class Labirynth:
         return None
 
 if __name__ == '__main__':
-    lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3), (4,3)])
-    # lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3), (4,3), (1,2)]) # None = no path
+    lab = Labyrinth(5, [(0, 1), (1, 1), (2, 1), (1, 3), (2, 3), (3, 3), (4, 3)])
+    # lab = Labyrinth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3), (4,3), (1,2)]) # None = no path
     print('Shortest path:', lab.find_shortest_path_bfs((0, 0), (3, 4)))
 
 
