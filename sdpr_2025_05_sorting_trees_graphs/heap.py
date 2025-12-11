@@ -11,3 +11,7 @@ class Heap[T](ABC):
     @abstractmethod
     def is_empty(self) -> bool:
         pass
+
+    @abstractmethod
+    def update_priority(self, value: T):
+        pass
