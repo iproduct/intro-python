@@ -7,18 +7,23 @@ class Cell:
         self.y = y
         self.neighbors = []
 
+    def __repr__(self):
+        return f'Cell({self.x}, {self.y})'
+
 class Labirynth:
     def __init__(self, size: int, blocked_list_x_y_tuples):
         self.size = size
         self.cells = {}
-        self.bocked_set = set(blocked_list_x_y_tuples)
+        self.blocked_set = set(blocked_list_x_y_tuples)
         for i in range(size):
             for j in range(size):
                 if not (i,j) in self.blocked_set: # O(1)
-                    current_cell = Cell(i, j)
-                    self.cells[(i,j)] = current_cell
-                    current_cell.neighbors.append(
-                        [self.cells[x_y_tuple] for x_y_tuple in self._get_neighbours_x_y_tuples(i,j)])
+                    self.cells[(i,j)] = Cell(i, j)
+        for i in range(size):
+            for j in range(size):
+                if not (i, j) in self.blocked_set:
+                    print((i,j), self._get_neighbours_x_y_tuples(i,j))
+                    self.cells[(i,j)].neighbors = [self.cells[x_y_tuple] for x_y_tuple in self._get_neighbours_x_y_tuples(i,j)]
 
     def _get_neighbours_x_y_tuples(self, x, y):
         neighbours = []
@@ -35,18 +40,24 @@ class Labirynth:
     def find_shortest_path_bfs(self, start_x_y_tuple, target_x_y_tuple):
         paths_queue = deque()
         paths_queue.append([start_x_y_tuple])
-        visited_x_y_tuples = set()
+        visited_x_y_tuples = set() # O(1)
         visited_x_y_tuples.add(start_x_y_tuple)
         while paths_queue:
             current_path = paths_queue.popleft()
+            print(current_path)
             current_x_y_tuple = current_path[-1]
             if current_x_y_tuple == target_x_y_tuple:
                 return current_path
             for neighbor in self.cells[current_x_y_tuple].neighbors:
-                if neighbor not in visited_x_y_tuples:
-                    visited_x_y_tuples.add(neighbor)
-                    current_path.append(neighbor)
-                    paths_queue.append(current_path)
+                neighbor_x_y_tuple = (neighbor.x, neighbor.y)
+                if  neighbor_x_y_tuple not in visited_x_y_tuples:
+                    visited_x_y_tuples.add( neighbor_x_y_tuple)
+                    paths_queue.append(current_path + [neighbor_x_y_tuple])
+        return None
+
+if __name__ == '__main__':
+    lab = Labirynth(5, [(0, 1), (1, 1), (2, 1), (1,3), (2,3), (3,3)])
+    print('Shortest path:', lab.find_shortest_path_bfs((0, 0), (3, 4)))
 
 
 
