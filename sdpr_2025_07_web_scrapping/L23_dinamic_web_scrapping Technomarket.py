@@ -22,10 +22,10 @@ print(urlpage)
 options = Options()
 
 # 2. Add the 'headless=new' argument for the new headless mode
-options.add_argument("--headless=new")
+# options.add_argument("--headless=new")
 
 # Optional: Add other arguments like disabling GPU for performance
-options.add_argument("--disable-gpu")
+# options.add_argument("--disable-gpu")
 
 # 3. Initialize ChromeDriver with the options
 driver = webdriver.Chrome(options=options)
