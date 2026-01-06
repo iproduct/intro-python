@@ -31,7 +31,7 @@ def knapsack_backtracking(capacity, weights, profits):
 
         # Option 1: Include item (if it fits)
         if current_weight + weights[index] <= capacity:
-            knapsack_backtrack(index + 1, current_weight + weights[index], current_profit + values[index])
+            knapsack_backtrack(index + 1, current_weight + weights[index], current_profit + profits[index])
 
         # Option 2: Exclude item
         knapsack_backtrack(index + 1, current_weight, current_profit)
