@@ -1,4 +1,5 @@
-def knapsack_dp(W, weights, values, n):
+def knapsack_dp(W, weights, values):
+    n = len(values)
     # Initialize DP table with zeros
     dp = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
 
@@ -12,9 +13,6 @@ def knapsack_dp(W, weights, values, n):
                 dp[i][w] = dp[i - 1][w]
 
     return dp[n][W]
-
-
-
 
 def knapsack_backtracking(capacity, weights, profits):
     max_profit = 0
@@ -41,12 +39,13 @@ def knapsack_backtracking(capacity, weights, profits):
 
 if __name__ == '__main__':
     # Example Usage
-    # values = [60, 100, 120]
-    # weights = [10, 20, 30]
-    # capacity = 50
+    values = [60, 100, 120]
+    weights = [10, 20, 30]
+    capacity = 50
     # Output: 220
-    values = [1,2,3]
-    weights = [4,5,1]
-    capacity = 4
+    # values = [1,2,3]
+    # weights = [4,5,1]
+    # capacity = 4
 
+    print(knapsack_dp(capacity, weights, values))
     print(knapsack_backtracking(capacity, weights, values))
