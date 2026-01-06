@@ -1,4 +1,4 @@
-def knapsack(W, weights, values, n):
+def knapsack_dp(W, weights, values, n):
     # Initialize DP table with zeros
     dp = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
 
