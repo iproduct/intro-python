@@ -8,3 +8,10 @@ if __name__ == "__main__":
     reversed_letters = letters[::-1] # reverse list
     s2 = ''.join(reversed_letters)
     print(s2)
+
+    codes = bytearray(s, 'utf-8')
+    print(codes)
+    codes[1] = ord('a') # works! - bytearray is mutable
+    s3 = codes.decode(encoding='utf-8')
+    print(s3)
+

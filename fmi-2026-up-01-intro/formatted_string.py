@@ -6,11 +6,11 @@ def print_formatted(lines, num_words):
         if len(words) >= num_words:
             row = "|"
             for i in range(num_words):
-               row += f" {words[i]:10.10s} |"
+               row += f" {words[i]:^10.10s} |"
             print(row)
 
 
 if __name__ == "__main__":
     text = strings.text
     lines = strings.split_lines(text)
-    print_formatted(lines, 5)
+    print_formatted(lines, 3)
