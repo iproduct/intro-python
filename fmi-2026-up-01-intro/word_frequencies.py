@@ -9,7 +9,6 @@ nltk.download('stopwords')
 
 stop_words = set(stopwords.words('english'))
 
-
 def count_frequencies(text):
     word_frequencies = dict() #  or {}
     for word in re.split(r'\W+', text):
