@@ -34,3 +34,12 @@ if __name__ == '__main__':
         else:
             print(i, end=', ')
 
+    print('\n')
+    l = list(range(1, n + 1))
+    i = 0
+    while i < len(l) and l[i] != 256:
+        i += 1
+    if i < len(l):
+        print(l[i])
+
+

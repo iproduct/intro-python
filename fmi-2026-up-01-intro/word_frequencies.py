@@ -30,7 +30,7 @@ def topn_words_frequencies(word_frequencies, num_words):
 
 
 if __name__ == '__main__':
-    myfile = open('wiki_text.txt', 'r')
-    text = myfile.read()
+    with open('wiki_text.txt', 'r') as myfile:
+        text = myfile.read()
     word_frequencies = count_frequencies(text)
     print(topn_words_frequencies(word_frequencies, 10))

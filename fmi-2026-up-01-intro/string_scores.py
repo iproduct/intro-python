@@ -1,5 +1,6 @@
 import strings
 
+
 def count_vowels(s):
     count = 0
     s = s.lower()
@@ -8,12 +9,15 @@ def count_vowels(s):
             count += 1
     return count
 
+
 def get_word_points(word):
     vowels = count_vowels(word)
-    if vowels % 2 == 0:
-        return 2
-    else:
-        return 1
+    # if vowels % 2 == 0:
+    #     return 2
+    # else:
+    #     return 1
+    return 2 if vowels % 2 == 0 else 1
+
 
 def get_total_points(line):
     points = 0
