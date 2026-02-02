@@ -15,10 +15,11 @@ def count_frequencies(text):
         word = word.lower()
         if len(word) < 2 or word.isdecimal() or word in stop_words:
             continue
-        if word in word_frequencies:
-            word_frequencies[word] += 1
-        else:
-            word_frequencies[word] = 1
+        # if word in word_frequencies:
+        #     word_frequencies[word] += 1
+        # else:
+        #     word_frequencies[word] = 1
+        word_frequencies[word] = word_frequencies.get(word, 0) + 1
     return word_frequencies
 
 def topn_words_frequencies(word_frequencies, num_words):
