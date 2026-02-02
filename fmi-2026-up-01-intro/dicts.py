@@ -1,4 +1,6 @@
 import copy
+from random import random
+
 
 def keyfunc_value(tup):
     return str(tup[1]).lower()
@@ -28,7 +30,25 @@ if __name__ == '__main__':
     print(original)
     print(copied_dict)
 
-    while original:
-        item = original.popitem()
-        print(item)
-    print(original)
+    # while original:
+    #     item = original.popitem()
+    #     print(item)
+    # print(original)
+
+    original.setdefault("c", "default")
+    print("After setdefault:", original)
+
+    # dict comprehension
+    squares_dict = {x: x*x for x in range(1, 11)}
+    print(squares_dict)
+
+    # list comprehension
+    matrix = [[0] * 10 for i in range(10)]
+    copy = [[col + 1 if random() < 0.2 else col for col in row] for row in matrix]
+    for row in matrix:
+        print(row)
+    print()
+    for row in copy:
+        print(row)
+    flatten = [col for row in copy for col in row]
+    print(flatten)
