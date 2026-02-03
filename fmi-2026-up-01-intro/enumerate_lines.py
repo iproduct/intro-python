@@ -35,10 +35,15 @@ def is_in_python_string(line, index):
                 instr = False
     return instr
 
+def write_to_file(filename, lines):
+    with open(filename, 'wt', encoding='utf-8') as f:
+        for line in lines:
+            f.write(line+"\n")
+
 
 # Test the demo
 if __name__ == '__main__':
-    for line in get_comments('enumerate_lines.py'):
+    comments = get_comments('enumerate_lines.py')
+    for line in comments:
         print(line)
-
-    # print(is_in_python_string("            index = line.find('#') #check if there is single line comment", 30))
+    write_to_file('comments.txt', comments)
