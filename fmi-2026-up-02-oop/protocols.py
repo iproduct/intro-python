@@ -1,6 +1,6 @@
 from typing import Protocol
 
-class Connection(Protocol):
+class Connectable(Protocol):
     def connect(self) -> None:
         ...  # Ellipsis indicates an abstract method
 
@@ -14,12 +14,12 @@ class Database:
     def disconnect(self) -> None:
         print("Disconnected from DB")
 
-def start_service(conn: Connection):
+def get_data_from_service(conn: Connectable) -> None:
     conn.connect()
+    # do smthg
+    conn.disconnect()
 
 if __name__ == "__main__":
-    conn = Connection()
-    start_service(conn)
     # Database satisfies the Connection protocol without inheriting from it
     db = Database()
-    start_service(db)
+    get_data_from_service(db)
