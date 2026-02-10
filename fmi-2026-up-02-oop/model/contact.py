@@ -17,7 +17,7 @@ class Contact:
         return f"<Contact {self.id}: {self.first_name} {self.last_name}, {self.email}, {self.phone}, {self.address}, {self.created}, {self.modified}>"
 
     def __str__(self):
-        return (f"| {self.id or '':4s} | {self.first_name:14.14s} | {self.last_name:14.14s} | {self.email:25.25s} | {self.phone:15.15s} |"
+        return (f"| {self.id or '':>4.4s} | {self.first_name:14.14s} | {self.last_name:14.14s} | {self.email:25.25s} | {self.phone:15.15s} |"
                 f" {self.address:30.30s} | {self.created.strftime('%d.%m.%Y %H:%M:%S'):19.19s} | {self.modified.strftime('%d.%m.%Y %H:%M:%S'):19.19s} |")
 
 
