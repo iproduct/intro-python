@@ -20,5 +20,5 @@ def word_count(fname):
 if __name__ == '__main__':
     wcounts = word_count('wiki.txt')
     wclist = list(wcounts.items())
-    wclist.sort(key=lambda x: x[1], reverse=True)
-    print(wclist[:10])
+    wclist.sort(key=lambda x: (-x[1], x[0]))
+    print(wclist)
