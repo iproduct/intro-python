@@ -11,12 +11,6 @@ class FibIterator2:
     def __iter__(self):
         return  self
 
-class FibIterable2:
-    def __init__(self, n):
-        self.n = n
-    def __iter__(self):
-        return FibIterator2(self.n)
-
 if __name__ == '__main__':
     for n in FibIterable2(100):
         print(n)
