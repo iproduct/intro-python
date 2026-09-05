@@ -6,6 +6,10 @@ class UserRepository:
     def __init__(self, id_generator):
         self.id_generator = id_generator
         self.entities: dict[str, Entity] = {}
+    def __len__(self):
+        return len(self.entities)
+    def __iter__(self):
+        return iter(self.entities.values())
     def create(self, entity):
         entity.id = self.id_generator.generate_id()
         self.entities[entity.id] = entity
