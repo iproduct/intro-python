@@ -10,7 +10,7 @@ def word_count(fname):
     wc = {}
     with open(fname) as f:
        for line in f:
-           words = re.split(r'\W', line)
+           words = re.split(r'\W+', line)
            for word in words:
                word = word.lower()
                if word in stop_words or len(word) < 3: continue
