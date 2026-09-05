@@ -1,8 +1,9 @@
 from xml.dom.minidom import Entity
 
+from dao.abstract_repository import AbstractRepository
 from exception.non_exisiting_entity_exception import NonExistingEntityException
 
-class UserRepository:
+class UserRepository(AbstractRepository):
     def __init__(self, id_generator):
         self.id_generator = id_generator
         self.entities: dict[str, Entity] = {}
@@ -29,3 +30,7 @@ class UserRepository:
         if entity_id not in self.entities:
             raise NonExistingEntityException(f'Entity with ID={entity_id} does not exist')
         return self.entities.pop(entity_id)
+
+    def size(self):
+        return len(self.entities)
+

@@ -1,5 +1,6 @@
 from dao.UserRepository import UserRepository
 from dao.id_generator import IdGeneratorUuid
+from model.customer import Customer
 from model.user import User
 
 
@@ -15,10 +16,10 @@ if __name__ == "__main__":
     u1 = user_repo.create(User(fname="John", lname="Doe", email="john@gmail.com",
                       username="john", password="john123", roles=["user", "admin"]))
     print(f'Created user: {u1}')
-    u2 = user_repo.create(User(fname="Jane", lname="Smith", email="jane@gmail.com",
-                      username="jane", password="jane123", roles=["manager", "admin"]))
-    u3 = user_repo.create(User(fname="Hristo", lname="Dimitrov", email="hristo@gmail.com",
-                      username="hristo", password="hristo123", roles=["user"]))
+    u2 = user_repo.create(Customer(fname="Jane", lname="Smith", email="jane@gmail.com",
+                      username="jane", password="jane123", address='London'))
+    u3 = user_repo.create(Customer(fname="Hristo", lname="Dimitrov", email="hristo@gmail.com",
+                      username="hristo", password="hristo123", phone='+359885324567'))
 
     users = user_repo.find()
     print_users(users)
@@ -31,4 +32,4 @@ if __name__ == "__main__":
     print_users(users)
     print(f'Users in repository: {len(user_repo)}')
     for u in user_repo:
-        print(u)
+        print(u.__repr__())

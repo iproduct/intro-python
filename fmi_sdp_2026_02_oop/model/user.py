@@ -26,5 +26,5 @@ class User:
         self.__password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt( 12 ))
 
     def __repr__(self):
-        return (f"User({self.id}, {self.username}, {self.fname}, {self.lname}, "
-                f"{self.email}, {self.password}, {self.roles}) - file: {self.get_filename()}")
+        return (f"User: {self.id}, {self.username}, {self.fname}, {self.lname}, "
+                f"{self.email}, {self.password}, {self.roles}")
