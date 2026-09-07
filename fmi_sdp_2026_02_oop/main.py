@@ -13,7 +13,7 @@ def print_users(users):
 
 if __name__ == "__main__":
     id_gen = IdGeneratorUuid()
-    user_repo = UserRepositoryMemoryImpl(id_gen)
+    user_repo: UserRepositoryMemoryImpl[str] = UserRepositoryMemoryImpl(id_gen)
     u1 = user_repo.create(User(fname="John", lname="Doe", email="john@gmail.com",
                       username="john", password="john123", roles=["user", "admin"]))
     print(f'Created user: {u1}')
@@ -34,4 +34,5 @@ if __name__ == "__main__":
     print(f'Users in repository: {len(user_repo)}')
     for u in user_repo:
         print(u.__repr__())
-    abstr_repo = AbstractRepository()
+
+
