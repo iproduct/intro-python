@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
-from typing import Protocol, Iterable
+from typing import Protocol, Iterable, TypeVar, Any
 
 from dao.entity import Entity
 
 
-class AbstractRepository[IDType, EntityType](Protocol):
+
+class AbstractRepository[IDType, EntityType: Entity[Any]] (Protocol):
     @abstractmethod
     def create(self, entity: EntityType):
         raise NotImplementedError
