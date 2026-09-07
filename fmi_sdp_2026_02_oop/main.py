@@ -1,4 +1,5 @@
 from dao.UserRepository import UserRepository
+from dao.abstract_repository import AbstractRepository
 from dao.id_generator import IdGeneratorUuid
 from model.customer import Customer
 from model.user import User
@@ -33,3 +34,4 @@ if __name__ == "__main__":
     print(f'Users in repository: {len(user_repo)}')
     for u in user_repo:
         print(u.__repr__())
+    abstr_repo = AbstractRepository()

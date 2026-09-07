@@ -1,25 +1,27 @@
 from abc import ABC, abstractmethod
+from typing import Protocol
+
+from dao.entity import Entity
 
 
-class AbstractRepository(ABC):
-    @abstractmethod
-    def create(self, entity):
-        raise NotImplementedError()
-    @abstractmethod
-    def update(self, entity):
-        raise NotImplementedError()
-    @abstractmethod
-    def find_by_id(self, entity_id):
-        raise NotImplementedError()
-    @abstractmethod
+class AbstractRepository[IDType](Protocol):
+    def create(self, entity: Entity[IDType]):
+        ...
+
+    def update(self, entity: Entity[IDType]):
+        ...
+
+    def find_by_id(self, entity_id: IDType):
+        ...
+
     def find(self):
-        raise NotImplementedError()
-    @abstractmethod
-    def delete(self, entity_id):
-        raise NotImplementedError()
-    @abstractmethod
+        ...
+
+    def delete(self, entity_id: IDType):
+        ...
+
     def size(self):
-        raise NotImplementedError()
+        ...
 
 
 
