@@ -1,8 +1,11 @@
 import sys
 from functools import cache, lru_cache
+
+from custom_cache import custom_cache
+
 sys.setrecursionlimit(100000)
 
-@cache
+@custom_cache
 def fib_rec(n):
     if n < 2:
         return n
