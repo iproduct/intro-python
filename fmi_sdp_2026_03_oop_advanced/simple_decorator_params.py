@@ -14,7 +14,7 @@ def simple_decorator_with_params(prefix):
 
 @simple_decorator_with_params(prefix='FIBONACCI:')
 def fib_rec(n):
-    """Fibonacci numbers up to n"""
+    """Fibonacci with number n"""
     if n < 2:
         return n
     return fib_rec(n - 1) + fib_rec(n - 2)
