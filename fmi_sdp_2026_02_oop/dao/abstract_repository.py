@@ -1,8 +1,7 @@
-from abc import ABC, abstractmethod
-from typing import Protocol, Iterable, TypeVar, Any
+from abc import abstractmethod
+from typing import Protocol, Iterable, Any
 
 from dao.entity import Entity
-
 
 
 class AbstractRepository[IDType, EntityType: Entity[Any]] (Protocol):

@@ -1,4 +1,4 @@
-from typing import Iterator, Iterable, TypeVar, Any
+from typing import Iterator, Iterable, Any
 
 from dao.abstract_repository import AbstractRepository
 from dao.entity import Entity
@@ -6,7 +6,7 @@ from dao.id_generator import IdGenerator
 from exception.non_exisiting_entity_exception import NonExistingEntityException
 
 
-class RepositoryMemoryImpl[IDType, EntityType:Entity](AbstractRepository[IDType, EntityType]):
+class RepositoryMemoryImpl[IDType, EntityType:Entity[Any]](AbstractRepository[IDType, EntityType]):
     def __init__(self, id_generator: IdGenerator[IDType]):
         self.id_generator = id_generator
         self.entities: dict[IDType, EntityType] = {}
