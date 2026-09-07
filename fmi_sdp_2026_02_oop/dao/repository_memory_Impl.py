@@ -27,7 +27,7 @@ class RepositoryMemoryImpl[IDType, EntityType](AbstractRepository[IDType, Entity
         self.entities[entity.id] = entity
         return entity
 
-    def find_by_id(self, entity_id) -> EntityType:
+    def find_by_id(self, entity_id) -> EntityType | None:
         if entity_id in self.entities:
             return self.entities[entity_id]
         return None

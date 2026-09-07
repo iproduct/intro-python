@@ -1,15 +1,20 @@
 import bcrypt
 
-class User:
+from dao.entity import Entity
+
+
+class User[IDType] (Entity[IDType]):
     db_filename = 'users'
+
     # @staticmethod
     # def get_filename():
     #     return User.db_filename
     @classmethod
     def get_filename(cls):
         return cls.db_filename
-    def __init__(self, username=None, password=None, email=None,
-                 fname=None, lname=None, roles=None, id=None):
+
+    def __init__(self, username: str = None, password: str = None, email: str = None,
+                 fname: str = None, lname: str = None, roles: list[str] = None, id: IDType = None):
         self.id = id
         self.fname = fname
         self.lname = lname
@@ -21,9 +26,10 @@ class User:
     @property
     def password(self):
         return self.__password.decode(encoding='utf-8')
+
     @password.setter
     def password(self, password):
-        self.__password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt( 12 ))
+        self.__password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt(12))
 
     def __repr__(self):
         return (f"User: {self.id}, {self.username}, {self.fname}, {self.lname}, "
