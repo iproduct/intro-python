@@ -1,26 +1,26 @@
 from abc import ABC, abstractmethod
-from typing import Protocol
+from typing import Protocol, Iterable
 
 from dao.entity import Entity
 
 
-class AbstractRepository[IDType](Protocol):
-    def create(self, entity: Entity[IDType]):
+class AbstractRepository[IDType, EntityType](Protocol):
+    def create(self, entity: EntityType[IDType]):
         ...
 
-    def update(self, entity: Entity[IDType]):
+    def update(self, entity: EntityType[IDType]):
         ...
 
-    def find_by_id(self, entity_id: IDType):
+    def find_by_id(self, entity_id: IDType)-> EntityType[IDType]:
         ...
 
-    def find(self):
+    def find(self)-> Iterable[EntityType[IDType]]:
         ...
 
-    def delete(self, entity_id: IDType):
+    def delete(self, entity_id: IDType)-> EntityType[IDType]:
         ...
 
-    def size(self):
+    def size(self) -> int:
         ...
 
 
