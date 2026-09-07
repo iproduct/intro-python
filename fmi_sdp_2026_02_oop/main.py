@@ -6,7 +6,7 @@ from model.customer import Customer
 from model.user import User
 
 
-def print_users(users: Iterable[User]):
+def print_users[IDType](users: Iterable[User[IDType]]):
     for usr in users:
         print(f'| {str(usr.id)[-12:]:12.12s} | {str(usr.username):12.12s} | {(str(usr.fname) + ' ' + str(usr.lname)):20.20s} '
               f'| {str(usr.email):20.20s} | {str(usr.password):20.20s} | {','.join(usr.roles):20.20s} |')

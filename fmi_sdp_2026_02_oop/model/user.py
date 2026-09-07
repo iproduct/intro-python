@@ -14,7 +14,7 @@ class User[IDType] (Entity[IDType]):
         return cls.db_filename
 
     def __init__(self, username: str|None = None, password: str|None = None, email: str|None = None,
-                 fname: str|None= None, lname: str|None = None, roles: list[str] | str|None = None, uid: IDType = None):
+                 fname: str|None= None, lname: str|None = None, roles: list[str] | str|None = None, uid: IDType|None = None):
         self.id = uid
         self.fname = fname
         self.lname = lname
