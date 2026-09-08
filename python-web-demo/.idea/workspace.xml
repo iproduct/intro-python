@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d90c87bb-68d2-4b22-b4ff-241b88b999f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../flask_dynamic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask_dynamic/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../flask_tutorial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask_tutorial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/conacts.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/contact_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2023-up-02-oop/controller/contact_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fmi-2023-up-02-oop/repository/contact_repository_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fmi-2023-up-02-oop/repository/contact_repository_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-flask-lab-b/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-flask-lab-b/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../intro-flask-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../intro-flask-lab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "iproduct"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/iproduct/intro-python.git",
+    "accountId": "d1f1482b-35a7-4a66-96c4-4c4dbaea86f7"
+  }
+}]]></component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -35,6 +44,10 @@
       </list>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0,
+  "fromUser": false
+}]]></component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="19" />
@@ -42,7 +55,6 @@
     <option name="height" value="820" />
   </component>
   <component name="ProjectId" id="2P4BMMXN3R0Byu4EA4jkzUsBFXj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -80,9 +92,18 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,6 +115,7 @@
   <component name="RunManager" selected="Python.flask-demo (1)">
     <configuration name="annotation-demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-web-demo" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -104,7 +126,9 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simple_demos/annotation-demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -116,6 +140,7 @@
     </configuration>
     <configuration name="flask-demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-web-demo" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -126,7 +151,9 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_demos/flask-demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -138,6 +165,7 @@
     </configuration>
     <configuration name="flask-demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-web-demo" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -148,7 +176,9 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="C:\CoursePython\git\intro-python\python-web-demo\flask_demos\flask-demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -159,9 +189,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.flask-demo" />
       <item itemvalue="Python.annotation-demo" />
       <item itemvalue="Python.flask-demo (1)" />
+      <item itemvalue="Python.flask-demo" />
     </list>
     <recent_temporary>
       <list>
@@ -170,6 +200,14 @@
         <item itemvalue="Python.flask-demo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PY-262.9437.214" />
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -182,6 +220,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682706424930</updated>
       <workItem from="1682706426437" duration="627000" />
+      <workItem from="1788808588492" duration="132000" />
     </task>
     <servers />
   </component>
