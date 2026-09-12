@@ -16,11 +16,29 @@ def is_palindrome(text: str) -> bool:
         return is_palindrome(normalized[1:-1])
     # return normalized == normalized[::-1]
 
+
+# @trace
+def is_palindrome2(text: str) -> bool:
+    regex = re.compile(r'\W+')
+    normalized = regex.sub('', text).lower()
+    return is_pal_rec(normalized)
+
+# @profile
+def is_pal_rec(text: str) -> bool:
+    if len(text) <= 1: # recursion bottom
+        return True
+    if text[0] == text[-1]: # recursion step
+        return is_pal_rec(text[1:-1])
+
+
 @profile
 def profile_is_palindrome(text: str):
-    for _ in range(1000):
+    for _ in range(100000):
         is_palindrome(text)
+        # is_pal_rec(text)
 
 if __name__ == '__main__':
-    print(profile_is_palindrome('Able was I, ere I saw Elba')) # True
-    print(is_palindrome.__name__)
+    print(is_palindrome('Able was I, ere I saw Elba'))
+    # print(profile_is_palindrome('Able was I, ere I saw Elba')) # True
+    # print(profile_is_palindrome('ablewasiereisawelba')) # True
+    print(profile_is_palindrome.__name__)
