@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from typing import Protocol
 
 
-class Stack(ABC):
+class Stack(Protocol):
     @abstractmethod
     def is_empty(self):
         pass

@@ -156,9 +156,9 @@ if __name__ == '__main__':
     words_list.pop(0)
     print(words_list)
     words_list.append('End')
-    words_list.pop()
-    words_list.pop(len(words_list) - 1)
-    words_list.pop(2)
+    print(words_list.pop())
+    print(words_list.pop(len(words_list) - 1))
+    print(words_list.pop(2))
     print(words_list)
     # words_list.pop(len(words_list))
     while (len(words_list) > 0):
