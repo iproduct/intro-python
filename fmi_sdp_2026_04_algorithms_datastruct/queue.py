@@ -17,3 +17,4 @@ class Queue[T](ABC):
     @abstractmethod
     def size(self) -> int:
         pass
+
