@@ -72,6 +72,7 @@ def binary_search[T](arr: list[T], elem: T) -> int:
     right = len(arr) - 1
     middle = (left + right) // 2
     while left < right and arr[middle] != elem:
+        print(left, right, arr[left: right + 1])
         if arr[middle] < elem:
             left = middle + 1
         else:
@@ -85,7 +86,7 @@ def binary_search[T](arr: list[T], elem: T) -> int:
 if __name__ == '__main__':
     a = [12, 46, 18, 9, 100, 92, 15, 9, 50, 40, 50, 20, 9, 12, 3, 50, 17, 100, 30, 7, 46, 9, 50, 70, 3, 1]
     # a = [9, 12, 46, 108, 92, 15, 150, 170]
+    # sort_ins(a)
     quick_sort(a)
     print(len(a), a)
-    print(f'17 in index: {binary_search(a, -5)}')
-
+    print(f'17 in index: {binary_search(a, 17)}')
