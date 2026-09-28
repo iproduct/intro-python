@@ -1,13 +1,14 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 from enum import Enum
-from typing import Iterator
+from typing import Iterator, Protocol
+
 
 class TreeVisitOrder(Enum):
     PREORDER = 1
     POSTORDER = 2
     INORDER = 3
 
-class BinaryTree[T](ABC):
+class BinaryTree[T](Protocol):
     def root(self) -> T:
             pass
     @abstractmethod
