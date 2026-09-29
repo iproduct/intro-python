@@ -1,5 +1,6 @@
 from typing import Iterator, Iterable, Any
 
+from dao import entity
 from dao.abstract_repository import AbstractRepository
 from dao.entity import Entity
 from dao.id_generator import IdGenerator
@@ -18,7 +19,7 @@ class RepositoryMemoryImpl[IDType, EntityType:Entity[Any]](AbstractRepository[ID
         return iter(self._entities.values())
 
     def create(self, entity:EntityType) -> EntityType:
-        entity.id = self.id_generator.generate_id()
+        entity.id = entity.id if hasattr(entity, "id") and entity.id is not None else self.id_generator.generate_id()
         self._entities[entity.id] = entity
         return entity
 
