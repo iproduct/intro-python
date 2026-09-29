@@ -36,7 +36,7 @@ class Contact:
     def __str__(self):
         result = ''
         phones_str = ', '.join([f'{ph.type.name}: {ph.number}' for ph in self.phones])
-        result += f'| {self.id} | ' \
+        result += f'| {self.id if hasattr(self, "id") else ''} | ' \
                   f'{self.first + " " + self.last:<15.15s} | ' \
                   f'{self.address:<40.40s} | ' \
                   f'{phones_str:50.50s} |'
