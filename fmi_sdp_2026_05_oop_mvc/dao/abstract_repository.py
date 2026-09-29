@@ -26,6 +26,10 @@ class AbstractRepository[IDType, EntityType: Entity[Any]] (Protocol):
         raise NotImplementedError
 
     @abstractmethod
+    def delete_all(self)-> EntityType:
+        raise NotImplementedError
+
+    @abstractmethod
     def size(self) -> int:
         raise NotImplementedError
 

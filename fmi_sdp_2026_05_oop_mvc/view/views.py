@@ -53,5 +53,5 @@ class ShowContactsView:
 
 if __name__ == '__main__':
     view = InputContactView()
-    c = view.input_contact()
+    c = view.show()
     print(c)

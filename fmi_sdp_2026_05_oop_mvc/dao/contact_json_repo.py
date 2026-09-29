@@ -16,16 +16,19 @@ class ContactJsonRepo(RepositoryMemoryImpl[uuid.UUID, Contact]):
 
     def save_contacts(self):
         with open(self.db_filename, 'wt', encoding='utf-8') as f:
-            dump(self.contacts, f, indent=4, default=dumper)
+            dump(list(self.find()), f, indent=4, default=dumper)
 
     def load_contacts(self):
         with open(self.db_filename, 'rt', encoding='utf-8') as f:
-            self.contacts = load(f, object_hook=object_hook_factory({
+            contacts = load(f, object_hook=object_hook_factory({
                 'PhoneType': PhoneType,
                 'Phone': Phone,
                 'Contact': Contact,
                 'UUID': uuid.UUID
             }))
+            self.delete_all()
+            for contact in contacts:
+                self.create(contact)
 
 
 def dumper(obj):

@@ -41,5 +41,8 @@ class RepositoryMemoryImpl[IDType, EntityType:Entity[Any]](AbstractRepository[ID
             raise NonExistingEntityException(f'Entity with ID={entity_id} does not exist')
         return self._entities.pop(entity_id)
 
+    def delete_all(self):
+        self._entities = {}
+
     def size(self) -> int:
         return len(self._entities)

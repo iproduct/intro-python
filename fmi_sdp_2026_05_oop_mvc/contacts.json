@@ -15,7 +15,7 @@
         ],
         "id": {
             "_class": "UUID",
-            "value": "0e596991-e1b8-4f3c-b37a-c06c15074675"
+            "value": "d1fce48f-fd87-4a63-8ed7-4506bfc93447"
         },
         "_class": "Contact"
     },
@@ -35,7 +35,7 @@
         ],
         "id": {
             "_class": "UUID",
-            "value": "0ece6c67-27d2-4333-bdd7-a0c12fb0c682"
+            "value": "38f4b434-23f2-46b2-905b-3214976c3f54"
         },
         "_class": "Contact"
     },
@@ -55,7 +55,7 @@
         ],
         "id": {
             "_class": "UUID",
-            "value": "23f51d97-e90c-4b0b-9d1f-ecf6ee422c6e"
+            "value": "fa894a28-ee6e-4466-94f1-fdf0defb44bc"
         },
         "_class": "Contact"
     },
@@ -83,7 +83,27 @@
         ],
         "id": {
             "_class": "UUID",
-            "value": "8987364e-2614-4864-82f2-40f552564705"
+            "value": "d0cca9cd-721f-4171-9139-baa13df7eb59"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "Jim",
+        "last": "Smith",
+        "address": "London, GB",
+        "phones": [
+            {
+                "number": "(044) 1234567",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "472206c7-4da4-4300-9dec-580cf2c2147d"
         },
         "_class": "Contact"
     }
