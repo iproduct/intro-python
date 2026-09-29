@@ -23,7 +23,7 @@ class Graph[T]:
 
     def __str__(self):
         result = ''
-        for node in self.nodes:
+        for node in sorted(self.nodes):
             result += str(node) + ' -> '
             edge_dict = self.edges[node]
             for to, dist in edge_dict.items():

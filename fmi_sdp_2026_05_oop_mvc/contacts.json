@@ -1,0 +1,90 @@
+[
+    {
+        "first": "Trayan",
+        "last": "Iliev",
+        "address": "Sofia 1000",
+        "phones": [
+            {
+                "number": "0889765443",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "0e596991-e1b8-4f3c-b37a-c06c15074675"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "John",
+        "last": "Doe",
+        "address": "London",
+        "phones": [
+            {
+                "number": "044567893221",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "0ece6c67-27d2-4333-bdd7-a0c12fb0c682"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "Jane",
+        "last": "Smith",
+        "address": "Bristol",
+        "phones": [
+            {
+                "number": "044786543222",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "23f51d97-e90c-4b0b-9d1f-ecf6ee422c6e"
+        },
+        "_class": "Contact"
+    },
+    {
+        "first": "Georgi",
+        "last": "Petrov",
+        "address": "",
+        "phones": [
+            {
+                "number": "02456789",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "HOME"
+                },
+                "_class": "Phone"
+            },
+            {
+                "number": "088765432",
+                "type": {
+                    "_class": "PhoneType",
+                    "value": "MOBILE"
+                },
+                "_class": "Phone"
+            }
+        ],
+        "id": {
+            "_class": "UUID",
+            "value": "8987364e-2614-4864-82f2-40f552564705"
+        },
+        "_class": "Contact"
+    }
+]
